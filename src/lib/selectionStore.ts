@@ -1,6 +1,7 @@
 import { writable } from 'svelte/store';
+import { REQUIRED_SELECTIONS, SELECTION_STATE_KEY, STAGES } from './constants';
 
-export const STORAGE_KEY = 'personal-values-selected';
+export const STORAGE_KEY = SELECTION_STATE_KEY;
 
 function loadSelection(): string[] {
   if (typeof window !== 'undefined') {
@@ -44,4 +45,24 @@ export function resetSelection() {
 
 export function isSelectionValid(selected: string[], min = 10): boolean {
   return selected.length >= min;
+}
+
+// Add a store for the current stage of the process
+export const processStage = writable<typeof STAGES[keyof typeof STAGES]>(getInitialStage());
+
+function getInitialStage() {
+  const comparisonRaw = typeof window !== 'undefined' ? localStorage.getItem('comparison-state-v1') : null;
+  if (comparisonRaw) {
+    const state = JSON.parse(comparisonRaw);
+    if (state && state.scores && state.pairs && state.selected) {
+      if (state.current >= state.pairs.length) return STAGES.RESULTS;
+      return STAGES.COMPARISON;
+    }
+  }
+  const selectionRaw = typeof window !== 'undefined' ? localStorage.getItem('selection-v1') : null;
+  if (selectionRaw) {
+    const arr = JSON.parse(selectionRaw);
+    if (Array.isArray(arr) && arr.length >= REQUIRED_SELECTIONS) return STAGES.SELECTION;
+  }
+  return STAGES.SELECTION;
 }

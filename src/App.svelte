@@ -1,41 +1,28 @@
 <script lang="ts">
   import svelteLogo from './assets/svelte.svg';
   import Comparison from './lib/Comparison.svelte';
+  import { REQUIRED_SELECTIONS, STAGES } from './lib/constants';
   import FAQ from './lib/FAQ.svelte';
-  import { resetSelection, selectedValues } from './lib/selectionStore';
+  import { processStage, resetSelection, selectedValues } from './lib/selectionStore';
   import { valueGroups, values } from './lib/values';
   import ValueSelection from './lib/ValueSelection.svelte';
   import viteLogo from '/vite.svg';
 
   // Subscribe to store for reactivity
   let selected: string[] = [];
-  let started = false;
   let error = '';
   let showComparison = false;
   let comparisonScores: Record<string, number> = {};
+  let stage: typeof STAGES[keyof typeof STAGES] = STAGES.SELECTION;
 
-  // Restore comparison state from localStorage if present
-  const COMPARISON_KEY = 'comparison-state-v1';
-  if (typeof window !== 'undefined') {
-    const raw = localStorage.getItem(COMPARISON_KEY);
-    if (raw) {
-      try {
-        const state = JSON.parse(raw);
-        if (state.selected && state.pairs) {
-          showComparison = true;
-          started = true;
-        }
-      } catch {}
-    }
-  }
+  processStage.subscribe(val => stage = val);
 
   selectedValues.subscribe((val) => {
     selected = val;
-    started = selected.length > 0;
   });
 
   function startAssessment() {
-    started = true;
+    processStage.set('selection');
     error = '';
   }
 
@@ -45,21 +32,21 @@
   }
 
   function handleProceed() {
-    if (selected.length < 3) {
-      error = 'Please select at least 10 values to continue.';
+    if (selected.length < REQUIRED_SELECTIONS) {
+      error = `Please select at least ${REQUIRED_SELECTIONS} values to continue.`;
       return;
     }
-    showComparison = true;
+    processStage.set(STAGES.COMPARISON);
   }
 
   function handleComparisonFinish(scores: Record<string, number>) {
     comparisonScores = scores;
-    // Optionally, do something with the results (e.g., show a summary)
+    processStage.set(STAGES.RESULTS);
   }
 
   function handleRestart() {
     resetSelection();
-    started = false;
+    processStage.set(STAGES.SELECTION);
     error = '';
     showComparison = false;
   }
@@ -78,14 +65,7 @@
   <p>
     Discover your core personal values and learn how they shape your decisions, relationships, and overall well-being.
   </p>
-  {#if !started}
-    <button on:click={startAssessment}>
-      Start Assessment
-    </button>
-    <FAQ />
-  {/if}
-
-  {#if started && !showComparison}
+  {#if stage === STAGES.SELECTION}
     <ValueSelection
       values={values}
       valueGroups={valueGroups}
@@ -95,13 +75,18 @@
       onRestart={handleRestart}
       error={error}
     />
-  {/if}
-  {#if showComparison}
+  {:else if stage === STAGES.COMPARISON}
+    <Comparison
+      selected={values.filter(v => selected.includes(v.name))}
+      onFinish={handleComparisonFinish}
+    />
+  {:else if stage === STAGES.RESULTS}
     <Comparison
       selected={values.filter(v => selected.includes(v.name))}
       onFinish={handleComparisonFinish}
     />
   {/if}
+  <FAQ />
 </main>
 
 <style>

@@ -1,93 +1,81 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { comparisonStore, resetComparison } from './comparisonStore';
+  import { TOP_VALUES_COUNT } from './constants';
   import TopValues from './TopValues.svelte';
+  import { getPairs } from './utils';
   import type { IValue } from './values';
   import { valueGroups } from './values';
 
   export let selected: IValue[] = [];
   export let onFinish: (scores: Record<string, number>) => void;
 
-  // Generate all unique pairs
-  function getPairs(arr: IValue[]) {
-    const pairs: [IValue, IValue][] = [];
-    for (let i = 0; i < arr.length; i++) {
-      for (let j = i + 1; j < arr.length; j++) {
-        pairs.push([arr[i], arr[j]]);
-      }
-    }
-    return pairs;
-  }
-
-  const STORAGE_KEY = 'comparison-state-v1';
-
-  let pairs = getPairs(selected);
+  let pairs: [IValue, IValue][] = [];
   let scores: Record<string, number> = {};
-  selected.forEach(v => (scores[v.name] = 0));
   let current = 0;
   let lastWinner: string | null = null;
 
+  function initializeFromStore(selected: IValue[]) {
+    comparisonStore.subscribe((state) => {
+      if (state && state.selected && JSON.stringify(state.selected) === JSON.stringify(selected.map(v => v.name))) {
+        // Restore from store
+        scores = { ...scores, ...state.scores };
+        current = state.current;
+        lastWinner = state.lastWinner;
+        // Rebuild pairs from names
+        const nameToValue = Object.fromEntries(selected.map(v => [v.name, v]));
+        pairs = state.pairs.map(([a, b]) => [nameToValue[a], nameToValue[b]]);
+      } else {
+        // Fresh start
+        pairs = getPairs(selected);
+        scores = {};
+        selected.forEach(v => (scores[v.name] = 0));
+        current = 0;
+        lastWinner = null;
+      }
+    });
+  }
+
+  onMount(() => {
+    initializeFromStore(selected);
+  });
+
   function saveState() {
-    const state = {
+    comparisonStore.set({
       scores,
       current,
       pairs: pairs.map(pair => [pair[0].name, pair[1].name]),
       selected: selected.map(v => v.name),
       lastWinner
-    };
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    });
   }
-
-  function loadState() {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return false;
-    try {
-      const state = JSON.parse(raw);
-      if (!state.selected || !state.pairs) return false;
-      // Only restore if selected matches
-      if (JSON.stringify(state.selected) !== JSON.stringify(selected.map(v => v.name))) return false;
-      scores = { ...scores, ...state.scores };
-      current = state.current;
-      lastWinner = state.lastWinner;
-      // Rebuild pairs from names
-      const nameToValue = Object.fromEntries(selected.map(v => [v.name, v]));
-      pairs = state.pairs.map(([a, b]: [string, string]) => [nameToValue[a], nameToValue[b]]);
-      return true;
-    } catch {
-      return false;
-    }
-  }
-
-  onMount(() => {
-    loadState();
-  });
 
   function pick(winner: IValue, loser: IValue) {
     scores[winner.name]++;
     lastWinner = winner.name;
     current++;
-    // Reorder the remaining pairs so that the winner is always first in the next pair(s) where possible
-    // Priority: next pair should be winner vs the next unresolved value, then continue as before
-    // Only reorder pairs after the current one
+    // Always show the winner in the next pair if possible
+    // Find the next pair where winner is present and move it to the next position
     let nextIdx = current;
-    // Find the next pair where winner is present and is not first, and swap it to be next
+    let found = false;
     for (let i = current; i < pairs.length; i++) {
       const [a, b] = pairs[i];
-      if (a.name !== winner.name && b.name === winner.name) {
-        // Swap winner to first position in this pair
-        pairs[i] = [winner, a];
-      }
-      // Move the next pair with winner to the next position if not already there
-      if (i === nextIdx && pairs[i][0].name !== winner.name && pairs[i][1].name === winner.name) {
-        // Swap with nextIdx
-        const temp = pairs[nextIdx];
-        pairs[nextIdx] = pairs[i];
-        pairs[i] = temp;
+      if (a.name === winner.name || b.name === winner.name) {
+        // Place winner as first in the pair
+        pairs[i] = [winner, a.name === winner.name ? b : a];
+        // Move this pair to nextIdx
+        if (i !== nextIdx) {
+          const temp = pairs[nextIdx];
+          pairs[nextIdx] = pairs[i];
+          pairs[i] = temp;
+        }
+        found = true;
         break;
       }
     }
     saveState();
     if (current >= pairs.length) {
-      localStorage.removeItem(STORAGE_KEY);
+      resetComparison();
       onFinish(scores);
     }
   }
@@ -108,11 +96,11 @@
 {:else}
   <div class="comparison-results">
     <h2>Comparison Complete</h2>
-    <!-- Show top 5 values as cards -->
+    <!-- Show top values as cards -->
     <TopValues
       topValues={Object.entries(scores)
         .sort((a, b) => b[1] - a[1])
-        .slice(0, 5)
+        .slice(0, TOP_VALUES_COUNT)
         .map(([name]) => selected.find(v => v.name === name))
         .filter(Boolean)}
       valueGroups={valueGroups}

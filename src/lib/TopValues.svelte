@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { COMPARISON_STATE_KEY, SELECTION_STATE_KEY } from './constants';
   import type { IValue, IValueGroup } from './values';
   export let topValues: IValue[] = [];
   export let valueGroups: Record<string, IValueGroup> = {};
@@ -6,6 +7,13 @@
   // Inline SVG background for each card
   function getSvgBg(group: IValueGroup) {
     return group?.iconSvg ? `url('data:image/svg+xml;utf8,${encodeURIComponent(group.iconSvg)}')` : 'none';
+  }
+
+  function resetAll() {
+    // Remove all localStorage keys related to the app
+    localStorage.removeItem(COMPARISON_STATE_KEY);
+    localStorage.removeItem(SELECTION_STATE_KEY);
+    window.location.reload();
   }
 </script>
 
@@ -26,6 +34,9 @@
       </div>
     {/each}
   </div>
+  <button class="reset-btn" type="button" on:click={resetAll}>
+    Start Over
+  </button>
 </div>
 
 <style>
@@ -94,5 +105,19 @@
 }
 .dangers {
   color: #ad1457;
+}
+.reset-btn {
+  margin-top: 2em;
+  padding: 0.7em 1.5em;
+  font-size: 1em;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.reset-btn:hover {
+  background-color: #0056b3;
 }
 </style>

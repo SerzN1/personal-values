@@ -1,5 +1,6 @@
 <script lang="ts">
   import ValueCard from './ValueCard.svelte';
+  import { REQUIRED_SELECTIONS } from './constants';
   import type { IValue, IValueGroup } from './values';
   export let values: IValue[] = [];
   export let valueGroups: Record<string, IValueGroup> = {};
@@ -11,7 +12,7 @@
 
   let localSelected = [...selected];
   $: selectionCount = localSelected.length;
-  $: canProceed = selectionCount >= 5;
+  $: canProceed = selectionCount >= REQUIRED_SELECTIONS;
 
   function toggleValue(name: string) {
     if (localSelected.includes(name)) {
@@ -37,7 +38,7 @@
 
 <section class="value-selection">
   <h2>Select Your Values</h2>
-  <p>Select at least 10 values that resonate with you.</p>
+  <p>Select at least {REQUIRED_SELECTIONS} values that resonate with you.</p>
   {#if error}
     <p class="error">{error}</p>
   {/if}
