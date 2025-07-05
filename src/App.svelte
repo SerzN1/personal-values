@@ -2,7 +2,7 @@
   import svelteLogo from './assets/svelte.svg';
   import FAQ from './lib/FAQ.svelte';
   import { isSelectionValid, resetSelection, selectedValues } from './lib/selectionStore';
-  import { values } from './lib/values';
+  import { valueGroups, values } from './lib/values';
   import viteLogo from '/vite.svg';
   let started = false;
   let error = '';
@@ -73,11 +73,30 @@
       {/if}
       <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
         {#each values as value}
-          <button type="button" style="border: 1px solid #ccc; border-radius: 4px; padding: 1rem; width: 220px; background: {selected.includes(value.name) ? '#e0ffe0' : 'rgba(255, 255, 255, 0.8)'}; cursor: pointer;" on:click={() => toggleValue(value.name)}>
-            <img src={value.image} alt={value.name} style="width: 48px; height: 48px; object-fit: contain;" />
+          {@const group = valueGroups[value.group]}
+          {@const svgBg = group?.iconSvg ? `url('data:image/svg+xml;utf8,${encodeURIComponent(group.iconSvg)}')` : 'none'}
+          <button
+            type="button"
+            style="
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              padding: 1rem;
+              width: 220px;
+              background: ${selected.includes(value.name) ? group?.background || '#e0ffe0' : 'rgba(255, 255, 255, 0.8)'};
+              color: ${group?.color || '#333'};
+              cursor: pointer;
+              background-image: ${svgBg};
+              background-repeat: no-repeat;
+              background-size: 60px 60px;
+              background-position: top right;
+              box-shadow: ${selected.includes(value.name) ? '0 0 0 2px ' + (group?.color || '#333') : 'none'};
+            "
+            on:click={() => toggleValue(value.name)}
+          >
             <h3>{value.name}</h3>
-            <small>({value.synonyms.join(', ')})</small>
-            <p>{value.info}</p>
+            <small>{value.synonyms.join(', ')}</small>
+            <div style="font-size: 0.9em; margin-top: 0.5em;">{group?.label}</div>
+            <div style="font-size: 0.8em; color: #666;">{group?.description}</div>
           </button>
         {/each}
       </div>
