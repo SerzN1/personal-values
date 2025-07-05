@@ -2,11 +2,11 @@
   export let faqs: { q: string; a: string }[] = [
     {
       q: 'What are personal values?',
-      a: 'Personal values are the core beliefs and principles that guide your decisions, actions, and interactions with others.'
+      a: 'Personal values are the guiding principles that influence your behavior, choices, and sense of purpose.'
     },
     {
       q: 'How does knowing your own values help you in daily life?',
-      a: 'Understanding your values helps you make choices that align with your true self, leading to greater satisfaction and clarity.'
+      a: 'Knowing your values helps you make decisions that align with your authentic self, reduce stress, and improve your relationships.'
     },
     {
       q: 'Can personal values change over time?',
