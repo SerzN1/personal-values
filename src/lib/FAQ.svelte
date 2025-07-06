@@ -50,7 +50,7 @@
 
 <style>
   article {
-    margin-bottom: 7rem;
+    margin-top: 7rem;
   }
 
   @media (min-width: 768px) {

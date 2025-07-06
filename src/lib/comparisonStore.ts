@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store';
 import { COMPARISON_STATE_KEY } from './constants';
 
-export interface ComparisonState {
+export interface IComparisonState {
   scores: Record<string, number>;
   current: number;
   pairs: [string, string][];
@@ -9,7 +9,7 @@ export interface ComparisonState {
   lastWinner: string | null;
 }
 
-function loadComparisonState(): ComparisonState | null {
+function loadComparisonState(): IComparisonState | null {
   if (typeof window !== 'undefined') {
     try {
       const saved = localStorage.getItem(COMPARISON_STATE_KEY);
@@ -31,7 +31,7 @@ function loadComparisonState(): ComparisonState | null {
   return null;
 }
 
-export const comparisonStore = writable<ComparisonState | null>(loadComparisonState());
+export const comparisonStore = writable<IComparisonState | null>(loadComparisonState());
 
 comparisonStore.subscribe((val) => {
   if (typeof window !== 'undefined') {

@@ -62,5 +62,5 @@ function getInitialProcessStage() {
     const arr = JSON.parse(selectionRaw);
     if (Array.isArray(arr) && arr.length >= VALUES_SELECTIONS_REQUIRED) return STAGES.SELECTION;
   }
-  return STAGES.SELECTION;
+  return STAGES.START;
 }

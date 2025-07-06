@@ -10,17 +10,8 @@
   import { processStage, resetSelectedValues, selectedValues } from './lib/selectionStore';
   import ValueSelection from './lib/ValueSelection.svelte';
 
-  // Subscribe to store for reactivity
-  let stage: typeof STAGES[keyof typeof STAGES] = STAGES.SELECTION;
-  let selected: string[] = [];
   let comparisonScores: Record<string, number> = {};
   let error = '';
-
-  processStage.subscribe(val => stage = val);
-
-  selectedValues.subscribe((val) => {
-    selected = val;
-  });
 
   function handleSelectionChange(newSelected: string[]) {
     selectedValues.set(newSelected);
@@ -28,7 +19,7 @@
   }
 
   function handleProceed() {
-    if (selected.length < VALUES_SELECTIONS_REQUIRED) {
+    if ($selectedValues.length < VALUES_SELECTIONS_REQUIRED) {
       error = `Please select at least ${VALUES_SELECTIONS_REQUIRED} values to continue.`;
       return;
     }
@@ -54,39 +45,43 @@
   }
 </script>
 
-<Navigation stage={stage} onStart={handleStart} onRestart={handleRestart} selected={selected} />
+<Navigation
+  stage={$processStage}
+  selected={$selectedValues}
+  onStart={handleStart}
+  onRestart={handleRestart}
+/>
+
 <header class="header">
-  <Breadcrumbs stage={stage} />
+  <Breadcrumbs stage={$processStage} />
   <h1 class="header-title">Personal Values Assessment</h1>
   <p class="header-description">
     Discover your core personal values and learn how they shape your decisions, relationships, and overall well-being.
   </p>
-
-  <a href="#start" class="cta" on:click={handleStart}>
-    <h2>Start Assessment</h2>
-    <p>We recommend starting with the interactive tutorial, which will teach you how to use Svelte right here in your browser.</p>
-  </a>
 </header>
 <main>
-  <FAQ />
-  {#if stage === STAGES.START}
-  123
-  {:else if stage === STAGES.SELECTION}
+  {#if $processStage === STAGES.START}
+    <a href="#start" class="cta" on:click|preventDefault={handleStart}>
+      <h2>Start Assessment</h2>
+      <p>Begin your journey of self-awareness — the assessment takes no more than 15 minutes.</p>
+    </a>
+    <FAQ />
+  {:else if $processStage === STAGES.SELECTION}
     <ValueSelection
       values={values}
       valueGroups={valueGroups}
-      selected={selected}
+      selected={$selectedValues}
       onSelectionChange={handleSelectionChange}
       onProceed={handleProceed}
       onRestart={handleRestart}
       error={error}
     />
-  {:else if stage === STAGES.COMPARISON}
+  {:else if $processStage === STAGES.COMPARISON}
     <Comparison
-      selected={values.filter(v => selected.includes(v.name))}
+      selected={values.filter(v => $selectedValues.includes(v.name))}
       onFinish={handleComparisonFinish}
     />
-  {:else if stage === STAGES.RESULTS}
+  {:else if $processStage === STAGES.RESULTS}
     <Result
       scores={comparisonScores}
       onStartOver={handleRestart}
@@ -102,7 +97,7 @@
       margin: 1em -1.6rem;
       padding: 1.6rem;
       display: block;
-      color: var(--sk-fg-accent);
+      /* color: var(--sk-fg-accent); */
   }
 
   .cta:hover {
@@ -111,6 +106,10 @@
       transform: var(--safari-fix);
       -webkit-transform: var(--safari-fix);
       text-decoration: none;
+  }
+
+  .cta:hover h2 {
+    text-decoration: underline;
   }
 
   .cta h2:after {
@@ -126,9 +125,9 @@
   }
 
   @media (min-width: 480px) {
-      .cta {
-          margin: 1em -2.4rem;
-          padding: 2.4rem;
-      }
+    .cta {
+        margin: 1em -2.4rem;
+        padding: 2.4rem;
+    }
   }
 </style>
