@@ -1,0 +1,8 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Personal Values Assessment Logo" role="img">
+  <title>Personal Values Assessment</title>
+  <circle cx="32" cy="32" r="29" fill="#e5e5e6"/>
+  <circle cx="32" cy="32" r="29" stroke="#FF3E00" stroke-width="5" fill="none"/>
+  <polygon points="32,12 38,32 32,28 26,32" fill="#FF3E00"/>
+  <polygon points="32,52 26,32 32,36 38,32" fill="#BF3600"/>
+  <circle cx="32" cy="32" r="6" fill="#FF3E00"/>
+</svg>

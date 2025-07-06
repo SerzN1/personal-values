@@ -54,7 +54,7 @@
       />
     {/each}
   </div>
-  <p class="selected-count">Selected: {selectionCount} / {values.length}</p>
+  <p class="selected-count">Selected: {selectionCount} / {VALUES_SELECTIONS_REQUIRED}</p>
   <button class="continue-btn" on:click={proceed} disabled={!canProceed}>
     Continue
   </button>

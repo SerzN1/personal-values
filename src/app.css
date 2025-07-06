@@ -1,118 +1,4 @@
 :root {
-  --sk-bg-1: #f8f9fa;
-  --sk-bg-3: #23272f;
-  --sk-nav-height: 6rem;
-  --sk-secondary-nav-height: 5rem;
-  --sk-page-padding-top: 6rem;
-  --sk-page-padding-bottom: 8rem;
-  --sk-page-padding-side: 1.6rem;
-  --sk-thick-border-width: .3rem;
-  --sk-border-radius: .4rem;
-  --sk-border-radius-inner: .2rem;
-  --sk-page-content-width: 76rem;
-  --sk-banner-height: 0px;
-  --sk-pane-controls-height: 4.2rem;
-
-  --sk-nav-height: 60px;
-  --sk-page-padding-side: 1rem;
-  --sk-page-padding-top: 8rem;
-  --sk-page-padding-side: 4.8rem;
-  --sk-secondary-nav-height: 6rem;
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.75), (min-resolution: 1.75dppx) {
-  :root {
-      --sk-font-family-body: "EB Garamond", Georgia, serif;
-      --sk-font-size-body: 2.2rem;
-      --sk-font-size-body-small: 2rem;
-  }
-}
-
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-.card {
-  padding: 2em;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-
-
-
-
-:root {
     --lightningcss-light: initial;
     --lightningcss-dark: ;
     color-scheme: light;
@@ -201,7 +87,7 @@ button:focus-visible {
 
 :root {
     --sk-font-family-ui: "Fira Sans",-apple-system,sans-serif;
-    --sk-font-family-body: Georgia,serif;
+    --sk-font-family-body: serif;
     --sk-font-family-heading: "DM Serif Display",Georgia,serif;
     --sk-font-family-mono: "Fira Mono",monospace;
     --sk-font-size-h1: 3.6rem;
@@ -255,7 +141,8 @@ button:focus-visible {
 }
 
 :root {
-    --safari-fix: translate3d(0,0,.01)
+    --safari-fix: translate3d(0,0,.01);
+    --quint-out: cubic-bezier(.23,1,.32,1)
 }
 
 html {
@@ -268,15 +155,14 @@ html {
 
 html,body {
     width: 100%;
-    height: 100%
+    /* height: 100% */
 }
 
-#app {
-  height: 100% ;
-}
-
-:root {
-    --quint-out: cubic-bezier(.23,1,.32,1)
+.page {
+  padding: var(--sk-page-padding-top) var(--sk-page-padding-side) var(--sk-page-padding-bottom);
+  max-width: var(--sk-page-content-width);
+  height: 100%;
+  margin: 0 auto;
 }
 
 body {
@@ -304,16 +190,16 @@ body {
 
 p,ul,ol {
     font: var(--sk-font-body);
-    margin: .5lh 0
+    margin: .5lh 0;
 }
-
+/*
 :is(p,ul,ol):first-child {
     margin-top: 0
 }
 
 :is(p,ul,ol):last-child {
     margin-bottom: 0
-}
+} */
 
 a {
     cursor: pointer;
@@ -342,6 +228,10 @@ h1,h2,h3 {
     text-wrap: balance;
     color: var(--sk-fg-1);
     position: relative
+}
+
+p {
+  margin: .5lh 0;
 }
 
 strong {
@@ -448,7 +338,7 @@ table :where(code,span) {
     overflow: hidden
 }
 
-:where(.token.comment.wrapped) {
+/* :where(.token.comment.wrapped) {
     white-space: pre-wrap;
     padding-left: calc(var(--indent) + 2ch);
     text-indent: calc(-1*var(--indent) - 2ch);
@@ -488,7 +378,7 @@ table :where(code,span) {
 
 .ts-block-property ul:last-child {
     margin-bottom: 0
-}
+} */
 
 :root {
     --sk-raised-border: var(--sk-border);
@@ -611,15 +501,15 @@ button:where(.tooltip,.tooltip-left)[aria-label]:where(:hover,:focus).tooltip-le
     translate: calc(2rem - 100%)
 }
 
-svelte-split-pane-divider {
+/* svelte-split-pane-divider {
     z-index: 2
 }
 
 svelte-split-pane-divider:after {
     background-color: var(--sk-border)!important
-}
+} */
 
-.secondary-nav-dropdown {
+/* .secondary-nav-dropdown {
     max-width: calc(100vw - 2*var(--sk-page-padding-side) - 2rem);
     font: var(--sk-font-ui-medium);
     width: 30rem;
@@ -651,4 +541,4 @@ svelte-split-pane-divider:after {
     top: .3rem;
     left: -2rem;
     rotate: -90deg
-}
+} */

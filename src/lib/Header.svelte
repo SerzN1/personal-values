@@ -53,35 +53,7 @@
 </nav>
 
 <style>
-  :root {
-    --sk-bg-1: #f8f9fa;
-    --sk-bg-3: #23272f;
-    --sk-nav-height: 6rem;
-    --sk-secondary-nav-height: 5rem;
-    --sk-page-padding-top: 6rem;
-    --sk-page-padding-bottom: 8rem;
-    --sk-page-padding-side: 1.6rem;
-    --sk-thick-border-width: .3rem;
-    --sk-border-radius: .4rem;
-    --sk-border-radius-inner: .2rem;
-    --sk-page-content-width: 76rem;
-    --sk-banner-height: 0px;
-    --sk-pane-controls-height: 4.2rem;
-
-    --sk-nav-height: 60px;
-    --sk-page-padding-side: 1rem;
-    --sk-page-padding-top: 8rem;
-    --sk-page-padding-side: 4.8rem;
-    --sk-secondary-nav-height: 6rem;
-  }
-
-  @media (-webkit-min-device-pixel-ratio: 1.75), (min-resolution: 1.75dppx) {
-    :root {
-        --sk-font-family-body: "EB Garamond", Georgia, serif;
-        --sk-font-size-body: 2.2rem;
-        --sk-font-size-body-small: 2rem;
-    }
-  }
+ 
 
   .header {
       position: fixed;
@@ -107,6 +79,14 @@
   .header-logo {
     display: flex;
     align-items: center;
+  }
+
+  .header-title {
+    color: inherit;
+    font: var(--sk-font-ui-medium);
+    align-items: center;
+    margin-left: .4em;
+    display: flex;
   }
 
   .logo {
