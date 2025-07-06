@@ -1,19 +1,20 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg';
+
   import Comparison from './lib/Comparison.svelte';
-  import { REQUIRED_SELECTIONS, STAGES } from './lib/constants';
+  import { resetComparison } from './lib/comparisonStore';
+  import { STAGES, VALUES_SELECTIONS_REQUIRED } from './lib/constants';
+  import { valueGroups, values } from './lib/data';
   import FAQ from './lib/FAQ.svelte';
-  import { processStage, resetSelection, selectedValues } from './lib/selectionStore';
-  import { valueGroups, values } from './lib/values';
+  import Header from './lib/Header.svelte';
+  import Result from './lib/Result.svelte';
+  import { processStage, resetSelectedValues, selectedValues } from './lib/selectionStore';
   import ValueSelection from './lib/ValueSelection.svelte';
-  import viteLogo from '/vite.svg';
 
   // Subscribe to store for reactivity
-  let selected: string[] = [];
-  let error = '';
-  let showComparison = false;
-  let comparisonScores: Record<string, number> = {};
   let stage: typeof STAGES[keyof typeof STAGES] = STAGES.SELECTION;
+  let selected: string[] = [];
+  let comparisonScores: Record<string, number> = {};
+  let error = '';
 
   processStage.subscribe(val => stage = val);
 
@@ -21,19 +22,14 @@
     selected = val;
   });
 
-  function startAssessment() {
-    processStage.set('selection');
-    error = '';
-  }
-
   function handleSelectionChange(newSelected: string[]) {
     selectedValues.set(newSelected);
     error = '';
   }
 
   function handleProceed() {
-    if (selected.length < REQUIRED_SELECTIONS) {
-      error = `Please select at least ${REQUIRED_SELECTIONS} values to continue.`;
+    if (selected.length < VALUES_SELECTIONS_REQUIRED) {
+      error = `Please select at least ${VALUES_SELECTIONS_REQUIRED} values to continue.`;
       return;
     }
     processStage.set(STAGES.COMPARISON);
@@ -44,28 +40,32 @@
     processStage.set(STAGES.RESULTS);
   }
 
-  function handleRestart() {
-    resetSelection();
+  function handleStart() {
     processStage.set(STAGES.SELECTION);
+  }
+
+  function handleRestart() {
+    resetSelectedValues();
+    resetComparison();
+
+    processStage.set(STAGES.START);
     error = '';
-    showComparison = false;
+    window.location.reload();
   }
 </script>
 
-<main>
-  <div>
-    <a href="https://vite.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
+<Header stage={stage} onStart={handleStart} onRestart={handleRestart} selected={selected} />
+<main class="page">
   <h1>Personal Values Assessment</h1>
-  <p>
-    Discover your core personal values and learn how they shape your decisions, relationships, and overall well-being.
-  </p>
-  {#if stage === STAGES.SELECTION}
+  {#if stage === STAGES.START}
+    <p>
+      Discover your core personal values and learn how they shape your decisions, relationships, and overall well-being.
+    </p>
+    <button class="start-btn" on:click={handleStart}>
+      Start Assessment
+    </button>
+    <FAQ />
+  {:else if stage === STAGES.SELECTION}
     <ValueSelection
       values={values}
       valueGroups={valueGroups}
@@ -81,25 +81,17 @@
       onFinish={handleComparisonFinish}
     />
   {:else if stage === STAGES.RESULTS}
-    <Comparison
-      selected={values.filter(v => selected.includes(v.name))}
-      onFinish={handleComparisonFinish}
+    <Result
+      scores={comparisonScores}
+      onStartOver={handleRestart}
     />
   {/if}
-  <FAQ />
 </main>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+
+  .page {
+    padding: var(--sk-page-padding-top) var(--sk-page-padding-side) var(--sk-page-padding-bottom);
   }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
+
 </style>

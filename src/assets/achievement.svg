@@ -1,0 +1,10 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Achievement Icon" role="img">
+  <title>Achievement Icon</title>
+  <!-- Trophy cup -->
+  <path d="M20 20 H44 V36 C44 44 36 44 32 44 C28 44 20 44 20 36 V20 Z" stroke="currentColor" stroke-width="5" fill="none" stroke-linejoin="round"/>
+  <!-- Handles -->
+  <line x1="20" y1="24" x2="14" y2="20" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+  <line x1="44" y1="24" x2="50" y2="20" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+  <!-- Base -->
+  <rect x="26" y="44" width="12" height="6" fill="currentColor" rx="1" ry="1"/>
+</svg>

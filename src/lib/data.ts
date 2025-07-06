@@ -1,178 +1,107 @@
-// TypeScript interface and sample data for personal values
-
-export interface IValue {
-  name: string;
-  synonyms: string[];
-  info: string;
-  strengths: string;
-  dangers: string;
-  group: string;
-}
-
-export interface IValueGroup {
-  label: string;
-  description: string;
-  iconSvg: string; // SVG markup for background
-  color: string; // text color
-  background: string; // background color
-}
+import achievementIcon from '../assets/achievement.svg';
+import benevolenceIcon from '../assets/benevolence.svg';
+import conformityIcon from '../assets/conformity.svg';
+import hedonismIcon from '../assets/hedonism.svg';
+import powerIcon from '../assets/power.svg';
+import securityIcon from '../assets/security.svg';
+import selfDirectionIcon from '../assets/self-direction.svg';
+import stimulationIcon from '../assets/stimulation.svg';
+import traditionIcon from '../assets/tradition.svg';
+import universalizmIcon from '../assets/universalizm.svg';
+import type { IValue, IValueGroup } from './types';
 
 export const valueGroups: Record<string, IValueGroup> = {
   'self-direction': {
     label: 'Self-Direction',
     description: 'Independent thought and action; choosing, creating, exploring.',
-    iconSvg: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" stroke="#1a237e" stroke-width="4" fill="#e3e6fa"/><polygon points="24,10 34,38 24,32 14,38" fill="#1a237e"/></svg>`,
+    iconSvg: selfDirectionIcon,
     color: '#1a237e',
     background: '#e3e6fa',
+    "mainColor": "#3F51B5",
+    "backgroundColor": "rgba(63, 81, 181, 0.08)"
   },
   universalism: {
     label: 'Universalism',
     description: 'Understanding, appreciation, tolerance, and protection for the welfare of all people and for nature.',
-    iconSvg: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" stroke="#00695c" stroke-width="4" fill="#e0f2f1"/><ellipse cx="24" cy="24" rx="16" ry="8" fill="#00695c" opacity="0.2"/><ellipse cx="24" cy="24" rx="8" ry="16" fill="#00695c" opacity="0.2"/></svg>`,
+    iconSvg: universalizmIcon,
     color: '#00695c',
     background: '#e0f2f1',
+    "mainColor": "#00BFA5",
+    "backgroundColor": "rgba(0, 191, 165, 0.08)"
   },
   stimulation: {
     label: 'Stimulation',
     description: 'Excitement, novelty, and challenge in life.',
-    iconSvg: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="20,4 44,24 28,24 32,44 4,24 20,24" fill="#ad1457"/></svg>`,
+    iconSvg: stimulationIcon,
     color: '#ad1457',
     background: '#fce4ec',
+    "mainColor": "#FF6D00",
+    "backgroundColor": "rgba(255, 109, 0, 0.08)"
   },
   hedonism: {
     label: 'Hedonism',
     description: 'Pleasure and sensuous gratification for oneself.',
-    iconSvg: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="#fff3e0" stroke="#ff6f00" stroke-width="4"/><path d="M12 36 Q24 12 36 36" stroke="#ff6f00" stroke-width="4" fill="none"/><circle cx="24" cy="24" r="4" fill="#ff6f00"/></svg>`,
+    iconSvg: hedonismIcon,
     color: '#ff6f00',
     background: '#fff3e0',
+    "mainColor": "#EC407A",
+    "backgroundColor": "rgba(236, 64, 122, 0.08)"
   },
   achievement: {
     label: 'Achievement',
     description: 'Personal success through demonstrating competence according to social standards.',
-    iconSvg: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="8" width="24" height="24" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="4"/><circle cx="24" cy="20" r="6" fill="#2e7d32"/></svg>`,
+    iconSvg: achievementIcon,
     color: '#2e7d32',
     background: '#e8f5e9',
+    "mainColor": "#FFC107",
+    "backgroundColor": "rgba(255, 193, 7, 0.08)"
   },
   power: {
     label: 'Power',
     description: 'Social status and prestige, control or dominance over people and resources.',
-    iconSvg: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="24" width="32" height="16" rx="4" fill="#efebe9" stroke="#6d4c41" stroke-width="4"/><polygon points="12,24 24,8 36,24" fill="#6d4c41"/></svg>`,
+    iconSvg: powerIcon,
     color: '#6d4c41',
     background: '#efebe9',
+    "mainColor": "#E53935",
+    "backgroundColor": "rgba(229, 57, 53, 0.08)"
   },
   security: {
     label: 'Security',
     description: 'Safety, harmony, and stability of society, of relationships, and of self.',
-    iconSvg: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="24" cy="32" rx="16" ry="12" fill="#e1f5fe" stroke="#0277bd" stroke-width="4"/><rect x="12" y="12" width="24" height="16" rx="8" fill="#0277bd" opacity="0.2"/></svg>`,
+    iconSvg: securityIcon,
     color: '#0277bd',
     background: '#e1f5fe',
+    "mainColor": "#607D8B",
+    "backgroundColor": "rgba(96, 125, 139, 0.08)"
   },
   conformity: {
     label: 'Conformity',
     description: 'Restraint of actions, inclinations, and impulses likely to upset or harm others and violate social expectations or norms.',
-    iconSvg: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="20" width="32" height="8" rx="4" fill="#eceff1" stroke="#37474f" stroke-width="4"/></svg>`,
+    iconSvg: conformityIcon,
     color: '#37474f',
     background: '#eceff1',
+    "mainColor": "#5C6BC0",
+    "backgroundColor": "rgba(92, 107, 192, 0.08)"
   },
   tradition: {
     label: 'Tradition',
     description: 'Respect, commitment, and acceptance of the customs and ideas that traditional culture or religion provide.',
-    iconSvg: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="20" width="24" height="16" rx="8" fill="#fbe9e7" stroke="#8d6e63" stroke-width="4"/><rect x="20" y="8" width="8" height="12" rx="4" fill="#8d6e63"/></svg>`,
+    iconSvg: traditionIcon,
     color: '#8d6e63',
     background: '#fbe9e7',
+    "mainColor": "#8D6E63",
+    "backgroundColor": "rgba(141, 110, 99, 0.08)"
   },
   benevolence: {
     label: 'Benevolence',
     description: 'Preserving and enhancing the welfare of those with whom one is in frequent personal contact.',
-    iconSvg: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="24" cy="32" rx="16" ry="10" fill="#e8f5e9" stroke="#388e3c" stroke-width="4"/><rect x="16" y="16" width="16" height="12" rx="6" fill="#388e3c" opacity="0.2"/></svg>`,
+    iconSvg: benevolenceIcon,
     color: '#388e3c',
     background: '#e8f5e9',
+    "mainColor": "#D84315",
+    "backgroundColor": "rgba(216, 67, 21, 0.08)"
   },
 };
-
-/**
-
-Co-operative
-Autonomy
-Perfection
-Clarity
-Sociable
-Personal authority
-Lively
-Efficiency
-Trustworthy
-Independence
-Fun/Humour
-Simplicity
-Loyal
-Freedom
-Choices
-Close
-Individuality
-Flexibility
-Warm
-Unpredictable
-Profit driven
-Family
-Conformity
-Financial reward
-Affection
-Originality
-Pay & bonuses
-Friendships
-Ingenuity
-Money
-Camaraderie
-Unconstrained
-Guide
-Love
-Risk
-Govern
-Responsibility
-Adventure
-Influence
-Tolerant
-Experiment
-Participation
-Caring
-Dynamic
-Learning
-Helping
-Competitive
-Intellectually Challenging
-Nurturing?
-Energetic
-Stimulating
-Empathise
-Innovation
-Respect
-Generous
-Expert
-Reward
-Sharing
-Professional
-Praise
-Solidarity
-Novelty
-Recognition
-Supporting
-Brave
-Appreciation
-Compassion
-Proficiency
-Settled
-Superiority
-Predictable
-People Oriented
-Social
-Competence
-Safe
-Open
-Structure
-Secure Orderly
-Organisation
-
- */
 
 export const values: IValue[] = [
   {

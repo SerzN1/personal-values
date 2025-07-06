@@ -1,0 +1,7 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Self-Direction Icon" role="img">
+  <title>Self-Direction Icon</title>
+  <!-- Head -->
+  <circle cx="32" cy="20" r="6" fill="currentColor"/>
+  <!-- Body / keyhole -->
+  <path d="M26 32 C26 26, 38 26, 38 32 C38 36, 32 38, 32 52" stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg>

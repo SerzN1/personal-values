@@ -1,4 +1,4 @@
-import type { IValue } from './values';
+import type { IValue } from './types';
 
 // Generate all unique pairs
 export function getPairs(arr: IValue[]) {

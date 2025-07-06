@@ -1,12 +1,10 @@
 import { writable } from 'svelte/store';
-import { REQUIRED_SELECTIONS, SELECTION_STATE_KEY, STAGES } from './constants';
+import { SELECTION_STATE_KEY, STAGES, VALUES_SELECTIONS_REQUIRED } from './constants';
 
-export const STORAGE_KEY = SELECTION_STATE_KEY;
-
-function loadSelection(): string[] {
+function loadSelectedValues(): string[] {
   if (typeof window !== 'undefined') {
     try {
-      const saved = localStorage.getItem(STORAGE_KEY);
+      const saved = localStorage.getItem(SELECTION_STATE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.every(item => typeof item === 'string')) {
@@ -20,23 +18,23 @@ function loadSelection(): string[] {
   return [];
 }
 
-export const selectedValues = writable<string[]>(loadSelection());
+export const selectedValues = writable<string[]>(loadSelectedValues());
 
 selectedValues.subscribe((val) => {
   if (typeof window !== 'undefined') {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(val));
+      localStorage.setItem(SELECTION_STATE_KEY, JSON.stringify(val));
     } catch (e) {
       console.error('Failed to save selection to localStorage:', e);
     }
   }
 });
 
-export function resetSelection() {
+export function resetSelectedValues() {
   selectedValues.set([]);
   if (typeof window !== 'undefined') {
     try {
-      localStorage.removeItem(STORAGE_KEY);
+      localStorage.removeItem(SELECTION_STATE_KEY);
     } catch (e) {
       console.error('Failed to remove selection from localStorage:', e);
     }
@@ -48,9 +46,9 @@ export function isSelectionValid(selected: string[], min = 10): boolean {
 }
 
 // Add a store for the current stage of the process
-export const processStage = writable<typeof STAGES[keyof typeof STAGES]>(getInitialStage());
+export const processStage = writable<typeof STAGES[keyof typeof STAGES]>(getInitialProcessStage());
 
-function getInitialStage() {
+function getInitialProcessStage() {
   const comparisonRaw = typeof window !== 'undefined' ? localStorage.getItem('comparison-state-v1') : null;
   if (comparisonRaw) {
     const state = JSON.parse(comparisonRaw);
@@ -62,7 +60,7 @@ function getInitialStage() {
   const selectionRaw = typeof window !== 'undefined' ? localStorage.getItem('selection-v1') : null;
   if (selectionRaw) {
     const arr = JSON.parse(selectionRaw);
-    if (Array.isArray(arr) && arr.length >= REQUIRED_SELECTIONS) return STAGES.SELECTION;
+    if (Array.isArray(arr) && arr.length >= VALUES_SELECTIONS_REQUIRED) return STAGES.SELECTION;
   }
   return STAGES.SELECTION;
 }

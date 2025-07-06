@@ -1,0 +1,17 @@
+<svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Benevolence Icon" role="img">
+  <title>Benevolence Icon</title>
+  <!-- Heart shape -->
+  <path
+    d="M16.1111 3
+       C19.6 3, 22 6.4, 22 9.5
+       C22 15.8, 12.1778 21, 12 21
+       C11.8 21, 2 15.8, 2 9.5
+       C2 6.4, 4.4 3, 7.9 3
+       C9.9 3, 11.2 4, 12 4.9
+       C12.8 4, 14.1 3, 16.1 3 Z"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Left hand simplified -->
+  <path d="M2 15 Q5 12 7 14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Right hand simplified -->
+  <path d="M22 15 Q19 12 17 14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

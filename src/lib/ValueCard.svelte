@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { IValue, IValueGroup } from './values';
+  import type { IValue, IValueGroup } from './types';
   export let value: IValue;
   export let group: IValueGroup;
   export let isSelected: boolean;

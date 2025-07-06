@@ -1,11 +1,11 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { comparisonStore, resetComparison } from './comparisonStore';
-  import { TOP_VALUES_COUNT } from './constants';
+  import { VALUES_RESULT_COUNT } from './constants';
+  import { valueGroups } from './data';
   import TopValues from './TopValues.svelte';
+  import type { IValue } from './types';
   import { getPairs } from './utils';
-  import type { IValue } from './values';
-  import { valueGroups } from './values';
 
   export let selected: IValue[] = [];
   export let onFinish: (scores: Record<string, number>) => void;
@@ -100,7 +100,7 @@
     <TopValues
       topValues={Object.entries(scores)
         .sort((a, b) => b[1] - a[1])
-        .slice(0, TOP_VALUES_COUNT)
+        .slice(0, VALUES_RESULT_COUNT)
         .map(([name]) => selected.find(v => v.name === name))
         .filter(Boolean)}
       valueGroups={valueGroups}
