@@ -11,16 +11,13 @@
   import ValueSelection from './lib/ValueSelection.svelte';
 
   let comparisonScores: Record<string, number> = {};
-  let error = '';
 
   function handleSelectionChange(newSelected: string[]) {
     selectedValues.set(newSelected);
-    error = '';
   }
 
   function handleProceed() {
     if ($selectedValues.length < VALUES_SELECTIONS_REQUIRED) {
-      error = `Please select at least ${VALUES_SELECTIONS_REQUIRED} values to continue.`;
       return;
     }
     processStage.set(STAGES.COMPARISON);
@@ -40,7 +37,6 @@
     resetComparison();
 
     processStage.set(STAGES.START);
-    error = '';
     window.location.reload();
   }
 </script>
@@ -59,6 +55,7 @@
     Discover your core personal values and learn how they shape your decisions, relationships, and overall well-being.
   </p>
 </header>
+
 <main>
   {#if $processStage === STAGES.START}
     <a href="#start" class="cta" on:click|preventDefault={handleStart}>
@@ -73,8 +70,6 @@
       selected={$selectedValues}
       onSelectionChange={handleSelectionChange}
       onProceed={handleProceed}
-      onRestart={handleRestart}
-      error={error}
     />
   {:else if $processStage === STAGES.COMPARISON}
     <Comparison
@@ -113,7 +108,6 @@
   }
 
   .cta h2:after {
-      /* .options.svelte-pf4pqp a:where(.svelte-pf4pqp) h2:where(.svelte-pf4pqp):after { */
     content: "";
     background: var(--sk-fg-accent);
     width: 3rem;

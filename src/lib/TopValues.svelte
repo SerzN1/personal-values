@@ -2,19 +2,14 @@
   import type { IValue, IValueGroup } from './types';
   export let topValues: IValue[] = [];
   export let valueGroups: Record<string, IValueGroup> = {};
-
-  // Inline SVG background for each card
-  function getSvgBg(group: IValueGroup) {
-    return group?.iconSvg ? `url('data:image/svg+xml;utf8,${encodeURIComponent(group.iconSvg)}')` : 'none';
-  }
 </script>
 
 <div class="top-values">
-  <h2>Your Top 5 Values</h2>
   <div class="cards">
     {#each topValues as value, i}
       {@const group = valueGroups[value.group]}
-      <div class="result-card group-{value.group}" style="background-image: {getSvgBg(group)};">
+      <div class="result-card group-{value.group}"
+           style="background-image: url('{group.iconSvg}')">
         <div class="rank-badge">#{i + 1}</div>
         <h3>{value.name}</h3>
         <small>{value.synonyms.join(', ')}</small>

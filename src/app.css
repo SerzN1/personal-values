@@ -115,8 +115,8 @@
 @media (-webkit-min-device-pixel-ratio: 1.75),(min-resolution:1.75dppx) {
     :root {
         --sk-font-family-body:"EB Garamond",Georgia,serif;
-        --sk-font-size-body: 2.2rem;
-        --sk-font-size-body-small: 2rem
+        --sk-font-size-body: 2.1rem;
+        --sk-font-size-body-small: 1.9rem
     }
 }
 
@@ -158,13 +158,6 @@ html,body {
     /* height: 100% */
 }
 
-.page {
-  padding: var(--sk-page-padding-top) var(--sk-page-padding-side) var(--sk-page-padding-bottom);
-  max-width: var(--sk-page-content-width);
-  height: 100%;
-  margin: 0 auto;
-}
-
 body {
     font-family: var(--sk-font-family-body);
     color: var(--sk-fg-2);
@@ -172,7 +165,17 @@ body {
     -moz-tab-size: 2;
     tab-size: 2;
     width: 100%;
-    line-height: 1.5
+    line-height: 1.5;
+    padding-top: var(--sk-banner-height);
+    padding-bottom: 0;
+    position: relative;
+}
+
+@media (min-width: 832px) {
+  body {
+    padding-top: var(--sk-nav-height);
+    padding-bottom: var(--sk-banner-height);
+  }
 }
 
 * {
@@ -326,6 +329,14 @@ table :where(code,span) {
     white-space: pre
 }
 
+.page {
+  padding: var(--sk-page-padding-top) var(--sk-page-padding-side) var(--sk-page-padding-bottom);
+  max-width: var(--sk-page-content-width);
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+
 .visually-hidden {
     clip: rect(0 0 0 0);
     white-space: nowrap;
@@ -449,7 +460,7 @@ button:has(>span.icon) {
     background-size: 2.3rem 2.3rem;
     width: 3.2rem;
     height: 3.2rem;
-    position: relative
+    position: relative;
 }
 
 button>span.icon {

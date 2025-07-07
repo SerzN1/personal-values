@@ -41,10 +41,6 @@ export function resetSelectedValues() {
   }
 }
 
-export function isSelectionValid(selected: string[], min = 10): boolean {
-  return selected.length >= min;
-}
-
 // Add a store for the current stage of the process
 export const processStage = writable<typeof STAGES[keyof typeof STAGES]>(getInitialProcessStage());
 

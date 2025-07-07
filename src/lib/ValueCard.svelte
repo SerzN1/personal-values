@@ -4,15 +4,12 @@
   export let group: IValueGroup;
   export let isSelected: boolean;
   export let onToggle: (name: string) => void;
-
-  // Inline SVG background as a data URL
-  $: svgBg = group?.iconSvg ? `url('data:image/svg+xml;utf8,${encodeURIComponent(group.iconSvg)}')` : 'none';
 </script>
 
 <button
   type="button"
   class="value-card group-{value.group} {isSelected ? 'selected' : ''}"
-  style="background-image: {svgBg};"
+  style="background-image: {group.iconSvg};"
   on:click={() => onToggle(value.name)}
 >
   <h3>{value.name}</h3>

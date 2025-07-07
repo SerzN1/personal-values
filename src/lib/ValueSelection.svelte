@@ -2,50 +2,35 @@
   import ValueCard from './ValueCard.svelte';
   import { VALUES_SELECTIONS_REQUIRED } from './constants';
   import type { IValue, IValueGroup } from './types';
+
   export let values: IValue[] = [];
   export let valueGroups: Record<string, IValueGroup> = {};
   export let selected: string[] = [];
-  export let error: string = '';
   export let onSelectionChange: (selected: string[]) => void;
   export let onProceed: () => void;
-  export let onRestart: () => void;
-
-  let localSelected = [...selected];
-  $: selectionCount = localSelected.length;
-  $: canProceed = selectionCount >= VALUES_SELECTIONS_REQUIRED;
 
   function toggleValue(name: string) {
-    if (localSelected.includes(name)) {
-      localSelected = localSelected.filter(n => n !== name);
+    if (selected.includes(name)) {
+      onSelectionChange(selected.filter(n => n !== name));
     } else {
-      if (localSelected.length >= values.length) return;
-      localSelected = [...localSelected, name];
+      if (selected.length >= values.length) return;
+      onSelectionChange([...selected, name]);
     }
-    onSelectionChange(localSelected);
   }
 
   function proceed() {
-    if (!canProceed) return;
+    if (selected.length < VALUES_SELECTIONS_REQUIRED) return;
     onProceed();
-  }
-
-  function restart() {
-    localSelected = [];
-    onRestart();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
 
 <section class="value-selection">
   <h2>Select Your Values</h2>
   <p>Select at least {VALUES_SELECTIONS_REQUIRED} values that resonate with you.</p>
-  {#if error}
-    <p class="error">{error}</p>
-  {/if}
   <div class="values-list">
     {#each values as value}
       {@const group = valueGroups[value.group]}
-      {@const isSelected = localSelected.includes(value.name)}
+      {@const isSelected = selected.includes(value.name)}
       <ValueCard
         {value}
         {group}
@@ -54,12 +39,8 @@
       />
     {/each}
   </div>
-  <p class="selected-count">Selected: {selectionCount} / {VALUES_SELECTIONS_REQUIRED}</p>
-  <button class="continue-btn" on:click={proceed} disabled={!canProceed}>
+  <button class="continue-btn" on:click={proceed} disabled={selected.length < VALUES_SELECTIONS_REQUIRED}>
     Continue
-  </button>
-  <button class="restart-btn" on:click={restart}>
-    Restart
   </button>
 </section>
 

@@ -18,15 +18,15 @@
   //   document.documentElement.classList.remove('dark');
   // }
 
-  function clickLogo() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  // function clickLogo() {
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // }
 </script>
 
 <nav aria-label="Primary" class="header">
   <div class="header-logo">
     <img src={logo} class="logo" alt="Personal Values Assessment" />
-    <span class="header-title">Personal Values Assessment</span>
+    <span class="header-title">Personal Values<br /> Assessment</span>
   </div>
   <div class="header-data">
     <button class="btn raised" type="button" aria-pressed="false" aria-label="Toggle dark mode"><span class="icon svelte-1e8u0mo"></span></button>
@@ -49,24 +49,34 @@
         Restart
       </button>
     {/if}
+
+    <button class="raised" type="button" aria-pressed="false" aria-label="Toggle dark mode"><span class="icon svelte-1e8u0mo"></span>
+    </button>
   </div>
 </nav>
 
 <style>
- 
-
   .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: var(--sk-bg-3);
-      padding: 0 var(--sk-page-padding-side);
-      height: var(--sk-nav-height);
-      z-index: 101;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--sk-bg-3);
+    padding: 0 var(--sk-page-padding-side);
+    height: var(--sk-nav-height);
+    z-index: 101;
+  }
+  .header:after {
+    content: "";
+    background: linear-gradient(#0000, #0000000d);
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: -4px;
+    left: 0;
   }
   @media (max-width: 831px) {
       .header {
@@ -75,6 +85,14 @@
           transition: transform .2s;
       }
   }
+
+  @media (min-width: 832px) {
+    .header:after {
+        background: linear-gradient(#0000000d, #0000);
+        top: auto;
+        bottom: -4px;
+    }
+}
 
   .header-logo {
     display: flex;
@@ -87,6 +105,8 @@
     align-items: center;
     margin-left: .4em;
     display: flex;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
   }
 
   .logo {

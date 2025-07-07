@@ -1,9 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { comparisonStore, resetComparison } from './comparisonStore';
-  import { VALUES_RESULT_COUNT } from './constants';
-  import { valueGroups } from './data';
-  import TopValues from './TopValues.svelte';
   import type { IValue } from './types';
   import { getPairs } from './utils';
 
@@ -57,7 +54,6 @@
     // Always show the winner in the next pair if possible
     // Find the next pair where winner is present and move it to the next position
     let nextIdx = current;
-    let found = false;
     for (let i = current; i < pairs.length; i++) {
       const [a, b] = pairs[i];
       if (a.name === winner.name || b.name === winner.name) {
@@ -69,7 +65,6 @@
           pairs[nextIdx] = pairs[i];
           pairs[i] = temp;
         }
-        found = true;
         break;
       }
     }
@@ -93,31 +88,10 @@
     </button>
     <p>Pair {current + 1} of {pairs.length}</p>
   </div>
-{:else}
-  <div class="comparison-results">
-    <h2>Comparison Complete</h2>
-    <!-- Show top values as cards -->
-    <TopValues
-      topValues={Object.entries(scores)
-        .sort((a, b) => b[1] - a[1])
-        .slice(0, VALUES_RESULT_COUNT)
-        .map(([name]) => selected.find(v => v.name === name))
-        .filter(Boolean)}
-      valueGroups={valueGroups}
-    />
-    <ul style="margin-top:2em;">
-      {#each Object.entries(scores).sort((a, b) => b[1] - a[1]) as [name, score]}
-        <li><strong>{name}</strong>: {score} points</li>
-      {/each}
-    </ul>
-  </div>
 {/if}
 
 <style>
   .comparison {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-top: 2em;
   }
   .compare-btn {
@@ -131,8 +105,5 @@
   }
   .compare-btn:hover {
     box-shadow: 0 0 0 2px #888;
-  }
-  .comparison-results {
-    margin-top: 2em;
   }
 </style>

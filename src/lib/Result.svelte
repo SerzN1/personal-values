@@ -9,14 +9,17 @@
   const topValuesSorted = Object.entries(scores)
     .sort((a, b) => b[1] - a[1])
     .slice(0, VALUES_RESULT_COUNT)
-    .map(([name]) => values.find(v => v.name === name))
     .filter(Boolean);
+
+  const topValuesData = topValuesSorted.map(([name]) => values.find(v => v.name === name));
+
+  console.log('Top values sorted:', topValuesSorted, topValuesData);
 </script>
 
 <div class="comparison-results">
-  <h2>Comparison Complete</h2>
+  <h2>Your Top 5 Values</h2>
   <TopValues
-    topValues={topValuesSorted}
+    topValues={topValuesData}
     valueGroups={valueGroups}
   />
   <button class="reset-btn" type="button" on:click={onStartOver}>
