@@ -114,16 +114,16 @@
 
 @media (-webkit-min-device-pixel-ratio: 1.75),(min-resolution:1.75dppx) {
     :root {
-        --sk-font-family-body:"EB Garamond",Georgia,serif;
-        --sk-font-size-body: 2.1rem;
-        --sk-font-size-body-small: 1.9rem
+        --sk-font-family-body:"EB Garamond",serif;
+        --sk-font-size-body: 2rem;
+        --sk-font-size-body-small: 1.8rem
     }
 }
 
 :root.font-boring {
     --sk-font-family-body: "Atkinson Hyperlegible",sans-serif;
-    --sk-font-size-body: 1.9rem;
-    --sk-font-size-body-small: 1.7rem
+    --sk-font-size-body: 1.8rem;
+    --sk-font-size-body-small: 1.6rem
 }
 
 :root.font-boring p code {
@@ -194,6 +194,7 @@ body {
 p,ul,ol {
     font: var(--sk-font-body);
     margin: .5lh 0;
+    /* letter-spacing: -0.0025em; */
 }
 /*
 :is(p,ul,ol):first-child {
@@ -303,11 +304,13 @@ input,button {
 button {
     color: currentColor;
     background-color: #0000;
-    border: none
+    border: none;
+    cursor: pointer;
 }
 
 button[disabled] {
-    color: var(--sk-fg-4)
+    color: var(--sk-fg-4);
+    cursor: not-allowed;
 }
 
 a {
@@ -470,11 +473,8 @@ button>span.icon {
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-mask-position: 50%;
     mask-position: 50%;
-    -webkit-mask-size: 2.3rem 2.3rem;
     mask-size: 2.3rem 2.3rem;
-    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat
 }
 
@@ -510,6 +510,12 @@ button:where(.tooltip,.tooltip-left)[aria-label]:where(:hover,:focus):after {
 
 button:where(.tooltip,.tooltip-left)[aria-label]:where(:hover,:focus).tooltip-left:after {
     translate: calc(2rem - 100%)
+}
+
+button.text {
+  font: var(--sk-font-ui-small);
+  height: 3.2rem;
+  padding: 0 1rem;
 }
 
 /* svelte-split-pane-divider {

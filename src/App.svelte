@@ -87,19 +87,20 @@
 <style>
   .cta {
       color: inherit;
-      background-color: var(--sk-bg-1);
+      background-color: var(--sk-bg-2);
+      filter: drop-shadow(1px 2px 4px #0000001a);
       border-radius: var(--sk-border-radius);
       margin: 1em -1.6rem;
       padding: 1.6rem;
       display: block;
+      transition: all .3s ease-in-out;
       /* color: var(--sk-fg-accent); */
   }
 
   .cta:hover {
-      background-color: var(--sk-bg-2);
-      filter: drop-shadow(1px 2px 4px #0000001a);
+      background-color: var(--sk-bg-3);
+      filter: drop-shadow(2px 3px 4px #0000002a);
       transform: var(--safari-fix);
-      -webkit-transform: var(--safari-fix);
       text-decoration: none;
   }
 

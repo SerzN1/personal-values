@@ -6,17 +6,17 @@
   export let onToggle: (name: string) => void;
 </script>
 
-<button
-  type="button"
+<a
   class="value-card group-{value.group} {isSelected ? 'selected' : ''}"
-  style="background-image: {group.iconSvg};"
+  style="background-color: {group.backgroundColor}; border-color: {group.borderColor}; background-image: url('{group.iconSvg}')"
+  href="/"
   on:click={() => onToggle(value.name)}
 >
   <h3>{value.name}</h3>
   <small>{value.synonyms.join(', ')}</small>
   <div class="group-label">{group?.label}</div>
   <div class="group-desc">{group?.description}</div>
-</button>
+</a>
 
 <style>
 .value-card {
