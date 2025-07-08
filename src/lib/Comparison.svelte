@@ -1,7 +1,8 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { comparisonStore, getPairs, resetComparison } from './comparisonStore';
-  import { groupData, valueById } from './data';
+  import Controls from './Controls.svelte';
+  import { valueById, valueTypes } from './data';
   import type { IValue } from './types';
   import ValueCard from './ValueCard.svelte';
 
@@ -12,11 +13,6 @@
   let scores: Record<string, number> = {};
   let current = 0;
   let lastWinnerId: string | null = null;
-
-  // const v1 = pairs[current][0];
-  // const g1 = groupData[v1.id];
-  // const v2 = pairs[current][1];
-  // const g2 = groupData[v2.id];
 
   function initializeFromStore(selected: IValue[]) {
     console.log("1", selected);
@@ -93,7 +89,7 @@
     <div class="comparison">
       <ValueCard
         value={valueById[pairs[current][0]]}
-        group={groupData[pairs[current][0]]}
+        type={valueTypes[valueById[pairs[current][0]].type]}
         onClick={() => pick(pairs[current][0], pairs[current][1])}
       />
 
@@ -103,28 +99,28 @@
 
       <ValueCard
         value={valueById[pairs[current][1]]}
-        group={groupData[pairs[current][1]]}
+        type={valueTypes[valueById[pairs[current][1]].type]}
         onClick={() => pick(pairs[current][1], pairs[current][0])}
       />
     </div>
     <p>Pair {current + 1} of {pairs.length}</p>
   {/if}
-  <div class="controls">
+
+  <Controls>
     {#snippet prev()}
-      <a href="#prev" on:click|preventDefault={() => resetComparison()} title="Reset comparison" aria-label="Reset comparison">Reset</a>
+      <a href="#prev" on:click|preventDefault={() => resetComparison()} title="Reset comparison" aria-label="Reset comparison">Reset Comparison</a>
     {/snippet}
     {#snippet next()}
-      <span title="You need to finish comparison before continuing">Continue</span>
+      <a href="#next" on:click|preventDefault title="You need to finish comparison too see results" class="disabled">See results</a>
     {/snippet}
-  </div>
+  </Controls>
 </main>
 
 <style>
   .comparison {
-    margin-top: 2em;
     display: grid;
     grid-gap: 1rem;
-    margin: 2rem -1.6rem;
+    margin: 5rem 0;
   }
   .comparison > :first-child {
     text-align: right;
@@ -133,7 +129,6 @@
     .comparison {
       grid-template-columns: 1fr auto 1fr;
       gap: 2rem;
-      margin: 7rem -2.4rem;
     }
   }
 

@@ -475,3 +475,13 @@ button.text {
   height: 3.2rem;
   padding: 0 1rem;
 }
+
+.highlight {
+  --color: #dcdc0033;
+  background: var(--color);
+  outline: 2px solid var(--color);
+  border-radius: 2px;
+}
+.highlight.remove {
+    --color: #ff00001a;
+}

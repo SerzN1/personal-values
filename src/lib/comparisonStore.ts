@@ -21,7 +21,6 @@ export function getPairs(arr: IValue[]) {
   return pairs;
 }
 
-
 function loadComparisonState(): IComparisonState | null {
   if (typeof window !== 'undefined') {
     try {

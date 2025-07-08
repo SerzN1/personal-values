@@ -1,14 +1,14 @@
 <script lang="ts">
   import type { IValue, IValueType } from './types';
   export let value: IValue;
-  export let group: IValueType;
+  export let type: IValueType;
   export let isSelected: boolean = false;
   export let onClick: (name: string) => void;
 </script>
 
 <div
   class="card group-{value.group} {isSelected ? 'selected' : ''}"
-  style="border-color: {isSelected ? group.color : 'transparent'};"
+  style="border-color: {isSelected ? type.color : 'transparent'};"
   role="button"
   tabindex="0"
   on:click|preventDefault={() => onClick(value.id)}
@@ -16,7 +16,7 @@
 >
   <h3>{value.label}</h3>
   <small class="value-description">{value.description}</small>
-  <img class="group-icon" src="{group.iconSvg}" alt="{group.label}" color={group.color} />
+  <img class="group-icon" src="{type.iconSvg}" alt="{type.label}" color={type.color} />
   <button class="checkbox" type="button" aria-label="Select {value.label}">
     <span class="icon icon-check"></span>
   </button>

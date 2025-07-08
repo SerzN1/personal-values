@@ -44,7 +44,7 @@
       </button>
     {:else if stage === STAGES.SELECTION}
       <span class="header-status">
-        Selected: {selected.length} / {VALUES_SELECTIONS_REQUIRED}
+        Selected {selected.length} of {VALUES_SELECTIONS_REQUIRED}
       </span>
       <button class="btn raised" type="button" aria-pressed="false" aria-label="Continue Assessment" title="Continue Assessment" on:click={onNext}>
         <span class="icon icon-continue"></span>
@@ -54,7 +54,7 @@
       </button>
     {:else if stage === STAGES.COMPARISON}
       <span class="header-status">
-        Pair {comparedPairs} of {totalPairs}
+        Compared {comparedPairs} of {totalPairs}
       </span>
       <button class="btn raised" type="button" aria-pressed="false" aria-label="Restart Assessment" title="Restart Assessment" on:click={onRestart}>
         <span class="icon icon-restart"></span>

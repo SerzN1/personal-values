@@ -1,7 +1,7 @@
 <script lang="ts">
   import Breadcrumbs from './lib/Breadcrumbs.svelte';
   import Comparison from './lib/Comparison.svelte';
-  import { resetComparison } from './lib/comparisonStore';
+  import { comparisonStore, resetComparison } from './lib/comparisonStore';
   import { STAGES, VALUES_SELECTIONS_REQUIRED } from './lib/constants';
   import CTA from './lib/CTA.svelte';
   import { valueTypes, values } from './lib/data';
@@ -46,8 +46,8 @@
 <Navigation
   stage={$processStage}
   selected={$selectedValues}
-  totalPairs={3}
-  comparedPairs={2}
+  totalPairs={$comparisonStore?.pairs.length}
+  comparedPairs={$comparisonStore?.current}
   onStart={handleStart}
   onNext={handleProceed}
   onRestart={handleRestart}

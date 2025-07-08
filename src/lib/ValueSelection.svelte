@@ -43,7 +43,7 @@
       {@const isSelected = selected.includes(value.id)}
       <ValueCard
         {value}
-        {group}
+        type={group}
         {isSelected}
         onClick={toggleValue}
       />
