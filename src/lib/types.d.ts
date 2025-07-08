@@ -38,6 +38,7 @@ export interface IGroupData {
   summary: string;
   insights: string[];
   color: string;
+  backgroundColor: string;
 }
 
 export interface IGroupPolarization {

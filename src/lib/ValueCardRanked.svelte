@@ -6,7 +6,7 @@
 </script>
 
 <div class="ranked">
-  <h3 style="color: {type.color};" id="#nr{rank}">
+  <h3 style="color: {type.color};" id="nr{rank}">
     {value.label}
     <a href="#nr{rank}" class="permalink" aria-label="permalink"></a>
   </h3>

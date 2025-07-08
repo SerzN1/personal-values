@@ -28,6 +28,7 @@
 
 <main class="comparison-results">
   <TopValues topValues={topValuesSorted} />
+  <hr />
   <GroupBalance groupScores={groupScores} groupAnalysysResult={groupAnalysysResult} />
 
   <Controls>

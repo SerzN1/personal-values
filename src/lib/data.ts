@@ -16,71 +16,71 @@ export const valueTypes: Record<string, IValueType> = {
     label: 'Self-Direction',
     description: 'Independent thought and action; choosing, creating, exploring.',
     iconSvg: selfDirectionIcon,
-    color: '#1a237e',          // Dark Indigo
-    background: '#e3e6fa'
+    color: '#3F51B5',          // Indigo (self-leadership)
+    background: "rgb(63, 81, 181)"
   },
   Universalism: {
     label: 'Universalism',
     description: 'Understanding, appreciation, tolerance, and protection for the welfare of all people and for nature.',
     iconSvg: universalizmIcon,
-    color: '#00695c',          // Teal
-    background: '#e0f2f1'
+    color: '#00BFA5',          // Teal
+    background: "rgb(0, 191, 165)", // Same as Self-Transcendence
   },
   Stimulation: {
     label: 'Stimulation',
     description: 'Excitement, novelty, and challenge in life.',
     iconSvg: stimulationIcon,
-    color: '#ad1457',          // Deep Pink / Magenta
-    background: '#fce4ec'
+    color: '#FF6D00',          // Vivid orange (intensity)
+    background: "rgb(255, 109, 0)",       // Slightly more vivid
   },
   Hedonism: {
     label: 'Hedonism',
     description: 'Pleasure and sensuous gratification for oneself.',
     iconSvg: hedonismIcon,
-    color: '#ff6f00',          // Orange
-    background: '#fff3e0'
+    color: '#EC407A',          // Raspberry pink (pleasure)
+    background: "rgb(236, 64, 122)",      // Pink/magenta
   },
   Achievement: {
     label: 'Achievement',
     description: 'Personal success through demonstrating competence according to social standards.',
     iconSvg: achievementIcon,
-    color: '#2e7d32',          // Dark Green
-    background: '#e8f5e9'
+    color: '#F9A825',          // Mustard orange (success tone)
+    background: "rgb(255, 193, 7)",       // Slightly softer gold
   },
   Power: {
     label: 'Power',
     description: 'Social status and prestige, control or dominance over people and resources.',
     iconSvg: powerIcon,
-    color: '#6d4c41',          // Brown
-    background: '#efebe9'
+    color: '#E53935',          // Red (dominance, impact)
+    background: "rgb(229, 57, 53)",       // Deep red
   },
   Security: {
     label: 'Security',
     description: 'Safety, harmony, and stability of society, of relationships, and of self.',
     iconSvg: securityIcon,
-    color: '#0277bd',          // Medium Blue
-    background: '#e1f5fe'
+    color: '#546E7A',          // Deep slate (protection)
+    background: "rgb(96, 125, 139)",      // Same as Conservation
   },
   Conformity: {
     label: 'Conformity',
     description: 'Restraint of actions, inclinations, and impulses likely to upset or harm others and violate social expectations or norms.',
     iconSvg: conformityIcon,
-    color: '#37474f',          // Dark Gray-Blue
-    background: '#eceff1'
+    color: '#5C6BC0',          // Cool blue-violet (structure)
+    background: "rgb(92, 107, 192)",      // Muted purple-blue
   },
   Tradition: {
     label: 'Tradition',
     description: 'Respect, commitment, and acceptance of the customs and ideas that traditional culture or religion provide.',
     iconSvg: traditionIcon,
-    color: '#8d6e63',          // Muted Brown
-    background: '#fbe9e7'
+    color: '#8D6E63',          // Earthy brown (heritage)
+    background: "rgb(141, 110, 99)",      // Dusty brown
   },
   Benevolence: {
     label: 'Benevolence',
     description: 'Preserving and enhancing the welfare of those with whom one is in frequent personal contact.',
     iconSvg: benevolenceIcon,
-    color: '#388e3c',          // Medium Green
-    background: '#e8f5e9'
+    color: '#43A047',          // Balanced green
+    background: "rgb(216, 67, 21)",       // Warm reddish-orange
   }
 };
 
@@ -92,8 +92,8 @@ export const groupData: Record<GroupKey, IGroupData> = {
       "You may feel most fulfilled when you're supporting others or making a positive impact.",
       "You likely value fairness, empathy, and social responsibility."
     ],
-    color: "#00BFA5",
-    // backgroundColor: "rgba(0, 191, 165, 0.08)"
+    color: "#00BFA5", // Strong teal (trust, care)
+    backgroundColor: "rgba(0, 191, 165, 0.12)"
   },
   SelfEnhancement: {
     label: "Self-Enhancement",
@@ -102,7 +102,8 @@ export const groupData: Record<GroupKey, IGroupData> = {
       "You may feel driven by achievement, recognition, and autonomy.",
       "A focus on success can be energizing, but balance with care for others helps relationships thrive."
     ],
-    color: '#FFC400',
+    color: '#FFC400', // Golden yellow (achievement)
+    backgroundColor: "rgba(255, 196, 0, 0.12)", // Vibrant gold
   },
   OpennessToChange: {
     label: "Openness to Change",
@@ -111,7 +112,8 @@ export const groupData: Record<GroupKey, IGroupData> = {
       "You likely enjoy exploring, learning, and expressing your individuality.",
       "This drive supports innovation, but may resist routine or stability."
     ],
-    color: '#FF8A00'
+    color: '#FF8A00', // Orange (creativity, exploration)
+    backgroundColor: "rgba(255, 138, 0, 0.12)",       // Bright orange
   },
   Conservation: {
     label: "Conservation",
@@ -120,7 +122,8 @@ export const groupData: Record<GroupKey, IGroupData> = {
       "You value order, safety, and traditions that create predictability.",
       "This can build strong foundations, but may reduce openness to change or risk."
     ],
-    color: '#90A4AE'
+    color: '#607D8B', // Muted blue-gray (stability)
+    backgroundColor: "rgba(96, 125, 139, 0.12)",      // Neutral slate
   }
 };
 
