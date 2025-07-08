@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { valueById, valueTypes } from './data';
+  import { valueById, valueInsights, valueTypes } from './data';
   import ValueCardRanked from './ValueCardRanked.svelte';
 
   export let topValues: [string, number][] = [];
@@ -15,6 +15,7 @@
       rank={i + 1}
       value={valueById[value[0]]}
       type={valueTypes[valueById[value[0]].type]}
+      insight={valueById[value[0]].insight || valueInsights[value[0]]}
     />
   {/each}
 </div>

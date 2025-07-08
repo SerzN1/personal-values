@@ -3,6 +3,7 @@
   export let rank: number;
   export let value: IValue;
   export let type: IValueType;
+  export let insight: string;
 </script>
 
 <div class="ranked">
@@ -11,7 +12,7 @@
     <a href="#nr{rank}" class="permalink" aria-label="permalink"></a>
   </h3>
   <img class="group-icon" src="{type.iconSvg}" alt="{type.label}" color={type.color} />
-  <p>{value.insight}</p>
+  <p>{insight}</p>
   <p>
     <span class="highlight add">Strengths:</span> {value.strengths}<br />
     <span class="highlight remove">Dangers:</span> {value.dangers}<br />

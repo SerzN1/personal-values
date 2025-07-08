@@ -11,8 +11,9 @@
   import { processStage, resetSelectedValues, selectedValues } from './lib/selectionStore';
   import ValueSelection from './lib/ValueSelection.svelte';
 
-  console.log(values);
+  export const prerender = true;
 
+  console.log(values);
 
   function handleSelectionChange(newSelected: string[] = []) {
     selectedValues.set(newSelected);
