@@ -38,6 +38,7 @@
     resetComparison();
 
     processStage.set(STAGES.START);
+    window.scrollTo(0, 0);
     window.location.reload();
   }
 </script>
