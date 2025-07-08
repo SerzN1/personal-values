@@ -12,8 +12,7 @@
     .slice(0, VALUES_RESULT_COUNT)
     .filter(Boolean);
 
-  const topValuesData = topValuesSorted.map(([name]) => values.find(v => v.name === name));
-
+  const topValuesData = topValuesSorted.map(([id]) => values.find(v => v.id === id));
 
 
   // const top5 = calculateTop5Values(...);
@@ -43,7 +42,7 @@
 
   <RadialDiagram
     scores={topValuesData.reduce((acc, val) => {
-      acc[val.name] = val.score;
+      acc[val.id] = val.score;
       return acc;
     }, {} as Record<string, number>)}
   />

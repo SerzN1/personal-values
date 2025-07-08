@@ -2,7 +2,7 @@
   import type { IValue, IValueType } from './types';
   export let value: IValue;
   export let group: IValueType;
-  export let isSelected: boolean;
+  export let isSelected: boolean = false;
   export let onClick: (name: string) => void;
 </script>
 

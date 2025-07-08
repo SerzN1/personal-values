@@ -13,7 +13,7 @@
 
   let comparisonScores: Record<string, number> = {};
 
-  function handleSelectionChange(newSelected: string[]) {
+  function handleSelectionChange(newSelected: string[] = []) {
     selectedValues.set(newSelected);
   }
 
@@ -54,8 +54,6 @@
 />
 
 <Breadcrumbs stage={$processStage} />
-
-<!-- <RadialDiagram /> -->
 
 {#if $processStage === STAGES.START}
   <header class="header">

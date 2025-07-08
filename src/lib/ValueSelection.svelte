@@ -1,5 +1,5 @@
 <script lang="ts">
-  import CTA from './CTA.svelte';
+  import Controls from './Controls.svelte';
   import ValueCard from './ValueCard.svelte';
   import { VALUES_SELECTIONS_REQUIRED } from './constants';
   import type { IValue, IValueType } from './types';
@@ -7,7 +7,7 @@
   export let values: IValue[] = [];
   export let valueTypes: Record<string, IValueType> = {};
   export let selected: string[] = [];
-  export let onSelectionChange: (selected: string[]) => void;
+  export let onSelectionChange: (selected?: string[]) => void;
   export let onProceed: () => void;
 
   function toggleValue(name: string) {
@@ -24,7 +24,8 @@
     onProceed();
   }
 
-  $: ctaMessage = selected.length < VALUES_SELECTIONS_REQUIRED ? `Select ${VALUES_SELECTIONS_REQUIRED - selected.length} more values to proceed.` : 'Let’s refine your selection';
+  $: isDisabled = selected.length < VALUES_SELECTIONS_REQUIRED;
+  $: ctaMessage = isDisabled ? `Select ${VALUES_SELECTIONS_REQUIRED - selected.length} more values to proceed.` : 'Let’s refine your selection';
 </script>
 
 <header class="header">
@@ -49,11 +50,18 @@
     {/each}
   </div>
 
-  <CTA
-    title="Continue"
-    message={ctaMessage}
-    onClick={proceed}
-  />
+  <Controls>
+    {#snippet prev()}
+      <a href="#prev" on:click|preventDefault={() => onSelectionChange()} title="Reset selection" aria-label="Reset selection">
+        Reset selection
+      </a>
+    {/snippet}
+    {#snippet next()}
+      <a href="#next" on:click|preventDefault={proceed} title={ctaMessage} aria-label="Continue to next step" class="{isDisabled ? 'disabled' : ''}">
+        Continue
+      </a>
+    {/snippet}
+  </Controls>
 </main>
 
 <style>
@@ -72,5 +80,9 @@
     .values-list {
       grid-template-columns: repeat(3, 1fr);
     }
+  }
+
+  .disabled {
+    cursor: not-allowed;
   }
 </style>

@@ -1,5 +1,6 @@
 import { writable } from 'svelte/store';
 import { COMPARISON_STATE_KEY } from './constants';
+import type { IValue } from './types';
 
 export interface IComparisonState {
   scores: Record<string, number>;
@@ -8,6 +9,18 @@ export interface IComparisonState {
   selected: string[];
   lastWinner: string | null;
 }
+
+// Generate all unique pairs
+export function getPairs(arr: IValue[]) {
+  const pairs: [string, string][] = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      pairs.push([arr[i].id, arr[j].id]);
+    }
+  }
+  return pairs;
+}
+
 
 function loadComparisonState(): IComparisonState | null {
   if (typeof window !== 'undefined') {
@@ -31,35 +44,11 @@ function loadComparisonState(): IComparisonState | null {
   return null;
 }
 
-function initializeFromStore(selected: IValue[]) {
-  comparisonStore.subscribe((state) => {
-    if (state && state.selected && JSON.stringify(state.selected) === JSON.stringify(selected.map(v => v.name))) {
-      // Restore from store
-      scores = { ...scores, ...state.scores };
-      current = state.current;
-      lastWinner = state.lastWinner;
-      // Rebuild pairs from names
-      const nameToValue = Object.fromEntries(selected.map(v => [v.name, v]));
-      pairs = state.pairs.map(([a, b]) => [nameToValue[a], nameToValue[b]]);
-    } else {
-      // Fresh start
-      pairs = getPairs(selected);
-      scores = {};
-      selected.forEach(v => (scores[v.name] = 0));
-      current = 0;
-      lastWinner = null;
-    }
-  });
-}
-
-  // onMount(() => {
-  //   initializeFromStore(selected);
-  // });
-
-
 export const comparisonStore = writable<IComparisonState | null>(loadComparisonState());
 
 comparisonStore.subscribe((val) => {
+  console.log("save 2", val);
+
   if (typeof window !== 'undefined') {
     if (val) {
       try {

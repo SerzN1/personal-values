@@ -774,3 +774,8 @@ export const values: IValue[] = [
     ]
   }
 ];
+
+export const valueById: Record<string, IValue> = values.reduce((acc, value) => {
+  acc[value.id] = value;
+  return acc;
+}, {});
