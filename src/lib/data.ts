@@ -160,6 +160,7 @@ export const values: IValue[] = [
     "id": "freedom",
     "label": "Freedom",
     "description": "Having the autonomy to make your own choices and act independently.",
+    "insight": "Freedom is not just about choice—it's about owning the direction of your life. For leaders, it means shaping environments where others can also thrive independently.",
     "type": "SelfDirection",
     "group": "OpennessToChange",
     "tags": ["individual", "personal"],
@@ -174,6 +175,7 @@ export const values: IValue[] = [
     "id": "independence",
     "label": "Independence",
     "description": "Relying on your own judgment and values to guide your actions.",
+    "insight": "True independence involves knowing when to trust yourself and when to seek input from others. This balance deepens your effectiveness as a leader and strengthens your relationships.",
     "type": "SelfDirection",
     "group": "OpennessToChange",
     "tags": ["personal", "leadership"],
@@ -770,6 +772,262 @@ export const values: IValue[] = [
     "reflectionQuestions": [
       "Who has shaped your perspective through lived experience?",
       "How do you carry forward their insights?"
+    ]
+  },
+  {
+    "id": "enjoyment",
+    "label": "Enjoyment",
+    "description": "Finding joy and pleasure in life’s moments, big and small.",
+    "insight": "Enjoyment is about making space for fun and positivity in your life, allowing yourself to truly savor joyful experiences. It’s not just fleeting happiness, but a way to recharge, connect with others, and nourish your spirit. By embracing enjoyment, you create meaningful memories that uplift you and build resilience for life’s challenges.",
+    "type": "Hedonism",
+    "group": "OpennessToChange",
+    "tags": ["pleasure", "joy", "well-being"],
+    "strengths": "Your ability to appreciate joyful moments spreads positivity and lightens the atmosphere around you. This not only supports your own well-being but also fosters connection and resilience in your relationships.",
+    "dangers": "If you focus too much on enjoyment, you may avoid necessary challenges or delay important responsibilities. Balancing joy with discipline helps you stay grounded and productive.",
+    "reflectionQuestions": [
+      "What moments bring you the most joy, and how can you invite more of them into your day?",
+      "How do you balance seeking enjoyment with pursuing your long-term goals?"
+    ]
+  },
+  {
+    "id": "gratification",
+    "label": "Gratification",
+    "description": "Rewarding yourself to honor your efforts and maintain motivation.",
+    "insight": "Gratification is the practice of acknowledging your hard work by treating yourself with kindness and reward. It nurtures your motivation and helps sustain your energy over time. Recognizing achievements, big or small, encourages you to keep moving forward with confidence and balance.",
+    "type": "Hedonism",
+    "group": "OpennessToChange",
+    "tags": ["reward", "self-care", "motivation"],
+    "strengths": "By celebrating your progress, you create a positive feedback loop that energizes your efforts and builds resilience. This mindset encourages sustainable growth and self-compassion.",
+    "dangers": "Over-reliance on immediate rewards can undermine patience or discipline. Keeping gratification aligned with your larger goals prevents distraction and impulsivity.",
+    "reflectionQuestions": [
+      "How do you decide when and how to reward yourself effectively?",
+      "In what ways can you use gratification to support your long-term motivation?"
+    ]
+  },
+  {
+    "id": "success",
+    "label": "Success",
+    "description": "Achieving meaningful goals that reflect your values and talents.",
+    "insight": "Success for you is more than just outcomes; it’s the fulfillment that comes from overcoming challenges and realizing your potential. It fuels your purpose and motivates you to grow. You take pride not only in personal achievements but also in the positive impact you create for others.",
+    "type": "Achievement",
+    "group": "SelfEnhancement",
+    "tags": ["ambition", "achievement", "goals"],
+    "strengths": "Your determination inspires persistence and focus. You set clear standards and lead by example, encouraging others to aim high and persevere.",
+    "dangers": "An intense focus on success can cause burnout or strained relationships if not balanced with empathy and self-care. Remembering that success includes wellbeing and connection keeps your efforts sustainable.",
+    "reflectionQuestions": [
+      "What does success mean to you beyond titles or rewards?",
+      "How do you maintain motivation when progress is slow or setbacks occur?"
+    ]
+  },
+  {
+    "id": "recognition",
+    "label": "Recognition",
+    "description": "Being seen and appreciated for your efforts and contributions.",
+    "insight": "Recognition is a vital source of encouragement that helps build your confidence and sense of belonging. You value meaningful feedback and respect from others, which motivates you to grow and contribute your best.",
+    "type": "Achievement",
+    "group": "SelfEnhancement",
+    "tags": ["validation", "appreciation", "respect"],
+    "strengths": "You actively seek feedback and appreciate recognition, which fosters mutual respect and continuous improvement in yourself and others.",
+    "dangers": "Relying too much on external validation can weaken your self-confidence when praise is absent. Developing inner assurance is essential for balance.",
+    "reflectionQuestions": [
+      "How do you celebrate achievements when recognition is limited?",
+      "What helps you maintain confidence independent of others’ opinions?"
+    ]
+  },
+  {
+    "id": "leadership",
+    "label": "Leadership",
+    "description": "Guiding and inspiring others toward shared goals with empathy and vision.",
+    "insight": "Leadership means more than authority—it’s about inspiring and empowering others to succeed together. You take responsibility for creating environments where people feel supported and motivated. Your leadership is grounded in integrity, clear communication, and genuine care.",
+    "type": "Power",
+    "group": "SelfEnhancement",
+    "tags": ["influence", "responsibility", "vision"],
+    "strengths": "You build trust by acting consistently with your values and encourage growth by supporting those you lead. Your ability to motivate inspires collective progress and meaningful achievements.",
+    "dangers": "Leadership focused too much on control or personal gain can erode trust. Balancing authority with empathy and openness is key to sustaining positive influence.",
+    "reflectionQuestions": [
+      "How do you empower others while maintaining clear direction?",
+      "What values guide your leadership decisions?"
+    ]
+  },
+  {
+    "id": "safety",
+    "label": "Safety",
+    "description": "Creating secure, stable environments that foster trust and confidence.",
+    "insight": "Safety is the foundation that allows people to relax and take healthy risks. You prioritize building spaces where physical, emotional, and social security support growth and well-being. This creates trust and allows for greater innovation and connection.",
+    "type": "Security",
+    "group": "Conservation",
+    "tags": ["protection", "stability", "trust"],
+    "strengths": "You proactively identify risks and implement measures that create calm and reassurance, fostering environments where people can flourish.",
+    "dangers": "Overemphasizing safety can lead to resistance to change or fear of uncertainty. Balancing caution with openness helps maintain adaptability.",
+    "reflectionQuestions": [
+      "What makes you feel safe and supported in your environments?",
+      "How do you balance risk-taking with maintaining safety?"
+    ]
+  },
+  {
+    "id": "protection",
+    "label": "Protection",
+    "description": "Standing up for the well-being of yourself and those you care about.",
+    "insight": "Protection means caring deeply about the safety and dignity of those around you. You take responsibility for shielding loved ones and communities from harm, creating spaces of trust and care. This dedication strengthens relationships and fosters a sense of belonging.",
+    "type": "Security",
+    "group": "Conservation",
+    "tags": ["defense", "care", "support"],
+    "strengths": "Your vigilance and willingness to support others create strong, dependable bonds. People feel safe and valued knowing you are ready to defend their interests.",
+    "dangers": "Being overly protective can sometimes limit others’ growth or independence. Finding a balance between care and autonomy is important.",
+    "reflectionQuestions": [
+      "Who or what do you feel called to protect, and why?",
+      "How do you encourage independence while providing support?"
+    ]
+  },
+  {
+    "id": "predictability",
+    "label": "Predictability",
+    "description": "Valuing routines and consistency to create stability and reduce uncertainty.",
+    "insight": "Predictability helps you manage stress and plan effectively by creating a dependable framework for your life and work. You appreciate routines that offer clarity and reduce chaos, which supports focus and confidence.",
+    "type": "Security",
+    "group": "Conservation",
+    "tags": ["stability", "routine", "consistency"],
+    "strengths": "Your preference for reliability builds trust and makes it easier for you and others to perform consistently. Stability creates a strong foundation for growth and learning.",
+    "dangers": "Clinging too tightly to predictability can hinder your ability to adapt to change or seize new opportunities. Cultivating flexibility alongside routine is essential.",
+    "reflectionQuestions": [
+      "What routines help you feel grounded and effective?",
+      "How do you stay open and adaptable when surprises arise?"
+    ]
+  },
+  {
+    "id": "resilience",
+    "label": "Resilience",
+    "description": "Bouncing back from adversity with strength, optimism, and adaptability.",
+    "insight": "Resilience means meeting challenges with courage and using setbacks as opportunities to grow. You cultivate a mindset that stays hopeful and solution-focused, inspiring both yourself and others to persevere.",
+    "type": "Security",
+    "group": "Conservation",
+    "tags": ["adaptability", "strength", "perseverance"],
+    "strengths": "Your inner strength helps you maintain momentum even in tough times. You find ways to learn and grow from difficulties, modeling endurance and positive attitude.",
+    "dangers": "Sometimes relying too heavily on resilience can mask deeper issues or delay needed rest. Recognizing when to seek support ensures your strength is sustainable.",
+    "reflectionQuestions": [
+      "What personal resources help you recover and thrive after setbacks?",
+      "When do you know it’s time to ask for help or pause for self-care?"
+    ]
+  },
+
+  {
+    "id": "self_discipline",
+    "label": "Self-Discipline",
+    "description": "Maintaining control and focus to follow through on goals and commitments.",
+    "insight": "Self-discipline empowers you to keep commitments and resist distractions, even when motivation fades. This consistency builds trust in yourself and with others and creates a reliable foundation for success.",
+    "type": "Conformity",
+    "group": "Conservation",
+    "tags": ["control", "responsibility", "focus"],
+    "strengths": "Your dedication and focus help you achieve long-term goals and inspire others by example. You manage your impulses thoughtfully to stay aligned with your priorities.",
+    "dangers": "Too much rigidity can cause stress or stifle creativity. Balancing discipline with flexibility and self-compassion supports lasting productivity and well-being.",
+    "reflectionQuestions": [
+      "How do you maintain your focus when motivation dips?",
+      "In what ways does flexibility enhance your discipline?"
+    ]
+  },
+  {
+    "id": "devotion",
+    "label": "Devotion",
+    "description": "Showing loyalty and commitment to your values, relationships, and communities.",
+    "insight": "Devotion is a steady, heartfelt dedication that builds deep connections and trust. You prioritize the well-being of what you care about and stand firm through challenges, creating a sense of belonging and purpose.",
+    "type": "Tradition",
+    "group": "Conservation",
+    "tags": ["loyalty", "commitment", "faithfulness"],
+    "strengths": "Your loyalty creates stable, supportive relationships that others rely on. Your commitment strengthens communities and sustains shared goals over time.",
+    "dangers": "Devotion can sometimes limit openness to new perspectives or necessary change. Balancing loyalty with growth keeps your connections vibrant and meaningful.",
+    "reflectionQuestions": [
+      "What are the values or people you feel most devoted to?",
+      "How do you balance loyalty with openness to new ideas?"
+    ]
+  },
+  {
+    "id": "respect_for_customs",
+    "label": "Respect for Customs",
+    "description": "Honoring traditions and cultural practices that build identity and community.",
+    "insight": "Respecting customs helps you stay connected to your roots and shared values. You appreciate the continuity and meaning that traditions bring, fostering harmony and belonging.",
+    "type": "Tradition",
+    "group": "Conservation",
+    "tags": ["culture", "heritage", "ritual"],
+    "strengths": "Your respect for customs creates a strong foundation for social cohesion and shared identity. You help preserve meaningful practices that enrich your community.",
+    "dangers": "Rigid adherence to customs may limit innovation or inclusiveness. Embracing adaptability while honoring tradition supports healthy evolution.",
+    "reflectionQuestions": [
+      "Which traditions matter most to you, and why?",
+      "How do you adapt customs to stay relevant and welcoming?"
+    ]
+  },
+  {
+    "id": "faith",
+    "label": "Faith",
+    "description": "Drawing strength and guidance from spiritual or philosophical beliefs.",
+    "insight": "Faith provides you with hope, meaning, and a moral compass. It supports resilience through life’s uncertainties and grounds your choices in deeply held values.",
+    "type": "Tradition",
+    "group": "Conservation",
+    "tags": ["belief", "spirituality", "commitment"],
+    "strengths": "Your faith inspires integrity and perseverance, helping you stay centered and hopeful even in difficult times. It also offers a source of inspiration for others.",
+    "dangers": "Overly rigid beliefs might limit openness or adaptability. Staying open to diverse perspectives can deepen and enrich your faith.",
+    "reflectionQuestions": [
+      "How does your faith influence your everyday decisions?",
+      "In what ways do you balance conviction with openness to new ideas?"
+    ]
+  },
+  {
+    "id": "ritual",
+    "label": "Ritual",
+    "description": "Using ceremonies and routines to express values and create connection.",
+    "insight": "Rituals bring comfort, structure, and a sense of belonging. They help you mark important moments and express what matters deeply, creating shared meaning with others. Through consistent practice, rituals ground you and build community bonds that provide emotional safety and identity.",
+    "type": "Tradition",
+    "group": "Conservation",
+    "tags": ["ceremony", "routine", "identity"],
+    "strengths": "Your commitment to meaningful rituals fosters stability and nurtures relationships. Rituals serve as anchors that bring people together and offer moments of reflection and gratitude.",
+    "dangers": "When rituals become too rigid, they may lose personal meaning or exclude others. Allowing flexibility and openness keeps rituals vibrant and inclusive.",
+    "reflectionQuestions": [
+      "Which rituals provide you with the most comfort and connection?",
+      "How do you refresh or adapt rituals to keep them meaningful?"
+    ]
+  },
+  {
+    "id": "authenticity",
+    "label": "Authenticity",
+    "description": "Being true to yourself and expressing your genuine values and feelings openly.",
+    "insight": "Authenticity means being true to who you really are—expressing your values, feelings, and beliefs honestly and openly. When you live authentically, you don’t feel the need to hide parts of yourself to fit in or please others. This genuine way of being helps build trust, deepen connections, and create meaningful relationships. It takes courage to show up as your real self, but it brings you peace and helps others see the real you.",
+    "type": "SelfDirection",
+    "group": "OpennessToChange",
+    "tags": ["genuineness", "integrity", "honesty"],
+    "strengths": "When you embrace authenticity, you inspire others to do the same. Your openness creates safe spaces where people feel comfortable being themselves. Being true to yourself also gives you confidence and clarity in your choices, helping you stand firm even when things get tough.",
+    "dangers": "Sometimes, being completely open can unintentionally hurt others or cause misunderstandings, especially if honesty isn’t paired with kindness. It’s important to balance truthfulness with empathy so that your authenticity brings people closer rather than pushing them away.",
+    "reflectionQuestions": [
+      "When do you feel most like your true self, and what helps you stay that way?",
+      "How do you find the right balance between honesty and kindness in your interactions?"
+    ]
+  },
+  {
+    "id": "exploration",
+    "label": "Exploration",
+    "description": "Seeking out new experiences and learning through discovery.",
+    "insight": "Exploration reflects your curiosity and your drive to expand your horizons—whether through travel, learning, new ideas, or unfamiliar perspectives. You thrive on stepping into the unknown and allowing uncertainty to fuel growth. This openness allows you to evolve and reimagine possibilities, both personally and professionally.",
+    "type": "SelfDirection",
+    "group": "OpennessToChange",
+    "tags": ["curiosity", "growth", "learning"],
+    "strengths": "Your openness invites creativity and helps you adapt quickly to change. You’re eager to test boundaries and innovate, which leads to new discoveries and personal growth.",
+    "dangers": "Restlessness or lack of focus may arise if you pursue too many directions at once. Intention and reflection can help ground your explorations.",
+    "reflectionQuestions": [
+      "What new experiences are calling you lately?",
+      "How do you decide where to explore next—internally or externally?"
+    ]
+  },
+  {
+    "id": "belonging",
+    "label": "Belonging",
+    "description": "Feeling connected, accepted, and valued within a group or community.",
+    "insight": "Belonging fulfills a deep human need for connection and acceptance. You cultivate inclusive environments where people feel safe to express themselves and collaborate authentically. This sense of community nurtures well-being and mutual support.",
+    "type": "Tradition",
+    "group": "Conservation",
+    "tags": ["connection", "community", "acceptance"],
+    "strengths": "Your focus on belonging helps build warm and supportive spaces where individuals thrive. You encourage openness and foster relationships based on trust and respect.",
+    "dangers": "A strong desire to belong may lead to compromising your identity or values. Practicing self-awareness helps you stay grounded while connecting with others.",
+    "reflectionQuestions": [
+      "What makes you feel truly included and accepted?",
+      "When have you compromised your voice to fit in—and how might you do it differently now?"
     ]
   }
 ];

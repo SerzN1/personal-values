@@ -11,7 +11,8 @@
   import { processStage, resetSelectedValues, selectedValues } from './lib/selectionStore';
   import ValueSelection from './lib/ValueSelection.svelte';
 
-  let comparisonScores: Record<string, number> = {};
+  console.log(values);
+
 
   function handleSelectionChange(newSelected: string[] = []) {
     selectedValues.set(newSelected);

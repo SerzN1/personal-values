@@ -12,6 +12,7 @@ export interface IValue {
   tags: string[];
   reflectionQuestions: string[];
   description: string;
+  insight: string;
   strengths: string;
   dangers: string;
   type: string;
