@@ -1,10 +1,11 @@
 <script lang="ts">
+  import CTA from './CTA.svelte';
   import ValueCard from './ValueCard.svelte';
   import { VALUES_SELECTIONS_REQUIRED } from './constants';
-  import type { IValue, IValueGroup } from './types';
+  import type { IValue, IValueType } from './types';
 
   export let values: IValue[] = [];
-  export let valueGroups: Record<string, IValueGroup> = {};
+  export let valueTypes: Record<string, IValueType> = {};
   export let selected: string[] = [];
   export let onSelectionChange: (selected: string[]) => void;
   export let onProceed: () => void;
@@ -22,52 +23,54 @@
     if (selected.length < VALUES_SELECTIONS_REQUIRED) return;
     onProceed();
   }
+
+  $: ctaMessage = selected.length < VALUES_SELECTIONS_REQUIRED ? `Select ${VALUES_SELECTIONS_REQUIRED - selected.length} more values to proceed.` : 'Let’s refine your selection';
 </script>
 
-<section class="value-selection">
-  <h2>Select Your Values</h2>
-  <p>Select at least {VALUES_SELECTIONS_REQUIRED} values that resonate with you.</p>
+<header class="header">
+  <h1 class="header-title">Select Your Values</h1>
+  <p class="header-description">
+    What matters to you, really? Pick the values that feel like “you.”<br />
+    Select at least {VALUES_SELECTIONS_REQUIRED} values that resonate with you.
+  </p>
+</header>
+
+<main>
   <div class="values-list">
     {#each values as value}
-      {@const group = valueGroups[value.group]}
-      {@const isSelected = selected.includes(value.name)}
+      {@const group = valueTypes[value.type]}
+      {@const isSelected = selected.includes(value.id)}
       <ValueCard
         {value}
         {group}
         {isSelected}
-        onToggle={toggleValue}
+        onClick={toggleValue}
       />
     {/each}
   </div>
-  <button class="continue-btn" on:click={proceed} disabled={selected.length < VALUES_SELECTIONS_REQUIRED}>
-    Continue
-  </button>
-</section>
+
+  <CTA
+    title="Continue"
+    message={ctaMessage}
+    onClick={proceed}
+  />
+</main>
 
 <style>
-
-  .error {
-    color: red;
-  }
-
   .values-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: grid;
+    grid-gap: 1rem;
+    margin-bottom: 7rem;
   }
 
-  .selected-count {
-    margin-top: 1em;
+  @media (min-width: 600px) {
+    .values-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
-
-  .continue-btn {
-    margin-top: 1rem;
-  }
-
-  .restart-btn {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    background: #eee;
-    color: #333;
+  @media (min-width: 900px) {
+    .values-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 </style>

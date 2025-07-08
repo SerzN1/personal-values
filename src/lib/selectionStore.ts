@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import { SELECTION_STATE_KEY, STAGES, VALUES_SELECTIONS_REQUIRED } from './constants';
+import { COMPARISON_STATE_KEY, SELECTION_STATE_KEY, STAGES, VALUES_SELECTIONS_REQUIRED } from './constants';
 
 function loadSelectedValues(): string[] {
   if (typeof window !== 'undefined') {
@@ -45,7 +45,7 @@ export function resetSelectedValues() {
 export const processStage = writable<typeof STAGES[keyof typeof STAGES]>(getInitialProcessStage());
 
 function getInitialProcessStage() {
-  const comparisonRaw = typeof window !== 'undefined' ? localStorage.getItem('comparison-state-v1') : null;
+  const comparisonRaw = typeof window !== 'undefined' ? localStorage.getItem(COMPARISON_STATE_KEY) : null;
   if (comparisonRaw) {
     const state = JSON.parse(comparisonRaw);
     if (state && state.scores && state.pairs && state.selected) {
@@ -53,7 +53,7 @@ function getInitialProcessStage() {
       return STAGES.COMPARISON;
     }
   }
-  const selectionRaw = typeof window !== 'undefined' ? localStorage.getItem('selection-v1') : null;
+  const selectionRaw = typeof window !== 'undefined' ? localStorage.getItem(SELECTION_STATE_KEY) : null;
   if (selectionRaw) {
     const arr = JSON.parse(selectionRaw);
     if (Array.isArray(arr) && arr.length >= VALUES_SELECTIONS_REQUIRED) return STAGES.SELECTION;

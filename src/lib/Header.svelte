@@ -4,7 +4,10 @@
 
   export let stage: typeof STAGES[keyof typeof STAGES] = STAGES.START;
   export let selected: string[] = [];
+  export let comparedPairs: number = 0;
+  export let totalPairs: number = 0;
   export let onStart: () => void;
+  export let onNext: () => void;
   export let onRestart: () => void;
 
   function toggleDarkMode() {
@@ -25,7 +28,7 @@
   }
 
   function openGithub() {
-    window.open('https://github.com/serzn1/personal-values', '_blank');
+    window.open('https://github.com/serzn1/personal-values/', '_blank');
   }
 </script>
 
@@ -43,12 +46,15 @@
       <span class="header-status">
         Selected: {selected.length} / {VALUES_SELECTIONS_REQUIRED}
       </span>
+      <button class="btn raised" type="button" aria-pressed="false" aria-label="Continue Assessment" title="Continue Assessment" on:click={onNext}>
+        <span class="icon icon-continue"></span>
+      </button>
       <button class="btn raised" type="button" aria-pressed="false" aria-label="Restart Assessment" title="Restart Assessment" on:click={onRestart}>
         <span class="icon icon-restart"></span>
       </button>
     {:else if stage === STAGES.COMPARISON}
       <span class="header-status">
-        Compared {selected.length} values
+        Pair {comparedPairs} of {totalPairs}
       </span>
       <button class="btn raised" type="button" aria-pressed="false" aria-label="Restart Assessment" title="Restart Assessment" on:click={onRestart}>
         <span class="icon icon-restart"></span>
@@ -162,6 +168,10 @@
 
   .icon-start {
     mask: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%3E%3Cpath%20d='M12%202v6.5'%20stroke='%23676778'%20stroke-width='2'%20stroke-linecap='round'/%3E%3Cpath%20d='M6.05%207.05a8%208%200%201%200%2011.9%200'%20stroke='%23676778'%20stroke-width='2'%20stroke-linecap='round'/%3E%3C/svg%3E") 50% / 2.2rem no-repeat;
+  }
+
+  .icon-continue {
+    mask: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%3E%3Cpath%20d='M8%206l6%206-6%206'%20stroke='%23676778'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3Cpath%20d='M12%206l6%206-6%206'%20stroke='%23676778'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E") 50% / 2.2rem no-repeat;
   }
 
   .icon-restart {

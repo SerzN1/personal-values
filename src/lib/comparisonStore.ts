@@ -31,6 +31,32 @@ function loadComparisonState(): IComparisonState | null {
   return null;
 }
 
+function initializeFromStore(selected: IValue[]) {
+  comparisonStore.subscribe((state) => {
+    if (state && state.selected && JSON.stringify(state.selected) === JSON.stringify(selected.map(v => v.name))) {
+      // Restore from store
+      scores = { ...scores, ...state.scores };
+      current = state.current;
+      lastWinner = state.lastWinner;
+      // Rebuild pairs from names
+      const nameToValue = Object.fromEntries(selected.map(v => [v.name, v]));
+      pairs = state.pairs.map(([a, b]) => [nameToValue[a], nameToValue[b]]);
+    } else {
+      // Fresh start
+      pairs = getPairs(selected);
+      scores = {};
+      selected.forEach(v => (scores[v.name] = 0));
+      current = 0;
+      lastWinner = null;
+    }
+  });
+}
+
+  // onMount(() => {
+  //   initializeFromStore(selected);
+  // });
+
+
 export const comparisonStore = writable<IComparisonState | null>(loadComparisonState());
 
 comparisonStore.subscribe((val) => {

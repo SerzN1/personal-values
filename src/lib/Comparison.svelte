@@ -1,8 +1,7 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import { comparisonStore, resetComparison } from './comparisonStore';
+  import { comparisonStore } from './comparisonStore';
   import type { IValue } from './types';
-  import { getPairs } from './utils';
+  import ValueCard from './ValueCard.svelte';
 
   export let selected: IValue[] = [];
   export let onFinish: (scores: Record<string, number>) => void;
@@ -12,30 +11,6 @@
   let current = 0;
   let lastWinner: string | null = null;
 
-  function initializeFromStore(selected: IValue[]) {
-    comparisonStore.subscribe((state) => {
-      if (state && state.selected && JSON.stringify(state.selected) === JSON.stringify(selected.map(v => v.name))) {
-        // Restore from store
-        scores = { ...scores, ...state.scores };
-        current = state.current;
-        lastWinner = state.lastWinner;
-        // Rebuild pairs from names
-        const nameToValue = Object.fromEntries(selected.map(v => [v.name, v]));
-        pairs = state.pairs.map(([a, b]) => [nameToValue[a], nameToValue[b]]);
-      } else {
-        // Fresh start
-        pairs = getPairs(selected);
-        scores = {};
-        selected.forEach(v => (scores[v.name] = 0));
-        current = 0;
-        lastWinner = null;
-      }
-    });
-  }
-
-  onMount(() => {
-    initializeFromStore(selected);
-  });
 
   function saveState() {
     comparisonStore.set({
@@ -70,40 +45,69 @@
     }
     saveState();
     if (current >= pairs.length) {
-      resetComparison();
       onFinish(scores);
     }
   }
 </script>
 
+<header class="header">
+  <h1 class="header-title">What Guides You Most?</h1>
+  <p class="header-description">
+    You’ve selected values that resonate with you — great start. In this step, we’ll help you clarify what matters most by comparing them directly. Just choose the one that feels more important in each pair.
+  </p>
+</header>
+
 {#if current < pairs.length}
   <div class="comparison">
-    <h2>Which value is more important to you?</h2>
-    <button class="compare-btn" on:click={() => pick(pairs[current][0], pairs[current][1])}>
-      {pairs[current][0].name}
-    </button>
-    <span style="margin: 0 1em;">vs</span>
-    <button class="compare-btn" on:click={() => pick(pairs[current][1], pairs[current][0])}>
-      {pairs[current][1].name}
-    </button>
-    <p>Pair {current + 1} of {pairs.length}</p>
+    <ValueCard
+      value={pairs[current][0]}
+      group={pairs[current][0].group}
+      onClick={() => pick(pairs[current][0], pairs[current][1])}
+      aria-label="Select {pairs[current][0].name} as more important than {pairs[current][1].name}"
+    />
+
+    <div class="vs">
+        <div class="vs-text">or</div>
+    </div>
+
+    <ValueCard
+      value={pairs[current][1]}
+      group={pairs[current][1].group}
+      onClick={() => pick(pairs[current][1], pairs[current][0])}
+      aria-label="Select {pairs[current][1].name} as more important than {pairs[current][0].name}"
+    />
   </div>
+  <p>Pair {current + 1} of {pairs.length}</p>
 {/if}
 
 <style>
   .comparison {
     margin-top: 2em;
+    display: grid;
+    grid-gap: 1rem;
+    margin: 2rem -1.6rem;
   }
-  .compare-btn {
-    font-size: 1.2em;
-    padding: 1em 2em;
-    margin: 0.5em;
-    border-radius: 8px;
-    border: 2px solid #888;
-    cursor: pointer;
-    transition: box-shadow 0.2s;
+  .comparison > :first-child {
+    text-align: right;
   }
-  .compare-btn:hover {
-    box-shadow: 0 0 0 2px #888;
+  @media (min-width: 600px) {
+    .comparison {
+      grid-template-columns: 1fr auto 1fr;
+      gap: 2rem;
+      margin: 7rem -2.4rem;
+    }
+  }
+
+  .vs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0;
+    overflow: hidden;
+  }
+  .vs-text {
+    font: var(--sk-font-ui-small);
+    color: var(--sk-fg-4);
+    text-transform: uppercase;
   }
 </style>

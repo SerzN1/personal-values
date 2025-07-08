@@ -1,94 +1,79 @@
 <script lang="ts">
-  import type { IValue, IValueGroup } from './types';
+  import type { IValue, IValueType } from './types';
   export let value: IValue;
-  export let group: IValueGroup;
+  export let group: IValueType;
   export let isSelected: boolean;
-  export let onToggle: (name: string) => void;
+  export let onClick: (name: string) => void;
 </script>
 
-<a
-  class="value-card group-{value.group} {isSelected ? 'selected' : ''}"
-  style="background-color: {group.backgroundColor}; border-color: {group.borderColor}; background-image: url('{group.iconSvg}')"
-  href="/"
-  on:click={() => onToggle(value.name)}
+<div
+  class="card group-{value.group} {isSelected ? 'selected' : ''}"
+  style="border-color: {isSelected ? group.color : 'transparent'};"
+  role="button"
+  tabindex="0"
+  on:click|preventDefault={() => onClick(value.id)}
+  on:keypress|preventDefault={() => onClick(value.id)}
 >
-  <h3>{value.name}</h3>
-  <small>{value.synonyms.join(', ')}</small>
-  <div class="group-label">{group?.label}</div>
-  <div class="group-desc">{group?.description}</div>
-</a>
+  <h3>{value.label}</h3>
+  <small class="value-description">{value.description}</small>
+  <img class="group-icon" src="{group.iconSvg}" alt="{group.label}" color={group.color} />
+  <button class="checkbox" type="button" aria-label="Select {value.label}">
+    <span class="icon icon-check"></span>
+  </button>
+</div>
 
 <style>
-.value-card {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 1rem;
-  width: 220px;
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-size: 60px 60px;
-  background-position: top right;
-  box-shadow: none;
-  transition: box-shadow 0.2s, border-color 0.2s;
-}
-.value-card.selected {
-  box-shadow: 0 0 0 2px #333;
-  border-color: #333;
-  outline: 2px solid #333;
-}
-.value-card h3 {
-  margin: 0 0 0.2em 0;
-}
-.value-card small {
-  color: #666;
-}
-.group-label {
-  font-size: 0.9em;
-  margin-top: 0.5em;
-}
-.group-desc {
-  font-size: 0.8em;
-  color: #666;
-}
-/* Group background and color classes */
-.group-self-direction {
-  background: #e3e6fa;
-  color: #1a237e;
-}
-.group-universalism {
-  background: #e0f2f1;
-  color: #00695c;
-}
-.group-stimulation {
-  background: #fce4ec;
-  color: #ad1457;
-}
-.group-hedonism {
-  background: #fff3e0;
-  color: #ff6f00;
-}
-.group-achievement {
-  background: #e8f5e9;
-  color: #2e7d32;
-}
-.group-power {
-  background: #efebe9;
-  color: #6d4c41;
-}
-.group-security {
-  background: #e1f5fe;
-  color: #0277bd;
-}
-.group-conformity {
-  background: #eceff1;
-  color: #37474f;
-}
-.group-tradition {
-  background: #fbe9e7;
-  color: #8d6e63;
-}
-.group-benevolence {
-  background: #e8f5e9;
-  color: #388e3c;
-}
+  .card {
+      color: inherit;
+      background-color: var(--sk-bg-2);
+      filter: drop-shadow(1px 2px 4px #0000001a);
+      border-radius: var(--sk-border-radius);
+      /* margin: 1em -1.6rem; */
+      padding: 1.6rem;
+      display: block;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+      text-decoration: none;
+      border: 2px solid transparent;
+      overflow: hidden;
+      /* color: var(--sk-fg-accent); */
+  }
+  .card:hover {
+      background-color: var(--sk-bg-3);
+      filter: drop-shadow(2px 3px 4px #0000002a);
+      transform: var(--safari-fix);
+      text-decoration: none;
+  }
+  @media (min-width: 480px) {
+    .card {
+      padding: 2.4rem;
+    }
+  }
+
+  .group-icon {
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    height: 140%;
+    opacity: 0.05;
+    pointer-events: none;
+  }
+  .value-description {
+    font-size: 1.3rem;
+  }
+
+  .checkbox {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    pointer-events: none;
+  }
+  .icon-check {
+    mask-image: url("data:image/svg+xml,%3csvg%20height='24'%20viewBox='0%200%2024%2024'%20width='24'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='m21%207-12%2012-5.5-5.5%201.41-1.41%204.09%204.08%2010.59-10.58z'%20fill='%23000000e0'/%3e%3c/svg%3e");
+  }
+  .selected .checkbox {
+    opacity: 1;
+  }
 </style>
