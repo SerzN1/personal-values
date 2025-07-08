@@ -60,7 +60,7 @@
   .value-description {
     font-size: 1.3rem;
     display: block;
-    min-height: 3.8rem;
+    min-height: 3.9rem;
   }
 
   .checkbox {

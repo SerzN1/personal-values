@@ -46,7 +46,7 @@
   <h2 id="polarization-insight">Polarization Insight</h2>
   <blockquote>
     <p>
-      {groupAnalysysResult.polarization.gap}
+      {groupAnalysysResult.polarization.gap} points
     </p>
     <p>
       {groupAnalysysResult.polarization.message}

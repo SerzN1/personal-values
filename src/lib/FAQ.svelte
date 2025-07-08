@@ -28,7 +28,7 @@
   {
     id: "what-will-i-get",
     q: "What will I get at the end?",
-    a: "You’ll receive a clear, prioritized list of your Top 5 personal values. Each one comes with a short reflection prompt to help you explore how it shows up in your daily life and leadership. It’s a snapshot of your inner compass — one you can revisit anytime you need to make a tough decision, reconnect with your purpose, or explore what’s next. Simple, insightful, and highly personal."
+    a: "You’ll receive a clear, prioritized list of your Top 5 personal values, each with a short reflection to help you explore how it shows up in your life and leadership. You’ll also see how your values are balanced across four key motivation groups — offering insight into what drives you, where tensions may exist, and how to stay aligned with what matters most. It’s a simple, personal snapshot of your inner compass — one you can return to whenever you need clarity, direction, or a moment of reflection."
   }
 ]
 ;
@@ -52,46 +52,4 @@
   article {
     margin-top: 7rem;
   }
-
-  /* @media (min-width: 768px) {
-    h2 {
-      margin: 0 0 0 -4.8rem;
-      padding: 0 2.4rem 0 4.8rem;
-    }
-  } */
-
-  /* @media (min-width: 768px) {
-    .permalink {
-        opacity: 0;
-        transition: opacity .2s;
-        left: 1.6rem;
-    }
-  }
-  @media (max-width: 767px) {
-    .permalink {
-        right: 0;
-        scale: .8;
-    }
-  }
-  .permalink {
-    background: var(--sk-fg-1);
-    width: 2.6rem;
-    height: 2.2rem;
-    display: block;
-    top: calc(50% - 1rem);
-    mask: url("data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:none;stroke:%23000000e0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px}%3c/style%3e%3c/defs%3e%3cg%20id='Layer_1'%3e%3cpath%20d='M8.5%202v20M15.5%202v20M4%208.5l16-.1M4%2015.5l16-.1'%20class='cls-1'/%3e%3c/g%3e%3c/svg%3e") 50% / 2.4rem 2.4rem no-repeat;
-    position: absolute !important;
-  }
-  @media (min-width: 768px) {
-    h2:hover .permalink {
-        opacity: 1;
-    }
-  }
-  @media (min-width: 768px) {
-    .permalink {
-        opacity: 0;
-        transition: opacity .2s;
-        left: 1.6rem;
-    }
-  } */
 </style>
