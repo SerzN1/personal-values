@@ -15,7 +15,6 @@
   let lastWinnerId: string | null = null;
 
   function initializeFromStore(selected: IValue[]) {
-    console.log("1", selected);
     comparisonStore.subscribe((state) => {
       if (state && state.selected && JSON.stringify(state.selected) === JSON.stringify(selected.map(v => v.id))) {
         // Restore from store
@@ -93,9 +92,9 @@
         onClick={() => pick(pairs[current][0], pairs[current][1])}
       />
 
-        <div class="vs">
-            <div class="vs-text">or</div>
-        </div>
+      <div class="vs">
+          <div class="vs-text">or</div>
+      </div>
 
       <ValueCard
         value={valueById[pairs[current][1]]}

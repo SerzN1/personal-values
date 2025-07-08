@@ -41,7 +41,6 @@ export interface IGroupData {
 }
 
 export interface IGroupPolarization {
-  tensionBetween: [GroupKey, GroupKey];
   gap: number;
   message: string;
 }

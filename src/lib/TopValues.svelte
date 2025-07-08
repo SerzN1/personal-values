@@ -20,10 +20,6 @@
 </div>
 
 <style>
-  .cards {
-    display: grid;
-    gap: 1.5rem;
-  }
   h2 {
     margin-top: 7rem;
     scroll-margin-top: calc(var(--sk-nav-height) + 4rem);

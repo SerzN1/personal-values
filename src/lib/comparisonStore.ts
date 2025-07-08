@@ -46,8 +46,6 @@ function loadComparisonState(): IComparisonState | null {
 export const comparisonStore = writable<IComparisonState | null>(loadComparisonState());
 
 comparisonStore.subscribe((val) => {
-  console.log("save 2", val);
-
   if (typeof window !== 'undefined') {
     if (val) {
       try {

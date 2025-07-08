@@ -35,6 +35,7 @@
     text-decoration: none;
     border: 2px solid transparent;
     overflow: hidden;
+    user-select: none;
   }
   .card:hover {
     background-color: var(--sk-bg-3);

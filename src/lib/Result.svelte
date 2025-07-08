@@ -30,13 +30,6 @@
   <TopValues topValues={topValuesSorted} />
   <GroupBalance groupScores={groupScores} groupAnalysysResult={groupAnalysysResult} />
 
-  <!-- Temporary
-  <ul>
-    {#each topValuesSorted as topValue}
-      <li><strong>{topValue[0]}</strong>: {topValue[1]} points</li>
-    {/each}
-  </ul> -->
-
   <Controls>
     {#snippet prev()}
       <a href="#prev" on:click|preventDefault={onPrev} title="Prioritize Again" aria-label="Prioritize Again">Prioritize Again</a>

@@ -9,7 +9,7 @@ import stimulationIcon from '../assets/stimulation.svg';
 import traditionIcon from '../assets/tradition.svg';
 import universalizmIcon from '../assets/universalizm.svg';
 
-import type { GroupKey, IValue, IValueType, IGroupData } from './types';
+import type { GroupKey, IGroupData, IValue, IValueType } from './types';
 
 export const valueTypes: Record<string, IValueType> = {
   SelfDirection: {
@@ -92,7 +92,8 @@ export const groupData: Record<GroupKey, IGroupData> = {
       "You may feel most fulfilled when you're supporting others or making a positive impact.",
       "You likely value fairness, empathy, and social responsibility."
     ],
-    color: '#00E5A1',
+    color: "#00BFA5",
+    // backgroundColor: "rgba(0, 191, 165, 0.08)"
   },
   SelfEnhancement: {
     label: "Self-Enhancement",
