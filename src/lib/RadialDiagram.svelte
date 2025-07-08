@@ -1,10 +1,10 @@
 <script lang="ts">
   import { groupData } from './data';
   export let scores: Record<string, number> = {
-    SelfTranscendence: 7,
-    SelfEnhancement: 5,
-    OpennessToChange: 6,
-    Conservation: 4
+    SelfTranscendence: 0,
+    SelfEnhancement: 0,
+    OpennessToChange: 0,
+    Conservation: 0
   };
   export let maxRadius: number = 100;
 

@@ -9,7 +9,7 @@ import stimulationIcon from '../assets/stimulation.svg';
 import traditionIcon from '../assets/tradition.svg';
 import universalizmIcon from '../assets/universalizm.svg';
 
-import type { GroupKey, IValue, IValueType } from './types';
+import type { GroupKey, IValue, IValueType, IGroupData } from './types';
 
 export const valueTypes: Record<string, IValueType> = {
   SelfDirection: {
@@ -84,12 +84,7 @@ export const valueTypes: Record<string, IValueType> = {
   }
 };
 
-export const groupData: Record<GroupKey, {
-  label: string;
-  summary: string;
-  insights: string[];
-  color: string;
-}> = {
+export const groupData: Record<GroupKey, IGroupData> = {
   SelfTranscendence: {
     label: "Self-Transcendence",
     summary: "helping others, compassion, and fairness",
@@ -442,7 +437,7 @@ export const values: IValue[] = [
     "label": "Empathy",
     "description": "Understanding and connecting with the feelings of others.",
     "type": "Benevolence",
-    "group": "Self-Transcendence",
+    "group": "SelfTranscendence",
     "tags": ["relationships", "care"],
     "strengths": "You build trust and compassion through deep understanding.",
     "dangers": "Too much emotional attunement can lead to emotional exhaustion or blurred boundaries.",
@@ -456,7 +451,7 @@ export const values: IValue[] = [
     "label": "Kindness",
     "description": "Acting with care, generosity, and goodwill toward others.",
     "type": "Benevolence",
-    "group": "Self-Transcendence",
+    "group": "SelfTranscendence",
     "tags": ["connection", "support"],
     "strengths": "You create warmth and connection through thoughtful actions.",
     "dangers": "Unbalanced kindness may lead to neglecting your own needs.",
@@ -470,7 +465,7 @@ export const values: IValue[] = [
     "label": "Helpfulness",
     "description": "Being willing to support, assist, or uplift others.",
     "type": "Benevolence",
-    "group": "Self-Transcendence",
+    "group": "SelfTranscendence",
     "tags": ["service", "community"],
     "strengths": "You make a meaningful difference in others’ lives.",
     "dangers": "Constant helping may create dependency or neglect of personal growth.",
@@ -484,7 +479,7 @@ export const values: IValue[] = [
     "label": "Equality",
     "description": "Believing in fairness and equal opportunities for all people.",
     "type": "Universalism",
-    "group": "Self-Transcendence",
+    "group": "SelfTranscendence",
     "tags": ["justice", "diversity"],
     "strengths": "You advocate for fairness and inclusiveness in your circles.",
     "dangers": "Pursuing fairness may lead to frustration in systems slow to change.",
@@ -498,7 +493,7 @@ export const values: IValue[] = [
     "label": "Sustainability",
     "description": "Protecting nature and acting with care for the planet and future generations.",
     "type": "Universalism",
-    "group": "Self-Transcendence",
+    "group": "SelfTranscendence",
     "tags": ["environment", "future"],
     "strengths": "You make choices that reflect long-term thinking and care for the Earth.",
     "dangers": "Sustainability efforts can feel overwhelming or isolating when not shared.",
@@ -512,7 +507,7 @@ export const values: IValue[] = [
     "label": "Openness to Others",
     "description": "Welcoming and appreciating different cultures, perspectives, and ways of life.",
     "type": "Universalism",
-    "group": "Self-Transcendence",
+    "group": "SelfTranscendence",
     "tags": ["diversity", "inclusion"],
     "strengths": "You foster connection across differences and create inclusive spaces.",
     "dangers": "Openness can become indecisiveness or dilution of your own stance.",
@@ -526,7 +521,7 @@ export const values: IValue[] = [
     "label": "Justice",
     "description": "Standing up for what is fair and morally right.",
     "type": "Universalism",
-    "group": "Self-Transcendence",
+    "group": "SelfTranscendence",
     "tags": ["equity", "principles"],
     "strengths": "You advocate for fairness and integrity even when it's hard.",
     "dangers": "Strong moral stance may lead to conflict or rigidity.",
@@ -540,7 +535,7 @@ export const values: IValue[] = [
     "label": "Compassion",
     "description": "Caring deeply about the pain or suffering of others, with a desire to alleviate it.",
     "type": "Benevolence",
-    "group": "Self-Transcendence",
+    "group": "SelfTranscendence",
     "tags": ["care", "support"],
     "strengths": "You offer deep care and emotional presence to those in need.",
     "dangers": "Compassion fatigue can occur when emotional reserves are depleted.",
@@ -554,7 +549,7 @@ export const values: IValue[] = [
     "label": "Community",
     "description": "Valuing connection and shared responsibility in groups you belong to.",
     "type": "Benevolence",
-    "group": "Self-Transcendence",
+    "group": "SelfTranscendence",
     "tags": ["belonging", "cooperation"],
     "strengths": "You strengthen groups through loyalty, collaboration, and care.",
     "dangers": "Over-identifying with the group can suppress individual needs.",
@@ -568,7 +563,7 @@ export const values: IValue[] = [
     "label": "Respect",
     "description": "Valuing dignity, rights, and perspectives of others.",
     "type": "Universalism",
-    "group": "Self-Transcendence",
+    "group": "SelfTranscendence",
     "tags": ["civility", "humanity"],
     "strengths": "You listen and act with fairness toward all, regardless of status or views.",
     "dangers": "Respect without discernment may enable harmful behavior.",
@@ -582,7 +577,7 @@ export const values: IValue[] = [
     "label": "Generosity",
     "description": "Willingness to share time, resources, or energy freely with others.",
     "type": "Benevolence",
-    "group": "Self-Transcendence",
+    "group": "SelfTranscendence",
     "tags": ["giving", "support"],
     "strengths": "You create abundance through your acts of giving.",
     "dangers": "Unchecked generosity can lead to depletion or imbalance in relationships.",

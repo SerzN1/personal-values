@@ -24,8 +24,12 @@
     processStage.set(STAGES.COMPARISON);
   }
 
-  function handleComparisonFinish(scores: Record<string, number>) {
-    comparisonScores = scores;
+  function handleBackToComparison() {
+    resetComparison();
+    processStage.set(STAGES.COMPARISON);
+  }
+
+  function handleComparisonFinish() {
     processStage.set(STAGES.RESULTS);
   }
 
@@ -85,7 +89,8 @@
   />
 {:else if $processStage === STAGES.RESULTS}
   <Result
-    scores={comparisonScores}
-    onStartOver={handleRestart}
+    scores={$comparisonStore?.scores}
+    onPrev={handleBackToComparison}
+    onNext={handleRestart}
   />
 {/if}

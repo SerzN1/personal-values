@@ -482,6 +482,38 @@ button.text {
   outline: 2px solid var(--color);
   border-radius: 2px;
 }
+.highlight.add {
+  --color: #00ff002e;
+}
 .highlight.remove {
-    --color: #ff00001a;
+  --color: #ff00001a;
+}
+:root.dark .highlight.remove {
+  --color: #ff000045;
+}
+
+main ul {
+  --list-padding: 3rem;
+  margin-left: var(--list-padding);
+  list-style: none;
+}
+
+main ul li {
+  position: relative;
+}
+
+main ul li:not(:last-child) {
+  margin: 0 0 .5em;
+}
+
+main ul li:before {
+  content: "";
+  background-color: var(--sk-fg-4);
+  opacity: .7;
+  border-radius: 50%;
+  width: .3em;
+  height: .3em;
+  position: absolute;
+  top: .65em;
+  left: -1.8rem;
 }

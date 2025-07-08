@@ -7,7 +7,7 @@
   import ValueCard from './ValueCard.svelte';
 
   export let selected: IValue[] = [];
-  export let onFinish: (scores: Record<string, number>) => void;
+  export let onFinish: () => void;
 
   let pairs: [string, string][] = [];
   let scores: Record<string, number> = {};
@@ -67,7 +67,7 @@
     }
     saveState();
     if (current >= pairs.length) {
-      onFinish(scores);
+      onFinish();
     }
   }
 

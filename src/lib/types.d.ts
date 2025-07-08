@@ -33,14 +33,23 @@ export interface IAssessmentResult {
 
 type GroupKey = 'SelfTranscendence' | 'SelfEnhancement' | 'OpennessToChange' | 'Conservation';
 
+export interface IGroupData {
+  label: string;
+  summary: string;
+  insights: string[];
+  color: string;
+}
+
+export interface IGroupPolarization {
+  tensionBetween: [GroupKey, GroupKey];
+  gap: number;
+  message: string;
+}
+
 export interface IGroupAnalysisResult {
   topGroup: GroupKey;
   bottomGroup: GroupKey;
   summary: string;
   insights: string[];
-  polarization?: {
-    tensionBetween: [GroupKey, GroupKey];
-    gap: number;
-    message: string;
-  };
+  polarization?: IGroupPolarization;
 }

@@ -24,25 +24,23 @@
 
 <style>
   .card {
-      color: inherit;
-      background-color: var(--sk-bg-2);
-      filter: drop-shadow(1px 2px 4px #0000001a);
-      border-radius: var(--sk-border-radius);
-      /* margin: 1em -1.6rem; */
-      padding: 1.6rem;
-      display: block;
-      cursor: pointer;
-      transition: all .3s ease-in-out;
-      text-decoration: none;
-      border: 2px solid transparent;
-      overflow: hidden;
-      /* color: var(--sk-fg-accent); */
+    color: inherit;
+    background-color: var(--sk-bg-2);
+    filter: drop-shadow(1px 2px 4px #0000001a);
+    border-radius: var(--sk-border-radius);
+    padding: 1.6rem;
+    display: block;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+    border: 2px solid transparent;
+    overflow: hidden;
   }
   .card:hover {
-      background-color: var(--sk-bg-3);
-      filter: drop-shadow(2px 3px 4px #0000002a);
-      transform: var(--safari-fix);
-      text-decoration: none;
+    background-color: var(--sk-bg-3);
+    filter: drop-shadow(2px 3px 4px #0000002a);
+    transform: var(--safari-fix);
+    text-decoration: none;
   }
   @media (min-width: 480px) {
     .card {

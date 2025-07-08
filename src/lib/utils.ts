@@ -1,5 +1,4 @@
-import { groupData } from './data';
-import type { GroupKey, IAssessmentResult, IGroupAnalysisResult, IValue } from './types';
+import type { GroupKey, IAssessmentResult, IGroupAnalysisResult, IGroupData, IValue } from './types';
 
 export function calculateValueScores(prioritizedIds: string[], allValues: IValue[]): IAssessmentResult {
   const valueScores: Record<string, number> = {};
@@ -38,23 +37,39 @@ const OPPOSITES = [
   ['Openness to Change', 'Conservation']
 ];
 
-function detectTensions(groupScores: Record<string, number>) {
+export function detectTensions(groupScores: Record<string, number>): string[] {
+  console.log('tensiion', groupScores);
   const insights: string[] = [];
 
   for (const [a, b] of OPPOSITES) {
-    const delta = Math.abs((groupScores[a] || 0) - (groupScores[b] || 0));
+    const scoreA = groupScores[a] || 0;
+    const scoreB = groupScores[b] || 0;
+    const delta = Math.abs(scoreA - scoreB);
 
-    if (delta < 2) {
-      insights.push(`You appear to value both ${a} and ${b}, which could reflect an inner pull between competing drives.`);
-    } else if ((groupScores[a] || 0) > (groupScores[b] || 0)) {
-      insights.push(`You lean strongly toward ${a}, while ${b} values are less emphasized.`);
+    if (delta < 10) {
+      // Low difference = balanced orientation
+      insights.push(`You show a relatively balanced emphasis between ${a} and ${b}, suggesting flexibility in navigating these areas.`);
+    } else if (delta >= 10 && delta < 20) {
+      // Mild contrast
+      const dominant = scoreA > scoreB ? a : b;
+      const lesser = scoreA > scoreB ? b : a;
+      insights.push(`You appear to lean toward ${dominant}, but still show awareness of the values associated with ${lesser}.`);
+    } else if (delta >= 20 && delta < 30) {
+      // Clear preference
+      const dominant = scoreA > scoreB ? a : b;
+      const lesser = scoreA > scoreB ? b : a;
+      insights.push(`You show a clear preference for ${dominant}, while placing less importance on ${lesser}. This may reflect a prioritization of one approach over the other.`);
     } else {
-      insights.push(`You prioritize ${b}, suggesting a preference for its stability over the flexibility of ${a}.`);
+      // Strong contrast (polarization)
+      const dominant = scoreA > scoreB ? a : b;
+      const lesser = scoreA > scoreB ? b : a;
+      insights.push(`There is a strong contrast between your preference for ${dominant} and your lower emphasis on ${lesser}. This tension might shape important decisions or challenges.`);
     }
   }
 
   return insights;
 }
+
 
 /**
  * Summarizes group scores from the top values.
@@ -62,18 +77,18 @@ function detectTensions(groupScores: Record<string, number>) {
  * @param {IValue[]} topValues
  * @return {*}  {Record<string, number>}
  */
-export function summarizeGroups(topValues: IValue[]): Record<string, number> {
+export function summarizeGroups(topValues: [string, number][], valueById: Record<string, IValue>): Record<GroupKey, number> {
   const groupTotals: Record<string, number> = {};
 
   for (const val of topValues) {
-    const group = val.group; // e.g. "Self-Transcendence"
-    groupTotals[group] = (groupTotals[group] || 0) + val.score;
+    const group = valueById[val[0]].group; // e.g. "Self-Transcendence"
+    groupTotals[group] = (groupTotals[group] || 0) + val[1];
   }
 
   return groupTotals;
 }
 
-export function analyzeGroupScores(scores: Record<GroupKey, number>): IGroupAnalysisResult {
+export function analyzeGroupScores(scores: Record<GroupKey, number>, groupData: Record<GroupKey, IGroupData>): IGroupAnalysisResult {
   const entries = Object.entries(scores) as [GroupKey, number][];
   const sorted = entries.sort((a, b) => b[1] - a[1]);
 
@@ -82,10 +97,6 @@ export function analyzeGroupScores(scores: Record<GroupKey, number>): IGroupAnal
 
   const top = groupData[topGroup];
   const bottom = groupData[bottomGroup];
-
-  const summary = `Your values are centered around ${top.summary}. You prioritize this over ${bottom.summary}.`;
-
-  const insights = [...top.insights, ...bottom.insights];
 
   const gap = topScore - bottomScore;
   const polarization = gap >= 30 ? {
@@ -97,8 +108,29 @@ export function analyzeGroupScores(scores: Record<GroupKey, number>): IGroupAnal
   return {
     topGroup,
     bottomGroup,
-    summary,
-    insights,
+    summary: `Your values are centered around ${top.summary}. You prioritize this over ${bottom.summary}.`,
+    insights: top.insights,
     polarization
   };
+}
+
+const reflectionPrompts: Record<string, (score: number) => string> = {
+  SelfTranscendence: (score) => score >= 70
+    ? "How do you care for yourself while caring for others?"
+    : "Where might more compassion or shared purpose energize your direction?",
+  SelfEnhancement: (score) => score >= 70
+    ? "How does your drive for achievement support — or compete with — your relationships?"
+    : "What would you pursue more boldly if recognition didn’t matter?",
+  OpennessToChange: (score) => score >= 70
+    ? "Where are you being called to explore something new right now?"
+    : "What new experiences might stretch your perspective?",
+  Conservation: (score) => score >= 70
+    ? "Where does structure or routine help you feel safe right now?"
+    : "What small rituals might create more stability in your life?"
+};
+
+export function generateUserReflections(scores: Record<string, number>): string[] {
+  return Object.entries(scores).map(([key, score]) => {
+    return reflectionPrompts[key](score);
+  });
 }
