@@ -1,47 +1,177 @@
-# Svelte + Vite
+# Personal Values / Core Values Assessment
 
-This template should help get you started developing with Svelte in Vite.
+This project provides a lightweight, efficient web application built with **Svelte** and **Vite** to deliver a fast and smooth Personal Values / Core Values Assessment experience. The tool helps users identify, prioritize, and reflect on their core personal values through an intuitive interface.
 
-## Recommended IDE Setup
+The assessment model is based on an **extended and humanized adaptation of Schwartz's Theory of Basic Human Values**, which classifies core values into 10 universal categories that guide human motivation. We've expanded the model to be more accessible and emotionally resonant, particularly for coaching, self-discovery, and leadership development contexts.
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+## Key Features
 
-## Need an official Svelte framework?
+- Identify and prioritize your top personal values through a guided interface
+- Understand the tensions and balances between value groups (e.g., Openness vs. Conservation)
+- Reflect on how your values align with your current goals, relationships, and leadership style
+- Designed for individual users, teams, and coaches alike
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+## Applications
 
-## Technical considerations
+- Self-awareness and personal development
+- Leadership training and alignment
+- Values-based decision-making
+- Coaching and facilitation tools
+- Team values mapping and cultural fit analysis
 
-**Why use this over SvelteKit?**
+## Values, Value Types and Value Groups
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
-
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
-
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `checkJs` in the JS template?**
-
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+```mermaid
+pie title Value Groups
+    "Openness to Change (SelfDirection + Stimulation)" : 12
+    "Self-Transcendence (Universalism + Benevolence)" : 14
+    "Conservation (Security + Conformity + Tradition)" : 18
+    "Self-Enhancement (Hedonism + Achievement + Power)" : 19
 ```
+
+> This is a simplified circular layout of the four higher-order Schwartz value groups, showing the proportion of values each group holds in the 63-value model.
+
+
+<details>
+<summary>Structure of the value system used in the assessment</summary>
+
+This is an extended Schwartz value system used in the Personal Values Assessment. Values are grouped under 10 value types, which in turn are nested within 4 higher-order motivational groups. The connections suggest psychological tensions and alignments.
+
+```mermaid
+graph TB
+
+%% Higher-Order Value Groups
+subgraph OpennessToChange
+  SelfDirection
+  Stimulation
+end
+
+subgraph SelfTranscendence
+  Universalism
+  Benevolence
+end
+
+subgraph Conservation
+  Security
+  Conformity
+  Tradition
+end
+
+subgraph SelfEnhancement
+  Hedonism
+  Achievement
+  Power
+end
+
+%% Connect to show psychological tensions (optional)
+SelfDirection -- contrast --> Conformity
+Stimulation -- contrast --> Security
+Universalism -- contrast --> Power
+Benevolence -- contrast --> Achievement
+
+%% Value Types to Values (sampled for brevity)
+SelfDirection --> curiosity
+SelfDirection --> creativity
+SelfDirection --> freedom
+SelfDirection --> independence
+SelfDirection --> self-expression
+
+Stimulation --> excitement
+Stimulation --> adventure
+Stimulation --> novelty
+Stimulation --> energy
+Stimulation --> challenge
+
+Achievement --> achievement
+Achievement --> ambition
+Achievement --> competence
+Achievement --> success
+Achievement --> recognition
+
+Power --> influence
+Power --> status
+Power --> control
+Power --> dominance
+Power --> wealth
+
+Hedonism --> pleasure
+Hedonism --> sensuality
+Hedonism --> enjoyment
+Hedonism --> gratification
+Hedonism --> fun
+
+Security --> safety
+Security --> protection
+Security --> predictability
+Security --> personal_security
+Security --> resilience
+
+Conformity --> order
+Conformity --> obedience
+Conformity --> self_control
+Conformity --> responsibility
+Conformity --> loyalty
+
+Tradition --> humility
+Tradition --> cultural_heritage
+Tradition --> respect_for_customs
+Tradition --> ritual
+Tradition --> respect_for_elders
+
+Benevolence --> kindness
+Benevolence --> empathy
+Benevolence --> helpfulness
+Benevolence --> generosity
+Benevolence --> community
+
+Universalism --> justice
+Universalism --> equality
+Universalism --> sustainability
+Universalism --> compassion
+Universalism --> openness
+
+%% Extra (uncategorized or bridge values)
+SelfDirection --> exploration
+Benevolence --> belonging
+Authenticity[authenticity] --> SelfDirection
+Faith[faith] --> Tradition
+Leadership[leadership] --> Achievement
+```
+
+</details>
+
+---
+
+## Tech Stack
+
+- **Svelte** – Reactive UI framework for building highly performant web apps
+- **Vite** – Next-generation frontend tooling for fast development experience
+
+This combination ensures rapid load times, seamless updates, and a responsive user experience.
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v20+ recommended)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/SerzN1/personal-values.git
+   cd personal-values
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+   Open [http://localhost:5173](http://localhost:5173) to view the app.

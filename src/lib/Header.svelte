@@ -9,8 +9,6 @@
   export let onNext: () => void;
   export let onRestart: () => void;
 
-  console.log(selected.length);
-
   $: totalPairs = selected.length * ( selected.length - 1) / 2;
 
   function toggleDarkMode() {
