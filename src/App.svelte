@@ -4,7 +4,7 @@
   import { comparisonStore, resetPrioritization } from './lib/comparisonStore';
   import { STAGES, VALUES_SELECTIONS_REQUIRED } from './lib/constants';
   import CTA from './lib/CTA.svelte';
-  import { groupData, valueById, valueTypes, values } from './lib/data';
+  import { valueTypes, values } from './lib/data';
   import FAQ from './lib/FAQ.svelte';
   import Navigation from './lib/Header.svelte';
   import PrivacyNote from './lib/PrivacyNote.svelte';
@@ -13,9 +13,6 @@
   import ValueSelection from './lib/ValueSelection.svelte';
 
   export const prerender = true;
-
-  console.log(Object.keys(valueTypes), Object.keys(groupData), Object.keys(valueById));
-
 
   function handleSelectionChange(newSelected: string[] = []) {
     selectedValues.set(newSelected);
