@@ -10,5 +10,5 @@ export const STAGES = {
   RESULTS: 'results',
 } as const;
 
-export const VALUES_SELECTIONS_REQUIRED = 3;
+export const VALUES_SELECTIONS_REQUIRED = 10;
 export const VALUES_RESULT_COUNT = 5;
