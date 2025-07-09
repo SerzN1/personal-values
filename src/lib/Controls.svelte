@@ -1,12 +1,12 @@
 
 <script>
-	let { prev, next } = $props();
+	let { prev = null, next = null } = $props();
 </script>
 
 <div class="controls">
   <div class="control-title">
-    <span class="prev">previous</span>
-    <span class="next">next</span>
+    <span class="prev {!prev && 'faded'}">previous</span>
+    <span class="next {!next && 'faded'}">next</span>
   </div>
   <div class="controls-content">
     <div class="prev">
@@ -44,5 +44,8 @@
   }
   .controls-content {
     font: var(--sk-font-body);
+  }
+  .faded {
+    opacity: .4;
   }
 </style>

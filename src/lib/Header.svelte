@@ -30,6 +30,10 @@
   function openGithub() {
     window.open('https://github.com/serzn1/personal-values/', '_blank');
   }
+
+  function scrollToPageBottom() {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  }
 </script>
 
 <nav aria-label="Primary" class="header">
@@ -44,7 +48,7 @@
       </button>
     {:else if stage === STAGES.SELECTION}
       <span class="header-status">
-        Selected {selected.length} of {VALUES_SELECTIONS_REQUIRED}
+        Selected {selected?.length} of {VALUES_SELECTIONS_REQUIRED}
       </span>
       <button class="btn raised" type="button" aria-pressed="false" aria-label="Continue Assessment" title="Continue Assessment" on:click={onNext}>
         <span class="icon icon-continue"></span>
@@ -70,6 +74,9 @@
     </button>
     <button class="raised" type="button" aria-pressed="false" aria-label="Github" title="Github" on:click={openGithub}>
       <span class="icon icon-github"></span>
+    </button>
+    <button class="raised" type="button" aria-pressed="false" aria-label="Privacy Note" title="Privacy Note" on:click={scrollToPageBottom}>
+      <span class="icon icon-privacy"></span>
     </button>
   </div>
 </nav>
@@ -194,5 +201,8 @@
 
   .icon-github {
     mask-image: url("data:image/svg+xml,%3csvg%20width='98'%20height='96'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M48.854%200C21.839%200%200%2022%200%2049.217c0%2021.756%2013.993%2040.172%2033.405%2046.69%202.427.49%203.316-1.059%203.316-2.362%200-1.141-.08-5.052-.08-9.127-13.59%202.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015%204.934.326%207.523%205.052%207.523%205.052%204.367%207.496%2011.404%205.378%2014.235%204.074.404-3.178%201.699-5.378%203.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283%200-5.378%201.94-9.778%205.014-13.2-.485-1.222-2.184-6.275.486-13.038%200%200%204.125-1.304%2013.426%205.052a46.97%2046.97%200%200%201%2012.214-1.63c4.125%200%208.33.571%2012.213%201.63%209.302-6.356%2013.427-5.052%2013.427-5.052%202.67%206.763.97%2011.816.485%2013.038%203.155%203.422%205.015%207.822%205.015%2013.2%200%2018.905-11.404%2023.06-22.324%2024.283%201.78%201.548%203.316%204.481%203.316%209.126%200%206.6-.08%2011.897-.08%2013.526%200%201.304.89%202.853%203.316%202.364%2019.412-6.52%2033.405-24.935%2033.405-46.691C97.707%2022%2075.788%200%2048.854%200z'%20fill='%23666'/%3e%3c/svg%3e");
+  }
+  .icon-privacy {
+    mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%20-1%2024%2024%22%20id%3D%22shield%22%3E%3Cpath%20d%3D%22M19.6%2C3.65a1%2C1%2C0%2C0%2C0-.84-.2%2C8%2C8%2C0%2C0%2C1-6.22-1.27%2C1%2C1%2C0%2C0%2C0-1.14%2C0A8%2C8%2C0%2C0%2C1%2C5.21%2C3.45a1%2C1%2C0%2C0%2C0-.84.2A1%2C1%2C0%2C0%2C0%2C4%2C4.43v7.45a9%2C9%2C0%2C0%2C0%2C3.77%2C7.33l3.65%2C2.6a1%2C1%2C0%2C0%2C0%2C1.16%2C0l3.65-2.6A9%2C9%2C0%2C0%2C0%2C20%2C11.88V4.43A1%2C1%2C0%2C0%2C0%2C19.63%2C3.65ZM18%2C11.88a7%2C7%2C0%2C0%2C1-2.93%2C5.7L12%2C19.77%2C8.93%2C17.58A7%2C7%2C0%2C0%2C1%2C6%2C11.88V5.58a10%2C10%2C0%2C0%2C0%2C6-1.39%2C10%2C10%2C0%2C0%2C0%2C6%2C1.39ZM13.54%2C9.59l-2.69%2C2.7-.89-.9a1%2C1%2C0%2C0%2C0-1.42%2C1.42l1.6%2C1.6a1%2C1%2C0%2C0%2C0%2C1.42%2C0L15%2C11a1%2C1%2C0%2C0%2C0-1.42-1.42Z%22%2F%3E%3C%2Fsvg%3E");
   }
 </style>

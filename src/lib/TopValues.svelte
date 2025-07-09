@@ -12,7 +12,7 @@
 <div class="cards">
   {#each topValues as value, i}
     <ValueCardRanked
-      rank={i + 1}
+      rank={i}
       value={valueById[value[0]]}
       type={valueTypes[valueById[value[0]].type]}
       insight={valueById[value[0]].insight || valueInsights[value[0]]}

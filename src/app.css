@@ -5,7 +5,7 @@
     --sk-fg-1: #141414;
     --sk-fg-2: #262626;
     --sk-fg-3: #666;
-    --sk-fg-4: gray;
+    --sk-fg-4: #757575;
     --sk-fg-accent: #d43008;
     --sk-bg-1: #fff;
     --sk-bg-2: #fdfdfd;
@@ -546,8 +546,6 @@ main ul li:before {
   h3[id]:hover .permalink {
       opacity: 1;
   }
-}
-@media (min-width: 768px) {
   .permalink {
       opacity: 0;
       transition: opacity .2s;

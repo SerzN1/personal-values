@@ -1,21 +1,19 @@
 import { writable } from 'svelte/store';
-import { COMPARISON_STATE_KEY, SELECTION_STATE_KEY, STAGES, VALUES_SELECTIONS_REQUIRED } from './constants';
+import { COMPARISON_STATE_KEY, SELECTION_STATE_KEY, STAGES } from './constants';
 
 function loadSelectedValues(): string[] {
-  if (typeof window !== 'undefined') {
-    try {
-      const saved = localStorage.getItem(SELECTION_STATE_KEY);
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.every(item => typeof item === 'string')) {
-          return parsed;
-        }
-      }
-    } catch (e) {
-      console.error('Failed to load selection from localStorage:', e);
+  const selectedRaw = typeof window !== 'undefined' ? localStorage.getItem(SELECTION_STATE_KEY) : null;
+  if (!selectedRaw) return null;
+
+  try {
+    const parsed = JSON.parse(selectedRaw);
+    if (Array.isArray(parsed) && parsed.every(item => typeof item === 'string')) {
+      return parsed;
     }
+  } catch (e) {
+    console.error('Failed to load selection from localStorage:', e);
   }
-  return [];
+  return []
 }
 
 export const selectedValues = writable<string[]>(loadSelectedValues());
@@ -55,8 +53,10 @@ function getInitialProcessStage() {
   }
   const selectionRaw = typeof window !== 'undefined' ? localStorage.getItem(SELECTION_STATE_KEY) : null;
   if (selectionRaw) {
-    const arr = JSON.parse(selectionRaw);
-    if (Array.isArray(arr) && arr.length >= VALUES_SELECTIONS_REQUIRED) return STAGES.SELECTION;
+    const parsed = JSON.parse(selectionRaw);
+    if (Array.isArray(parsed) && parsed.every(item => typeof item === 'string') && parsed.length > 0) {
+      return STAGES.SELECTION;
+    };
   }
   return STAGES.START;
 }

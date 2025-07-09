@@ -47,7 +47,7 @@
   {#each svsGroups as { angle }, i}
     {#key i}
       {@const [x, y] = polarToCartesian(angle, maxRadius)}
-      <line x1="0" y1="0" x2={x} y2={y} stroke="#ccc" stroke-width="1" />
+      <line x1="0" y1="0" x2={x} y2={y} stroke="#ccc" stroke-width="1" stroke-opacity="0.5" />
     {/key}
   {/each}
 
@@ -70,8 +70,8 @@
     <text
       x={x}
       y={y}
-      font-size="10"
-      font-variant="small-caps"
+      font-size="12"
+      font-family="monospace"
       fill={groupData[key].color}
       text-anchor="middle"
       alignment-baseline="middle"

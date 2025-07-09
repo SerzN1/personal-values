@@ -7,13 +7,12 @@
   import { valueTypes, values } from './lib/data';
   import FAQ from './lib/FAQ.svelte';
   import Navigation from './lib/Header.svelte';
+  import PrivacyNote from './lib/PrivacyNote.svelte';
   import Result from './lib/Result.svelte';
   import { processStage, resetSelectedValues, selectedValues } from './lib/selectionStore';
   import ValueSelection from './lib/ValueSelection.svelte';
 
   export const prerender = true;
-
-  console.log(values);
 
   function handleSelectionChange(newSelected: string[] = []) {
     selectedValues.set(newSelected);
@@ -96,3 +95,5 @@
     onNext={handleRestart}
   />
 {/if}
+
+<PrivacyNote />

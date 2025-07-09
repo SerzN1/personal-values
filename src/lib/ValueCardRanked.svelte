@@ -4,12 +4,14 @@
   export let value: IValue;
   export let type: IValueType;
   export let insight: string;
+
+  const fontSizes = ['--sk-font-size-h1', '--sk-font-size-h2'];
 </script>
 
 <div class="ranked">
-  <h3 style="color: {type.color};" id="nr{rank}">
+  <h3 style="color: {type.color}; font-size: var({fontSizes[rank]})" id="nr{rank + 1}">
     {value.label}
-    <a href="#nr{rank}" class="permalink" aria-label="permalink"></a>
+    <a href="#nr{rank + 1}" class="permalink" aria-label="permalink"></a>
   </h3>
   <img class="group-icon" src="{type.iconSvg}" alt="{type.label}" color={type.color} />
   <p>{insight}</p>
@@ -21,7 +23,7 @@
       {q}<br />
     {/each}
   </p>
-  <span class="rank" aria-label="Rank {value.label}">#{rank}</span>
+  <span class="rank" aria-label="Rank {value.label}">#{rank + 1}</span>
 </div>
 
 <style>
@@ -44,11 +46,15 @@
     top: -3rem;
     right: 0rem;
     opacity: 0.15;
+    pointer-events: none;
   }
-
   h3 {
     margin-top: 5rem;
     scroll-margin-top: calc(var(--sk-nav-height) + 4rem);
   }
-
+  @media (max-width: 767px) {
+    .permalink {
+      display: none;
+    }
+  }
 </style>
