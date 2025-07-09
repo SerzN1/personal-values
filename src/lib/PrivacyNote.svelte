@@ -10,6 +10,6 @@ If you ever want to clear your answers, you can reset your session anytime.
   footer {
     font: var(--sk-font-ui-small);
     margin: 7rem 0 0;
-    opacity: 0.4;
+    color: var(--sk-fg-4);
   }
 </style>

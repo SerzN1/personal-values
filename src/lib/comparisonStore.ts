@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import { COMPARISON_STATE_KEY } from './constants';
+import { PRIORITIZATION_STORAGE_KEY } from './constants';
 import type { IValue } from './types';
 
 export interface IComparisonState {
@@ -21,10 +21,10 @@ export function getPairs(arr: IValue[]) {
   return pairs;
 }
 
-function loadComparisonState(): IComparisonState | null {
+function loadPrioritizationsState(): IComparisonState | null {
   if (typeof window !== 'undefined') {
     try {
-      const saved = localStorage.getItem(COMPARISON_STATE_KEY);
+      const saved = localStorage.getItem(PRIORITIZATION_STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
         if (
@@ -43,19 +43,19 @@ function loadComparisonState(): IComparisonState | null {
   return null;
 }
 
-export const comparisonStore = writable<IComparisonState | null>(loadComparisonState());
+export const comparisonStore = writable<IComparisonState | null>(loadPrioritizationsState());
 
 comparisonStore.subscribe((val) => {
   if (typeof window !== 'undefined') {
     if (val) {
       try {
-        localStorage.setItem(COMPARISON_STATE_KEY, JSON.stringify(val));
+        localStorage.setItem(PRIORITIZATION_STORAGE_KEY, JSON.stringify(val));
       } catch (e) {
         console.error('Failed to save comparison state to localStorage:', e);
       }
     } else {
       try {
-        localStorage.removeItem(COMPARISON_STATE_KEY);
+        localStorage.removeItem(PRIORITIZATION_STORAGE_KEY);
       } catch (e) {
         console.error('Failed to remove comparison state from localStorage:', e);
       }
@@ -63,6 +63,6 @@ comparisonStore.subscribe((val) => {
   }
 });
 
-export function resetComparison() {
+export function resetPrioritization() {
   comparisonStore.set(null);
 }

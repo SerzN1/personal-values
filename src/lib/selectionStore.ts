@@ -1,9 +1,9 @@
 import { writable } from 'svelte/store';
-import { COMPARISON_STATE_KEY, SELECTION_STATE_KEY, STAGES } from './constants';
+import { PRIORITIZATION_STORAGE_KEY, SELECTION_STORAGE_KEY, STAGES } from './constants';
 
 function loadSelectedValues(): string[] {
-  const selectedRaw = typeof window !== 'undefined' ? localStorage.getItem(SELECTION_STATE_KEY) : null;
-  if (!selectedRaw) return null;
+  const selectedRaw = typeof window !== 'undefined' ? localStorage.getItem(SELECTION_STORAGE_KEY) : null;
+  if (!selectedRaw) return [];
 
   try {
     const parsed = JSON.parse(selectedRaw);
@@ -21,7 +21,7 @@ export const selectedValues = writable<string[]>(loadSelectedValues());
 selectedValues.subscribe((val) => {
   if (typeof window !== 'undefined') {
     try {
-      localStorage.setItem(SELECTION_STATE_KEY, JSON.stringify(val));
+      localStorage.setItem(SELECTION_STORAGE_KEY, JSON.stringify(val));
     } catch (e) {
       console.error('Failed to save selection to localStorage:', e);
     }
@@ -32,7 +32,7 @@ export function resetSelectedValues() {
   selectedValues.set([]);
   if (typeof window !== 'undefined') {
     try {
-      localStorage.removeItem(SELECTION_STATE_KEY);
+      localStorage.setItem(SELECTION_STORAGE_KEY, JSON.stringify('[]'));
     } catch (e) {
       console.error('Failed to remove selection from localStorage:', e);
     }
@@ -43,7 +43,7 @@ export function resetSelectedValues() {
 export const processStage = writable<typeof STAGES[keyof typeof STAGES]>(getInitialProcessStage());
 
 function getInitialProcessStage() {
-  const comparisonRaw = typeof window !== 'undefined' ? localStorage.getItem(COMPARISON_STATE_KEY) : null;
+  const comparisonRaw = typeof window !== 'undefined' ? localStorage.getItem(PRIORITIZATION_STORAGE_KEY) : null;
   if (comparisonRaw) {
     const state = JSON.parse(comparisonRaw);
     if (state && state.scores && state.pairs && state.selected) {
@@ -51,7 +51,7 @@ function getInitialProcessStage() {
       return STAGES.COMPARISON;
     }
   }
-  const selectionRaw = typeof window !== 'undefined' ? localStorage.getItem(SELECTION_STATE_KEY) : null;
+  const selectionRaw = typeof window !== 'undefined' ? localStorage.getItem(SELECTION_STORAGE_KEY) : null;
   if (selectionRaw) {
     const parsed = JSON.parse(selectionRaw);
     if (Array.isArray(parsed) && parsed.every(item => typeof item === 'string') && parsed.length > 0) {

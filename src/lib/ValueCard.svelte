@@ -17,7 +17,7 @@
   <h3>{value.label}</h3>
   <small class="value-description">{value.description}</small>
   <img class="group-icon" src="{type.iconSvg}" alt="{type.label}" color={type.color} />
-  <button class="checkbox" type="button" aria-label="Select {value.label}">
+  <button class="checkbox" type="button" aria-label="Select {value.label}" tabindex="-1">
     <span class="icon icon-check"></span>
   </button>
 </div>

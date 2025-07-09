@@ -39,11 +39,11 @@
 <main>
   <div class="values-list">
     {#each values as value}
-      {@const group = valueTypes[value.type]}
+      {@const type = valueTypes[value.type]}
       {@const isSelected = selected.includes(value.id)}
       <ValueCard
         {value}
-        type={group}
+        {type}
         {isSelected}
         onClick={toggleValue}
       />

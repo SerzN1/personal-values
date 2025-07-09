@@ -1,7 +1,7 @@
 <script lang="ts">
   import Breadcrumbs from './lib/Breadcrumbs.svelte';
   import Comparison from './lib/Comparison.svelte';
-  import { comparisonStore, resetComparison } from './lib/comparisonStore';
+  import { comparisonStore, resetPrioritization } from './lib/comparisonStore';
   import { STAGES, VALUES_SELECTIONS_REQUIRED } from './lib/constants';
   import CTA from './lib/CTA.svelte';
   import { valueTypes, values } from './lib/data';
@@ -26,7 +26,7 @@
   }
 
   function handleBackToComparison() {
-    resetComparison();
+    resetPrioritization();
     processStage.set(STAGES.COMPARISON);
   }
 
@@ -40,18 +40,17 @@
 
   function handleRestart() {
     resetSelectedValues();
-    resetComparison();
+    resetPrioritization();
 
     processStage.set(STAGES.START);
     window.scrollTo(0, 0);
-    window.location.reload();
+    // window.location.reload();
   }
 </script>
 
 <Navigation
   stage={$processStage}
   selected={$selectedValues}
-  totalPairs={$comparisonStore?.pairs.length}
   comparedPairs={$comparisonStore?.current}
   onStart={handleStart}
   onNext={handleProceed}

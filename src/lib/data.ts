@@ -16,14 +16,14 @@ export const valueTypes: Record<string, IValueType> = {
     label: 'Self-Direction',
     description: 'Independent thought and action; choosing, creating, exploring.',
     iconSvg: selfDirectionIcon,
-    color: '#3F51B5',          // Indigo (self-leadership)
+    color: '#4a5fd5',          // Indigo (self-leadership)
     background: "rgb(63, 81, 181)"
   },
   Universalism: {
     label: 'Universalism',
     description: 'Understanding, appreciation, tolerance, and protection for the welfare of all people and for nature.',
     iconSvg: universalizmIcon,
-    color: '#00BFA5',          // Teal
+    color: '#00a58e',          // Teal
     background: "rgb(0, 191, 165)", // Same as Self-Transcendence
   },
   Stimulation: {
@@ -44,7 +44,7 @@ export const valueTypes: Record<string, IValueType> = {
     label: 'Achievement',
     description: 'Personal success through demonstrating competence according to social standards.',
     iconSvg: achievementIcon,
-    color: '#F9A825',          // Mustard orange (success tone)
+    color: '#c6851d',          // Mustard orange (success tone)
     background: "rgb(255, 193, 7)",       // Slightly softer gold
   },
   Power: {

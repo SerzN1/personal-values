@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { comparisonStore, getPairs, resetComparison } from './comparisonStore';
+  import { comparisonStore, getPairs, resetPrioritization } from './comparisonStore';
   import Controls from './Controls.svelte';
   import { valueById, valueTypes } from './data';
   import type { IValue } from './types';
@@ -102,12 +102,12 @@
         onClick={() => pick(pairs[current][1], pairs[current][0])}
       />
     </div>
-    <p>Pair {current + 1} of {pairs.length}</p>
+    <!-- <p>Pair {current + 1} of {pairs.length}</p> -->
   {/if}
 
   <Controls>
     {#snippet prev()}
-      <a href="#prev" on:click|preventDefault={() => resetComparison()} title="Reset comparison" aria-label="Reset comparison">Reset Comparison</a>
+      <a href="#prev" on:click|preventDefault={resetPrioritization} title="Reset prioritization" aria-label="Reset prioritization">Reset Prioritization</a>
     {/snippet}
     {#snippet next()}
       <a href="#next" on:click|preventDefault title="You need to finish comparison too see results" class="disabled">See results</a>

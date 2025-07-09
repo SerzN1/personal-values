@@ -5,10 +5,13 @@
   export let stage: typeof STAGES[keyof typeof STAGES] = STAGES.START;
   export let selected: string[] = [];
   export let comparedPairs: number = 0;
-  export let totalPairs: number = 0;
   export let onStart: () => void;
   export let onNext: () => void;
   export let onRestart: () => void;
+
+  console.log(selected.length);
+
+  $: totalPairs = selected.length * ( selected.length - 1) / 2;
 
   function toggleDarkMode() {
     const isDark = document.documentElement.classList.toggle('dark');
@@ -58,7 +61,7 @@
       </button>
     {:else if stage === STAGES.COMPARISON}
       <span class="header-status">
-        Compared {comparedPairs} of {totalPairs}
+        Pair {(comparedPairs || 0) + 1} of {totalPairs}
       </span>
       <button class="btn raised" type="button" aria-pressed="false" aria-label="Restart Assessment" title="Restart Assessment" on:click={onRestart}>
         <span class="icon icon-restart"></span>
