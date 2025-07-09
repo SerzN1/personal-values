@@ -4,7 +4,7 @@
   import { comparisonStore, resetPrioritization } from './lib/comparisonStore';
   import { STAGES, VALUES_SELECTIONS_REQUIRED } from './lib/constants';
   import CTA from './lib/CTA.svelte';
-  import { valueTypes, values } from './lib/data';
+  import { valueTypes, valuesShuffled as values } from './lib/data';
   import FAQ from './lib/FAQ.svelte';
   import Navigation from './lib/Header.svelte';
   import PrivacyNote from './lib/PrivacyNote.svelte';

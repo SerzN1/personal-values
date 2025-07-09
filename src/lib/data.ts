@@ -10,6 +10,7 @@ import traditionIcon from '../assets/tradition.svg';
 import universalizmIcon from '../assets/universalizm.svg';
 
 import type { GroupKey, IGroupData, IValue, IValueType } from './types';
+import { shuffleArray } from './utils';
 
 export const valueTypes: Record<string, IValueType> = {
   SelfDirection: {
@@ -122,7 +123,7 @@ export const groupData: Record<GroupKey, IGroupData> = {
       "You value order, safety, and traditions that create predictability.",
       "This can build strong foundations, but may reduce openness to change or risk."
     ],
-    color: '#607D8B', // Muted blue-gray (stability)
+    color: '#6b8b9b', // Muted blue-gray (stability)
     backgroundColor: "rgba(96, 125, 139, 0.12)",      // Neutral slate
   }
 };
@@ -1037,6 +1038,7 @@ export const valueById: Record<string, IValue> = values.reduce((acc, value) => {
   return acc;
 }, {});
 
+export const valuesShuffled = shuffleArray(values);
 
 export const valueInsights: Record<string, string> = {
   curiosity: "Curiosity encourages you to venture beyond the familiar, engaging with questions that deepen your understanding of yourself and the world. As a leader, fostering curiosity not only fuels continuous personal and professional growth but also cultivates an environment where innovation thrives, inspiring your team to explore new horizons thoughtfully and purposefully.",
