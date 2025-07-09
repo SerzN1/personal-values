@@ -84,7 +84,6 @@
   }
 
   blockquote:before {
-    /* content: "“"; */
     font-size: 6.4em;
     line-height: 1;
     font-family: var(--sk-font-family-heading);

@@ -140,7 +140,8 @@ export function generateUserReflections(scores: Record<string, number>): string[
   });
 }
 
-export function shuffleArray<T>(array): T {
+export function shuffleArray<T>(arr: T[]): T[] {
+  const array = [...arr];
   let currentIndex = array.length, randomIndex;
 
   // While there remain elements to shuffle

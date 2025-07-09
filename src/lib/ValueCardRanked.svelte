@@ -23,7 +23,7 @@
       {q}<br />
     {/each}
   </p>
-  <span class="rank" aria-label="Rank {value.label}">#{rank + 1}</span>
+  <span class="rank" aria-label="Rank {value.label}" style="font-size: {12 - 1.3 * rank}rem">#{rank + 1}</span>
 </div>
 
 <style>
@@ -41,7 +41,7 @@
   }
   .rank {
     font: var(--sk-font-h1);
-    font-size: 12rem;
+    font-size: 5rem;
     position: absolute;
     top: -3rem;
     right: 0rem;
