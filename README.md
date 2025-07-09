@@ -1,6 +1,6 @@
 # Personal Values / Core Values Assessment
 
-This project provides a lightweight, efficient web application built with **Svelte** and **Vite** to deliver a fast and smooth Personal Values / Core Values Assessment experience. The tool helps users identify, prioritize, and reflect on their core personal values through an intuitive interface.
+This project provides a lightweight, efficient web application to deliver a fast and smooth Personal Values / Core Values Assessment experience. The tool helps users identify, prioritize, and reflect on their core personal values through an intuitive interface.
 
 The assessment model is based on an **extended and humanized adaptation of Schwartz's Theory of Basic Human Values**, which classifies core values into 10 universal categories that guide human motivation. We've expanded the model to be more accessible and emotionally resonant, particularly for coaching, self-discovery, and leadership development contexts.
 
