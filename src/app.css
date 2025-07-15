@@ -577,9 +577,9 @@ hr:after {
   direction: rtl;
 }
 
-[dir="rtl"] .header-data {
+/* [dir="rtl"] .header-data {
   flex-direction: row-reverse;
-}
+} */
 
 [dir="rtl"] .language-dropdown .dropdown-content {
   left: auto;

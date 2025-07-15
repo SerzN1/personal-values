@@ -1,3 +1,5 @@
+import { get } from 'svelte/store';
+import { t } from './i18n';
 import type { GroupKey, IAssessmentResult, IGroupAnalysisResult, IGroupData, IValue } from './types';
 
 export function calculateValueScores(prioritizedIds: string[], allValues: IValue[]): IAssessmentResult {
@@ -39,6 +41,7 @@ const OPPOSITES = [
 
 export function detectTensions(groupScores: Record<string, number>, groupData: Record<GroupKey, IGroupData>): string[] {
   const insights: string[] = [];
+  const translate = get(t);
 
   for (const [a, b] of OPPOSITES) {
     const scoreA = groupScores[a] || 0;
@@ -49,22 +52,22 @@ export function detectTensions(groupScores: Record<string, number>, groupData: R
 
     if (delta < 10) {
       // Low difference = balanced orientation
-      insights.push(`You show a relatively balanced emphasis between ${aLabel} and ${bLabel}, suggesting flexibility in navigating these areas.`);
+      insights.push(translate('analysis.tensions.balanced', { groupA: aLabel, groupB: bLabel }));
     } else if (delta >= 10 && delta < 20) {
       // Mild contrast
       const dominant = scoreA > scoreB ? aLabel : bLabel;
       const lesser = scoreA > scoreB ? bLabel : aLabel;
-      insights.push(`You appear to lean toward ${dominant}, but still show awareness of the values associated with ${lesser}.`);
+      insights.push(translate('analysis.tensions.mildContrast', { dominant, lesser }));
     } else if (delta >= 20 && delta < 30) {
       // Clear preference
       const dominant = scoreA > scoreB ? aLabel : bLabel;
       const lesser = scoreA > scoreB ? bLabel : aLabel;
-      insights.push(`You show a clear preference for ${dominant}, while placing less importance on ${lesser}. This may reflect a prioritization of one approach over the other.`);
+      insights.push(translate('analysis.tensions.clearPreference', { dominant, lesser }));
     } else {
       // Strong contrast (polarization)
       const dominant = scoreA > scoreB ? aLabel : bLabel;
       const lesser = scoreA > scoreB ? bLabel : aLabel;
-      insights.push(`There is a strong contrast between your preference for ${dominant} and your lower emphasis on ${lesser}. This tension might shape important decisions or challenges.`);
+      insights.push(translate('analysis.tensions.strongContrast', { dominant, lesser }));
     }
   }
 
@@ -103,17 +106,25 @@ export function analyzeGroupScores(scores: Record<GroupKey, number>, groupData: 
 
   const top = groupData[topGroup];
   const bottom = groupData[bottomGroup];
+  const translate = get(t);
 
   const gap = topScore - bottomScore;
   const polarization = gap >= 30 ? {
     gap,
-    message: `There's a significant gap (${gap} points) between your focus on ${top.label} and your lesser emphasis on ${bottom.label}. This may lead to inner tension between your aspirations and your need for stability or balance.`
+    message: translate('analysis.groupAnalysis.polarizationMessage', {
+      gap: gap.toString(),
+      topLabel: top.label,
+      bottomLabel: bottom.label
+    })
   } : undefined;
 
   return {
     topGroup,
     bottomGroup,
-    summary: `Your values are centered around ${top.summary}. You prioritize this over ${bottom.summary}.`,
+    summary: translate('analysis.groupAnalysis.summary', {
+      topSummary: top.summary,
+      bottomSummary: bottom.summary
+    }),
     insights: top.insights,
     polarization
   };
@@ -135,8 +146,11 @@ const reflectionPrompts: Record<string, (score: number) => string> = {
 };
 
 export function generateUserReflections(scores: Record<string, number>): string[] {
+  const translate = get(t);
+
   return Object.entries(scores).map(([key, score]) => {
-    return reflectionPrompts[key](score);
+    const threshold = score >= 70 ? 'high' : 'low';
+    return translate(`analysis.reflections.${key}.${threshold}`);
   });
 }
 

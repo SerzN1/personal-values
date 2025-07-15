@@ -2,7 +2,7 @@
   import { VALUES_RESULT_COUNT } from './constants';
   import Controls from './toolbox/Controls.svelte';
   import { groupData, valueById } from './data';
-  import GroupBalance from './GroupBalance.svelte';
+  import GroupBalance from './toolbox/GroupBalance.svelte';
   import { t } from './i18n';
   import TopValues from './toolbox/TopValues.svelte';
   import { analyzeGroupScores, summarizeGroups } from './utils';

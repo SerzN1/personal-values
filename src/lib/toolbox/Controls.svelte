@@ -47,6 +47,9 @@
   .controls-content {
     font: var(--sk-font-body);
   }
+  .next {
+    text-align: right;
+  }
   .faded {
     opacity: .4;
   }

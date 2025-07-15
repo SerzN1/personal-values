@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { groupData } from './data';
+  import { groupData } from '../data';
+  import { t } from '../i18n';
   import RadialDiagram from './RadialDiagram.svelte';
-  import SvsGroupsDisplay from './toolbox/SVSGroupsDisplay.svelte';
-  import type { IGroupAnalysisResult } from './types';
-  import { detectTensions, generateUserReflections } from './utils';
+  import SvsGroupsDisplay from './SVSGroupsDisplay.svelte';
+  import type { IGroupAnalysisResult } from '../types';
+  import { detectTensions, generateUserReflections } from '../utils';
 
   export let groupScores: Record<string, number> = {};
   export let groupAnalysysResult: IGroupAnalysisResult;
@@ -14,10 +15,10 @@
   const bottomGroupData = groupData[groupAnalysysResult.bottomGroup];
 </script>
 
-<h2>Values Group Balance Overview</h2>
+<h2>{$t('groupBalance.title')}</h2>
 <p>
-  <span style="color:{topGroupData.color}">{topGroupData.label}</span> is your <code>Leading Value Group Orientation</code>.
-  <span style="color:{bottomGroupData.color}">{bottomGroupData.label}</span> is a <code>Less Emphasized Focus</code>.
+  <span style="color:{topGroupData.color}">{topGroupData.label}</span> is your <code>{$t('groupBalance.leadingOrientation')}</code>.
+  <span style="color:{bottomGroupData.color}">{bottomGroupData.label}</span> is a <code>{$t('groupBalance.lessEmphasized')}</code>.
   {groupAnalysysResult.summary}
 </p>
 
@@ -26,14 +27,14 @@
   <RadialDiagram scores={groupScores} />
 </div>
 
-<h3>Personal Insights</h3>
+<h3>{$t('groupBalance.personalInsights')}</h3>
 {#each radialDiagramInsights as insight}
   <blockquote>
     <p>{insight}</p>
   </blockquote>
 {/each}
 
-<h3 id="reflective-prompts">Reflective Prompts</h3>
+<h3 id="reflective-prompts">{$t('groupBalance.reflectivePrompts')}</h3>
 <blockquote>
   <p>
     {#each userReflections as userReflection}
@@ -43,10 +44,10 @@
 </blockquote>
 
 {#if groupAnalysysResult.polarization}
-  <h2 id="polarization-insight">Polarization Insight</h2>
+  <h2 id="polarization-insight">{$t('groupBalance.polarizationInsight')}</h2>
   <blockquote>
     <p>
-      {groupAnalysysResult.polarization.gap} points
+      {$t('groupBalance.polarizationPoints', { gap: groupAnalysysResult.polarization.gap })}
     </p>
     <p>
       {groupAnalysysResult.polarization.message}

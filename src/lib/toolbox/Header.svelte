@@ -165,7 +165,7 @@
     font-size: 1.5rem;
     line-height: 1.3;
     align-items: center;
-    margin-left: .4em;
+    margin: 0 1em;
     display: flex;
     text-transform: uppercase;
     white-space: pre-line;
@@ -180,7 +180,7 @@
 
   .logo {
     height: 38px;
-    margin-right: 1em;
+    transition: filter 0.3s ease-in-out;
   }
 
   .header-logo:hover .logo {
@@ -236,7 +236,6 @@
   .icon-language {
     mask-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%3E%3Cpath%20d='M12.87%2015.07l-2.54-2.51.03-.03A17.52%2017.52%200%200%200%2014.07%206H17V4h-7V2H8v2H1v1.99h11.17C11.5%207.92%2010.44%209.75%209%2011.35%208.07%2010.32%207.3%209.19%206.69%208h-2c.73%201.63%201.73%203.17%202.98%204.56l-5.09%205.02L4%2019l5-5%203.11%203.11.76-2.04zM18.5%2010h-2L12%2022h2l1.12-3h4.75L21%2022h2l-4.5-12zm-2.62%207l1.62-4.33L19.12%2017h-3.24z'%20fill='%23676778'/%3E%3C/svg%3E");
     mask-size: 2rem;
-    background-color: currentColor;
   }
 
   .language-dropdown {

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { groupData } from './data';
-  import { t } from './i18n';
+  import { groupData } from '../data';
+  import { t } from '../i18n';
 
   export let scores: Record<string, number> = {
     SelfTranscendence: 0,

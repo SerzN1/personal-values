@@ -1,15 +1,16 @@
 <script lang="ts">
-  import Breadcrumbs from './lib/toolbox/Breadcrumbs.svelte';
   import Comparison from './lib/Comparison.svelte';
   import { comparisonStore, resetPrioritization } from './lib/comparisonStore';
   import { STAGES, VALUES_SELECTIONS_REQUIRED } from './lib/constants';
-  import CTA from './lib/toolbox/CTA.svelte';
   import { valueTypes, values, valuesShuffled } from './lib/data';
-  import FAQ from './lib/toolbox/FAQ.svelte';
-  import Navigation from './lib/toolbox/Header.svelte';
-  import PrivacyNote from './lib/PrivacyNote.svelte';
+  import { t } from './lib/i18n';
   import Result from './lib/Result.svelte';
   import { processStage, resetSelectedValues, selectedValues } from './lib/selectionStore';
+  import Breadcrumbs from './lib/toolbox/Breadcrumbs.svelte';
+  import CTA from './lib/toolbox/CTA.svelte';
+  import FAQ from './lib/toolbox/FAQ.svelte';
+  import Navigation from './lib/toolbox/Header.svelte';
+  import PrivacyNote from './lib/toolbox/PrivacyNote.svelte';
   import ValueSelection from './lib/ValueSelection.svelte';
 
   export const prerender = true;
@@ -44,7 +45,6 @@
 
     processStage.set(STAGES.START);
     window.scrollTo(0, 0);
-    // window.location.reload();
   }
 </script>
 
@@ -61,15 +61,15 @@
 
 {#if $processStage === STAGES.START}
   <header class="header">
-    <h1 class="header-title">Personal Values Assessment</h1>
+    <h1 class="header-title">{$t('header.title')}</h1>
     <p class="header-description">
-      Discover your core personal values and learn how they shape your decisions, relationships, and overall well-being.
+      {$t('header.description')}
     </p>
   </header>
   <main>
     <CTA
-      title="Start Assessment"
-      message="Begin your journey of self-awareness — the assessment takes no more than 15 minutes."
+      title={$t('header.start')}
+      message={$t('header.startMessage')}
       onClick={handleStart}
     />
     <FAQ />

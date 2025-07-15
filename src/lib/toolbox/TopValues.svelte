@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { valueById, valueInsights, valueTypes } from '../data';
+  import { valueById, valueTypes } from '../data';
   import { t } from '../i18n';
   import ValueCardRanked from './ValueCardRanked.svelte';
 
@@ -14,7 +14,7 @@
       rank={i}
       value={valueById[value[0]]}
       type={valueTypes[valueById[value[0]].type]}
-      insight={valueById[value[0]].insight || valueInsights[value[0]]}
+      insight={valueById[value[0]].insight}
     />
   {/each}
 </div>

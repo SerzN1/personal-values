@@ -1,6 +1,8 @@
 {
   "header": {
     "title": "Évaluation des Valeurs\nPersonnelles",
+    "description": "Découvrez vos valeurs personnelles fondamentales et apprenez comment elles façonnent vos décisions, relations et bien-être général.",
+    "startMessage": "Commencez votre voyage de connaissance de soi — l'évaluation ne prend pas plus de 15 minutes.",
     "start": "Commencer l'Évaluation",
     "continue": "Continuer l'Évaluation",
     "restart": "Redémarrer l'Évaluation",
@@ -99,5 +101,96 @@
       "q": "Qu'obtiendrai-je à la fin ?",
       "a": "Vous recevrez une liste claire et priorisée de vos 5 valeurs personnelles principales, chacune avec une courte réflexion pour vous aider à explorer comment elle se manifeste dans votre vie et votre leadership. Vous verrez aussi comment vos valeurs sont équilibrées à travers quatre groupes de motivation clés — offrant un aperçu de ce qui vous motive, où des tensions peuvent exister, et comment rester aligné avec ce qui compte le plus. C'est un instantané simple et personnel de votre boussole intérieure — un que vous pouvez consulter chaque fois que vous avez besoin de clarté, de direction, ou d'un moment de réflexion."
     }
-  ]
+  ],
+  "analysis": {
+    "tensions": {
+      "balanced": "Vous montrez un équilibre relativement équilibré entre {groupA} et {groupB}, suggérant une flexibilité pour naviguer dans ces domaines.",
+      "mildContrast": "Vous semblez pencher vers {dominant}, mais montrez encore une prise de conscience des valeurs associées à {lesser}.",
+      "clearPreference": "Vous montrez une préférence claire pour {dominant}, tout en accordant moins d'importance à {lesser}. Cela peut refléter une priorisation d'une approche par rapport à l'autre.",
+      "strongContrast": "Il y a un contraste fort entre votre préférence pour {dominant} et votre accent moindre sur {lesser}. Cette tension pourrait façonner des décisions importantes ou des défis."
+    },
+    "groupAnalysis": {
+      "summary": "Vos valeurs sont centrées autour de {topSummary}. Vous priorisez cela par rapport à {bottomSummary}.",
+      "polarizationMessage": "Il y a un écart significatif ({gap} points) entre votre focus sur {topLabel} et votre accent moindre sur {bottomLabel}. Cela peut conduire à une tension intérieure entre vos aspirations et votre besoin de stabilité ou d'équilibre."
+    },
+    "reflections": {
+      "SelfTranscendence": {
+        "high": "Comment prenez-vous soin de vous tout en prenant soin des autres ?",
+        "low": "Où plus de compassion ou de but partagé pourrait-il énergiser votre direction ?"
+      },
+      "SelfEnhancement": {
+        "high": "Comment votre drive pour la réussite soutient-il — ou entre-t-il en compétition avec — vos relations ?",
+        "low": "Que poursuivriez-vous plus audacieusement si la reconnaissance n'avait pas d'importance ?"
+      },
+      "OpennessToChange": {
+        "high": "Où êtes-vous appelé à explorer quelque chose de nouveau en ce moment ?",
+        "low": "Quelles nouvelles expériences pourraient élargir votre perspective ?"
+      },
+      "Conservation": {
+        "high": "Où la structure ou la routine vous aide-t-elle à vous sentir en sécurité en ce moment ?",
+        "low": "Quels petits rituels pourraient créer plus de stabilité dans votre vie ?"
+      }
+    }
+  },
+  "groupBalance": {
+    "title": "Aperçu de l'Équilibre des Groupes de Valeurs",
+    "leadingOrientation": "Orientation du Groupe de Valeurs Principal",
+    "lessEmphasized": "Focus Moins Accentué",
+    "description": "{topGroup} est votre {leadingOrientation}. {bottomGroup} est un {lessEmphasized}.",
+    "personalInsights": "Aperçus Personnels",
+    "reflectivePrompts": "Questions Réflexives",
+    "polarizationInsight": "Aperçu de la Polarisation",
+    "polarizationPoints": "{gap} points"
+  },
+  "valueTypes": {
+    "selfDirection": {
+      "label": "Autonomie",
+      "description": "Pensée et action indépendantes ; choisir, créer, explorer."
+    },
+    "universalism": {
+      "label": "Universalisme",
+      "description": "Compréhension, appréciation, tolérance et protection du bien-être de toutes les personnes et de la nature."
+    },
+    "stimulation": {
+      "label": "Stimulation",
+      "description": "Excitation, nouveauté et défi dans la vie."
+    },
+    "hedonism": {
+      "label": "Hédonisme",
+      "description": "Plaisir et gratification sensuelle pour soi-même."
+    },
+    "achievement": {
+      "label": "Réussite",
+      "description": "Succès personnel en démontrant sa compétence selon les normes sociales."
+    },
+    "power": {
+      "label": "Pouvoir",
+      "description": "Statut social et prestige, contrôle ou domination sur les personnes et les ressources."
+    },
+    "security": {
+      "label": "Sécurité",
+      "description": "Sécurité, harmonie et stabilité de la société, des relations et de soi."
+    },
+    "conformity": {
+      "label": "Conformité",
+      "description": "Restriction des actions, inclinations et impulsions susceptibles de déranger ou de nuire aux autres et de violer les attentes ou normes sociales."
+    },
+    "tradition": {
+      "label": "Tradition",
+      "description": "Respect, engagement et acceptation des coutumes et idées que fournissent la culture traditionnelle ou la religion."
+    },
+    "benevolence": {
+      "label": "Bienveillance",
+      "description": "Préserver et améliorer le bien-être de ceux avec qui on a un contact personnel fréquent."
+    }
+  },
+  "comparison": {
+    "title": "Qu'est-ce qui vous guide le plus ?",
+    "description": "Vous avez sélectionné des valeurs qui résonnent avec vous — excellent début. Dans cette étape, nous vous aiderons à clarifier ce qui compte le plus en les comparant directement. Choisissez simplement celle qui vous semble la plus importante dans chaque paire.",
+    "or": "ou",
+    "resetPrioritization": "Réinitialiser la Priorisation",
+    "seeResults": "Voir les résultats",
+    "finishComparisonFirst": "Vous devez terminer la comparaison pour voir les résultats",
+    "pairProgress": "Paire {current} sur {total}"
+  }
 }

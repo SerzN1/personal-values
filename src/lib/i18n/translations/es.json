@@ -1,6 +1,8 @@
 {
   "header": {
     "title": "Evaluación de Valores\nPersonales",
+    "description": "Descubre tus valores personales fundamentales y aprende cómo moldean tus decisiones, relaciones y bienestar general.",
+    "startMessage": "Comienza tu viaje de autoconocimiento — la evaluación no toma más de 15 minutos.",
     "start": "Comenzar Evaluación",
     "continue": "Continuar Evaluación",
     "restart": "Reiniciar Evaluación",
@@ -99,5 +101,96 @@
       "q": "¿Qué obtendré al final?",
       "a": "Recibirás una lista clara y priorizada de tus 5 valores personales principales, cada uno con una breve reflexión para ayudarte a explorar cómo se manifiesta en tu vida y liderazgo. También verás cómo tus valores están equilibrados a través de cuatro grupos de motivación clave — ofreciendo perspicacia sobre qué te impulsa, dónde pueden existir tensiones, y cómo mantenerte alineado con lo que más importa. Es una instantánea simple y personal de tu brújula interna — una a la que puedes regresar cuando necesites claridad, dirección, o un momento de reflexión."
     }
-  ]
+  ],
+  "analysis": {
+    "tensions": {
+      "balanced": "Muestras un énfasis relativamente equilibrado entre {groupA} y {groupB}, sugiriendo flexibilidad para navegar en estas áreas.",
+      "mildContrast": "Pareces inclinarte hacia {dominant}, pero aún muestras conciencia de los valores asociados con {lesser}.",
+      "clearPreference": "Muestras una preferencia clara por {dominant}, mientras das menos importancia a {lesser}. Esto puede reflejar una priorización de un enfoque sobre el otro.",
+      "strongContrast": "Hay un contraste fuerte entre tu preferencia por {dominant} y tu menor énfasis en {lesser}. Esta tensión podría dar forma a decisiones importantes o desafíos."
+    },
+    "groupAnalysis": {
+      "summary": "Tus valores están centrados alrededor de {topSummary}. Priorizas esto sobre {bottomSummary}.",
+      "polarizationMessage": "Hay una brecha significativa ({gap} puntos) entre tu enfoque en {topLabel} y tu menor énfasis en {bottomLabel}. Esto puede llevar a una tensión interna entre tus aspiraciones y tu necesidad de estabilidad o equilibrio."
+    },
+    "reflections": {
+      "SelfTranscendence": {
+        "high": "¿Cómo cuidas de ti mismo mientras cuidas de otros?",
+        "low": "¿Dónde podría más compasión o propósito compartido energizar tu dirección?"
+      },
+      "SelfEnhancement": {
+        "high": "¿Cómo tu impulso por el logro apoya — o compite con — tus relaciones?",
+        "low": "¿Qué perseguirías más audazmente si el reconocimiento no importara?"
+      },
+      "OpennessToChange": {
+        "high": "¿Dónde estás siendo llamado a explorar algo nuevo ahora mismo?",
+        "low": "¿Qué nuevas experiencias podrían estirar tu perspectiva?"
+      },
+      "Conservation": {
+        "high": "¿Dónde la estructura o rutina te ayuda a sentirte seguro ahora mismo?",
+        "low": "¿Qué pequeños rituales podrían crear más estabilidad en tu vida?"
+      }
+    }
+  },
+  "groupBalance": {
+    "title": "Resumen del Equilibrio de Grupos de Valores",
+    "leadingOrientation": "Orientación del Grupo de Valores Principal",
+    "lessEmphasized": "Enfoque Menos Enfatizado",
+    "description": "{topGroup} es tu {leadingOrientation}. {bottomGroup} es un {lessEmphasized}.",
+    "personalInsights": "Perspectivas Personales",
+    "reflectivePrompts": "Preguntas Reflexivas",
+    "polarizationInsight": "Perspectiva de Polarización",
+    "polarizationPoints": "{gap} puntos"
+  },
+  "valueTypes": {
+    "selfDirection": {
+      "label": "Autodirección",
+      "description": "Pensamiento y acción independientes; elegir, crear, explorar."
+    },
+    "universalism": {
+      "label": "Universalismo",
+      "description": "Comprensión, apreciación, tolerancia y protección del bienestar de todas las personas y la naturaleza."
+    },
+    "stimulation": {
+      "label": "Estimulación",
+      "description": "Emoción, novedad y desafío en la vida."
+    },
+    "hedonism": {
+      "label": "Hedonismo",
+      "description": "Placer y gratificación sensual para uno mismo."
+    },
+    "achievement": {
+      "label": "Logro",
+      "description": "Éxito personal a través de demostrar competencia según los estándares sociales."
+    },
+    "power": {
+      "label": "Poder",
+      "description": "Estatus social y prestigio, control o dominio sobre personas y recursos."
+    },
+    "security": {
+      "label": "Seguridad",
+      "description": "Seguridad, armonía y estabilidad de la sociedad, las relaciones y uno mismo."
+    },
+    "conformity": {
+      "label": "Conformidad",
+      "description": "Restricción de acciones, inclinaciones e impulsos que podrían molestar o dañar a otros y violar expectativas o normas sociales."
+    },
+    "tradition": {
+      "label": "Tradición",
+      "description": "Respeto, compromiso y aceptación de las costumbres e ideas que proporciona la cultura tradicional o la religión."
+    },
+    "benevolence": {
+      "label": "Benevolencia",
+      "description": "Preservar y mejorar el bienestar de aquellos con quienes uno tiene contacto personal frecuente."
+    }
+  },
+  "comparison": {
+    "title": "¿Qué te guía más?",
+    "description": "Has seleccionado valores que resuenan contigo — excelente comienzo. En este paso, te ayudaremos a aclarar qué es lo más importante comparándolos directamente. Solo elige el que sientes más importante en cada par.",
+    "or": "o",
+    "resetPrioritization": "Reiniciar Priorización",
+    "seeResults": "Ver resultados",
+    "finishComparisonFirst": "Necesitas terminar la comparación para ver los resultados",
+    "pairProgress": "Par {current} de {total}"
+  }
 }

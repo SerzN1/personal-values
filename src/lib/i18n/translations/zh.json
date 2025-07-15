@@ -1,11 +1,13 @@
 {
   "header": {
     "title": "个人价值观评估",
+    "description": "发现你的核心个人价值观，了解它们如何塑造你的决策、关系和整体幸福感。",
+    "startMessage": "开始你的自我认知之旅——评估不超过15分钟。",
     "start": "开始评估",
     "continue": "继续评估",
     "restart": "重新开始评估",
-    "selected": "已选择 {count} 个，共 {total} 个",
-    "pair": "第 {current} 对，共 {total} 对",
+    "selected": "已选择{count}个，共{total}个",
+    "pair": "第{current}对，共{total}对",
     "darkMode": "切换深色模式",
     "language": "语言",
     "github": "Github",
@@ -99,5 +101,96 @@
       "q": "最后我会得到什么？",
       "a": "您将收到一个清晰的、按优先级排列的前5个个人价值观列表，每个价值观都有一个简短的反思，帮助您探索它如何在您的生活和领导中体现。您还将看到您的价值观如何在四个关键动机群体中保持平衡——提供对驱动您的因素、可能存在紧张关系的地方以及如何与最重要的事物保持一致的洞察。这是您内在指南针的简单、个人快照——每当您需要清晰度、方向或反思时刻时，您都可以回到这里。"
     }
-  ]
+  ],
+  "analysis": {
+    "tensions": {
+      "balanced": "您在{groupA}和{groupB}之间显示出相对平衡的重点，表明在导航这些领域时具有灵活性。",
+      "mildContrast": "您似乎倾向于{dominant}，但仍然显示出对与{lesser}相关价值观的认识。",
+      "clearPreference": "您显示出对{dominant}的明确偏好，而对{lesser}的重视较少。这可能反映了一种方法相对于另一种方法的优先排序。",
+      "strongContrast": "您对{dominant}的偏好与对{lesser}的较少重视之间存在强烈对比。这种紧张关系可能会影响重要决策或挑战。"
+    },
+    "groupAnalysis": {
+      "summary": "您的价值观围绕{topSummary}为中心。您将此优先于{bottomSummary}。",
+      "polarizationMessage": "您对{topLabel}的关注与对{bottomLabel}的较少重视之间存在显著差距（{gap}分）。这可能导致您的抱负与对稳定性或平衡的需求之间的内在紧张关系。"
+    },
+    "reflections": {
+      "SelfTranscendence": {
+        "high": "您如何在照顾他人的同时照顾自己？",
+        "low": "在哪里，更多的同情心或共同目标可能会为您的方向注入活力？"
+      },
+      "SelfEnhancement": {
+        "high": "您对成就的追求如何支持——或与——您的人际关系竞争？",
+        "low": "如果认可不重要，您会更大胆地追求什么？"
+      },
+      "OpennessToChange": {
+        "high": "您现在被呼召在哪里探索新的东西？",
+        "low": "什么新体验可能会拓展您的视角？"
+      },
+      "Conservation": {
+        "high": "结构或例行程序在哪里帮助您现在感到安全？",
+        "low": "什么小仪式可能在您的生活中创造更多稳定性？"
+      }
+    }
+  },
+  "groupBalance": {
+    "title": "价值观群体平衡概览",
+    "leadingOrientation": "主导价值观群体取向",
+    "lessEmphasized": "较少强调的重点",
+    "description": "{topGroup}是您的{leadingOrientation}。{bottomGroup}是一个{lessEmphasized}。",
+    "personalInsights": "个人洞察",
+    "reflectivePrompts": "反思提示",
+    "polarizationInsight": "极化洞察",
+    "polarizationPoints": "{gap}分"
+  },
+  "valueTypes": {
+    "selfDirection": {
+      "label": "自我导向",
+      "description": "独立思考和行动；选择、创造、探索。"
+    },
+    "universalism": {
+      "label": "普世主义",
+      "description": "理解、欣赏、宽容和保护所有人类和自然的福祉。"
+    },
+    "stimulation": {
+      "label": "刺激",
+      "description": "生活中的兴奋、新奇和挑战。"
+    },
+    "hedonism": {
+      "label": "享乐主义",
+      "description": "为自己寻求快乐和感官满足。"
+    },
+    "achievement": {
+      "label": "成就",
+      "description": "通过展示符合社会标准的能力来获得个人成功。"
+    },
+    "power": {
+      "label": "权力",
+      "description": "社会地位和声望，对人和资源的控制或主导。"
+    },
+    "security": {
+      "label": "安全",
+      "description": "社会、关系和自我的安全、和谐与稳定。"
+    },
+    "conformity": {
+      "label": "顺从",
+      "description": "约束可能扰乱或伤害他人并违反社会期望或规范的行为、倾向和冲动。"
+    },
+    "tradition": {
+      "label": "传统",
+      "description": "尊重、承诺和接受传统文化或宗教提供的习俗和思想。"
+    },
+    "benevolence": {
+      "label": "仁慈",
+      "description": "保护和增进与自己经常接触的人的福祉。"
+    }
+  },
+  "comparison": {
+    "title": "什么最能指导您？",
+    "description": "您已经选择了与您产生共鸣的价值观——很好的开始。在这一步中，我们将通过直接比较来帮助您明确什么最重要。只需在每对中选择您觉得更重要的那个。",
+    "or": "或",
+    "resetPrioritization": "重置优先级",
+    "seeResults": "查看结果",
+    "finishComparisonFirst": "您需要完成比较才能查看结果",
+    "pairProgress": "第{current}对，共{total}对"
+  }
 }

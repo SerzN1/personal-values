@@ -1,6 +1,8 @@
 {
   "header": {
     "title": "Personal Values\nAssessment",
+    "description": "Discover your core personal values and learn how they shape your decisions, relationships, and overall well-being.",
+    "startMessage": "Begin your journey of self-awareness — the assessment takes no more than 15 minutes.",
     "start": "Start Assessment",
     "continue": "Continue Assessment",
     "restart": "Restart Assessment",
@@ -99,5 +101,96 @@
       "q": "What will I get at the end?",
       "a": "You'll receive a clear, prioritized list of your Top 5 personal values, each with a short reflection to help you explore how it shows up in your life and leadership. You'll also see how your values are balanced across four key motivation groups — offering insight into what drives you, where tensions may exist, and how to stay aligned with what matters most. It's a simple, personal snapshot of your inner compass — one you can return to whenever you need clarity, direction, or a moment of reflection."
     }
-  ]
+  ],
+  "analysis": {
+    "tensions": {
+      "balanced": "You show a relatively balanced emphasis between {groupA} and {groupB}, suggesting flexibility in navigating these areas.",
+      "mildContrast": "You appear to lean toward {dominant}, but still show awareness of the values associated with {lesser}.",
+      "clearPreference": "You show a clear preference for {dominant}, while placing less importance on {lesser}. This may reflect a prioritization of one approach over the other.",
+      "strongContrast": "There is a strong contrast between your preference for {dominant} and your lower emphasis on {lesser}. This tension might shape important decisions or challenges."
+    },
+    "groupAnalysis": {
+      "summary": "Your values are centered around {topSummary}. You prioritize this over {bottomSummary}.",
+      "polarizationMessage": "There's a significant gap ({gap} points) between your focus on {topLabel} and your lesser emphasis on {bottomLabel}. This may lead to inner tension between your aspirations and your need for stability or balance."
+    },
+    "reflections": {
+      "SelfTranscendence": {
+        "high": "How do you care for yourself while caring for others?",
+        "low": "Where might more compassion or shared purpose energize your direction?"
+      },
+      "SelfEnhancement": {
+        "high": "How does your drive for achievement support — or compete with — your relationships?",
+        "low": "What would you pursue more boldly if recognition didn't matter?"
+      },
+      "OpennessToChange": {
+        "high": "Where are you being called to explore something new right now?",
+        "low": "What new experiences might stretch your perspective?"
+      },
+      "Conservation": {
+        "high": "Where does structure or routine help you feel safe right now?",
+        "low": "What small rituals might create more stability in your life?"
+      }
+    }
+  },
+  "groupBalance": {
+    "title": "Values Group Balance Overview",
+    "leadingOrientation": "Leading Value Group Orientation",
+    "lessEmphasized": "Less Emphasized Focus",
+    "description": "{topGroup} is your {leadingOrientation}. {bottomGroup} is a {lessEmphasized}.",
+    "personalInsights": "Personal Insights",
+    "reflectivePrompts": "Reflective Prompts",
+    "polarizationInsight": "Polarization Insight",
+    "polarizationPoints": "{gap} points"
+  },
+  "valueTypes": {
+    "selfDirection": {
+      "label": "Self-Direction",
+      "description": "Independent thought and action; choosing, creating, exploring."
+    },
+    "universalism": {
+      "label": "Universalism",
+      "description": "Understanding, appreciation, tolerance, and protection for the welfare of all people and for nature."
+    },
+    "stimulation": {
+      "label": "Stimulation",
+      "description": "Excitement, novelty, and challenge in life."
+    },
+    "hedonism": {
+      "label": "Hedonism",
+      "description": "Pleasure and sensuous gratification for oneself."
+    },
+    "achievement": {
+      "label": "Achievement",
+      "description": "Personal success through demonstrating competence according to social standards."
+    },
+    "power": {
+      "label": "Power",
+      "description": "Social status and prestige, control or dominance over people and resources."
+    },
+    "security": {
+      "label": "Security",
+      "description": "Safety, harmony, and stability of society, of relationships, and of self."
+    },
+    "conformity": {
+      "label": "Conformity",
+      "description": "Restraint of actions, inclinations, and impulses likely to upset or harm others and violate social expectations or norms."
+    },
+    "tradition": {
+      "label": "Tradition",
+      "description": "Respect, commitment, and acceptance of the customs and ideas that traditional culture or religion provide."
+    },
+    "benevolence": {
+      "label": "Benevolence",
+      "description": "Preserving and enhancing the welfare of those with whom one is in frequent personal contact."
+    }
+  },
+  "comparison": {
+    "title": "What Guides You Most?",
+    "description": "You've selected values that resonate with you — great start. In this step, we'll help you clarify what matters most by comparing them directly. Just choose the one that feels more important in each pair.",
+    "or": "or",
+    "resetPrioritization": "Reset Prioritization",
+    "seeResults": "See results",
+    "finishComparisonFirst": "You need to finish comparison to see results",
+    "pairProgress": "Pair {current} of {total}"
+  }
 }

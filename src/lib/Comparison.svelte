@@ -1,10 +1,11 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { comparisonStore, getPairs, resetPrioritization } from './comparisonStore';
-  import Controls from './toolbox/Controls.svelte';
   import { valueById, valueTypes } from './data';
-  import type { IValue } from './types';
+  import { t } from './i18n';
+  import Controls from './toolbox/Controls.svelte';
   import ValueCard from './toolbox/ValueCard.svelte';
+  import type { IValue } from './types';
 
   export let selected: IValue[] = [];
   export let onFinish: () => void;
@@ -77,10 +78,8 @@
 </script>
 
 <header class="header">
-  <h1 class="header-title">What Guides You Most?</h1>
-  <p class="header-description">
-    You’ve selected values that resonate with you — great start. In this step, we’ll help you clarify what matters most by comparing them directly. Just choose the one that feels more important in each pair.
-  </p>
+  <h1 class="header-title">{$t('comparison.title')}</h1>
+  <p class="header-description">{$t('comparison.description')}</p>
 </header>
 
 <main>
@@ -93,7 +92,7 @@
       />
 
       <div class="vs">
-          <div class="vs-text">or</div>
+          <div class="vs-text">{$t('comparison.or')}</div>
       </div>
 
       <ValueCard
@@ -102,15 +101,14 @@
         onClick={() => pick(pairs[current][1], pairs[current][0])}
       />
     </div>
-    <!-- <p>Pair {current + 1} of {pairs.length}</p> -->
   {/if}
 
   <Controls>
     {#snippet prev()}
-      <a href="#prev" on:click|preventDefault={resetPrioritization} title="Reset prioritization" aria-label="Reset prioritization">Reset Prioritization</a>
+      <a href="#prev" on:click|preventDefault={resetPrioritization} title={$t('comparison.resetPrioritization')} aria-label={$t('comparison.resetPrioritization')}>{$t('comparison.resetPrioritization')}</a>
     {/snippet}
     {#snippet next()}
-      <a href="#next" on:click|preventDefault title="You need to finish comparison too see results" class="disabled">See results</a>
+      <a href="#next" on:click|preventDefault title={$t('comparison.finishComparisonFirst')} class="disabled">{$t('comparison.seeResults')}</a>
     {/snippet}
   </Controls>
 </main>

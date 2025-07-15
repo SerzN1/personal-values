@@ -1,7 +1,7 @@
 <script lang="ts">
   import { VALUES_SELECTIONS_REQUIRED } from './constants';
-  import Controls from './toolbox/Controls.svelte';
   import { t } from './i18n';
+  import Controls from './toolbox/Controls.svelte';
   import ValueCard from './toolbox/ValueCard.svelte';
   import type { IValue, IValueType } from './types';
 
@@ -26,7 +26,7 @@
   }
 
   $: isDisabled = selected.length < VALUES_SELECTIONS_REQUIRED;
-  $: ctaMessage = isDisabled ? `Select ${VALUES_SELECTIONS_REQUIRED - selected.length} more values to proceed.` : 'Let’s refine your selection';
+  $: ctaMessage = isDisabled ? $t('selection.selectMore', { count: VALUES_SELECTIONS_REQUIRED - selected.length }) : $t('selection.refineSelection');
 </script>
 
 <header class="header">
