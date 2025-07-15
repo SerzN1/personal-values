@@ -1,0 +1,34 @@
+{
+  "header": {
+    "title": "Оценка личных ценностей",
+    "start": "Начать оценку",
+    "continue": "Продолжить оценку",
+    "restart": "Перезапустить оценку",
+    "selected": "Выбрано {count} из {total}",
+    "pair": "Пара {current} из {total}",
+    "darkMode": "Переключить тёмный режим",
+    "language": "Язык",
+    "github": "Github",
+    "privacy": "Уведомление о конфиденциальности"
+  },
+  "values": {
+    "achievement": "Достижение",
+    "benevolence": "Доброжелательность",
+    "conformity": "Конформность",
+    "hedonism": "Гедонизм",
+    "power": "Власть",
+    "security": "Безопасность",
+    "self-direction": "Самостоятельность",
+    "stimulation": "Стимуляция",
+    "tradition": "Традиция",
+    "universalism": "Универсализм"
+  },
+  "common": {
+    "loading": "Загрузка...",
+    "error": "Произошла ошибка",
+    "next": "Далее",
+    "back": "Назад",
+    "close": "Закрыть",
+    "save": "Сохранить"
+  }
+}

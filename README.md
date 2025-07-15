@@ -146,8 +146,44 @@ Leadership[leadership] --> Achievement
 
 - **Svelte** – Reactive UI framework for building highly performant web apps
 - **Vite** – Next-generation frontend tooling for fast development experience
+- **TypeScript** – Strong typing for better development experience and code reliability
 
 This combination ensures rapid load times, seamless updates, and a responsive user experience.
+
+## Internationalization
+
+The application supports the **six official United Nations languages** with full TypeScript implementation:
+
+- 🇺🇸 **English** - Default language
+- 🇫🇷 **Français** - French
+- 🇪🇸 **Español** - Spanish  
+- 🇷🇺 **Русский** - Russian (Cyrillic script)
+- 🇨🇳 **中文** - Chinese (Simplified characters)
+- 🇸🇦 **العربية** - Arabic (with RTL support)
+
+### Features:
+- **TypeScript Support**: Strong typing for `LanguageCode`, `Language` interface
+- **RTL Layout**: Automatic right-to-left support for Arabic
+- **Font Optimization**: Script-specific font stacks
+- **Mobile-Friendly**: Cycling language switcher
+- **Reactive**: Instant text updates on language change
+- **Automatic language detection** from browser settings
+- **Persistent language preference** in localStorage
+- **Zero Dependencies**: Lightweight, no external i18n libraries
+
+### Usage Example:
+
+```typescript
+import { t, setLanguage, type LanguageCode } from './lib/i18n';
+
+// Type-safe language switching
+setLanguage('ar' as LanguageCode); // Enables RTL automatically
+
+// Reactive translations in Svelte components
+$t('header.title') // Displays in current language
+```
+
+Languages can be switched via the language selector in the header, with desktop dropdown and mobile cycling behavior.
 
 ---
 

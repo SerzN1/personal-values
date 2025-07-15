@@ -1,0 +1,34 @@
+{
+  "header": {
+    "title": "تقييم القيم الشخصية",
+    "start": "بدء التقييم",
+    "continue": "متابعة التقييم",
+    "restart": "إعادة تشغيل التقييم",
+    "selected": "تم اختيار {count} من {total}",
+    "pair": "الزوج {current} من {total}",
+    "darkMode": "تبديل الوضع المظلم",
+    "language": "اللغة",
+    "github": "Github",
+    "privacy": "ملاحظة الخصوصية"
+  },
+  "values": {
+    "achievement": "الإنجاز",
+    "benevolence": "الإحسان",
+    "conformity": "المطابقة",
+    "hedonism": "المتعة",
+    "power": "القوة",
+    "security": "الأمان",
+    "self-direction": "التوجيه الذاتي",
+    "stimulation": "التحفيز",
+    "tradition": "التقليد",
+    "universalism": "العالمية"
+  },
+  "common": {
+    "loading": "جارٍ التحميل...",
+    "error": "حدث خطأ",
+    "next": "التالي",
+    "back": "السابق",
+    "close": "إغلاق",
+    "save": "حفظ"
+  }
+}

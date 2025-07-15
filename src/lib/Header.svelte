@@ -1,7 +1,7 @@
 <script lang="ts">
   import logo from '../assets/logo.svg';
   import { STAGES, VALUES_SELECTIONS_REQUIRED } from './constants';
-  import { currentLanguage, languagesList, setLanguage, t } from './i18n/index.js';
+  import { currentLanguage, languagesList, setLanguage, t, type LanguageCode } from './i18n/index';
 
   export let stage: typeof STAGES[keyof typeof STAGES] = STAGES.START;
   export let selected: string[] = [];
@@ -44,7 +44,7 @@
     currentLanguageIndex = languagesList.findIndex(lang => lang.code === $currentLanguage);
   }
 
-  function changeLanguage(langCode: string) {
+  function changeLanguage(langCode: LanguageCode) {
     setLanguage(langCode);
   }
 

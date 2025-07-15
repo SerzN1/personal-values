@@ -567,3 +567,45 @@ hr:after {
   left: 50%;
   transform: rotate(45deg) translate(-50%, -50%);
 }
+
+/* RTL Support for Arabic */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .header {
+  direction: rtl;
+}
+
+[dir="rtl"] .header-data {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .language-dropdown .dropdown-content {
+  left: auto;
+  right: -1rem;
+}
+
+[dir="rtl"] .language-indicator {
+  left: -2px;
+  right: auto;
+}
+
+/* Font optimization for different scripts */
+:root {
+  --font-arabic: "Noto Sans Arabic", "Tahoma", "Arial Unicode MS", sans-serif;
+  --font-chinese: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-cyrillic: "Noto Sans", "Roboto", "Arial", sans-serif;
+}
+
+[lang="ar"] {
+  font-family: var(--font-arabic);
+}
+
+[lang="zh"] {
+  font-family: var(--font-chinese);
+}
+
+[lang="ru"] {
+  font-family: var(--font-cyrillic);
+}
