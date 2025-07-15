@@ -27,8 +27,18 @@
     "loading": "Chargement...",
     "error": "Une erreur s'est produite",
     "next": "Suivant",
+    "previous": "Précédent",
     "back": "Retour",
     "close": "Fermer",
     "save": "Enregistrer"
+  },
+  "breadcrumbs": {
+    "start": "Début",
+    "selection": "Sélection des Valeurs",
+    "comparison": "Priorisation des Valeurs",
+    "results": "Résultats"
+  },
+  "privacy": {
+    "note": "* Vos données personnelles restent personnelles.\nCette application est conçue de manière à ce que tout ce que vous saisissez, choisissez ou sur quoi vous réfléchissez soit stocké localement dans votre navigateur — cela ne quitte jamais votre appareil et aucune donnée n'est envoyée à un serveur.\nVous avez le contrôle total.\nAucun suivi. Aucune analyse. Aucune collecte cachée.\nSi vous souhaitez effacer vos réponses, vous pouvez réinitialiser votre session à tout moment."
   }
 }

@@ -1,12 +1,14 @@
 
 <script>
+	import { t } from './i18n';
+
 	let { prev = null, next = null } = $props();
 </script>
 
 <div class="controls">
   <div class="control-title">
-    <span class="prev {!prev && 'faded'}">previous</span>
-    <span class="next {!next && 'faded'}">next</span>
+    <span class="prev {!prev && 'faded'}">{$t('common.previous')}</span>
+    <span class="next {!next && 'faded'}">{$t('common.next')}</span>
   </div>
   <div class="controls-content">
     <div class="prev">

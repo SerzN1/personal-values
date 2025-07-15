@@ -1,14 +1,15 @@
 <script lang="ts">
   import { STAGES } from './constants';
+  import { t } from './i18n';
 
   export let stage: typeof STAGES[keyof typeof STAGES] = STAGES.START;
 </script>
 
 <div class="breadcrumbs">
-  <span class="breadcrumb {stage === STAGES.START ? 'active' : ''}">Start</span>
-  <span class="breadcrumb {stage === STAGES.SELECTION ? 'active' : ''}">Values Selection</span>
-  <span class="breadcrumb {stage === STAGES.COMPARISON ? 'active' : ''}">Values Prioritization</span>
-  <span class="breadcrumb {stage === STAGES.RESULTS ? 'active' : ''}">Results</span>
+  <span class="breadcrumb {stage === STAGES.START ? 'active' : ''}">{$t('breadcrumbs.start')}</span>
+  <span class="breadcrumb {stage === STAGES.SELECTION ? 'active' : ''}">{$t('breadcrumbs.selection')}</span>
+  <span class="breadcrumb {stage === STAGES.COMPARISON ? 'active' : ''}">{$t('breadcrumbs.comparison')}</span>
+  <span class="breadcrumb {stage === STAGES.RESULTS ? 'active' : ''}">{$t('breadcrumbs.results')}</span>
 </div>
 
 <style>

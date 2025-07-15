@@ -1,6 +1,6 @@
 {
   "header": {
-    "title": "Personal Values Assessment",
+    "title": "Personal Values\nAssessment",
     "start": "Start Assessment",
     "continue": "Continue Assessment",
     "restart": "Restart Assessment",
@@ -27,8 +27,18 @@
     "loading": "Loading...",
     "error": "An error occurred",
     "next": "Next",
+    "previous": "Previous",
     "back": "Back",
     "close": "Close",
     "save": "Save"
+  },
+  "breadcrumbs": {
+    "start": "Start",
+    "selection": "Values Selection",
+    "comparison": "Values Prioritization",
+    "results": "Results"
+  },
+  "privacy": {
+    "note": "* Your personal data stays personal.\nThis application is designed in the way everything you enter, choose, or reflect on is stored locally in your browser — it never leaves your device, and no data is sent to any server.\nYou are in full control.\nNo tracking. No analytics. No hidden collection.\nIf you ever want to clear your answers, you can reset your session anytime."
   }
 }

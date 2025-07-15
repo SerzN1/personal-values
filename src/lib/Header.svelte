@@ -1,7 +1,7 @@
 <script lang="ts">
   import logo from '../assets/logo.svg';
   import { STAGES, VALUES_SELECTIONS_REQUIRED } from './constants';
-  import { currentLanguage, languagesList, setLanguage, t, type LanguageCode } from './i18n/index';
+  import { currentLanguage, languagesList, setLanguage, t, type LanguageCode } from './i18n';
 
   export let stage: typeof STAGES[keyof typeof STAGES] = STAGES.START;
   export let selected: string[] = [];
@@ -168,7 +168,7 @@
     margin-left: .4em;
     display: flex;
     text-transform: uppercase;
-    white-space: nowrap;
+    white-space: pre-line;
     letter-spacing: -0.02em;
   }
 
