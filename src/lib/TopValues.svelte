@@ -1,14 +1,13 @@
 <script lang="ts">
   import { valueById, valueInsights, valueTypes } from './data';
+  import { t } from './i18n';
   import ValueCardRanked from './ValueCardRanked.svelte';
 
   export let topValues: [string, number][] = [];
 </script>
 
-<h2>Your Top 5 Values</h2>
-<p>
-  These values represent the core principles that resonate with you the most. They are the guiding lights in your life, shaping your decisions and actions.
-</p>
+<h2>{$t('topValues.title')}</h2>
+<p>{$t('topValues.description')}</p>
 <div class="cards">
   {#each topValues as value, i}
     <ValueCardRanked

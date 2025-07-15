@@ -4,7 +4,7 @@
   import Controls from './Controls.svelte';
   import { valueById, valueTypes } from './data';
   import type { IValue } from './types';
-  import ValueCard from './ValueCard.svelte';
+  import ValueCard from './toolbox/ValueCard.svelte';
 
   export let selected: IValue[] = [];
   export let onFinish: () => void;

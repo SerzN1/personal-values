@@ -56,7 +56,7 @@
 
 <nav aria-label="Primary" class="header">
   <div class="header-logo" on:click={clickLogo} on:keypress={clickLogo} tabindex="0" role="button">
-    <img src={logo} class="logo" alt={$t('header.title')} />
+    <img src={logo} class="logo" alt="logo" />
     <span class="header-title mobile-hidden">{$t('header.title')}</span>
   </div>
   <div class="header-data">

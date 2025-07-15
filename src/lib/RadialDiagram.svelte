@@ -1,5 +1,7 @@
 <script lang="ts">
   import { groupData } from './data';
+  import { t } from './i18n';
+
   export let scores: Record<string, number> = {
     SelfTranscendence: 0,
     SelfEnhancement: 0,
@@ -39,7 +41,7 @@
   width={maxRadius * 2 + 100}
   height={maxRadius * 2 + 50}
   viewBox={`${-maxRadius - 25} ${-maxRadius - 50} ${maxRadius * 2 + 50} ${maxRadius * 2 + 100}`}
-  aria-label="SVS Radial Diagram"
+  aria-label={$t('diagram.ariaLabel')}
   role="img"
   font-family="Arial, sans-serif"
 >
@@ -76,7 +78,7 @@
       text-anchor="middle"
       alignment-baseline="middle"
     >
-      {key.replace(/([A-Z])/g, ' $1').trim().toUpperCase()}
+      {$t(`diagram.groups.${key}`).toUpperCase()}
     </text>
   {/each}
 </svg>

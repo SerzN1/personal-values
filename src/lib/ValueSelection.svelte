@@ -1,7 +1,8 @@
 <script lang="ts">
-  import Controls from './Controls.svelte';
-  import ValueCard from './ValueCard.svelte';
   import { VALUES_SELECTIONS_REQUIRED } from './constants';
+  import Controls from './Controls.svelte';
+  import { t } from './i18n';
+  import ValueCard from './toolbox/ValueCard.svelte';
   import type { IValue, IValueType } from './types';
 
   export let values: IValue[] = [];
@@ -29,10 +30,9 @@
 </script>
 
 <header class="header">
-  <h1 class="header-title">Select Your Values</h1>
+  <h1 class="header-title">{$t('selection.title')}</h1>
   <p class="header-description">
-    What matters to you, really? Pick the values that feel like “you.”<br />
-    Select at least {VALUES_SELECTIONS_REQUIRED} values that resonate with you.
+    {$t('selection.description', { required: VALUES_SELECTIONS_REQUIRED })}
   </p>
 </header>
 
@@ -52,13 +52,13 @@
 
   <Controls>
     {#snippet prev()}
-      <a href="#prev" on:click|preventDefault={() => onSelectionChange()} title="Reset selection" aria-label="Reset selection">
-        Reset selection
+      <a href="#prev" on:click|preventDefault={() => onSelectionChange()} title={$t('selection.resetSelection')} aria-label={$t('selection.resetSelection')}>
+        {$t('selection.resetSelection')}
       </a>
     {/snippet}
     {#snippet next()}
-      <a href="#next" on:click|preventDefault={proceed} title={ctaMessage} aria-label="Continue to next step" class="{isDisabled ? 'disabled' : ''}">
-        Continue
+      <a href="#next" on:click|preventDefault={proceed} title={ctaMessage} aria-label={$t('selection.continue')} class="{isDisabled ? 'disabled' : ''}">
+        {$t('selection.continue')}
       </a>
     {/snippet}
   </Controls>

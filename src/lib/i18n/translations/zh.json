@@ -40,5 +40,32 @@
   },
   "privacy": {
     "note": "* 您的个人数据保持私密。\n此应用程序的设计确保您输入、选择或思考的所有内容都本地存储在您的浏览器中——永远不会离开您的设备，也不会将任何数据发送到服务器。\n您拥有完全控制权。\n无跟踪。无分析。无隐藏收集。\n如果您想清除答案，可以随时重置会话。"
+  },
+  "diagram": {
+    "ariaLabel": "SVS 径向图",
+    "groups": {
+      "SelfTranscendence": "自我超越",
+      "OpennessToChange": "开放性变化",
+      "SelfEnhancement": "自我提升",
+      "Conservation": "保守"
+    }
+  },
+  "results": {
+    "title": "评估结果",
+    "description": "它们反映了对您真正重要的事物——塑造您的选择、关系和人生方向的原则。请保持它们；它们是您的指南针。",
+    "prioritizeAgain": "重新排序",
+    "restartAssessment": "重新开始评估"
+  },
+  "topValues": {
+    "title": "您的前5大价值观",
+    "description": "这些价值观代表了与您最共鸣的核心原则。它们是您生活中的指路明灯，塑造着您的决策和行动。"
+  },
+  "selection": {
+    "title": "选择您的价值观",
+    "description": "什么对您真正重要？选择感觉像您的价值观。\n至少选择{required}个与您产生共鸣的价值观。",
+    "selectMore": "再选择{count}个价值观以继续。",
+    "refineSelection": "让我们完善您的选择",
+    "resetSelection": "重置选择",
+    "continue": "继续"
   }
 }

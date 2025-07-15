@@ -3,6 +3,7 @@
   import Controls from './Controls.svelte';
   import { groupData, valueById } from './data';
   import GroupBalance from './GroupBalance.svelte';
+  import { t } from './i18n';
   import TopValues from './TopValues.svelte';
   import { analyzeGroupScores, summarizeGroups } from './utils';
 
@@ -20,10 +21,8 @@
 </script>
 
 <header class="header">
-  <h1 class="header-title">Assessment Results</h1>
-  <p class="header-description">
-    They reflect what truly matters to you — the principles that shape your choices, relationships, and direction in life. Keep them close; they’re your compass.
-  </p>
+  <h1 class="header-title">{$t('results.title')}</h1>
+  <p class="header-description">{$t('results.description')}</p>
 </header>
 
 <main class="comparison-results">
@@ -33,10 +32,10 @@
 
   <Controls>
     {#snippet prev()}
-      <a href="#prev" on:click|preventDefault={onPrev} title="Prioritize Again" aria-label="Prioritize Again">Prioritize Again</a>
+      <a href="#prev" on:click|preventDefault={onPrev} title={$t('results.prioritizeAgain')} aria-label={$t('results.prioritizeAgain')}>{$t('results.prioritizeAgain')}</a>
     {/snippet}
     {#snippet next()}
-      <a href="#next" on:click|preventDefault={onNext} aria-label="Restart Assessment">Restart Assessment</a>
+      <a href="#next" on:click|preventDefault={onNext} title={$t('results.restartAssessment')} aria-label={$t('results.restartAssessment')}>{$t('results.restartAssessment')}</a>
     {/snippet}
   </Controls>
 </main>

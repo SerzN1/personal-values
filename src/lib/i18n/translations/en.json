@@ -40,5 +40,32 @@
   },
   "privacy": {
     "note": "* Your personal data stays personal.\nThis application is designed in the way everything you enter, choose, or reflect on is stored locally in your browser — it never leaves your device, and no data is sent to any server.\nYou are in full control.\nNo tracking. No analytics. No hidden collection.\nIf you ever want to clear your answers, you can reset your session anytime."
+  },
+  "diagram": {
+    "ariaLabel": "SVS Radial Diagram",
+    "groups": {
+      "SelfTranscendence": "Self Transcendence",
+      "OpennessToChange": "Openness To Change",
+      "SelfEnhancement": "Self Enhancement",
+      "Conservation": "Conservation"
+    }
+  },
+  "results": {
+    "title": "Assessment Results",
+    "description": "They reflect what truly matters to you — the principles that shape your choices, relationships, and direction in life. Keep them close; they're your compass.",
+    "prioritizeAgain": "Prioritize Again",
+    "restartAssessment": "Restart Assessment"
+  },
+  "topValues": {
+    "title": "Your Top 5 Values",
+    "description": "These values represent the core principles that resonate with you the most. They are the guiding lights in your life, shaping your decisions and actions."
+  },
+  "selection": {
+    "title": "Select Your Values",
+    "description": "What matters to you, really? Pick the values that feel like \"you.\"\nSelect at least {required} values that resonate with you.",
+    "selectMore": "Select {count} more values to proceed.",
+    "refineSelection": "Let's refine your selection",
+    "resetSelection": "Reset selection",
+    "continue": "Continue"
   }
 }

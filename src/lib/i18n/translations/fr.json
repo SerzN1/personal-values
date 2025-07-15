@@ -1,6 +1,6 @@
 {
   "header": {
-    "title": "Évaluation des Valeurs Personnelles",
+    "title": "Évaluation des Valeurs\nPersonnelles",
     "start": "Commencer l'Évaluation",
     "continue": "Continuer l'Évaluation",
     "restart": "Redémarrer l'Évaluation",
@@ -40,5 +40,32 @@
   },
   "privacy": {
     "note": "* Vos données personnelles restent personnelles.\nCette application est conçue de manière à ce que tout ce que vous saisissez, choisissez ou sur quoi vous réfléchissez soit stocké localement dans votre navigateur — cela ne quitte jamais votre appareil et aucune donnée n'est envoyée à un serveur.\nVous avez le contrôle total.\nAucun suivi. Aucune analyse. Aucune collecte cachée.\nSi vous souhaitez effacer vos réponses, vous pouvez réinitialiser votre session à tout moment."
+  },
+  "diagram": {
+    "ariaLabel": "Diagramme Radial SVS",
+    "groups": {
+      "SelfTranscendence": "Dépassement de Soi",
+      "OpennessToChange": "Ouverture au Changement",
+      "SelfEnhancement": "Affirmation de Soi",
+      "Conservation": "Conservation"
+    }
+  },
+  "results": {
+    "title": "Résultats de l'Évaluation",
+    "description": "Ils reflètent ce qui compte vraiment pour vous — les principes qui façonnent vos choix, vos relations et votre direction dans la vie. Gardez-les près de vous ; ils sont votre boussole.",
+    "prioritizeAgain": "Prioriser à Nouveau",
+    "restartAssessment": "Redémarrer l'Évaluation"
+  },
+  "topValues": {
+    "title": "Vos 5 Valeurs Principales",
+    "description": "Ces valeurs représentent les principes fondamentaux qui résonnent le plus avec vous. Elles sont les phares de votre vie, façonnant vos décisions et vos actions."
+  },
+  "selection": {
+    "title": "Sélectionnez Vos Valeurs",
+    "description": "Qu'est-ce qui compte vraiment pour vous ? Choisissez les valeurs qui vous ressemblent.\nSélectionnez au moins {required} valeurs qui résonnent avec vous.",
+    "selectMore": "Sélectionnez {count} valeurs de plus pour continuer.",
+    "refineSelection": "Affinons votre sélection",
+    "resetSelection": "Réinitialiser la sélection",
+    "continue": "Continuer"
   }
 }
