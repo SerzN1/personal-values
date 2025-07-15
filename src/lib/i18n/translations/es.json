@@ -1,0 +1,34 @@
+{
+  "header": {
+    "title": "Evaluación de Valores Personales",
+    "start": "Comenzar Evaluación",
+    "continue": "Continuar Evaluación",
+    "restart": "Reiniciar Evaluación",
+    "selected": "Seleccionados {count} de {total}",
+    "pair": "Par {current} de {total}",
+    "darkMode": "Alternar Modo Oscuro",
+    "language": "Idioma",
+    "github": "Github",
+    "privacy": "Nota de Privacidad"
+  },
+  "values": {
+    "achievement": "Logro",
+    "benevolence": "Benevolencia",
+    "conformity": "Conformidad",
+    "hedonism": "Hedonismo",
+    "power": "Poder",
+    "security": "Seguridad",
+    "self-direction": "Autodirección",
+    "stimulation": "Estimulación",
+    "tradition": "Tradición",
+    "universalism": "Universalismo"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "next": "Siguiente",
+    "back": "Atrás",
+    "close": "Cerrar",
+    "save": "Guardar"
+  }
+}

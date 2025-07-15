@@ -20,7 +20,6 @@
     padding: 1.6rem;
     display: block;
     transition: all .3s ease-in-out;
-    /* color: var(--sk-fg-accent); */
   }
 
   .cta:hover {

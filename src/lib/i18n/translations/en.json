@@ -1,0 +1,34 @@
+{
+  "header": {
+    "title": "Personal Values Assessment",
+    "start": "Start Assessment",
+    "continue": "Continue Assessment",
+    "restart": "Restart Assessment",
+    "selected": "Selected {count} of {total}",
+    "pair": "Pair {current} of {total}",
+    "darkMode": "Toggle Dark Mode",
+    "language": "Language",
+    "github": "Github",
+    "privacy": "Privacy Note"
+  },
+  "values": {
+    "achievement": "Achievement",
+    "benevolence": "Benevolence",
+    "conformity": "Conformity",
+    "hedonism": "Hedonism",
+    "power": "Power",
+    "security": "Security",
+    "self-direction": "Self-Direction",
+    "stimulation": "Stimulation",
+    "tradition": "Tradition",
+    "universalism": "Universalism"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "next": "Next",
+    "back": "Back",
+    "close": "Close",
+    "save": "Save"
+  }
+}
