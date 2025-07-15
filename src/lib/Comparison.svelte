@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { comparisonStore, getPairs, resetPrioritization } from './comparisonStore';
-  import Controls from './Controls.svelte';
+  import Controls from './toolbox/Controls.svelte';
   import { valueById, valueTypes } from './data';
   import type { IValue } from './types';
   import ValueCard from './toolbox/ValueCard.svelte';

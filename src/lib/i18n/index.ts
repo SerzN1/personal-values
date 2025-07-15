@@ -20,7 +20,7 @@ export interface Language {
 export type Languages = Record<LanguageCode, Language>;
 
 export interface TranslationFunction {
-  (key: string, params?: Record<string, string | number>): string;
+  <T = any>(key: string, params?: Record<string, string | number>): T;
 }
 
 const DEFAULT_LANGUAGE: LanguageCode = 'en';
@@ -114,18 +114,18 @@ function interpolate(template: string, params: Record<string, string | number>):
 
 // Reactive translation function for use in Svelte components
 export const t: Readable<TranslationFunction> = derived(translations, ($translations) => {
-  return function translate(key: string, params: Record<string, string | number> = {}): string {
+  return function translate<T = any>(key: string, params: Record<string, string | number> = {}): T {
     const result = getNestedValue($translations, key);
 
     if (result === null) {
-      return key; // Return key if translation not found
+      return key as T; // Return key if translation not found
     }
 
-    // Handle interpolation
+    // Handle interpolation for strings only
     if (typeof result === 'string' && Object.keys(params).length > 0) {
-      return interpolate(result, params);
+      return interpolate(result, params) as T;
     }
 
-    return result;
+    return result as T;
   };
 });

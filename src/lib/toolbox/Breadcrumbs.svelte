@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { STAGES } from './constants';
-  import { t } from './i18n';
+  import { STAGES } from '../constants';
+  import { t } from '../i18n';
 
   export let stage: typeof STAGES[keyof typeof STAGES] = STAGES.START;
 </script>

@@ -67,5 +67,37 @@
     "refineSelection": "Affinons votre sélection",
     "resetSelection": "Réinitialiser la sélection",
     "continue": "Continuer"
-  }
+  },
+  "faq": [
+    {
+      "id": "what-are-values",
+      "q": "Que sont les valeurs personnelles fondamentales ?",
+      "a": "Les valeurs personnelles fondamentales sont les croyances et principes intérieurs qui guident vos décisions, actions et relations. Elles façonnent votre leadership, vos priorités et votre définition du succès. Ces valeurs ne sont pas que des idées abstraites — ce sont des moteurs profondément ressentis du comportement. Quand vous les connaissez clairement, vous naviguez dans la vie avec plus de confiance et de clarté. Des valeurs comme la curiosité, l'honnêteté, l'autonomie ou la compassion reflètent qui vous êtes au fond — pas qui les autres attendent que vous soyez."
+    },
+    {
+      "id": "why-know-values",
+      "q": "Pourquoi est-il important de connaître ses valeurs ?",
+      "a": "Quand vous connaissez vos valeurs fondamentales, vous prenez des décisions avec plus de facilité et d'intégrité. Vous vous sentez plus aligné dans votre travail, vos relations et votre leadership. Vos valeurs vous aident à définir ce que le \"succès\" signifie vraiment pour vous — et elles servent de boussole quand les choses deviennent floues ou difficiles. Sans clarté sur vos valeurs, il est facile de se sentir tiré dans trop de directions ou coincé dans des rôles qui ne correspondent plus à qui vous êtes."
+    },
+    {
+      "id": "how-assessment-works",
+      "q": "Comment fonctionne cette évaluation des valeurs ?",
+      "a": "C'est un outil rapide et réflexif conçu pour vous aider à identifier vos 5 valeurs personnelles principales. Vous examinerez une liste soigneusement sélectionnée de valeurs, choisirez celles qui résonnent le plus, puis les prioriserez. Cela ne prend que quelques minutes — mais l'insight que vous gagnez peut être durable. L'objectif n'est pas la perfection — c'est la conscience de soi. Une fois que vous connaissez vos valeurs, vous pouvez commencer à prendre des décisions et fixer des objectifs qui s'alignent vraiment."
+    },
+    {
+      "id": "who-is-this-for",
+      "q": "Pour qui est-ce destiné ?",
+      "a": "Cette évaluation est pour les leaders, professionnels, et toute personne qui veut vivre et diriger de manière plus intentionnelle. Que vous naviguiez un changement, travailliez avec un coach, ou soyez simplement curieux de ce qui vous motive, cet outil vous aide à vous connecter avec ce qui compte le plus. Il est particulièrement utile pendant les transitions de carrière, le développement du leadership, ou les moments où vous vous sentez coincé ou désynchronisé. La clarté sur vos valeurs mène à la clarté dans vos actions."
+    },
+    {
+      "id": "can-values-change",
+      "q": "Les valeurs peuvent-elles changer avec le temps ?",
+      "a": "Oui — et c'est un signe de croissance. À mesure que vous évoluez, faites face à de nouveaux défis, ou vivez des changements significatifs dans la vie, certaines valeurs peuvent gagner en importance tandis que d'autres s'estompent. Vérifier avec vos valeurs vous aide à rester aligné avec qui vous devenez, pas seulement qui vous avez été. Cette évaluation ne consiste pas à vous enfermer dans des idées fixes — il s'agit de rester ancré et intentionnel dans votre façon de diriger et de vivre."
+    },
+    {
+      "id": "what-will-i-get",
+      "q": "Qu'obtiendrai-je à la fin ?",
+      "a": "Vous recevrez une liste claire et priorisée de vos 5 valeurs personnelles principales, chacune avec une courte réflexion pour vous aider à explorer comment elle se manifeste dans votre vie et votre leadership. Vous verrez aussi comment vos valeurs sont équilibrées à travers quatre groupes de motivation clés — offrant un aperçu de ce qui vous motive, où des tensions peuvent exister, et comment rester aligné avec ce qui compte le plus. C'est un instantané simple et personnel de votre boussole intérieure — un que vous pouvez consulter chaque fois que vous avez besoin de clarté, de direction, ou d'un moment de réflexion."
+    }
+  ]
 }

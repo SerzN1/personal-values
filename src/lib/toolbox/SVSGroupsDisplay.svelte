@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { groupData } from "./data";
+  import { groupData } from "../data";
 
   export let groupScores: Record<string, number>;
 

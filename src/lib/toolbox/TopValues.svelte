@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { valueById, valueInsights, valueTypes } from './data';
-  import { t } from './i18n';
+  import { valueById, valueInsights, valueTypes } from '../data';
+  import { t } from '../i18n';
   import ValueCardRanked from './ValueCardRanked.svelte';
 
   export let topValues: [string, number][] = [];

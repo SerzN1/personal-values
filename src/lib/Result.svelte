@@ -1,10 +1,10 @@
 <script lang="ts">
   import { VALUES_RESULT_COUNT } from './constants';
-  import Controls from './Controls.svelte';
+  import Controls from './toolbox/Controls.svelte';
   import { groupData, valueById } from './data';
   import GroupBalance from './GroupBalance.svelte';
   import { t } from './i18n';
-  import TopValues from './TopValues.svelte';
+  import TopValues from './toolbox/TopValues.svelte';
   import { analyzeGroupScores, summarizeGroups } from './utils';
 
   export let scores: Record<string, number> = {};

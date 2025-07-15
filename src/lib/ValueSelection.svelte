@@ -1,6 +1,6 @@
 <script lang="ts">
   import { VALUES_SELECTIONS_REQUIRED } from './constants';
-  import Controls from './Controls.svelte';
+  import Controls from './toolbox/Controls.svelte';
   import { t } from './i18n';
   import ValueCard from './toolbox/ValueCard.svelte';
   import type { IValue, IValueType } from './types';

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { groupData } from './data';
   import RadialDiagram from './RadialDiagram.svelte';
-  import SvsGroupsDisplay from './SVSGroupsDisplay.svelte';
+  import SvsGroupsDisplay from './toolbox/SVSGroupsDisplay.svelte';
   import type { IGroupAnalysisResult } from './types';
   import { detectTensions, generateUserReflections } from './utils';
 

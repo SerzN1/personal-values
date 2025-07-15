@@ -1,6 +1,6 @@
 
 <script>
-	import { t } from './i18n';
+	import { t } from '../i18n';
 
 	let { prev = null, next = null } = $props();
 </script>

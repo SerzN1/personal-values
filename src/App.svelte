@@ -1,12 +1,12 @@
 <script lang="ts">
-  import Breadcrumbs from './lib/Breadcrumbs.svelte';
+  import Breadcrumbs from './lib/toolbox/Breadcrumbs.svelte';
   import Comparison from './lib/Comparison.svelte';
   import { comparisonStore, resetPrioritization } from './lib/comparisonStore';
   import { STAGES, VALUES_SELECTIONS_REQUIRED } from './lib/constants';
-  import CTA from './lib/CTA.svelte';
+  import CTA from './lib/toolbox/CTA.svelte';
   import { valueTypes, values, valuesShuffled } from './lib/data';
-  import FAQ from './lib/FAQ.svelte';
-  import Navigation from './lib/Header.svelte';
+  import FAQ from './lib/toolbox/FAQ.svelte';
+  import Navigation from './lib/toolbox/Header.svelte';
   import PrivacyNote from './lib/PrivacyNote.svelte';
   import Result from './lib/Result.svelte';
   import { processStage, resetSelectedValues, selectedValues } from './lib/selectionStore';

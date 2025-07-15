@@ -67,5 +67,37 @@
     "refineSelection": "Refinemos tu selección",
     "resetSelection": "Reiniciar selección",
     "continue": "Continuar"
-  }
+  },
+  "faq": [
+    {
+      "id": "what-are-values",
+      "q": "¿Qué son los valores personales fundamentales?",
+      "a": "Los valores personales fundamentales son las creencias y principios internos que guían tus decisiones, acciones y relaciones. Dan forma a cómo lideras, qué priorizas y cómo defines el éxito. Estos valores no son solo ideas abstractas — son impulsores profundamente sentidos del comportamiento. Cuando los tienes claros, navegas la vida con más confianza y claridad. Valores como la curiosidad, honestidad, autonomía o compasión reflejan quién eres en tu núcleo — no quien otros esperan que seas."
+    },
+    {
+      "id": "why-know-values",
+      "q": "¿Por qué importa conocer tus valores?",
+      "a": "Cuando conoces tus valores fundamentales, tomas decisiones con más facilidad e integridad. Te sientes más alineado en tu trabajo, relaciones y liderazgo. Tus valores te ayudan a definir qué significa realmente el \"éxito\" para ti — y sirven como brújula cuando las cosas se vuelven confusas o desafiantes. Sin claridad sobre tus valores, es fácil sentirse tirado en demasiadas direcciones o atascado en roles que ya no encajan con quien eres."
+    },
+    {
+      "id": "how-assessment-works",
+      "q": "¿Cómo funciona esta evaluación de valores?",
+      "a": "Esta es una herramienta rápida y reflexiva diseñada para ayudarte a identificar tus 5 valores personales principales. Revisarás una lista cuidadosamente seleccionada de valores, elegirás los que más resuenen, y luego los priorizarás. Solo toma unos minutos — pero la comprensión que obtienes puede ser duradera. El objetivo no es la perfección — es la autoconciencia. Una vez que conoces tus valores, puedes comenzar a tomar decisiones y establecer metas que realmente se alineen."
+    },
+    {
+      "id": "who-is-this-for",
+      "q": "¿Para quién es esto?",
+      "a": "Esta evaluación es para líderes, profesionales, y cualquiera que quiera vivir y liderar más intencionalmente. Ya sea que estés navegando un cambio, trabajando con un coach, o simplemente curioso sobre qué te impulsa, esta herramienta te ayuda a conectar con lo que más importa. Es especialmente útil durante transiciones de carrera, desarrollo de liderazgo, o momentos cuando te sientes atascado o desincronizado. La claridad sobre tus valores lleva a claridad en tus acciones."
+    },
+    {
+      "id": "can-values-change",
+      "q": "¿Pueden cambiar los valores con el tiempo?",
+      "a": "Sí — y eso es una señal de crecimiento. Mientras evolucionas, enfrentas nuevos desafíos, o experimentas cambios significativos en la vida, algunos valores pueden aumentar en importancia mientras otros se desvanecen. Revisar tus valores te ayuda a mantenerte alineado con quien te estás convirtiendo, no solo quien has sido. Esta evaluación no se trata de encerrarte en ideas fijas — se trata de mantenerte arraigado e intencional en cómo lideras y vives."
+    },
+    {
+      "id": "what-will-i-get",
+      "q": "¿Qué obtendré al final?",
+      "a": "Recibirás una lista clara y priorizada de tus 5 valores personales principales, cada uno con una breve reflexión para ayudarte a explorar cómo se manifiesta en tu vida y liderazgo. También verás cómo tus valores están equilibrados a través de cuatro grupos de motivación clave — ofreciendo perspicacia sobre qué te impulsa, dónde pueden existir tensiones, y cómo mantenerte alineado con lo que más importa. Es una instantánea simple y personal de tu brújula interna — una a la que puedes regresar cuando necesites claridad, dirección, o un momento de reflexión."
+    }
+  ]
 }
