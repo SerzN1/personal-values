@@ -1,4 +1,3 @@
-import type { TranslationParams } from './i18n';
 
 export interface IValueType {
   label: string;
@@ -46,13 +45,18 @@ export interface IGroupData {
 
 export interface IGroupPolarization {
   gap: number;
-  message: TranslationParams;
+  message: {
+    gap: string;
+    topLabel: string;
+    bottomLabel: string;
+  };
 }
 
 export interface IGroupAnalysisResult {
   topGroup: GroupKey;
   bottomGroup: GroupKey;
-  summary: TranslationParams;
+  topSummary: string;
+  bottomSummary: string;
   insights: string;
   polarization?: IGroupPolarization;
 }

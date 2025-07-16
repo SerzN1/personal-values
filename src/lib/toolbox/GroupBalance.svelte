@@ -10,6 +10,11 @@
   export let groupAnalysysResult: IGroupAnalysisResult;
 
   $: radialDiagramInsights = detectTensions(groupScores, groupData, $t);
+  $: groupSummaryOptions = {
+    topSummary: $t(groupAnalysysResult.topSummary),
+    bottomSummary: $t(groupAnalysysResult.bottomSummary)
+  };
+
   const userReflections = generateUserReflections(groupScores);
   const topGroupData = groupData[groupAnalysysResult.topGroup];
   const bottomGroupData = groupData[groupAnalysysResult.bottomGroup];
@@ -22,7 +27,7 @@
 <p>
   <span style="color:{topGroupData.color}">{$t(topGroupData.label)}</span> is your <code>{$t('groupBalance.leadingOrientation')}</code>.
   <span style="color:{bottomGroupData.color}">{$t(bottomGroupData.label)}</span> is a <code>{$t('groupBalance.lessEmphasized')}</code>.
-  {$t(...groupAnalysysResult.summary)}
+  {$t('analysis.groupAnalysis.summary', groupSummaryOptions)}
 </p>
 
 <div class="graphs">
@@ -62,7 +67,7 @@
       {$t('groupBalance.polarizationPoints', { gap: groupAnalysysResult.polarization.gap })}
     </p>
     <p>
-      {groupAnalysysResult.polarization.message}
+      {$t('analysis.groupAnalysis.polarizationMessage', groupAnalysysResult.polarization.message)}
     </p>
   </blockquote>
 {/if}
@@ -89,7 +94,6 @@
       grid-template-columns: 1fr 1fr;
     }
   }
-
 
   blockquote {
     padding: 0 0 0 4.5rem;

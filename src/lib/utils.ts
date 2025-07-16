@@ -103,43 +103,22 @@ export function analyzeGroupScores(scores: Record<GroupKey, number>, groupData: 
   const gap = topScore - bottomScore;
   const polarization: IGroupPolarization = gap >= 30 ? {
     gap,
-    message: [
-      'analysis.groupAnalysis.polarizationMessage', {
-        gap: gap.toString(),
-        topLabel: top.label,
-        bottomLabel: bottom.label
-      }
-    ]
+    message: {
+      gap: gap.toString(),
+      topLabel: top.label,
+      bottomLabel: bottom.label
+    }
   } : undefined;
 
   return {
     topGroup,
     bottomGroup,
-    summary: [
-      'analysis.groupAnalysis.summary', {
-        topSummary: top.summary,
-        bottomSummary: bottom.summary
-      }
-    ],
+    topSummary: top.summary,
+    bottomSummary: bottom.summary,
     insights: top.insights,
     polarization
   };
 }
-
-const reflectionPrompts: Record<string, (score: number) => string> = {
-  SelfTranscendence: (score) => score >= 70
-    ? "How do you care for yourself while caring for others?"
-    : "Where might more compassion or shared purpose energize your direction?",
-  SelfEnhancement: (score) => score >= 70
-    ? "How does your drive for achievement support — or compete with — your relationships?"
-    : "What would you pursue more boldly if recognition didn’t matter?",
-  OpennessToChange: (score) => score >= 70
-    ? "Where are you being called to explore something new right now?"
-    : "What new experiences might stretch your perspective?",
-  Conservation: (score) => score >= 70
-    ? "Where does structure or routine help you feel safe right now?"
-    : "What small rituals might create more stability in your life?"
-};
 
 export function generateUserReflections(scores: Record<string, number>): string[] {
   return Object.entries(scores).map(([key, score]) => {
