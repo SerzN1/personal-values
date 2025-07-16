@@ -1,36 +1,4 @@
-import type { GroupKey, IAssessmentResult, IGroupAnalysisResult, IGroupData, IGroupPolarization, IValue } from './types';
-
-export function calculateValueScores(prioritizedIds: string[], allValues: IValue[]): IAssessmentResult {
-  const valueScores: Record<string, number> = {};
-  const typeScores: Record<string, number> = {};
-  const groupScores: Record<string, number> = {};
-
-  const maxScore = 5;
-  const minScore = 0.5;
-  const step = (maxScore - minScore) / (prioritizedIds.length - 1);
-
-  prioritizedIds.forEach((valueId, index) => {
-    const score = maxScore - index * step;
-    const value = allValues.find(v => v.id === valueId);
-    if (!value) return;
-
-    valueScores[valueId] = score;
-
-    // Score by type
-    if (!typeScores[value.type]) typeScores[value.type] = 0;
-    typeScores[value.type] += score;
-
-    // Score by group
-    if (!groupScores[value.group]) groupScores[value.group] = 0;
-    groupScores[value.group] += score;
-  });
-
-  return {
-    valueScores,
-    typeScores,
-    groupScores
-  };
-}
+import type { GroupKey, IGroupAnalysisResult, IGroupData, IGroupPolarization, IValue } from './types';
 
 const OPPOSITES = [
   ['SelfEnhancement', 'SelfTranscendence'],

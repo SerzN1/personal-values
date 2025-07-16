@@ -1,7 +1,8 @@
+type TranslationKey = string;
 
 export interface IValueType {
-  label: string;
-  description: string;
+  label: TranslationKey;
+  description: TranslationKey;
   iconSvg: string; // SVG markup for background
   color: string; // text color
   background: string; // background color
@@ -9,36 +10,23 @@ export interface IValueType {
 
 export interface IValue {
   id: string;
-  label: string;
+  label: TranslationKey;
   tags: string[];
-  reflectionQuestions: string[];
-  description: string;
-  insight: string;
-  strengths: string;
-  dangers: string;
+  reflectionQuestions: TranslationKey;
+  description: TranslationKey;
+  insight: TranslationKey;
+  strengths: TranslationKey;
+  dangers: TranslationKey;
   type: string;
   group: string;
-}
-
-export interface IValueScore {
-  id: string;
-  score: number;
-  type: string;
-  group: string;
-}
-
-export interface IAssessmentResult {
-  valueScores: Record<string, number>;
-  typeScores: Record<string, number>;
-  groupScores: Record<string, number>;
 }
 
 type GroupKey = 'SelfTranscendence' | 'SelfEnhancement' | 'OpennessToChange' | 'Conservation';
 
 export interface IGroupData {
   label: string;
-  summary: string;
-  insights: string;
+  summary: TranslationKey;
+  insights: TranslationKey;
   color: string;
   backgroundColor: string;
 }
@@ -55,8 +43,8 @@ export interface IGroupPolarization {
 export interface IGroupAnalysisResult {
   topGroup: GroupKey;
   bottomGroup: GroupKey;
-  topSummary: string;
-  bottomSummary: string;
-  insights: string;
+  topSummary: TranslationKey;
+  bottomSummary: TranslationKey;
+  insights: TranslationKey;
   polarization?: IGroupPolarization;
 }
