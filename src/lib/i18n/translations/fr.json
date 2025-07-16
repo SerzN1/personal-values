@@ -15,55 +15,191 @@
   },
   "values": {
     "curiosity": {
-      "label": "Curiosité"
+      "label": "Curiosité",
+      "description": "Une motivation à rechercher de nouvelles idées, connaissances et expériences.",
+      "insight": "La curiosité vous encourage à vous aventurer au-delà du familier, en vous engageant avec des questions qui approfondissent votre compréhension de vous-même et du monde. En tant que leader, favoriser la curiosité alimente non seulement la croissance personnelle et professionnelle continue, mais cultive également un environnement où l'innovation prospère, inspirant votre équipe à explorer de nouveaux horizons de manière réfléchie et intentionnelle.",
+      "strengths": "Vous êtes ouvert d'esprit et motivé à explorer de nouvelles idées et perspectives.",
+      "dangers": "La curiosité peut mener à la distraction ou à une compréhension superficielle si elle n'est pas focalisée.",
+      "reflectionQuestions": [
+        "Où votre curiosité vous mène-t-elle en ce moment ?",
+        "Comment choisissez-vous quelles questions valent la peine d'être poursuivies ?"
+      ]
     },
     "creativity": {
-      "label": "Créativité"
+      "label": "Créativité",
+      "description": "Utiliser la pensée originale et l'imagination pour façonner des idées et des solutions.",
+      "insight": "La créativité vous permet de transformer l'imagination en action significative, défiant les limites conventionnelles avec une pensée originale. Le leadership enraciné dans la créativité équilibre les idées visionnaires avec l'exécution pratique, favorisant une culture qui embrasse l'expérimentation, apprend de l'échec et évolue continuellement à travers la résolution inspirée de problèmes.",
+      "strengths": "Vous apportez l'originalité et l'innovation à votre travail et votre vie.",
+      "dangers": "La créativité peut causer de la frustration quand les idées ne sont pas réalisées ou acceptées.",
+      "reflectionQuestions": [
+        "Comment exprimez-vous votre créativité aujourd'hui ?",
+        "Quels blocages empêchent votre potentiel créatif ?"
+      ]
     },
     "freedom": {
-      "label": "Liberté"
+      "label": "Liberté",
+      "description": "Avoir l'autonomie de faire ses propres choix et d'agir indépendamment.",
+      "insight": "La liberté ne concerne pas seulement le choix—il s'agit de posséder la direction de votre vie. Pour les leaders, cela signifie façonner des environnements où les autres peuvent également s'épanouir indépendamment.",
+      "strengths": "Vous valorisez l'autonomie et faire vos propres choix.",
+      "dangers": "La liberté sans limites peut mener à l'impulsivité ou à l'isolement.",
+      "reflectionQuestions": [
+        "Dans quels domaines vous sentez-vous le plus libre ?",
+        "Comment équilibrez-vous liberté et responsabilité ?"
+      ]
     },
     "independence": {
-      "label": "Indépendance"
+      "label": "Indépendance",
+      "description": "Être autonome et confiant dans vos capacités à réussir par vous-même.",
+      "insight": "L'indépendance est la confiance de naviguer dans la vie selon vos propres termes, tout en restant ouvert à la collaboration et au soutien quand cela a du sens. Pour les leaders, c'est modéliser l'auto-direction tout en créant des espaces où d'autres peuvent développer leur propre force et capacité.",
+      "strengths": "Vous êtes autonome et confiant dans vos capacités.",
+      "dangers": "L'indépendance excessive peut créer des barrières à la collaboration et au soutien.",
+      "reflectionQuestions": [
+        "Où votre indépendance vous sert-elle le mieux ?",
+        "Quand demander de l'aide renforcerait-il votre autonomie ?"
+      ]
     },
     "selfExpression": {
-      "label": "Expression de soi"
+      "label": "Expression de soi",
+      "description": "Communiquer authentiquement qui vous êtes à travers vos paroles, actions et créations.",
+      "insight": "L'expression de soi authentique invite les autres à faire de même, créant des connexions plus profondes et une culture de confiance. En tant que leader, votre volonté d'être vulnérable et authentique donne la permission aux autres d'apporter leur moi entier au travail et à la vie.",
+      "strengths": "Vous communiquez authentiquement qui vous êtes.",
+      "dangers": "L'expression de soi peut parfois entrer en conflit avec les attentes sociales ou les normes du groupe.",
+      "reflectionQuestions": [
+        "Comment vous exprimez-vous le plus authentiquement ?",
+        "Quand retenez-vous votre vraie voix ?"
+      ]
     },
     "excitement": {
-      "label": "Excitement"
+      "label": "Excitation",
+      "description": "Rechercher l'énergie et l'émotion à travers des expériences stimulantes.",
+      "insight": "L'excitation est l'énergie émotionnelle qui signale la passion et l'engagement, vous poussant vers des défis significatifs et de nouvelles expériences. Les leaders efficaces exploitent cette énergie de manière réfléchie, équilibrant l'enthousiasme avec des pratiques durables pour maintenir la motivation et inspirer les autres sans risquer l'épuisement ou la distraction.",
+      "strengths": "Vous recherchez et créez de l'énergie à travers des expériences nouvelles et palpitantes.",
+      "dangers": "Poursuivre l'excitation peut mener à l'épuisement ou à l'imprudence.",
+      "reflectionQuestions": [
+        "Quelles expériences récentes vous ont excité ?",
+        "Comment gérez-vous votre énergie pour éviter l'épuisement ?"
+      ]
     },
     "adventure": {
-      "label": "Aventure"
+      "label": "Aventure",
+      "description": "Embrasser de nouveaux défis et s'aventurer dans l'inconnu.",
+      "insight": "L'aventure vous invite à embrasser l'incertitude et à vous aventurer audacieusement dans l'inconnu, favorisant la croissance à travers la prise de risques et la résilience. Le leadership qui embrasse l'aventure modélise le courage, encourageant les autres à dépasser les zones de confort avec une vision claire et un jugement calculé pour naviguer les défis avec confiance.",
+      "strengths": "Vous poursuivez les défis et de nouveaux horizons avec courage.",
+      "dangers": "La recherche d'aventure peut causer une prise de risques sans prudence suffisante.",
+      "reflectionQuestions": [
+        "Quels nouveaux défis êtes-vous prêt à affronter ?",
+        "Comment évaluez-vous et gérez-vous les risques dans vos aventures ?"
+      ]
     },
     "novelty": {
-      "label": "Nouveauté"
+      "label": "Nouveauté",
+      "description": "Apprécier la fraîcheur, la diversité et les expériences inattendues.",
+      "insight": "La nouveauté suscite des perspectives fraîches et revitalise les schémas périmés, mais nécessite du discernement pour maintenir la concentration et la profondeur. En tant que leader, savoir quand introduire de nouvelles idées et quand consolider les progrès est crucial pour maintenir l'élan et assurer un impact significatif et durable.",
+      "strengths": "Vous prospérez avec de nouvelles idées et la diversité dans les expériences.",
+      "dangers": "La nouveauté constante peut perturber la concentration et la cohérence.",
+      "reflectionQuestions": [
+        "Comment incorporez-vous la nouveauté sans perdre la concentration ?",
+        "Quelles routines vous aident à rester ancré au milieu du changement ?"
+      ]
     },
     "energy": {
-      "label": "Énergie"
+      "label": "Énergie",
+      "description": "Vivre avec enthousiasme, audace et une forte motivation personnelle.",
+      "insight": "L'énergie reflète votre vitalité, votre influence et votre capacité à diriger avec présence. Les leaders sages gèrent leur énergie délibérément—sachant quand amplifier l'élan et quand prendre du recul pour se restaurer—modélisant la résilience et la stabilité qui permettent aux équipes de performer durablement dans le temps.",
+      "strengths": "Vous apportez enthousiasme et audace à vos entreprises.",
+      "dangers": "Une énergie élevée sans repos peut causer l'épuisement ou l'accablement.",
+      "reflectionQuestions": [
+        "Comment canalisez-vous votre énergie de manière productive ?",
+        "Quels signes vous disent de ralentir et de vous recharger ?"
+      ]
     },
     "challenge": {
-      "label": "Défi"
+      "label": "Défi",
+      "description": "Se pousser à travers des objectifs exigeants et la croissance personnelle.",
+      "insight": "Le défi sert de catalyseur pour la croissance personnelle et collective en repoussant les limites et en encourageant la persévérance. Le leadership qui embrasse le défi favorise un état d'esprit de croissance, équilibrant l'ambition avec la compassion pour maintenir la motivation tout en reconnaissant les limites pour éviter l'accablement et l'épuisement.",
+      "strengths": "Vous recherchez la croissance à travers des objectifs exigeants et la compétition.",
+      "dangers": "Rechercher constamment des défis peut mener à l'épuisement ou à l'insatisfaction.",
+      "reflectionQuestions": [
+        "Quels défis vous motivent le plus en ce moment ?",
+        "Comment équilibrez-vous ambition et bien-être ?"
+      ]
     },
     "achievement": {
-      "label": "Accomplissement"
+      "label": "Accomplissement",
+      "description": "S'efforcer d'atteindre des objectifs et de démontrer le succès personnel.",
+      "insight": "L'accomplissement valide la compétence et le progrès, renforçant l'auto-efficacité et le but. Les leaders qui célèbrent l'accomplissement de manière réfléchie inspirent l'excellence continue tout en maintenant l'équilibre, s'assurant que le succès alimente le moral collectif et l'épanouissement à long terme plutôt qu'une fixation étroite sur les objectifs.",
+      "strengths": "Vous êtes motivé à atteindre des objectifs et à démontrer vos capacités.",
+      "dangers": "Une concentration excessive sur l'accomplissement peut causer du stress ou négligence des relations.",
+      "reflectionQuestions": [
+        "De quel accomplissement êtes-vous le plus fier ?",
+        "Comment mesurez-vous le succès dans votre vie ?"
+      ]
     },
     "ambition": {
-      "label": "Ambition"
+      "label": "Ambition",
+      "description": "Poursuivre la croissance, l'impact et l'avancement avec détermination.",
+      "insight": "L'ambition est la force motrice qui propulse l'avancement intentionnel et la fixation d'objectifs visionnaires. L'ambition équilibrée vous connecte à vos valeurs fondamentales et vous motive à vous élever ainsi que ceux que vous dirigez, nourrissant une vision partagée tout en prévenant les pièges de la compétitivité effrénée ou de l'épuisement.",
+      "strengths": "Vous fixez des objectifs élevés et travaillez dur pour les atteindre.",
+      "dangers": "L'ambition sans équilibre peut mener à l'épuisement ou à la surcompétitivité.",
+      "reflectionQuestions": [
+        "Où votre ambition vous mène-t-elle en ce moment ?",
+        "Comment restez-vous ancré en poursuivant vos objectifs ?"
+      ]
     },
     "influence": {
-      "label": "Influence"
+      "label": "Influence",
+      "description": "Façonner les résultats, décisions ou personnes par votre présence et votre voix.",
+      "insight": "L'influence est le pouvoir de façonner les résultats par la présence, la voix et l'intégrité. Le leadership efficace canalise l'influence pour inspirer, autonomiser et cultiver la propriété partagée, favorisant la collaboration et la confiance plutôt que le contrôle ou la coercition, construisant ainsi un impact positif et durable.",
+      "strengths": "Vous créez de l'impact et inspirez les autres à suivre votre leadership.",
+      "dangers": "L'influence utilisée sans précaution peut manipuler ou dominer les autres.",
+      "reflectionQuestions": [
+        "Qui influencez-vous le plus dans votre vie ?",
+        "Quel genre d'impact voulez-vous laisser derrière vous ?"
+      ]
     },
     "status": {
-      "label": "Statut"
+      "label": "Statut",
+      "description": "Atteindre reconnaissance sociale et position respectée.",
+      "insight": "Le statut peut motiver l'excellence et fournir influence pour un changement positif. Les leaders conscients du statut équilibrent l'ambition personnelle avec l'impact collectif, utilisant leur position pour élever les autres plutôt que simplement pour la reconnaissance personnelle.",
+      "strengths": "Vous aspirez à l'excellence et à la reconnaissance de vos contributions.",
+      "dangers": "Poursuivre le statut peut créer compétition malsaine ou compromettre l'authenticité.",
+      "reflectionQuestions": [
+        "Comment votre désir de statut influence-t-il vos décisions ?",
+        "Où pouvez-vous utiliser votre position pour aider les autres ?"
+      ]
     },
     "control": {
-      "label": "Contrôle"
+      "label": "Contrôle",
+      "description": "Avoir le pouvoir de diriger les événements et les résultats.",
+      "insight": "Le contrôle offre sécurité et efficacité, permettant de façonner les résultats et de maintenir la stabilité. Les leaders efficaces équilibrent le contrôle avec la délégation, comprenant quand diriger fermement et quand permettre l'autonomie pour favoriser la croissance et l'innovation.",
+      "strengths": "Vous excellez à diriger les résultats et maintenir la stabilité.",
+      "dangers": "Un contrôle excessif peut étouffer la créativité et créer de la résistance chez les autres.",
+      "reflectionQuestions": [
+        "Où votre besoin de contrôle vous sert-il le mieux ?",
+        "Quand lâcher prise pourrait-il mener à de meilleurs résultats ?"
+      ]
     },
     "pleasure": {
-      "label": "Plaisir"
+      "label": "Plaisir",
+      "description": "Rechercher le bonheur, la satisfaction et les expériences agréables.",
+      "insight": "Le plaisir nourrit la joie et peut énergiser d'autres activités importantes. Les leaders équilibrés comprennent que cultiver la joie et la satisfaction améliore la créativité et le bien-être, créant un environnement plus positif et productif pour tous.",
+      "strengths": "Vous valorisez la joie et recherchez activement des expériences agréables.",
+      "dangers": "Rechercher uniquement le plaisir peut parfois entrer en conflit avec des objectifs à long terme.",
+      "reflectionQuestions": [
+        "Quelles activités vous apportent le plus de joie authentique ?",
+        "Comment équilibrez-vous plaisir et responsabilités ?"
+      ]
     },
     "stability": {
-      "label": "Stabilité"
+      "label": "Stabilité",
+      "description": "Maintenir cohérence, prévisibilité et équilibre dans la vie.",
+      "insight": "La stabilité fournit la base à partir de laquelle la croissance et l'innovation peuvent s'épanouir. Les leaders qui valorisent la stabilité créent des environnements fiables où les équipes peuvent prendre des risques calculés, sachant qu'il y a une base solide à laquelle revenir.",
+      "strengths": "Vous créez cohérence et prévisibilité pour vous-même et les autres.",
+      "dangers": "Une stabilité excessive peut résister au changement nécessaire ou à l'innovation.",
+      "reflectionQuestions": [
+        "Quels domaines de votre vie bénéficient le plus de stabilité ?",
+        "Où pourriez-vous avoir besoin d'embrasser plus de changement ?"
+      ]
     },
     "order": {
       "label": "Ordre"
@@ -78,40 +214,136 @@
       "label": "Humilité"
     },
     "tradition": {
-      "label": "Tradition"
+      "label": "Tradition",
+      "description": "Respecter et préserver les coutumes et croyances culturelles.",
+      "insight": "La tradition vous connecte à un patrimoine riche et fournit stabilité et continuité. En tant que leader, honorer la tradition peut créer un sentiment d'appartenance et de fierté, tout en équilibrant l'innovation avec le respect pour ce qui a façonné votre organisation ou communauté.",
+      "strengths": "Vous apportez sagesse historique et stabilité culturelle.",
+      "dangers": "Un excès de tradition peut étouffer l'innovation ou l'adaptation au changement.",
+      "reflectionQuestions": [
+        "Quelles traditions vous apportent le plus de signification ?",
+        "Comment équilibrez-vous respect de la tradition et besoin de changement ?"
+      ]
     },
     "empathy": {
-      "label": "Empathie"
+      "label": "Empathie",
+      "description": "Comprendre et partager les sentiments des autres avec compassion.",
+      "insight": "L'empathie crée des connexions authentiques et favorise la compréhension mutuelle. En leadership, l'empathie vous permet de répondre aux besoins profonds de votre équipe, créant un environnement où les gens se sentent vus, entendus et valorisés, ce qui améliore naturellement la collaboration et la loyauté.",
+      "strengths": "Vous excellez à comprendre et vous connecter avec les autres.",
+      "dangers": "L'empathie peut mener à l'épuisement émotionnel si elle n'est pas équilibrée avec des limites.",
+      "reflectionQuestions": [
+        "Comment votre empathie influence-t-elle vos relations ?",
+        "Quand avez-vous besoin de protéger votre énergie émotionnelle ?"
+      ]
     },
     "kindness": {
-      "label": "Bienveillance"
+      "label": "Bienveillance",
+      "description": "Agir avec gentillesse, considération et générosité envers les autres.",
+      "insight": "La bienveillance crée un cercle vertueux de positivité et de confiance. Les leaders bienveillants inspirent la loyauté non par la peur mais par un soin authentique, construisant des équipes qui se soutiennent mutuellement et excellent ensemble dans un environnement de sécurité psychologique.",
+      "strengths": "Vous créez de la chaleur et de la confiance dans vos relations.",
+      "dangers": "La bienveillance peut être exploitée si elle n'est pas accompagnée de limites.",
+      "reflectionQuestions": [
+        "Comment votre bienveillance affecte-t-elle ceux qui vous entourent ?",
+        "Où pourriez-vous avoir besoin d'établir des limites plus claires ?"
+      ]
     },
     "helpfulness": {
-      "label": "Entraide"
+      "label": "Entraide",
+      "description": "Offrir de l'aide, du soutien et de l'assistance aux autres dans le besoin.",
+      "insight": "L'entraide crée un impact direct et significatif sur la vie des autres, construisant un réseau de confiance et de soutien mutuel. Les leaders serviables comprennent que leur succès est interconnecté avec celui des autres, favorisant des environnements où l'assistance et la collaboration fleurissent naturellement.",
+      "strengths": "Vous excellez à identifier et répondre aux besoins des autres.",
+      "dangers": "Être trop serviable peut mener à l'épuisement ou à la négligence de vos propres besoins.",
+      "reflectionQuestions": [
+        "Comment votre aide affecte-t-elle ceux que vous soutenez ?",
+        "Quand avez-vous besoin de prioriser votre propre bien-être ?"
+      ]
     },
     "equality": {
-      "label": "Égalité"
+      "label": "Égalité",
+      "description": "Assurer un traitement équitable et des opportunités pour tous.",
+      "insight": "L'égalité reflète un engagement profond envers la justice et la dignité humaine. Les leaders qui valorisent l'égalité créent des environnements inclusifs où chacun peut contribuer et prospérer, comprenant que la diversité des perspectives renforce la prise de décision et l'innovation collective.",
+      "strengths": "Vous défendez la justice et créez des opportunités équitables pour tous.",
+      "dangers": "Poursuivre l'égalité peut être frustrant face à des systèmes résistants au changement.",
+      "reflectionQuestions": [
+        "Où voyez-vous le plus besoin d'égalité dans votre environnement ?",
+        "Comment équilibez-vous idéalisme et action pratique ?"
+      ]
     },
     "sustainability": {
-      "label": "Durabilité"
+      "label": "Durabilité",
+      "description": "Protéger l'environnement et assurer des ressources pour les générations futures.",
+      "insight": "La durabilité représente une responsabilité envers l'avenir et une compréhension de notre interconnexion avec le monde naturel. Les leaders axés sur la durabilité prennent des décisions en pensant aux impacts à long terme, équilibrant les besoins immédiats avec la préservation des ressources pour les générations futures.",
+      "strengths": "Vous pensez à long terme et considérez l'impact de vos actions.",
+      "dangers": "Se concentrer sur la durabilité peut parfois entrer en conflit avec des besoins ou pressions immédiats.",
+      "reflectionQuestions": [
+        "Comment vos choix quotidiens reflètent-ils vos valeurs environnementales ?",
+        "Où pouvez-vous avoir plus d'impact durable ?"
+      ]
     },
     "openness": {
-      "label": "Ouverture"
+      "label": "Ouverture",
+      "description": "Être réceptif aux nouvelles idées, expériences et perspectives différentes.",
+      "insight": "L'ouverture cultive la curiosité et la croissance, vous permettant d'apprendre continuellement et de vous adapter. Les leaders ouverts créent des espaces psychologiquement sûrs où des idées diverses peuvent émerger, favorisant l'innovation et la compréhension mutuelle à travers les différences.",
+      "strengths": "Vous embrassez nouvelles idées et perspectives avec curiosité.",
+      "dangers": "Être trop ouvert peut parfois mener à l'indécision ou au manque de direction.",
+      "reflectionQuestions": [
+        "Quelles nouvelles perspectives ont récemment changé votre point de vue ?",
+        "Où votre ouverture a-t-elle mené à une croissance significative ?"
+      ]
     },
     "justice": {
-      "label": "Justice"
+      "label": "Justice",
+      "description": "Défendre l'équité, les droits et le traitement moral de tous.",
+      "insight": "La justice est l'engagement à faire ce qui est juste, même quand c'est difficile. Les leaders guidés par la justice créent des systèmes et des cultures qui protègent les droits, récompensent le mérite et garantissent que les voix sont entendues, comprenant que l'équité renforce la confiance et la cohésion à long terme.",
+      "strengths": "Vous défendez ce qui est juste et équitable.",
+      "dangers": "Poursuivre la justice peut être émotionnellement épuisant face à l'injustice systémique.",
+      "reflectionQuestions": [
+        "Où ressentez-vous le plus fort appel à défendre la justice ?",
+        "Comment équilibrez-vous idéalisme et pragmatisme dans votre quête de justice ?"
+      ]
     },
     "compassion": {
-      "label": "Compassion"
+      "label": "Compassion",
+      "description": "Ressentir profondément la souffrance des autres et être motivé à aider.",
+      "insight": "La compassion transforme l'empathie en action, créant des connexions profondes et inspirant un changement positif. Les leaders compatissants reconnaissent la souffrance sans se laisser submerger, canalisant leur soin en actions réfléchies qui élèvent les autres tout en maintenant leur propre résilience.",
+      "strengths": "Vous ressentez profondément la souffrance des autres et agissez pour aider.",
+      "dangers": "La compassion sans limites peut mener à l'épuisement ou à la souffrance vicariante.",
+      "reflectionQuestions": [
+        "Comment votre compassion vous guide-t-elle dans vos actions ?",
+        "Où avez-vous besoin de plus de compassion envers vous-même ?"
+      ]
     },
     "community": {
-      "label": "Communauté"
+      "label": "Communauté",
+      "description": "Construire des connexions et appartenir à quelque chose de plus grand.",
+      "insight": "La communauté satisfait notre besoin humain fondamental de connexion et de but partagé. Les leaders axés sur la communauté comprennent que le succès collectif élève chacun, favorisant des environnements où les gens se sentent vus, valorisés et investis dans les résultats mutuels.",
+      "strengths": "Vous excellez à créer des connexions et favoriser l'appartenance.",
+      "dangers": "Prioriser la communauté peut parfois compromettre l'autonomie individuelle ou la prise de décision.",
+      "reflectionQuestions": [
+        "Quelles communautés vous donnent le plus d'énergie ?",
+        "Comment équilibrez-vous besoins communautaires et personnels ?"
+      ]
     },
     "respect": {
-      "label": "Respect"
+      "label": "Respect",
+      "description": "Honorer la dignité, les droits et la valeur de chaque personne.",
+      "insight": "Le respect crée la base de toutes relations saines et de la collaboration efficace. Les leaders respectueux reconnaissent la valeur inhérente de chaque personne, créant des environnements où les différences sont honorées et où chacun peut contribuer authentiquement.",
+      "strengths": "Vous honorez la dignité et la valeur de chaque personne.",
+      "dangers": "Montrer du respect peut parfois être défié quand les autres ne le rendent pas.",
+      "reflectionQuestions": [
+        "Comment montrez-vous du respect même dans des situations difficiles ?",
+        "Où pourriez-vous mieux honorer les perspectives des autres ?"
+      ]
     },
     "generosity": {
-      "label": "Générosité"
+      "label": "Générosité",
+      "description": "Donner librement son temps, ressources ou attention aux autres.",
+      "insight": "La générosité crée de l'abondance en circulation, construisant la confiance et renforçant les relations. Les leaders généreux comprennent que donner stratégiquement—que ce soit du temps, des ressources ou des opportunités—crée un effet multiplicateur qui profite à tous.",
+      "strengths": "Vous donnez librement et créez de l'abondance pour les autres.",
+      "dangers": "La générosité excessive peut mener à l'épuisement ou être exploitée par d'autres.",
+      "reflectionQuestions": [
+        "Quelle forme de générosité vous donne le plus de satisfaction ?",
+        "Comment maintenez-vous des limites saines dans votre générosité ?"
+      ]
     },
     "playfulness": {
       "label": "Espièglerie"
@@ -203,6 +435,12 @@
     "belonging": {
       "label": "Appartenance"
     }
+  },
+  "valueCard": {
+    "strengths": "Forces",
+    "dangers": "Défis Potentiels",
+    "reflectionQuestions": "Questions d'auto-réflexion",
+    "rank": "Rang {rank}"
   },
   "common": {
     "loading": "Chargement...",

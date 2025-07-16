@@ -204,6 +204,12 @@
       "label": "Pertenencia"
     }
   },
+  "valueCard": {
+    "strengths": "Fortalezas",
+    "dangers": "Desafíos Potenciales",
+    "reflectionQuestions": "Preguntas para la Reflexión",
+    "rank": "Posición {rank}"
+  },
   "common": {
     "loading": "Cargando...",
     "error": "Ocurrió un error",

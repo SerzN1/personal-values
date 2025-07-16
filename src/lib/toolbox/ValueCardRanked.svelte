@@ -1,5 +1,7 @@
 <script lang="ts">
+  import { t } from '../i18n';
   import type { IValue, IValueType } from '../types';
+
   export let rank: number;
   export let value: IValue;
   export let type: IValueType;
@@ -10,20 +12,20 @@
 
 <div class="ranked">
   <h3 style="color: {type.color}; font-size: var({fontSizes[rank]})" id="nr{rank + 1}">
-    {value.label}
+    {$t(value.label)}
     <a href="#nr{rank + 1}" class="permalink" aria-label="permalink"></a>
   </h3>
   <img class="group-icon" src="{type.iconSvg}" alt="{type.label}" color={type.color} />
-  <p>{insight}</p>
+  <p>{$t(insight)}</p>
   <p>
-    <span class="highlight add">Strengths:</span> {value.strengths}<br />
-    <span class="highlight remove">Dangers:</span> {value.dangers}<br />
-    <span class="highlight">Self-reflection questions:</span><br />
-    {#each value.reflectionQuestions as q}
-      {q}<br />
+    <span class="highlight add">{$t('valueCard.strengths')}:</span> {$t(value.strengths)}<br />
+    <span class="highlight remove">{$t('valueCard.dangers')}:</span> {$t(value.dangers)}<br />
+    <span class="highlight">{$t('valueCard.reflectionQuestions')}:</span><br />
+    {#each $t(value.reflectionQuestions) as q}
+      • {q}<br />
     {/each}
   </p>
-  <span class="rank" aria-label="Rank {value.label}" style="font-size: {12 - 1.3 * rank}rem">#{rank + 1}</span>
+  <span class="rank" aria-label="{$t('valueCard.rank', { rank: rank + 1 })}" style="font-size: {12 - 1.3 * rank}rem">#{rank + 1}</span>
 </div>
 
 <style>

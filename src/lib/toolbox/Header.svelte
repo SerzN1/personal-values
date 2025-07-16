@@ -18,6 +18,8 @@
     darkMode = isDark;
   }
 
+  // if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+
   $: darkMode = localStorage.getItem('darkMode') === 'true';
   $: if (darkMode) {
     document.documentElement.classList.add('dark');

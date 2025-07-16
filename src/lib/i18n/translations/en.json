@@ -706,8 +706,13 @@
             "What makes you feel truly included and accepted?",
             "When have you compromised your voice to fit in—and how might you do it differently now?"
         ]
-    }
-},
+    }  },
+  "valueCard": {
+    "strengths": "Strengths",
+    "dangers": "Dangers",
+    "reflectionQuestions": "Self-reflection questions",
+    "rank": "Rank {rank}"
+  },
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",
