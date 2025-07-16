@@ -1,25 +1,28 @@
 <script lang="ts">
   import { groupData } from '../data';
   import { t } from '../i18n';
-  import RadialDiagram from './RadialDiagram.svelte';
-  import SvsGroupsDisplay from './SVSGroupsDisplay.svelte';
   import type { IGroupAnalysisResult } from '../types';
   import { detectTensions, generateUserReflections } from '../utils';
+  import RadialDiagram from './RadialDiagram.svelte';
+  import SvsGroupsDisplay from './SVSGroupsDisplay.svelte';
 
   export let groupScores: Record<string, number> = {};
   export let groupAnalysysResult: IGroupAnalysisResult;
 
-  const radialDiagramInsights = detectTensions(groupScores, groupData);
+  $: radialDiagramInsights = detectTensions(groupScores, groupData, $t);
   const userReflections = generateUserReflections(groupScores);
   const topGroupData = groupData[groupAnalysysResult.topGroup];
   const bottomGroupData = groupData[groupAnalysysResult.bottomGroup];
 </script>
 
-<h2>{$t('groupBalance.title')}</h2>
+<h2 id="group-balance">
+  {$t('groupBalance.title')}
+  <a href="#group-balance" class="permalink" aria-label="permalink"></a>
+</h2>
 <p>
-  <span style="color:{topGroupData.color}">{topGroupData.label}</span> is your <code>{$t('groupBalance.leadingOrientation')}</code>.
-  <span style="color:{bottomGroupData.color}">{bottomGroupData.label}</span> is a <code>{$t('groupBalance.lessEmphasized')}</code>.
-  {groupAnalysysResult.summary}
+  <span style="color:{topGroupData.color}">{$t(topGroupData.label)}</span> is your <code>{$t('groupBalance.leadingOrientation')}</code>.
+  <span style="color:{bottomGroupData.color}">{$t(bottomGroupData.label)}</span> is a <code>{$t('groupBalance.lessEmphasized')}</code>.
+  {$t(...groupAnalysysResult.summary)}
 </p>
 
 <div class="graphs">
@@ -27,24 +30,33 @@
   <RadialDiagram scores={groupScores} />
 </div>
 
-<h3>{$t('groupBalance.personalInsights')}</h3>
+<h3 id="personal-insights">
+  {$t('groupBalance.personalInsights')}
+  <a href="#personal-insights" class="permalink" aria-label="permalink"></a>
+</h3>
 {#each radialDiagramInsights as insight}
   <blockquote>
-    <p>{insight}</p>
+    <p>{$t(insight)}</p>
   </blockquote>
 {/each}
 
-<h3 id="reflective-prompts">{$t('groupBalance.reflectivePrompts')}</h3>
+<h3 id="reflective-prompts">
+  {$t('groupBalance.reflectivePrompts')}
+  <a href="#reflective-prompts" class="permalink" aria-label="permalink"></a>
+</h3>
 <blockquote>
   <p>
     {#each userReflections as userReflection}
-      {userReflection}<br />
+      {$t(userReflection)}<br />
     {/each}
   </p>
 </blockquote>
 
 {#if groupAnalysysResult.polarization}
-  <h2 id="polarization-insight">{$t('groupBalance.polarizationInsight')}</h2>
+  <h2 id="polarization-insight">
+    {$t('groupBalance.polarizationInsight')}
+    <a href="#polarization-insight" class="permalink" aria-label="permalink"></a>
+  </h2>
   <blockquote>
     <p>
       {$t('groupBalance.polarizationPoints', { gap: groupAnalysysResult.polarization.gap })}

@@ -184,6 +184,40 @@
       "description": "Preservar y mejorar el bienestar de aquellos con quienes uno tiene contacto personal frecuente."
     }
   },
+  "groupData": {
+    "selfTranscendence": {
+      "label": "Autotrascendencia",
+      "summary": "ayudar a otros, compasión y justicia",
+      "insights": [
+        "Puedes sentirte más realizado cuando apoyas a otros o generas un impacto positivo.",
+        "Probablemente valores la justicia, la empatía y la responsabilidad social."
+      ]
+    },
+    "selfEnhancement": {
+      "label": "Automejora",
+      "summary": "ambición personal, éxito e influencia",
+      "insights": [
+        "Puedes sentirte impulsado por el logro, el reconocimiento y la autonomía.",
+        "Un enfoque en el éxito puede ser energizante, pero equilibrarlo con el cuidado de otros ayuda a que las relaciones prosperen."
+      ]
+    },
+    "opennessToChange": {
+      "label": "Apertura al Cambio",
+      "summary": "libertad, creatividad y exploración",
+      "insights": [
+        "Probablemente disfrutes explorar, aprender y expresar tu individualidad.",
+        "Este impulso apoya la innovación, pero puede resistir la rutina o la estabilidad."
+      ]
+    },
+    "conservation": {
+      "label": "Conservación",
+      "summary": "seguridad, estructura y tradición",
+      "insights": [
+        "Valoras el orden, la seguridad y las tradiciones que crean predictibilidad.",
+        "Esto puede construir bases sólidas, pero puede reducir la apertura al cambio o al riesgo."
+      ]
+    }
+  },
   "comparison": {
     "title": "¿Qué te guía más?",
     "description": "Has seleccionado valores que resuenan contigo — excelente comienzo. En este paso, te ayudaremos a aclarar qué es lo más importante comparándolos directamente. Solo elige el que sientes más importante en cada par.",

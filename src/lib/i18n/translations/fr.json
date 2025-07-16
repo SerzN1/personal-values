@@ -184,6 +184,40 @@
       "description": "Préserver et améliorer le bien-être de ceux avec qui on a un contact personnel fréquent."
     }
   },
+  "groupData": {
+    "selfTranscendence": {
+      "label": "Dépassement de Soi",
+      "summary": "aider les autres, compassion et équité",
+      "insights": [
+        "Vous pourriez vous sentir le plus épanoui lorsque vous soutenez les autres ou créez un impact positif.",
+        "Vous valorisez probablement l'équité, l'empathie et la responsabilité sociale."
+      ]
+    },
+    "selfEnhancement": {
+      "label": "Amélioration de Soi",
+      "summary": "ambition personnelle, succès et influence",
+      "insights": [
+        "Vous pourriez être motivé par la réussite, la reconnaissance et l'autonomie.",
+        "Un focus sur le succès peut être énergisant, mais l'équilibrer avec le soin des autres aide les relations à prospérer."
+      ]
+    },
+    "opennessToChange": {
+      "label": "Ouverture au Changement",
+      "summary": "liberté, créativité et exploration",
+      "insights": [
+        "Vous aimez probablement explorer, apprendre et exprimer votre individualité.",
+        "Cette motivation soutient l'innovation, mais peut résister à la routine ou à la stabilité."
+      ]
+    },
+    "conservation": {
+      "label": "Conservation",
+      "summary": "sécurité, structure et tradition",
+      "insights": [
+        "Vous valorisez l'ordre, la sécurité et les traditions qui créent la prévisibilité.",
+        "Cela peut construire des fondations solides, mais peut réduire l'ouverture au changement ou au risque."
+      ]
+    }
+  },
   "comparison": {
     "title": "Qu'est-ce qui vous guide le plus ?",
     "description": "Vous avez sélectionné des valeurs qui résonnent avec vous — excellent début. Dans cette étape, nous vous aiderons à clarifier ce qui compte le plus en les comparant directement. Choisissez simplement celle qui vous semble la plus importante dans chaque paire.",

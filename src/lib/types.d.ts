@@ -1,3 +1,5 @@
+import type { TranslationParams } from './i18n';
+
 export interface IValueType {
   label: string;
   description: string;
@@ -37,20 +39,20 @@ type GroupKey = 'SelfTranscendence' | 'SelfEnhancement' | 'OpennessToChange' | '
 export interface IGroupData {
   label: string;
   summary: string;
-  insights: string[];
+  insights: string;
   color: string;
   backgroundColor: string;
 }
 
 export interface IGroupPolarization {
   gap: number;
-  message: string;
+  message: TranslationParams;
 }
 
 export interface IGroupAnalysisResult {
   topGroup: GroupKey;
   bottomGroup: GroupKey;
-  summary: string;
-  insights: string[];
+  summary: TranslationParams;
+  insights: string;
   polarization?: IGroupPolarization;
 }

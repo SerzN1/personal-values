@@ -1,6 +1,4 @@
-import { get } from 'svelte/store';
-import { t } from './i18n';
-import type { GroupKey, IAssessmentResult, IGroupAnalysisResult, IGroupData, IValue } from './types';
+import type { GroupKey, IAssessmentResult, IGroupAnalysisResult, IGroupData, IGroupPolarization, IValue } from './types';
 
 export function calculateValueScores(prioritizedIds: string[], allValues: IValue[]): IAssessmentResult {
   const valueScores: Record<string, number> = {};
@@ -39,35 +37,30 @@ const OPPOSITES = [
   ['OpennessToChange', 'Conservation']
 ];
 
-export function detectTensions(groupScores: Record<string, number>, groupData: Record<GroupKey, IGroupData>): string[] {
+export function detectTensions(groupScores: Record<string, number>, groupData: Record<GroupKey, IGroupData>, t: any): string[] {
   const insights: string[] = [];
-  const translate = get(t);
 
   for (const [a, b] of OPPOSITES) {
     const scoreA = groupScores[a] || 0;
     const scoreB = groupScores[b] || 0;
     const delta = Math.abs(scoreA - scoreB);
-    const aLabel = groupData[a].label;
-    const bLabel = groupData[b].label;
+    const aLabel = t(groupData[a].label);
+    const bLabel = t(groupData[b].label);
+    const dominant = scoreA > scoreB ? aLabel : bLabel;
+    const lesser = scoreA > scoreB ? bLabel : aLabel;
 
     if (delta < 10) {
       // Low difference = balanced orientation
-      insights.push(translate('analysis.tensions.balanced', { groupA: aLabel, groupB: bLabel }));
+      insights.push(t('analysis.tensions.balanced', { groupA: aLabel, groupB: bLabel }));
     } else if (delta >= 10 && delta < 20) {
       // Mild contrast
-      const dominant = scoreA > scoreB ? aLabel : bLabel;
-      const lesser = scoreA > scoreB ? bLabel : aLabel;
-      insights.push(translate('analysis.tensions.mildContrast', { dominant, lesser }));
+      insights.push(t('analysis.tensions.mildContrast', { dominant, lesser }));
     } else if (delta >= 20 && delta < 30) {
       // Clear preference
-      const dominant = scoreA > scoreB ? aLabel : bLabel;
-      const lesser = scoreA > scoreB ? bLabel : aLabel;
-      insights.push(translate('analysis.tensions.clearPreference', { dominant, lesser }));
+      insights.push(t('analysis.tensions.clearPreference', { dominant, lesser }));
     } else {
       // Strong contrast (polarization)
-      const dominant = scoreA > scoreB ? aLabel : bLabel;
-      const lesser = scoreA > scoreB ? bLabel : aLabel;
-      insights.push(translate('analysis.tensions.strongContrast', { dominant, lesser }));
+      insights.push(t('analysis.tensions.strongContrast', { dominant, lesser }));
     }
   }
 
@@ -106,25 +99,28 @@ export function analyzeGroupScores(scores: Record<GroupKey, number>, groupData: 
 
   const top = groupData[topGroup];
   const bottom = groupData[bottomGroup];
-  const translate = get(t);
 
   const gap = topScore - bottomScore;
-  const polarization = gap >= 30 ? {
+  const polarization: IGroupPolarization = gap >= 30 ? {
     gap,
-    message: translate('analysis.groupAnalysis.polarizationMessage', {
-      gap: gap.toString(),
-      topLabel: top.label,
-      bottomLabel: bottom.label
-    })
+    message: [
+      'analysis.groupAnalysis.polarizationMessage', {
+        gap: gap.toString(),
+        topLabel: top.label,
+        bottomLabel: bottom.label
+      }
+    ]
   } : undefined;
 
   return {
     topGroup,
     bottomGroup,
-    summary: translate('analysis.groupAnalysis.summary', {
-      topSummary: top.summary,
-      bottomSummary: bottom.summary
-    }),
+    summary: [
+      'analysis.groupAnalysis.summary', {
+        topSummary: top.summary,
+        bottomSummary: bottom.summary
+      }
+    ],
     insights: top.insights,
     polarization
   };
@@ -146,11 +142,9 @@ const reflectionPrompts: Record<string, (score: number) => string> = {
 };
 
 export function generateUserReflections(scores: Record<string, number>): string[] {
-  const translate = get(t);
-
   return Object.entries(scores).map(([key, score]) => {
     const threshold = score >= 70 ? 'high' : 'low';
-    return translate(`analysis.reflections.${key}.${threshold}`);
+    return `analysis.reflections.${key}.${threshold}`;
   });
 }
 

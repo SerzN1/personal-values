@@ -87,42 +87,30 @@ export const valueTypes: Record<string, IValueType> = {
 
 export const groupData: Record<GroupKey, IGroupData> = {
   SelfTranscendence: {
-    label: "Self-Transcendence",
-    summary: "helping others, compassion, and fairness",
-    insights: [
-      "You may feel most fulfilled when you're supporting others or making a positive impact.",
-      "You likely value fairness, empathy, and social responsibility."
-    ],
+    label: "groupData.selfTranscendence.label",
+    summary: "groupData.selfTranscendence.summary",
+    insights: "groupData.selfTranscendence.insights",
     color: "#00BFA5", // Strong teal (trust, care)
     backgroundColor: "rgba(0, 191, 165, 0.12)"
   },
   SelfEnhancement: {
-    label: "Self-Enhancement",
-    summary: "personal ambition, success, and influence",
-    insights: [
-      "You may feel driven by achievement, recognition, and autonomy.",
-      "A focus on success can be energizing, but balance with care for others helps relationships thrive."
-    ],
+    label: "groupData.selfEnhancement.label",
+    summary: "groupData.selfEnhancement.summary",
+    insights: "groupData.selfEnhancement.insights",
     color: '#FFC400', // Golden yellow (achievement)
     backgroundColor: "rgba(255, 196, 0, 0.12)", // Vibrant gold
   },
   OpennessToChange: {
-    label: "Openness to Change",
-    summary: "freedom, creativity, and exploration",
-    insights: [
-      "You likely enjoy exploring, learning, and expressing your individuality.",
-      "This drive supports innovation, but may resist routine or stability."
-    ],
+    label: "groupData.opennessToChange.label",
+    summary: "groupData.opennessToChange.summary",
+    insights: "groupData.opennessToChange.insights.0",
     color: '#FF8A00', // Orange (creativity, exploration)
     backgroundColor: "rgba(255, 138, 0, 0.12)",       // Bright orange
   },
   Conservation: {
-    label: "Conservation",
-    summary: "security, structure, and tradition",
-    insights: [
-      "You value order, safety, and traditions that create predictability.",
-      "This can build strong foundations, but may reduce openness to change or risk."
-    ],
+    label: "groupData.conservation.label",
+    summary: "groupData.conservation.summary",
+    insights: "groupData.conservation.insights",
     color: '#6b8b9b', // Muted blue-gray (stability)
     backgroundColor: "rgba(96, 125, 139, 0.12)",      // Neutral slate
   }

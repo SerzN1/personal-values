@@ -184,6 +184,40 @@
       "description": "Preserving and enhancing the welfare of those with whom one is in frequent personal contact."
     }
   },
+  "groupData": {
+    "selfTranscendence": {
+      "label": "Self-Transcendence",
+      "summary": "helping others, compassion, and fairness",
+      "insights": [
+        "You may feel most fulfilled when you're supporting others or making a positive impact.",
+        "You likely value fairness, empathy, and social responsibility."
+      ]
+    },
+    "selfEnhancement": {
+      "label": "Self-Enhancement",
+      "summary": "personal ambition, success, and influence",
+      "insights": [
+        "You may feel driven by achievement, recognition, and autonomy.",
+        "A focus on success can be energizing, but balance with care for others helps relationships thrive."
+      ]
+    },
+    "opennessToChange": {
+      "label": "Openness to Change",
+      "summary": "freedom, creativity, and exploration",
+      "insights": [
+        "You likely enjoy exploring, learning, and expressing your individuality.",
+        "This drive supports innovation, but may resist routine or stability."
+      ]
+    },
+    "conservation": {
+      "label": "Conservation",
+      "summary": "security, structure, and tradition",
+      "insights": [
+        "You value order, safety, and traditions that create predictability.",
+        "This can build strong foundations, but may reduce openness to change or risk."
+      ]
+    }
+  },
   "comparison": {
     "title": "What Guides You Most?",
     "description": "You've selected values that resonate with you — great start. In this step, we'll help you clarify what matters most by comparing them directly. Just choose the one that feels more important in each pair.",

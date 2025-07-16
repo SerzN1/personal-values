@@ -9,6 +9,7 @@ import zh from './translations/zh.json';
 
 // Type definitions
 export type LanguageCode = 'en' | 'fr' | 'es' | 'ru' | 'zh' | 'ar';
+export type TranslationParams = [key: string, params: Record<string, string | number>];
 
 export interface Language {
   code: LanguageCode;
