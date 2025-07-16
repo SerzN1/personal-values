@@ -14,16 +14,195 @@
     "privacy": "隐私说明"
   },
   "values": {
-    "achievement": "成就",
-    "benevolence": "仁慈",
-    "conformity": "顺从",
-    "hedonism": "享乐主义",
-    "power": "权力",
-    "security": "安全",
-    "self-direction": "自主",
-    "stimulation": "刺激",
-    "tradition": "传统",
-    "universalism": "普世主义"
+    "curiosity": {
+      "label": "好奇心"
+    },
+    "creativity": {
+      "label": "创造力"
+    },
+    "freedom": {
+      "label": "自由"
+    },
+    "independence": {
+      "label": "独立"
+    },
+    "selfExpression": {
+      "label": "自我表达"
+    },
+    "excitement": {
+      "label": "兴奋"
+    },
+    "adventure": {
+      "label": "冒险"
+    },
+    "novelty": {
+      "label": "新颖性"
+    },
+    "energy": {
+      "label": "活力"
+    },
+    "challenge": {
+      "label": "挑战"
+    },
+    "achievement": {
+      "label": "成就"
+    },
+    "ambition": {
+      "label": "雄心"
+    },
+    "influence": {
+      "label": "影响力"
+    },
+    "status": {
+      "label": "地位"
+    },
+    "control": {
+      "label": "控制"
+    },
+    "pleasure": {
+      "label": "快乐"
+    },
+    "stability": {
+      "label": "稳定"
+    },
+    "order": {
+      "label": "秩序"
+    },
+    "loyalty": {
+      "label": "忠诚"
+    },
+    "responsibility": {
+      "label": "责任"
+    },
+    "humility": {
+      "label": "谦逊"
+    },
+    "tradition": {
+      "label": "传统"
+    },
+    "empathy": {
+      "label": "同理心"
+    },
+    "kindness": {
+      "label": "善良"
+    },
+    "helpfulness": {
+      "label": "乐于助人"
+    },
+    "equality": {
+      "label": "平等"
+    },
+    "sustainability": {
+      "label": "可持续性"
+    },
+    "openness": {
+      "label": "开放性"
+    },
+    "justice": {
+      "label": "正义"
+    },
+    "compassion": {
+      "label": "慈悲"
+    },
+    "community": {
+      "label": "社区"
+    },
+    "respect": {
+      "label": "尊重"
+    },
+    "generosity": {
+      "label": "慷慨"
+    },
+    "playfulness": {
+      "label": "趣味性"
+    },
+    "spontaneity": {
+      "label": "自发性"
+    },
+    "sensuality": {
+      "label": "感官享受"
+    },
+    "obedience": {
+      "label": "服从"
+    },
+    "selfControl": {
+      "label": "自制力"
+    },
+    "competence": {
+      "label": "能力"
+    },
+    "fun": {
+      "label": "乐趣"
+    },
+    "authority": {
+      "label": "权威"
+    },
+    "personalSecurity": {
+      "label": "个人安全"
+    },
+    "dominance": {
+      "label": "主导地位"
+    },
+    "wealth": {
+      "label": "财富"
+    },
+    "culturalHeritage": {
+      "label": "文化遗产"
+    },
+    "respectForElders": {
+      "label": "尊敬长辈"
+    },
+    "enjoyment": {
+      "label": "享受"
+    },
+    "gratification": {
+      "label": "满足感"
+    },
+    "success": {
+      "label": "成功"
+    },
+    "recognition": {
+      "label": "认可"
+    },
+    "leadership": {
+      "label": "领导力"
+    },
+    "safety": {
+      "label": "安全"
+    },
+    "protection": {
+      "label": "保护"
+    },
+    "predictability": {
+      "label": "可预测性"
+    },
+    "resilience": {
+      "label": "韧性"
+    },
+    "selfDiscipline": {
+      "label": "自律"
+    },
+    "devotion": {
+      "label": "奉献"
+    },
+    "respectForCustoms": {
+      "label": "尊重习俗"
+    },
+    "faith": {
+      "label": "信仰"
+    },
+    "ritual": {
+      "label": "仪式"
+    },
+    "authenticity": {
+      "label": "真实性"
+    },
+    "exploration": {
+      "label": "探索"
+    },
+    "belonging": {
+      "label": "归属感"
+    }
   },
   "common": {
     "loading": "加载中...",

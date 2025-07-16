@@ -119,7 +119,7 @@ export const groupData: Record<GroupKey, IGroupData> = {
 export const values: IValue[] = [
   {
     "id": "curiosity",
-    "label": "Curiosity",
+    "label": "values.curiosity.label",
     "description": "A drive to seek new ideas, knowledge, and experiences.",
     "insight": "Curiosity encourages you to venture beyond the familiar, engaging with questions that deepen your understanding of yourself and the world. As a leader, fostering curiosity not only fuels continuous personal and professional growth but also cultivates an environment where innovation thrives, inspiring your team to explore new horizons thoughtfully and purposefully.",
     "type": "SelfDirection",
@@ -134,7 +134,7 @@ export const values: IValue[] = [
   },
   {
     "id": "creativity",
-    "label": "Creativity",
+    "label": "values.creativity.label",
     "description": "Using original thinking and imagination to shape ideas and solutions.",
     "insight": "Creativity empowers you to transform imagination into meaningful action, challenging conventional boundaries with original thought. Leadership rooted in creativity balances visionary ideas with practical execution, fostering a culture that embraces experimentation, learns from failure, and continuously evolves through inspired problem-solving.",
     "type": "SelfDirection",
@@ -149,7 +149,7 @@ export const values: IValue[] = [
   },
   {
     "id": "freedom",
-    "label": "Freedom",
+    "label": "values.freedom.label",
     "description": "Having the autonomy to make your own choices and act independently.",
     "insight": "Freedom is not just about choice—it's about owning the direction of your life. For leaders, it means shaping environments where others can also thrive independently.",
     "type": "SelfDirection",
@@ -164,7 +164,7 @@ export const values: IValue[] = [
   },
   {
     "id": "independence",
-    "label": "Independence",
+    "label": "values.independence.label",
     "description": "Relying on your own judgment and values to guide your actions.",
     "insight": "True independence involves knowing when to trust yourself and when to seek input from others. This balance deepens your effectiveness as a leader and strengthens your relationships.",
     "type": "SelfDirection",
@@ -179,7 +179,7 @@ export const values: IValue[] = [
   },
   {
     "id": "self-expression",
-    "label": "Self-Expression",
+    "label": "values.selfExpression.label",
     "description": "Openly showing your thoughts, emotions, and identity.",
     "insight": "Authentic self-expression is a courageous act of revealing your true values, emotions, and perspectives. For leaders, this transparency builds trust and deep connection while demanding empathy and awareness of how your words and actions influence those around you. Your self-expression shapes the culture and invites others to bring their whole selves to the table.",
     "type": "SelfDirection",
@@ -194,7 +194,7 @@ export const values: IValue[] = [
   },
   {
     "id": "excitement",
-    "label": "Excitement",
+    "label": "values.excitement.label",
     "description": "Seeking energy and thrill through stimulating experiences.",
     "insight": "Excitement is the emotional energy that signals passion and engagement, driving you toward meaningful challenges and new experiences. Effective leaders harness this energy mindfully, balancing enthusiasm with sustainable practices to maintain motivation and inspire others without risking burnout or distraction.",
     "type": "Stimulation",
@@ -209,7 +209,7 @@ export const values: IValue[] = [
   },
   {
     "id": "adventure",
-    "label": "Adventure",
+    "label": "values.adventure.label",
     "description": "Embracing new challenges and stepping into the unknown.",
     "insight": "Adventure invites you to embrace uncertainty and boldly step into the unknown, fostering growth through risk-taking and resilience. Leadership that embraces adventure models courage, encouraging others to push past comfort zones with clear vision and calculated judgment to navigate challenges with confidence.",
     "type": "Stimulation",
@@ -224,7 +224,7 @@ export const values: IValue[] = [
   },
   {
     "id": "novelty",
-    "label": "Novelty",
+    "label": "values.novelty.label",
     "description": "Enjoying freshness, diversity, and unexpected experiences.",
     "insight": "Novelty sparks fresh perspectives and rejuvenates stale patterns but requires discernment to maintain focus and depth. As a leader, knowing when to introduce new ideas and when to consolidate progress is crucial for sustaining momentum and ensuring meaningful, lasting impact.",
     "type": "Stimulation",
@@ -239,7 +239,7 @@ export const values: IValue[] = [
   },
   {
     "id": "energy",
-    "label": "Energy",
+    "label": "values.energy.label",
     "description": "Living with enthusiasm, boldness, and high personal drive.",
     "insight": "Energy reflects your vitality, influence, and capacity to lead with presence. Wise leaders manage their energy deliberately—knowing when to amplify momentum and when to step back for restoration—modeling resilience and steadiness that empower teams to perform sustainably over time.",
     "type": "Stimulation",
@@ -254,7 +254,7 @@ export const values: IValue[] = [
   },
   {
     "id": "challenge",
-    "label": "Challenge",
+    "label": "values.challenge.label",
     "description": "Pushing yourself through demanding goals and personal growth.",
     "insight": "Challenge serves as a catalyst for personal and collective growth by pushing boundaries and encouraging perseverance. Leadership that embraces challenge fosters a growth mindset, balancing ambition with compassion to maintain motivation while recognizing limits to avoid overwhelm and burnout.",
     "type": "Stimulation",
@@ -269,7 +269,7 @@ export const values: IValue[] = [
   },
   {
     "id": "achievement",
-    "label": "Achievement",
+    "label": "values.achievement.label",
     "description": "Striving to accomplish goals and demonstrate personal success.",
     "insight": "Achievement validates competence and progress, reinforcing self-efficacy and purpose. Leaders who celebrate achievement thoughtfully inspire continued excellence while maintaining balance, ensuring that success fuels collective morale and long-term fulfillment rather than narrow goal fixation.",
     "type": "Achievement",
@@ -284,7 +284,7 @@ export const values: IValue[] = [
   },
   {
     "id": "ambition",
-    "label": "Ambition",
+    "label": "values.ambition.label",
     "description": "Pursuing growth, impact, and advancement with determination.",
     "insight": "Ambition is the driving force that propels purposeful advancement and visionary goal-setting. Balanced ambition connects you to your core values and motivates you to elevate both yourself and those you lead, nurturing a shared vision while preventing the pitfalls of unchecked competitiveness or burnout.",
     "type": "Achievement",
@@ -299,7 +299,7 @@ export const values: IValue[] = [
   },
   {
     "id": "influence",
-    "label": "Influence",
+    "label": "values.influence.label",
     "description": "Shaping outcomes, decisions, or people through your presence and voice.",
     "insight": "Influence is the power to shape outcomes through presence, voice, and integrity. Effective leadership channels influence to inspire, empower, and cultivate shared ownership, fostering collaboration and trust rather than control or coercion, thus building lasting, positive impact.",
     "type": "Power",
@@ -314,7 +314,7 @@ export const values: IValue[] = [
   },
   {
     "id": "status",
-    "label": "Status",
+    "label": "values.status.label",
     "description": "Seeking recognition, prestige, and respect in social or professional spaces.",
     "insight": "Status can motivate excellence and social recognition but risks overshadowing authentic purpose if pursued narrowly. Grounded leaders balance their drive for status with humility and genuine service, maintaining self-awareness and aligning ambition with meaningful contributions beyond external validation.",
     "type": "Power",
@@ -329,7 +329,7 @@ export const values: IValue[] = [
   },
   {
     "id": "control",
-    "label": "Control",
+    "label": "values.control.label",
     "description": "Maintaining influence over circumstances and outcomes.",
     "insight": "Control offers clarity and order amidst complexity but must be balanced with openness to change and trust in others. Leadership that wields control wisely creates structured environments that foster creativity and adaptability, avoiding rigidity and encouraging emergent opportunities for growth.",
     "type": "Power",
@@ -344,7 +344,7 @@ export const values: IValue[] = [
   },
   {
     "id": "pleasure",
-    "label": "Pleasure",
+    "label": "values.pleasure.label",
     "description": "Enjoying comfort, delight, and life's sensory experiences.",
     "insight": "Pleasure enriches life by bringing joy, comfort, and balance. Leaders who prioritize well-being model the importance of integrating rest and delight with dedication, fostering environments where people thrive holistically rather than through relentless output alone.",
     "type": "Hedonism",
@@ -359,7 +359,7 @@ export const values: IValue[] = [
   },
   {
     "id": "stability",
-    "label": "Stability",
+    "label": "values.stability.label",
     "description": "Valuing predictability and protection from threats or disruption.",
     "insight": "Stability provides a secure foundation essential for confidence and sustainable growth. Effective leadership embraces stability while remaining vigilant to opportunities for necessary change and innovation, avoiding stagnation by balancing continuity with adaptive flexibility.",
     "type": "Security",
@@ -374,7 +374,7 @@ export const values: IValue[] = [
   },
   {
     "id": "order",
-    "label": "Order",
+    "label": "values.order.label",
     "description": "Appreciating structure, rules, and clear expectations.",
     "insight": "Order creates clarity and predictability that enable coordinated action and trust. Leaders who balance structure with flexibility maintain environments where processes support innovation and responsiveness, ensuring systems serve people rather than constrain creativity.",
     "type": "Security",
@@ -389,7 +389,7 @@ export const values: IValue[] = [
   },
   {
     "id": "loyalty",
-    "label": "Loyalty",
+    "label": "values.loyalty.label",
     "description": "Staying devoted to people, traditions, or causes you value.",
     "insight": "Loyalty builds deep trust and strengthens bonds within communities or teams. Thoughtful leadership honors commitments while remaining open to growth and evolution, recognizing when loyalty nurtures cohesion and when it may require reassessment to foster healthy progress.",
     "type": "Conformity",
@@ -404,7 +404,7 @@ export const values: IValue[] = [
   },
   {
     "id": "responsibility",
-    "label": "Responsibility",
+    "label": "values.responsibility.label",
     "description": "Upholding social or moral obligations with care and consistency.",
     "insight": "Responsibility anchors leadership in accountability, dependability, and ethical action. Wise leaders know when to take charge and when to delegate, balancing care for others with self-management to prevent overload while ensuring commitments are met with integrity.",
     "type": "Conformity",
@@ -419,7 +419,7 @@ export const values: IValue[] = [
   },
   {
     "id": "humility",
-    "label": "Humility",
+    "label": "values.humility.label",
     "description": "Keeping ego in check and respecting shared norms and others' contributions.",
     "insight": "Humility opens space for learning, growth, and genuine connection by acknowledging limitations and valuing others' contributions. Leaders who cultivate humility create inclusive cultures where diverse perspectives are respected and collective wisdom flourishes.",
     "type": "Conformity",
@@ -434,7 +434,7 @@ export const values: IValue[] = [
   },
   {
     "id": "tradition",
-    "label": "Tradition",
+    "label": "values.tradition.label",
     "description": "Honoring cultural, spiritual, or family practices that guide life.",
     "insight": "Tradition connects you to shared history and cultural meaning, providing grounding and continuity. Leadership honors tradition thoughtfully, discerning which practices preserve identity and which may need evolution to remain relevant and inclusive in changing contexts.",
     "type": "Tradition",
@@ -449,7 +449,7 @@ export const values: IValue[] = [
   },
   {
     "id": "empathy",
-    "label": "Empathy",
+    "label": "values.empathy.label",
     "description": "Understanding and connecting with the feelings of others.",
     "insight": "Empathy is the bridge that connects you to others' experiences, fostering compassion and understanding. As a leader, empathy enhances relationships, enabling you to respond thoughtfully and create environments where people feel seen, heard, and valued, ultimately strengthening collaboration and trust.",
     "type": "Benevolence",
@@ -464,7 +464,7 @@ export const values: IValue[] = [
   },
   {
     "id": "kindness",
-    "label": "Kindness",
+    "label": "values.kindness.label",
     "description": "Acting with care, generosity, and goodwill toward others.",
     "insight": "Kindness is an active expression of care and goodwill that nurtures cooperation and loyalty. Leaders who lead with kindness inspire positive relationships and foster cultures of mutual respect and generosity, strengthening teams and communities alike.",
     "type": "Benevolence",
@@ -479,7 +479,7 @@ export const values: IValue[] = [
   },
   {
     "id": "helpfulness",
-    "label": "Helpfulness",
+    "label": "values.helpfulness.label",
     "description": "Being willing to support, assist, or uplift others.",
     "insight": "Helpfulness reflects a commitment to support and uplift others, enhancing collective strength. Leaders who embody helpfulness balance generosity with self-care, ensuring their assistance empowers others without fostering dependency, thereby cultivating sustainable, resilient teams.",
     "type": "Benevolence",
@@ -494,7 +494,7 @@ export const values: IValue[] = [
   },
   {
     "id": "equality",
-    "label": "Equality",
+    "label": "values.equality.label",
     "description": "Believing in fairness and equal opportunities for all people.",
     "insight": "Equality embodies a dedication to fairness and justice, advocating for equal opportunities and respect. Leadership grounded in equality challenges biases and systemic barriers, creating inclusive environments where every voice is valued and diverse talents can flourish.",
     "type": "Universalism",
@@ -509,7 +509,7 @@ export const values: IValue[] = [
   },
   {
     "id": "sustainability",
-    "label": "Sustainability",
+    "label": "values.sustainability.label",
     "description": "Protecting nature and acting with care for the planet and future generations.",
     "insight": "Sustainability calls for long-term thinking and stewardship of resources, honoring the impact of today’s choices on future generations. Leaders who prioritize sustainability inspire responsibility beyond immediate goals, fostering cultures that value ethical impact alongside performance.",
     "type": "Universalism",
@@ -524,7 +524,7 @@ export const values: IValue[] = [
   },
   {
     "id": "openness",
-    "label": "Openness to Others",
+    "label": "values.openness.label",
     "description": "Welcoming and appreciating different cultures, perspectives, and ways of life.",
     "insight": "Openness to others invites curiosity and respect for diverse perspectives, enriching understanding and innovation. Effective leadership embraces openness while maintaining clarity of values, creating inclusive spaces where dialogue and growth thrive without losing purpose.",
     "type": "Universalism",
@@ -539,7 +539,7 @@ export const values: IValue[] = [
   },
   {
     "id": "justice",
-    "label": "Justice",
+    "label": "values.justice.label",
     "description": "Standing up for what is fair and morally right.",
     "insight": "Justice embodies a commitment to fairness and integrity, advocating for equitable treatment and accountability. Leaders who champion justice mindfully balance strong moral principles with compassion, ensuring that their pursuit of fairness uplifts rather than alienates, fostering environments where ethical standards are upheld without rigidity.",
     "type": "Universalism",
@@ -554,7 +554,7 @@ export const values: IValue[] = [
   },
   {
     "id": "compassion",
-    "label": "Compassion",
+    "label": "values.compassion.label",
     "description": "Caring deeply about the pain or suffering of others, with a desire to alleviate it.",
     "insight": "Compassion is the heart's response to suffering, driving you to alleviate pain and foster healing. As a leader, compassion enhances emotional intelligence, enabling you to connect deeply with others while balancing empathy with self-care to prevent burnout and maintain sustainable support.",
     "type": "Benevolence",
@@ -569,7 +569,7 @@ export const values: IValue[] = [
   },
   {
     "id": "community",
-    "label": "Community",
+    "label": "values.community.label",
     "description": "Valuing connection and shared responsibility in groups you belong to.",
     "insight": "Community nurtures belonging and shared purpose, enhancing collective strength and resilience. Leaders who cultivate community mindfully balance group identity with individual needs, ensuring that collaboration thrives without suppressing personal expression or autonomy.",
     "type": "Benevolence",
@@ -584,7 +584,7 @@ export const values: IValue[] = [
   },
   {
     "id": "respect",
-    "label": "Respect",
+    "label": "values.respect.label",
     "description": "Valuing dignity, rights, and perspectives of others.",
     "insight": "Respect is the foundation of healthy relationships and social harmony, recognizing the inherent worth of every individual. Leaders who practice respect mindfully balance honoring others with discerning when to challenge harmful behaviors, fostering environments where diverse voices are valued while maintaining accountability.",
     "type": "Universalism",
@@ -599,7 +599,7 @@ export const values: IValue[] = [
   },
   {
     "id": "generosity",
-    "label": "Generosity",
+    "label": "values.generosity.label",
     "description": "Willingness to share time, resources, or energy freely with others.",
     "insight": "Generosity reflects a spirit of abundance and support, enhancing relationships and community well-being. Leaders who practice generosity mindfully balance giving with self-care, ensuring that their contributions uplift others without depleting their own resources or creating dependency.",
     "type": "Benevolence",
@@ -614,7 +614,7 @@ export const values: IValue[] = [
   },
   {
     "id": "playfulness",
-    "label": "Playfulness",
+    "label": "values.playfulness.label",
     "description": "Embracing fun, humor, and spontaneity in life.",
     "insight": "Playfulness invites joy and creativity into daily life, enhancing well-being and connection. Leaders who embrace playfulness mindfully balance lightheartedness with purpose, recognizing that humor and spontaneity can foster innovation and resilience while ensuring that play does not undermine focus or responsibility.",
     "type": "Hedonism",
@@ -629,7 +629,7 @@ export const values: IValue[] = [
   },
   {
     "id": "spontaneity",
-    "label": "Spontaneity",
+    "label": "values.spontaneity.label",
     "description": "Acting on impulse and embracing unexpected opportunities.",
     "insight": "Spontaneity invites you to embrace the unexpected, fostering adaptability and creativity. Leaders who harness spontaneity mindfully balance impulsiveness with purpose, ensuring that moments of inspiration lead to meaningful action rather than chaos or regret.",
     "type": "Stimulation",
@@ -644,7 +644,7 @@ export const values: IValue[] = [
   },
   {
     "id": "sensuality",
-    "label": "Sensuality",
+    "label": "values.sensuality.label",
     "description": "Enjoying physical pleasure and sensory experiences.",
     "insight": "Sensuality invites you to savor the richness of physical experiences, enhancing well-being and connection. Leaders who embrace sensuality mindfully balance indulgence with awareness, recognizing that pleasure can rejuvenate and inspire creativity while ensuring it does not overshadow purpose or responsibility.",
     "type": "Hedonism",
@@ -659,7 +659,7 @@ export const values: IValue[] = [
   },
   {
     "id": "obedience",
-    "label": "Obedience",
+    "label": "values.obedience.label",
     "description": "Respecting authority and rules to maintain order.",
     "insight": "Obedience reflects respect for authority and social norms, essential for maintaining order and cooperation. Leaders who embody obedience wisely balance adherence to rules with critical thinking, ensuring that compliance serves the greater good while encouraging innovation and ethical reflection.",
     "type": "Conformity",
@@ -674,7 +674,7 @@ export const values: IValue[] = [
   },
   {
     "id": "self_control",
-    "label": "Self-Control",
+    "label": "values.selfControl.label",
     "description": "Exercising restraint and discipline in your actions and impulses.",
     "insight": "Self-control is the ability to regulate impulses and maintain focus on long-term goals. Leaders who practice self-control model discipline and resilience, inspiring others to cultivate their own self-regulation while ensuring that control does not stifle creativity or spontaneity.",
     "type": "Conformity",
@@ -689,7 +689,7 @@ export const values: IValue[] = [
   },
   {
     "id": "competence",
-    "label": "Competence",
+    "label": "values.competence.label",
     "description": "Feeling capable and effective in your tasks and roles.",
     "insight": "Competence is the foundation of confidence and effectiveness, driving you to excel in your endeavors. Leaders who cultivate competence inspire trust and respect, balancing skill development with humility to ensure that their expertise serves the greater good rather than personal ego.",
     "type": "Achievement",
@@ -704,7 +704,7 @@ export const values: IValue[] = [
   },
   {
     "id": "fun",
-    "label": "Fun",
+    "label": "values.fun.label",
     "description": "Enjoying activities that bring joy, play, and amusement.",
     "insight": "Fun introduces joy and amusement that invigorate motivation and team morale. Leaders who incorporate fun create positive, engaging cultures that balance productivity with well-being, recognizing that enjoyment fuels sustained performance.",
     "type": "Hedonism",
@@ -719,7 +719,7 @@ export const values: IValue[] = [
   },
   {
     "id": "authority",
-    "label": "Authority",
+    "label": "values.authority.label",
     "description": "Having recognized power or control in a group or setting.",
     "insight": "Authority is the recognized power to lead and make decisions, essential for effective governance and direction. Leaders who wield authority responsibly balance decisiveness with humility, ensuring that their influence fosters collaboration, trust, and ethical outcomes rather than dominance or fear.",
     "type": "Power",
@@ -734,7 +734,7 @@ export const values: IValue[] = [
   },
   {
     "id": "personal_security",
-    "label": "Personal Security",
+    "label": "values.personalSecurity.label",
     "description": "Ensuring safety, health, and stability in your daily life.",
     "insight": "Personal security encompasses physical, emotional, and financial safety, providing a foundation for well-being and growth. Leaders who prioritize personal security create environments where individuals feel safe to take risks, innovate, and contribute meaningfully, fostering resilience and trust within teams.",
     "type": "Security",
@@ -749,7 +749,7 @@ export const values: IValue[] = [
   },
   {
     "id": "dominance",
-    "label": "Dominance",
+    "label": "values.dominance.label",
     "description": "Asserting influence or control in competitive situations.",
     "insight": "Dominance is the ability to assert influence and control, often in competitive contexts. Effective leaders wield dominance with responsibility, ensuring that their assertiveness fosters empowerment rather than oppression, and that it aligns with ethical principles and the well-being of those they lead.",
     "type": "Power",
@@ -764,7 +764,7 @@ export const values: IValue[] = [
   },
   {
     "id": "wealth",
-    "label": "Wealth",
+    "label": "values.wealth.label",
     "description": "Desiring material abundance, comfort, and financial independence.",
     "insight": "Wealth enables freedom of choice and resources to support goals and well-being. Leaders who pursue wealth thoughtfully align material success with ethical responsibility and holistic fulfillment, recognizing the broader impact of their prosperity.",
     "type": "Power",
@@ -779,7 +779,7 @@ export const values: IValue[] = [
   },
   {
     "id": "cultural_heritage",
-    "label": "Cultural Heritage",
+    "label": "values.culturalHeritage.label",
     "description": "Honoring traditions, ancestry, and collective memory.",
     "insight": "Cultural heritage connects you to your roots, providing a sense of belonging and identity. Leaders who honor cultural heritage foster inclusivity and respect for diverse backgrounds, enriching team dynamics and promoting understanding across differences.",
     "type": "Tradition",
@@ -794,7 +794,7 @@ export const values: IValue[] = [
   },
   {
     "id": "respect_for_elders",
-    "label": "Respect for Elders",
+    "label": "values.respectForElders.label",
     "description": "Recognizing the wisdom, experience, and value of older generations.",
     "insight": "Respect for elders acknowledges the wisdom and experience of previous generations. Leadership that values this respect blends tradition with innovation, learning from the past to inform ethical, forward-thinking decisions.",
     "type": "Tradition",
@@ -809,7 +809,7 @@ export const values: IValue[] = [
   },
   {
     "id": "enjoyment",
-    "label": "Enjoyment",
+    "label": "values.enjoyment.label",
     "description": "Finding joy and pleasure in life’s moments, big and small.",
     "insight": "Enjoyment is about making space for fun and positivity in your life, allowing yourself to truly savor joyful experiences. It’s not just fleeting happiness, but a way to recharge, connect with others, and nourish your spirit. By embracing enjoyment, you create meaningful memories that uplift you and build resilience for life’s challenges.",
     "type": "Hedonism",
@@ -824,7 +824,7 @@ export const values: IValue[] = [
   },
   {
     "id": "gratification",
-    "label": "Gratification",
+    "label": "values.gratification.label",
     "description": "Rewarding yourself to honor your efforts and maintain motivation.",
     "insight": "Gratification is the practice of acknowledging your hard work by treating yourself with kindness and reward. It nurtures your motivation and helps sustain your energy over time. Recognizing achievements, big or small, encourages you to keep moving forward with confidence and balance.",
     "type": "Hedonism",
@@ -839,7 +839,7 @@ export const values: IValue[] = [
   },
   {
     "id": "success",
-    "label": "Success",
+    "label": "values.success.label",
     "description": "Achieving meaningful goals that reflect your values and talents.",
     "insight": "Success for you is more than just outcomes; it’s the fulfillment that comes from overcoming challenges and realizing your potential. It fuels your purpose and motivates you to grow. You take pride not only in personal achievements but also in the positive impact you create for others.",
     "type": "Achievement",
@@ -854,7 +854,7 @@ export const values: IValue[] = [
   },
   {
     "id": "recognition",
-    "label": "Recognition",
+    "label": "values.recognition.label",
     "description": "Being seen and appreciated for your efforts and contributions.",
     "insight": "Recognition is a vital source of encouragement that helps build your confidence and sense of belonging. You value meaningful feedback and respect from others, which motivates you to grow and contribute your best.",
     "type": "Achievement",
@@ -869,7 +869,7 @@ export const values: IValue[] = [
   },
   {
     "id": "leadership",
-    "label": "Leadership",
+    "label": "values.leadership.label",
     "description": "Guiding and inspiring others toward shared goals with empathy and vision.",
     "insight": "Leadership means more than authority—it’s about inspiring and empowering others to succeed together. You take responsibility for creating environments where people feel supported and motivated. Your leadership is grounded in integrity, clear communication, and genuine care.",
     "type": "Power",
@@ -884,7 +884,7 @@ export const values: IValue[] = [
   },
   {
     "id": "safety",
-    "label": "Safety",
+    "label": "values.safety.label",
     "description": "Creating secure, stable environments that foster trust and confidence.",
     "insight": "Safety is the foundation that allows people to relax and take healthy risks. You prioritize building spaces where physical, emotional, and social security support growth and well-being. This creates trust and allows for greater innovation and connection.",
     "type": "Security",
@@ -899,7 +899,7 @@ export const values: IValue[] = [
   },
   {
     "id": "protection",
-    "label": "Protection",
+    "label": "values.protection.label",
     "description": "Standing up for the well-being of yourself and those you care about.",
     "insight": "Protection means caring deeply about the safety and dignity of those around you. You take responsibility for shielding loved ones and communities from harm, creating spaces of trust and care. This dedication strengthens relationships and fosters a sense of belonging.",
     "type": "Security",
@@ -914,7 +914,7 @@ export const values: IValue[] = [
   },
   {
     "id": "predictability",
-    "label": "Predictability",
+    "label": "values.predictability.label",
     "description": "Valuing routines and consistency to create stability and reduce uncertainty.",
     "insight": "Predictability helps you manage stress and plan effectively by creating a dependable framework for your life and work. You appreciate routines that offer clarity and reduce chaos, which supports focus and confidence.",
     "type": "Security",
@@ -929,7 +929,7 @@ export const values: IValue[] = [
   },
   {
     "id": "resilience",
-    "label": "Resilience",
+    "label": "values.resilience.label",
     "description": "Bouncing back from adversity with strength, optimism, and adaptability.",
     "insight": "Resilience means meeting challenges with courage and using setbacks as opportunities to grow. You cultivate a mindset that stays hopeful and solution-focused, inspiring both yourself and others to persevere.",
     "type": "Security",
@@ -945,7 +945,7 @@ export const values: IValue[] = [
 
   {
     "id": "self_discipline",
-    "label": "Self-Discipline",
+    "label": "values.selfDiscipline.label",
     "description": "Maintaining control and focus to follow through on goals and commitments.",
     "insight": "Self-discipline empowers you to keep commitments and resist distractions, even when motivation fades. This consistency builds trust in yourself and with others and creates a reliable foundation for success.",
     "type": "Conformity",
@@ -960,7 +960,7 @@ export const values: IValue[] = [
   },
   {
     "id": "devotion",
-    "label": "Devotion",
+    "label": "values.devotion.label",
     "description": "Showing loyalty and commitment to your values, relationships, and communities.",
     "insight": "Devotion is a steady, heartfelt dedication that builds deep connections and trust. You prioritize the well-being of what you care about and stand firm through challenges, creating a sense of belonging and purpose.",
     "type": "Tradition",
@@ -975,7 +975,7 @@ export const values: IValue[] = [
   },
   {
     "id": "respect_for_customs",
-    "label": "Respect for Customs",
+    "label": "values.respectForCustoms.label",
     "description": "Honoring traditions and cultural practices that build identity and community.",
     "insight": "Respecting customs helps you stay connected to your roots and shared values. You appreciate the continuity and meaning that traditions bring, fostering harmony and belonging.",
     "type": "Tradition",
@@ -990,7 +990,7 @@ export const values: IValue[] = [
   },
   {
     "id": "faith",
-    "label": "Faith",
+    "label": "values.faith.label",
     "description": "Drawing strength and guidance from spiritual or philosophical beliefs.",
     "insight": "Faith provides you with hope, meaning, and a moral compass. It supports resilience through life’s uncertainties and grounds your choices in deeply held values.",
     "type": "Tradition",
@@ -1005,7 +1005,7 @@ export const values: IValue[] = [
   },
   {
     "id": "ritual",
-    "label": "Ritual",
+    "label": "values.ritual.label",
     "description": "Using ceremonies and routines to express values and create connection.",
     "insight": "Rituals bring comfort, structure, and a sense of belonging. They help you mark important moments and express what matters deeply, creating shared meaning with others. Through consistent practice, rituals ground you and build community bonds that provide emotional safety and identity.",
     "type": "Tradition",
@@ -1020,7 +1020,7 @@ export const values: IValue[] = [
   },
   {
     "id": "authenticity",
-    "label": "Authenticity",
+    "label": "values.authenticity.label",
     "description": "Being true to yourself and expressing your genuine values and feelings openly.",
     "insight": "Authenticity means being true to who you really are—expressing your values, feelings, and beliefs honestly and openly. When you live authentically, you don’t feel the need to hide parts of yourself to fit in or please others. This genuine way of being helps build trust, deepen connections, and create meaningful relationships. It takes courage to show up as your real self, but it brings you peace and helps others see the real you.",
     "type": "SelfDirection",
@@ -1035,7 +1035,7 @@ export const values: IValue[] = [
   },
   {
     "id": "exploration",
-    "label": "Exploration",
+    "label": "values.exploration.label",
     "description": "Seeking out new experiences and learning through discovery.",
     "insight": "Exploration reflects your curiosity and your drive to expand your horizons—whether through travel, learning, new ideas, or unfamiliar perspectives. You thrive on stepping into the unknown and allowing uncertainty to fuel growth. This openness allows you to evolve and reimagine possibilities, both personally and professionally.",
     "type": "SelfDirection",
@@ -1050,7 +1050,7 @@ export const values: IValue[] = [
   },
   {
     "id": "belonging",
-    "label": "Belonging",
+    "label": "values.belonging.label",
     "description": "Feeling connected, accepted, and valued within a group or community.",
     "insight": "Belonging fulfills a deep human need for connection and acceptance. You cultivate inclusive environments where people feel safe to express themselves and collaborate authentically. This sense of community nurtures well-being and mutual support.",
     "type": "Tradition",

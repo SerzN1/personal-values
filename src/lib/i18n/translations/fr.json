@@ -14,16 +14,195 @@
     "privacy": "Note de Confidentialité"
   },
   "values": {
-    "achievement": "Accomplissement",
-    "benevolence": "Bienveillance",
-    "conformity": "Conformité",
-    "hedonism": "Hédonisme",
-    "power": "Pouvoir",
-    "security": "Sécurité",
-    "self-direction": "Auto-direction",
-    "stimulation": "Stimulation",
-    "tradition": "Tradition",
-    "universalism": "Universalisme"
+    "curiosity": {
+      "label": "Curiosité"
+    },
+    "creativity": {
+      "label": "Créativité"
+    },
+    "freedom": {
+      "label": "Liberté"
+    },
+    "independence": {
+      "label": "Indépendance"
+    },
+    "selfExpression": {
+      "label": "Expression de soi"
+    },
+    "excitement": {
+      "label": "Excitement"
+    },
+    "adventure": {
+      "label": "Aventure"
+    },
+    "novelty": {
+      "label": "Nouveauté"
+    },
+    "energy": {
+      "label": "Énergie"
+    },
+    "challenge": {
+      "label": "Défi"
+    },
+    "achievement": {
+      "label": "Accomplissement"
+    },
+    "ambition": {
+      "label": "Ambition"
+    },
+    "influence": {
+      "label": "Influence"
+    },
+    "status": {
+      "label": "Statut"
+    },
+    "control": {
+      "label": "Contrôle"
+    },
+    "pleasure": {
+      "label": "Plaisir"
+    },
+    "stability": {
+      "label": "Stabilité"
+    },
+    "order": {
+      "label": "Ordre"
+    },
+    "loyalty": {
+      "label": "Loyauté"
+    },
+    "responsibility": {
+      "label": "Responsabilité"
+    },
+    "humility": {
+      "label": "Humilité"
+    },
+    "tradition": {
+      "label": "Tradition"
+    },
+    "empathy": {
+      "label": "Empathie"
+    },
+    "kindness": {
+      "label": "Bienveillance"
+    },
+    "helpfulness": {
+      "label": "Entraide"
+    },
+    "equality": {
+      "label": "Égalité"
+    },
+    "sustainability": {
+      "label": "Durabilité"
+    },
+    "openness": {
+      "label": "Ouverture"
+    },
+    "justice": {
+      "label": "Justice"
+    },
+    "compassion": {
+      "label": "Compassion"
+    },
+    "community": {
+      "label": "Communauté"
+    },
+    "respect": {
+      "label": "Respect"
+    },
+    "generosity": {
+      "label": "Générosité"
+    },
+    "playfulness": {
+      "label": "Espièglerie"
+    },
+    "spontaneity": {
+      "label": "Spontanéité"
+    },
+    "sensuality": {
+      "label": "Sensualité"
+    },
+    "obedience": {
+      "label": "Obéissance"
+    },
+    "selfControl": {
+      "label": "Maîtrise de soi"
+    },
+    "competence": {
+      "label": "Compétence"
+    },
+    "fun": {
+      "label": "Amusement"
+    },
+    "authority": {
+      "label": "Autorité"
+    },
+    "personalSecurity": {
+      "label": "Sécurité personnelle"
+    },
+    "dominance": {
+      "label": "Dominance"
+    },
+    "wealth": {
+      "label": "Richesse"
+    },
+    "culturalHeritage": {
+      "label": "Patrimoine culturel"
+    },
+    "respectForElders": {
+      "label": "Respect des aînés"
+    },
+    "enjoyment": {
+      "label": "Plaisir"
+    },
+    "gratification": {
+      "label": "Gratification"
+    },
+    "success": {
+      "label": "Succès"
+    },
+    "recognition": {
+      "label": "Reconnaissance"
+    },
+    "leadership": {
+      "label": "Leadership"
+    },
+    "safety": {
+      "label": "Sécurité"
+    },
+    "protection": {
+      "label": "Protection"
+    },
+    "predictability": {
+      "label": "Prévisibilité"
+    },
+    "resilience": {
+      "label": "Résilience"
+    },
+    "selfDiscipline": {
+      "label": "Autodiscipline"
+    },
+    "devotion": {
+      "label": "Dévotion"
+    },
+    "respectForCustoms": {
+      "label": "Respect des coutumes"
+    },
+    "faith": {
+      "label": "Foi"
+    },
+    "ritual": {
+      "label": "Rituel"
+    },
+    "authenticity": {
+      "label": "Authenticité"
+    },
+    "exploration": {
+      "label": "Exploration"
+    },
+    "belonging": {
+      "label": "Appartenance"
+    }
   },
   "common": {
     "loading": "Chargement...",

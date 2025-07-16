@@ -14,16 +14,195 @@
     "privacy": "Политика Конфиденциальности"
   },
   "values": {
-    "achievement": "Достижение",
-    "benevolence": "Доброжелательность",
-    "conformity": "Конформность",
-    "hedonism": "Гедонизм",
-    "power": "Власть",
-    "security": "Безопасность",
-    "self-direction": "Самостоятельность",
-    "stimulation": "Стимуляция",
-    "tradition": "Традиция",
-    "universalism": "Универсализм"
+    "curiosity": {
+      "label": "Любопытство"
+    },
+    "creativity": {
+      "label": "Творчество"
+    },
+    "freedom": {
+      "label": "Свобода"
+    },
+    "independence": {
+      "label": "Независимость"
+    },
+    "selfExpression": {
+      "label": "Самовыражение"
+    },
+    "excitement": {
+      "label": "Волнение"
+    },
+    "adventure": {
+      "label": "Приключения"
+    },
+    "novelty": {
+      "label": "Новизна"
+    },
+    "energy": {
+      "label": "Энергия"
+    },
+    "challenge": {
+      "label": "Вызов"
+    },
+    "achievement": {
+      "label": "Достижения"
+    },
+    "ambition": {
+      "label": "Амбиции"
+    },
+    "influence": {
+      "label": "Влияние"
+    },
+    "status": {
+      "label": "Статус"
+    },
+    "control": {
+      "label": "Контроль"
+    },
+    "pleasure": {
+      "label": "Удовольствие"
+    },
+    "stability": {
+      "label": "Стабильность"
+    },
+    "order": {
+      "label": "Порядок"
+    },
+    "loyalty": {
+      "label": "Лояльность"
+    },
+    "responsibility": {
+      "label": "Ответственность"
+    },
+    "humility": {
+      "label": "Смирение"
+    },
+    "tradition": {
+      "label": "Традиция"
+    },
+    "empathy": {
+      "label": "Эмпатия"
+    },
+    "kindness": {
+      "label": "Доброта"
+    },
+    "helpfulness": {
+      "label": "Отзывчивость"
+    },
+    "equality": {
+      "label": "Равенство"
+    },
+    "sustainability": {
+      "label": "Устойчивость"
+    },
+    "openness": {
+      "label": "Открытость"
+    },
+    "justice": {
+      "label": "Справедливость"
+    },
+    "compassion": {
+      "label": "Сострадание"
+    },
+    "community": {
+      "label": "Сообщество"
+    },
+    "respect": {
+      "label": "Уважение"
+    },
+    "generosity": {
+      "label": "Щедрость"
+    },
+    "playfulness": {
+      "label": "Игривость"
+    },
+    "spontaneity": {
+      "label": "Спонтанность"
+    },
+    "sensuality": {
+      "label": "Чувственность"
+    },
+    "obedience": {
+      "label": "Послушание"
+    },
+    "selfControl": {
+      "label": "Самоконтроль"
+    },
+    "competence": {
+      "label": "Компетентность"
+    },
+    "fun": {
+      "label": "Веселье"
+    },
+    "authority": {
+      "label": "Авторитет"
+    },
+    "personalSecurity": {
+      "label": "Личная безопасность"
+    },
+    "dominance": {
+      "label": "Доминирование"
+    },
+    "wealth": {
+      "label": "Богатство"
+    },
+    "culturalHeritage": {
+      "label": "Культурное наследие"
+    },
+    "respectForElders": {
+      "label": "Уважение к старшим"
+    },
+    "enjoyment": {
+      "label": "Наслаждение"
+    },
+    "gratification": {
+      "label": "Удовлетворение"
+    },
+    "success": {
+      "label": "Успех"
+    },
+    "recognition": {
+      "label": "Признание"
+    },
+    "leadership": {
+      "label": "Лидерство"
+    },
+    "safety": {
+      "label": "Безопасность"
+    },
+    "protection": {
+      "label": "Защита"
+    },
+    "predictability": {
+      "label": "Предсказуемость"
+    },
+    "resilience": {
+      "label": "Стойкость"
+    },
+    "selfDiscipline": {
+      "label": "Самодисциплина"
+    },
+    "devotion": {
+      "label": "Преданность"
+    },
+    "respectForCustoms": {
+      "label": "Уважение к обычаям"
+    },
+    "faith": {
+      "label": "Вера"
+    },
+    "ritual": {
+      "label": "Ритуал"
+    },
+    "authenticity": {
+      "label": "Подлинность"
+    },
+    "exploration": {
+      "label": "Исследование"
+    },
+    "belonging": {
+      "label": "Принадлежность"
+    }
   },
   "common": {
     "loading": "Загрузка...",

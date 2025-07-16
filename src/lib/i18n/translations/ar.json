@@ -14,16 +14,195 @@
     "privacy": "ملاحظة الخصوصية"
   },
   "values": {
-    "achievement": "الإنجاز",
-    "benevolence": "الإحسان",
-    "conformity": "المطابقة",
-    "hedonism": "المتعة",
-    "power": "القوة",
-    "security": "الأمان",
-    "self-direction": "التوجيه الذاتي",
-    "stimulation": "التحفيز",
-    "tradition": "التقليد",
-    "universalism": "العالمية"
+    "curiosity": {
+      "label": "الفضول"
+    },
+    "creativity": {
+      "label": "الإبداع"
+    },
+    "freedom": {
+      "label": "الحرية"
+    },
+    "independence": {
+      "label": "الاستقلالية"
+    },
+    "selfExpression": {
+      "label": "التعبير عن الذات"
+    },
+    "excitement": {
+      "label": "الإثارة"
+    },
+    "adventure": {
+      "label": "المغامرة"
+    },
+    "novelty": {
+      "label": "الجدة"
+    },
+    "energy": {
+      "label": "الطاقة"
+    },
+    "challenge": {
+      "label": "التحدي"
+    },
+    "achievement": {
+      "label": "الإنجاز"
+    },
+    "ambition": {
+      "label": "الطموح"
+    },
+    "influence": {
+      "label": "التأثير"
+    },
+    "status": {
+      "label": "المكانة"
+    },
+    "control": {
+      "label": "السيطرة"
+    },
+    "pleasure": {
+      "label": "المتعة"
+    },
+    "stability": {
+      "label": "الاستقرار"
+    },
+    "order": {
+      "label": "النظام"
+    },
+    "loyalty": {
+      "label": "الولاء"
+    },
+    "responsibility": {
+      "label": "المسؤولية"
+    },
+    "humility": {
+      "label": "التواضع"
+    },
+    "tradition": {
+      "label": "التقليد"
+    },
+    "empathy": {
+      "label": "التعاطف"
+    },
+    "kindness": {
+      "label": "اللطف"
+    },
+    "helpfulness": {
+      "label": "المساعدة"
+    },
+    "equality": {
+      "label": "المساواة"
+    },
+    "sustainability": {
+      "label": "الاستدامة"
+    },
+    "openness": {
+      "label": "الانفتاح"
+    },
+    "justice": {
+      "label": "العدالة"
+    },
+    "compassion": {
+      "label": "الرحمة"
+    },
+    "community": {
+      "label": "المجتمع"
+    },
+    "respect": {
+      "label": "الاحترام"
+    },
+    "generosity": {
+      "label": "الكرم"
+    },
+    "playfulness": {
+      "label": "المرح"
+    },
+    "spontaneity": {
+      "label": "العفوية"
+    },
+    "sensuality": {
+      "label": "الحسية"
+    },
+    "obedience": {
+      "label": "الطاعة"
+    },
+    "selfControl": {
+      "label": "ضبط النفس"
+    },
+    "competence": {
+      "label": "الكفاءة"
+    },
+    "fun": {
+      "label": "المتعة"
+    },
+    "authority": {
+      "label": "السلطة"
+    },
+    "personalSecurity": {
+      "label": "الأمان الشخصي"
+    },
+    "dominance": {
+      "label": "الهيمنة"
+    },
+    "wealth": {
+      "label": "الثروة"
+    },
+    "culturalHeritage": {
+      "label": "التراث الثقافي"
+    },
+    "respectForElders": {
+      "label": "احترام الكبار"
+    },
+    "enjoyment": {
+      "label": "الاستمتاع"
+    },
+    "gratification": {
+      "label": "الإشباع"
+    },
+    "success": {
+      "label": "النجاح"
+    },
+    "recognition": {
+      "label": "التقدير"
+    },
+    "leadership": {
+      "label": "القيادة"
+    },
+    "safety": {
+      "label": "السلامة"
+    },
+    "protection": {
+      "label": "الحماية"
+    },
+    "predictability": {
+      "label": "القابلية للتنبؤ"
+    },
+    "resilience": {
+      "label": "المرونة"
+    },
+    "selfDiscipline": {
+      "label": "الانضباط الذاتي"
+    },
+    "devotion": {
+      "label": "التفاني"
+    },
+    "respectForCustoms": {
+      "label": "احترام العادات"
+    },
+    "faith": {
+      "label": "الإيمان"
+    },
+    "ritual": {
+      "label": "الطقوس"
+    },
+    "authenticity": {
+      "label": "الأصالة"
+    },
+    "exploration": {
+      "label": "الاستكشاف"
+    },
+    "belonging": {
+      "label": "الانتماء"
+    }
   },
   "common": {
     "loading": "جارٍ التحميل...",

@@ -14,16 +14,195 @@
     "privacy": "Privacy Note"
   },
   "values": {
-    "achievement": "Achievement",
-    "benevolence": "Benevolence",
-    "conformity": "Conformity",
-    "hedonism": "Hedonism",
-    "power": "Power",
-    "security": "Security",
-    "self-direction": "Self-Direction",
-    "stimulation": "Stimulation",
-    "tradition": "Tradition",
-    "universalism": "Universalism"
+    "curiosity": {
+      "label": "Curiosity"
+    },
+    "creativity": {
+      "label": "Creativity"
+    },
+    "freedom": {
+      "label": "Freedom"
+    },
+    "independence": {
+      "label": "Independence"
+    },
+    "selfExpression": {
+      "label": "Self-Expression"
+    },
+    "excitement": {
+      "label": "Excitement"
+    },
+    "adventure": {
+      "label": "Adventure"
+    },
+    "novelty": {
+      "label": "Novelty"
+    },
+    "energy": {
+      "label": "Energy"
+    },
+    "challenge": {
+      "label": "Challenge"
+    },
+    "achievement": {
+      "label": "Achievement"
+    },
+    "ambition": {
+      "label": "Ambition"
+    },
+    "influence": {
+      "label": "Influence"
+    },
+    "status": {
+      "label": "Status"
+    },
+    "control": {
+      "label": "Control"
+    },
+    "pleasure": {
+      "label": "Pleasure"
+    },
+    "stability": {
+      "label": "Stability"
+    },
+    "order": {
+      "label": "Order"
+    },
+    "loyalty": {
+      "label": "Loyalty"
+    },
+    "responsibility": {
+      "label": "Responsibility"
+    },
+    "humility": {
+      "label": "Humility"
+    },
+    "tradition": {
+      "label": "Tradition"
+    },
+    "empathy": {
+      "label": "Empathy"
+    },
+    "kindness": {
+      "label": "Kindness"
+    },
+    "helpfulness": {
+      "label": "Helpfulness"
+    },
+    "equality": {
+      "label": "Equality"
+    },
+    "sustainability": {
+      "label": "Sustainability"
+    },
+    "openness": {
+      "label": "Openness"
+    },
+    "justice": {
+      "label": "Justice"
+    },
+    "compassion": {
+      "label": "Compassion"
+    },
+    "community": {
+      "label": "Community"
+    },
+    "respect": {
+      "label": "Respect"
+    },
+    "generosity": {
+      "label": "Generosity"
+    },
+    "playfulness": {
+      "label": "Playfulness"
+    },
+    "spontaneity": {
+      "label": "Spontaneity"
+    },
+    "sensuality": {
+      "label": "Sensuality"
+    },
+    "obedience": {
+      "label": "Obedience"
+    },
+    "selfControl": {
+      "label": "Self-Control"
+    },
+    "competence": {
+      "label": "Competence"
+    },
+    "fun": {
+      "label": "Fun"
+    },
+    "authority": {
+      "label": "Authority"
+    },
+    "personalSecurity": {
+      "label": "Personal Security"
+    },
+    "dominance": {
+      "label": "Dominance"
+    },
+    "wealth": {
+      "label": "Wealth"
+    },
+    "culturalHeritage": {
+      "label": "Cultural Heritage"
+    },
+    "respectForElders": {
+      "label": "Respect for Elders"
+    },
+    "enjoyment": {
+      "label": "Enjoyment"
+    },
+    "gratification": {
+      "label": "Gratification"
+    },
+    "success": {
+      "label": "Success"
+    },
+    "recognition": {
+      "label": "Recognition"
+    },
+    "leadership": {
+      "label": "Leadership"
+    },
+    "safety": {
+      "label": "Safety"
+    },
+    "protection": {
+      "label": "Protection"
+    },
+    "predictability": {
+      "label": "Predictability"
+    },
+    "resilience": {
+      "label": "Resilience"
+    },
+    "selfDiscipline": {
+      "label": "Self-Discipline"
+    },
+    "devotion": {
+      "label": "Devotion"
+    },
+    "respectForCustoms": {
+      "label": "Respect for Customs"
+    },
+    "faith": {
+      "label": "Faith"
+    },
+    "ritual": {
+      "label": "Ritual"
+    },
+    "authenticity": {
+      "label": "Authenticity"
+    },
+    "exploration": {
+      "label": "Exploration"
+    },
+    "belonging": {
+      "label": "Belonging"
+    }
   },
   "common": {
     "loading": "Loading...",
