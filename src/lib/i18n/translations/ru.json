@@ -135,7 +135,7 @@
   "groupBalance": {
     "title": "Обзор Баланса Групп Ценностей",
     "leadingOrientation": "Ведущая Ориентация Группы Ценностей",
-    "lessEmphasized": "Менее Подчеркнутый Фокус",
+    "lessEmphasized": "Наименее Подчеркнутый Фокус",
     "description": "{topGroup} — ваша {leadingOrientation}. {bottomGroup} — это {lessEmphasized}.",
     "personalInsights": "Личные Прозрения",
     "reflectivePrompts": "Рефлексивные Вопросы",

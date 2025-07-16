@@ -25,8 +25,12 @@
   <a href="#group-balance" class="permalink" aria-label="permalink"></a>
 </h2>
 <p>
-  <span style="color:{topGroupData.color}">{$t(topGroupData.label)}</span> is your <code>{$t('groupBalance.leadingOrientation')}</code>.
-  <span style="color:{bottomGroupData.color}">{$t(bottomGroupData.label)}</span> is a <code>{$t('groupBalance.lessEmphasized')}</code>.
+  {@html $t('groupBalance.description', {
+    topGroup: `<span style="color:${topGroupData.color}">${$t(topGroupData.label)}</span>`,
+    bottomGroup: `<span style="color:${bottomGroupData.color}">${$t(bottomGroupData.label)}</span>`,
+    leadingOrientation: `<code>${$t('groupBalance.leadingOrientation')}</code>`,
+    lessEmphasized: `<code>${$t('groupBalance.lessEmphasized')}</code>`
+  })}
   {$t('analysis.groupAnalysis.summary', groupSummaryOptions)}
 </p>
 
