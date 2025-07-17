@@ -202,16 +202,48 @@
       ]
     },
     "order": {
-      "label": "Ordre"
+      "label": "Ordre",
+      "description": "Créer structure, organisation et systèmes pour l'efficacité et la clarté.",
+      "insight": "L'ordre apporte clarté et efficacité, créant des fondations stables pour que les équipes et les projets prospèrent. Les leaders qui valorisent l'ordre équilibrent structure avec flexibilité, comprenant que les systèmes bien conçus libèrent la créativité plutôt que de l'entraver.",
+      "strengths": "Vous excellez à créer des systèmes et de la structure qui permettent aux autres de réussir.",
+      "dangers": "Un excès d'ordre peut étouffer la flexibilité et l'adaptation aux changements inattendus.",
+      "reflectionQuestions": [
+        "Quels systèmes ou structures vous aident le plus à réussir ?",
+        "Où pourriez-vous avoir besoin de plus de flexibilité dans votre approche ?"
+      ]
     },
     "loyalty": {
-      "label": "Loyauté"
+      "label": "Loyauté",
+      "description": "Maintenir fidélité et engagement envers les personnes, groupes ou causes.",
+      "insight": "La loyauté construit confiance et stabilité relationnelle, créant des liens durables basés sur l'engagement mutuel. Les leaders loyaux inspirent dévouement en démontrant consistance et fiabilité, tout en équilibrant loyauté avec discernement pour s'assurer que l'engagement sert des causes et relations saines.",
+      "strengths": "Vous construisez confiance et relations durables par votre fidélité.",
+      "dangers": "La loyauté aveugle peut vous empêcher de voir des problèmes ou de faire des changements nécessaires.",
+      "reflectionQuestions": [
+        "À qui ou à quoi êtes-vous le plus loyal dans votre vie ?",
+        "Comment équilibez-vous loyauté avec pensée critique ?"
+      ]
     },
     "responsibility": {
-      "label": "Responsabilité"
+      "label": "Responsabilité",
+      "description": "Assumer la charge de ses devoirs, actions et leur impact sur les autres.",
+      "insight": "La responsabilité crée confiance et fiabilité, démontrant que vous pouvez être compté pour tenir vos engagements. Les leaders responsables modèlent l'intégrité et l'accountability, créant une culture où chacun assume ses rôles et contribue au succès collectif.",
+      "strengths": "Vous êtes fiable et assumez vos engagements envers les autres.",
+      "dangers": "Un excès de responsabilité peut mener à l'épuisement ou à la difficulté à déléguer.",
+      "reflectionQuestions": [
+        "Dans quels domaines votre sens des responsabilités vous sert-il le mieux ?",
+        "Où pourriez-vous avoir besoin de partager plus de responsabilités avec d'autres ?"
+      ]
     },
     "humility": {
-      "label": "Humilité"
+      "label": "Humilité",
+      "description": "Reconnaître ses limites et valoriser les contributions des autres.",
+      "insight": "L'humilité favorise l'apprentissage continu et des relations authentiques en reconnaissant que chacun a quelque chose à apporter. Les leaders humbles créent un espace psychologique sûr où les idées peuvent émerger librement, comprenant que reconnaître ses limites renforce plutôt que diminue l'autorité.",
+      "strengths": "Vous restez ouvert à l'apprentissage et valorisez les perspectives des autres.",
+      "dangers": "L'humilité excessive peut parfois vous empêcher de revendiquer vos accomplissements ou votre expertise.",
+      "reflectionQuestions": [
+        "Comment l'humilité améliore-t-elle vos relations et votre apprentissage ?",
+        "Où pourriez-vous avoir besoin de plus de confiance en vos capacités ?"
+      ]
     },
     "tradition": {
       "label": "Tradition",
@@ -346,94 +378,334 @@
       ]
     },
     "playfulness": {
-      "label": "Espièglerie"
+      "label": "Espièglerie",
+      "description": "Apporter légèreté, humour et joie aux expériences quotidiennes.",
+      "insight": "L'espièglerie favorise la créativité, réduit le stress et renforce les connexions à travers la joie partagée. Les leaders espiègles savent quand introduire de la légèreté pour énergiser les équipes, défuser les tensions et créer un environnement où l'innovation et la collaboration fleurissent naturellement.",
+      "strengths": "Vous apportez joie et légèreté aux situations, énergisant les autres.",
+      "dangers": "L'espièglerie mal placée peut sembler inappropriée dans des contextes sérieux.",
+      "reflectionQuestions": [
+        "Comment l'espièglerie améliore-t-elle vos relations et votre travail ?",
+        "Quand savez-vous qu'il est temps d'être plus sérieux ?"
+      ]
     },
     "spontaneity": {
-      "label": "Spontanéité"
+      "label": "Spontanéité",
+      "description": "Agir naturellement et sans planification excessive, embrassant le moment présent.",
+      "insight": "La spontanéité apporte fraîcheur et authenticité à la vie, permettant de saisir les opportunités inattendues. Les leaders qui embrassent la spontanéité équilibrent planification stratégique avec flexibilité, sachant quand ajuster le cours pour tirer parti de moments opportuns.",
+      "strengths": "Vous embrassez les opportunités inattendues et agissez avec authenticité naturelle.",
+      "dangers": "La spontanéité excessive peut parfois compromettre la planification ou la cohérence nécessaires.",
+      "reflectionQuestions": [
+        "Quand la spontanéité vous a-t-elle mené à des découvertes importantes ?",
+        "Comment équilibez-vous spontanéité et planification dans votre vie ?"
+      ]
     },
     "sensuality": {
-      "label": "Sensualité"
+      "label": "Sensualité",
+      "description": "Apprécier les expériences sensorielles et la connexion physique avec le monde.",
+      "insight": "La sensualité enrichit la vie à travers l'appréciation consciente des expériences sensorielles. Les leaders qui embrassent la sensualité comprennent l'importance du bien-être physique et de l'environnement dans la performance, créant des espaces qui nourrissent les sens et favorisent le confort et la créativité.",
+      "strengths": "Vous appréciez pleinement les expériences sensorielles et physiques de la vie.",
+      "dangers": "Se concentrer uniquement sur le plaisir sensoriel peut parfois distraire des objectifs à long terme.",
+      "reflectionQuestions": [
+        "Comment les expériences sensorielles enrichissent-elles votre vie quotidienne ?",
+        "Où pourriez-vous créer plus de confort et de beauté dans votre environnement ?"
+      ]
     },
     "obedience": {
-      "label": "Obéissance"
+      "label": "Obéissance",
+      "description": "Suivre les règles, l'autorité et les structures établies avec respect.",
+      "insight": "L'obéissance réfléchie reconnaît la valeur des structures et de l'autorité légitimes tout en maintenant l'intégrité personnelle. Les leaders qui comprennent l'obéissance savent quand suivre et quand guider, créant des environnements où le respect mutuel et la hiérarchie claire permettent l'efficacité collective.",
+      "strengths": "Vous respectez l'autorité légitime et contribuez à l'ordre organisationnel.",
+      "dangers": "L'obéissance aveugle peut empêcher la pensée critique ou l'innovation nécessaire.",
+      "reflectionQuestions": [
+        "Dans quels contextes l'obéissance vous sert-elle le mieux ?",
+        "Comment équilibrez-vous respect de l'autorité et pensée indépendante ?"
+      ]
     },
     "selfControl": {
-      "label": "Maîtrise de soi"
+      "label": "Maîtrise de soi",
+      "description": "Exercer discipline et retenue dans ses actions et réactions émotionnelles.",
+      "insight": "La maîtrise de soi est la fondation de la leadership consciente, permettant des réponses réfléchies plutôt que des réactions impulsives. Les leaders avec une forte maîtrise de soi inspirent confiance et stabilité, modélisant comment naviguer les défis avec calme et intention délibérée.",
+      "strengths": "Vous maintenez discipline et composure dans des situations difficiles.",
+      "dangers": "Une maîtrise de soi excessive peut parfois supprimer l'expression émotionnelle naturelle.",
+      "reflectionQuestions": [
+        "Dans quelles situations votre maîtrise de soi vous sert-elle le mieux ?",
+        "Où pourriez-vous avoir besoin de plus de spontanéité ou d'expression émotionnelle ?"
+      ]
     },
     "competence": {
-      "label": "Compétence"
+      "label": "Compétence",
+      "description": "Développer et démontrer ses compétences et capacités professionnelles.",
+      "insight": "La compétence construit confiance et permet de contribuer de manière significative. Les leaders compétents investissent continuellement dans leur développement tout en reconnaissant les domaines d'expertise des autres, créant une culture d'excellence et d'apprentissage mutuel.",
+      "strengths": "Vous vous efforcez de maîtriser vos compétences et de livrer un travail de qualité.",
+      "dangers": "La poursuite de la compétence peut parfois mener au perfectionnisme ou à la résistance au changement.",
+      "reflectionQuestions": [
+        "Dans quels domaines votre compétence vous donne-t-elle le plus de confiance ?",
+        "Quelles nouvelles compétences pourriez-vous développer pour grandir ?"
+      ]
     },
     "fun": {
-      "label": "Amusement"
+      "label": "Amusement",
+      "description": "Rechercher et créer des moments de plaisir, de rire et de légèreté.",
+      "insight": "L'amusement revitalise l'esprit et renforce les liens sociaux, créant des souvenirs positifs qui soutiennent la résilience. Les leaders qui valorisent l'amusement comprennent que la joie partagée améliore la cohésion d'équipe et la créativité, équilibrant sérieux et légèreté pour maintenir l'engagement et le moral.",
+      "strengths": "Vous créez atmosphère positive et recherchez activement les moments de joie.",
+      "dangers": "Privilégier l'amusement peut parfois compromettre la concentration sur des tâches sérieuses.",
+      "reflectionQuestions": [
+        "Comment l'amusement améliore-t-il vos relations et votre bien-être ?",
+        "Où pourriez-vous introduire plus de légèreté dans votre vie ou travail ?"
+      ]
     },
     "authority": {
-      "label": "Autorité"
+      "label": "Autorité",
+      "description": "Exercer leadership et influence pour guider les décisions et actions.",
+      "insight": "L'autorité responsable combine expertise avec service, utilisant l'influence pour créer des résultats positifs. Les leaders conscients de leur autorité comprennent que le vrai pouvoir vient de l'habilitation des autres et de la création d'environnements où chacun peut contribuer efficacement.",
+      "strengths": "Vous exercez leadership et prenez des décisions avec confiance.",
+      "dangers": "L'autorité mal utilisée peut devenir autoritaire ou étouffer les contributions des autres.",
+      "reflectionQuestions": [
+        "Comment utilisez-vous votre autorité pour servir les autres ?",
+        "Où pourriez-vous partager plus de pouvoir décisionnel ?"
+      ]
     },
     "personalSecurity": {
-      "label": "Sécurité personnelle"
+      "label": "Sécurité personnelle",
+      "description": "Assurer sa propre protection physique, émotionnelle et financière.",
+      "insight": "La sécurité personnelle crée la base stable nécessaire pour prendre des risques calculés et poursuivre des objectifs ambitieux. Les leaders conscients de la sécurité équilibrent prudence et courage, s'assurant que la stabilité personnelle permet l'innovation plutôt que de l'entraver.",
+      "strengths": "Vous priorisez votre bien-être et créez des fondations stables pour votre vie.",
+      "dangers": "Une préoccupation excessive pour la sécurité peut limiter la prise de risques nécessaires.",
+      "reflectionQuestions": [
+        "Dans quels domaines vous sentez-vous le plus en sécurité ?",
+        "Où pourriez-vous avoir besoin de plus de courage pour grandir ?"
+      ]
     },
     "dominance": {
-      "label": "Dominance"
+      "label": "Dominance",
+      "description": "Exercer contrôle et autorité sur les autres dans les situations sociales et professionnelles.",
+      "insight": "La dominance peut être un outil de leadership efficace quand elle est utilisée pour créer de l'ordre et diriger vers des objectifs partagés. Les leaders conscients de leur dominance équilibrent autorité avec respect, comprenant que le vrai pouvoir vient de l'inspiration et de l'autonomisation des autres plutôt que de la seule coercition.",
+      "strengths": "Vous prenez naturellement charge des situations et dirigez avec confiance et autorité.",
+      "dangers": "La dominance excessive peut créer de la résistance, étouffer la créativité et endommager les relations.",
+      "reflectionQuestions": [
+        "Comment votre tendance à dominer affecte-t-elle vos relations ?",
+        "Quand votre leadership serait-il plus efficace en étant moins directif ?"
+      ]
     },
     "wealth": {
-      "label": "Richesse"
+      "label": "Richesse",
+      "description": "Accumuler des ressources financières et des biens matériels.",
+      "insight": "La richesse peut être un outil puissant pour créer sécurité, opportunités et impact positif. Les leaders conscients de la richesse comprennent qu'elle est un moyen vers des fins plus grandes, utilisant les ressources pour créer de la valeur pour les autres tout en maintenant l'équilibre et la perspective.",
+      "strengths": "Vous êtes motivé à créer sécurité financière et opportunités par les ressources.",
+      "dangers": "Poursuivre uniquement la richesse peut parfois compromettre relations ou valeurs importantes.",
+      "reflectionQuestions": [
+        "Comment la richesse vous permet-elle de servir vos valeurs plus profondes ?",
+        "Quel équilibre cherchez-vous entre sécurité financière et autres priorités ?"
+      ]
     },
     "culturalHeritage": {
-      "label": "Patrimoine culturel"
+      "label": "Patrimoine culturel",
+      "description": "Préserver et honorer les traditions, coutumes et héritages de sa culture.",
+      "insight": "Le patrimoine culturel connecte le présent au passé, offrant sagesse et identité. Les leaders conscients du patrimoine culturel puisent dans la richesse des traditions tout en adaptant les enseignements aux réalités contemporaines, créant des ponts entre générations et cultures.",
+      "strengths": "Vous valorisez et préservez les traditions culturelles importantes et la sagesse ancestrale.",
+      "dangers": "Un attachement excessif au patrimoine peut parfois résister aux changements nécessaires.",
+      "reflectionQuestions": [
+        "Quels aspects de votre patrimoine culturel vous tiennent le plus à cœur ?",
+        "Comment transmettez-vous les valeurs culturelles importantes aux autres ?"
+      ]
     },
     "respectForElders": {
-      "label": "Respect des aînés"
+      "label": "Respect des aînés",
+      "description": "Honorer la sagesse, l'expérience et les contributions des personnes âgées.",
+      "insight": "Le respect des aînés reconnaît la valeur de l'expérience vécue et de la perspective. Les leaders qui respectent les aînés créent des environnements intergénérationnels où la sagesse se transmet naturellement, enrichissant la prise de décision par la profondeur historique et la perspective.",
+      "strengths": "Vous valorisez la sagesse et l'expérience que les aînés apportent à la communauté.",
+      "dangers": "Le respect peut parfois empêcher la remise en question nécessaire d'idées dépassées.",
+      "reflectionQuestions": [
+        "Quelle sagesse avez-vous apprise des aînés dans votre vie ?",
+        "Comment équilibrez-vous respect pour la tradition et innovation nécessaire ?"
+      ]
     },
     "enjoyment": {
-      "label": "Plaisir"
+      "label": "Plaisir",
+      "description": "Trouver joie et satisfaction dans les expériences et activités de la vie.",
+      "insight": "Le plaisir authentique nourrit l'esprit et maintient la motivation à long terme. Les leaders qui comprennent le plaisir créent des environnements où la joie et l'accomplissement se renforcent mutuellement, reconnaissant que le bien-être et la performance sont intrinsèquement liés.",
+      "strengths": "Vous savez apprécier la beauté et la joie dans les expériences quotidiennes.",
+      "dangers": "La recherche constante du plaisir peut parfois éviter les défis nécessaires à la croissance.",
+      "reflectionQuestions": [
+        "Quelles activités vous apportent le plus de joie authentique ?",
+        "Comment intégrez-vous plaisir et responsabilité dans votre vie ?"
+      ]
     },
     "gratification": {
-      "label": "Gratification"
+      "label": "Gratification",
+      "description": "Rechercher satisfaction et récompense immédiate pour ses efforts et désirs.",
+      "insight": "La gratification équilibrée motive l'action et maintient l'engagement. Les leaders conscients de la gratification comprennent l'importance de célébrer les progrès tout en gardant perspective sur les objectifs à long terme, utilisant les récompenses pour soutenir la persévérance.",
+      "strengths": "Vous savez reconnaître et célébrer vos accomplissements et progrès.",
+      "dangers": "La recherche de gratification immédiate peut parfois compromettre les objectifs à long terme.",
+      "reflectionQuestions": [
+        "Quels types de gratification vous motivent le plus durablement ?",
+        "Comment équilibrez-vous satisfaction immédiate et objectifs à long terme ?"
+      ]
     },
     "success": {
-      "label": "Succès"
+      "label": "Succès",
+      "description": "Atteindre des objectifs significatifs et réaliser ses aspirations.",
+      "insight": "Le succès authentique aligne accomplissements externes avec épanouissement personnel et impact positif. Les leaders qui redéfinissent le succès créent des environnements où la réussite collective et individuelle se renforcent mutuellement, mesurant le progrès au-delà des seules métriques traditionnelles.",
+      "strengths": "Vous êtes motivé à atteindre vos objectifs et créer des résultats tangibles.",
+      "dangers": "Poursuivre le succès peut parfois compromettre des valeurs importantes ou le bien-être.",
+      "reflectionQuestions": [
+        "Comment définissez-vous le succès dans votre vie actuelle ?",
+        "Quels types de succès vous donnent le plus de satisfaction durable ?"
+      ]
     },
     "recognition": {
-      "label": "Reconnaissance"
+      "label": "Reconnaissance",
+      "description": "Recevoir appréciation et validation pour ses contributions et accomplissements.",
+      "insight": "La reconnaissance valide l'effort et l'impact, motivant l'excellence continue. Les leaders qui comprennent la reconnaissance créent des cultures qui célèbrent les contributions significatives, comprenant que l'appréciation authentique inspire performance et engagement à long terme.",
+      "strengths": "Vous aspirez à ce que vos contributions soient vues et valorisées par les autres.",
+      "dangers": "Dépendre uniquement de la reconnaissance externe peut compromettre la motivation intrinsèque.",
+      "reflectionQuestions": [
+        "Quel type de reconnaissance vous motive le plus ?",
+        "Comment trouvez-vous satisfaction dans votre travail indépendamment de la reconnaissance ?"
+      ]
     },
     "leadership": {
-      "label": "Leadership"
+      "label": "Leadership",
+      "description": "Guider, inspirer et influencer positivement les autres vers des objectifs communs.",
+      "insight": "Le leadership authentique émerge du service aux autres et de la vision partagée. Les vrais leaders comprennent que leur rôle est de développer d'autres leaders, créant des impacts qui perdurent bien au-delà de leur propre présence et influence directe.",
+      "strengths": "Vous inspirez et guidez les autres vers la réalisation d'objectifs communs.",
+      "dangers": "Le leadership peut parfois isoler ou créer une pression excessive de performance.",
+      "reflectionQuestions": [
+        "Quel type de leader voulez-vous être reconnu comme étant ?",
+        "Comment votre leadership développe-t-il les capacités des autres ?"
+      ]
     },
     "safety": {
-      "label": "Sécurité"
+      "label": "Sécurité",
+      "description": "Protéger soi-même et les autres des dangers et risques.",
+      "insight": "La sécurité crée l'environnement dans lequel l'innovation et la croissance peuvent prospérer. Les leaders axés sur la sécurité équilibrent protection et progrès, comprenant que la sécurité physique et psychologique est essentielle pour que les équipes performent à leur meilleur niveau.",
+      "strengths": "Vous priorisez la protection et le bien-être de vous-même et des autres.",
+      "dangers": "Une préoccupation excessive pour la sécurité peut parfois empêcher la prise de risques nécessaires.",
+      "reflectionQuestions": [
+        "Comment créez-vous sécurité pour vous-même et les autres ?",
+        "Où l'équilibre entre sécurité et risque est-il le plus important pour vous ?"
+      ]
     },
     "protection": {
-      "label": "Protection"
+      "label": "Protection",
+      "description": "Défendre et préserver ce qui est important contre les menaces et dangers.",
+      "insight": "La protection crée l'espace sûr nécessaire pour que la croissance et l'innovation prospèrent. Les leaders protecteurs équilibrent vigilance et confiance, créant des environnements où les autres se sentent assez en sécurité pour prendre des risques créatifs et exprimer leur authenticité.",
+      "strengths": "Vous défendez activement ce qui compte le plus pour vous et les autres.",
+      "dangers": "La protection excessive peut parfois limiter la croissance et l'indépendance nécessaires.",
+      "reflectionQuestions": [
+        "Qu'est-ce qui vous pousse le plus à protéger les autres ?",
+        "Comment équilibrez-vous protection et encouragement à l'autonomie ?"
+      ]
     },
     "predictability": {
-      "label": "Prévisibilité"
+      "label": "Prévisibilité",
+      "description": "Valoriser la stabilité, la routine et des résultats cohérents dans la vie.",
+      "insight": "La prévisibilité crée la structure dans laquelle la créativité et l'innovation peuvent s'épanouir en toute sécurité. Les leaders qui comprennent la prévisibilité créent des systèmes fiables qui libèrent l'énergie mentale pour se concentrer sur ce qui compte vraiment.",
+      "strengths": "Vous créez stabilité et cohérence qui rassurent et permettent la planification.",
+      "dangers": "Trop de prévisibilité peut parfois empêcher l'adaptation nécessaire au changement.",
+      "reflectionQuestions": [
+        "Dans quels domaines la prévisibilité vous aide-t-elle le plus à performer ?",
+        "Où pourriez-vous bénéficier de plus de flexibilité et d'adaptation ?"
+      ]
     },
     "resilience": {
-      "label": "Résilience"
+      "label": "Résilience",
+      "description": "Rebondir face aux défis et s'adapter aux changements avec force.",
+      "insight": "La résilience transforme les obstacles en opportunités de croissance, développant la capacité de prospérer dans l'adversité. Les leaders résilients modèlent la persévérance et l'adaptabilité, inspirant leurs équipes à voir les défis comme des occasions d'innovation et de développement personnel.",
+      "strengths": "Vous rebondissez des difficultés et vous adaptez efficacement au changement.",
+      "dangers": "La résilience peut parfois masquer le besoin de soutien ou de repos nécessaire.",
+      "reflectionQuestions": [
+        "Quelles expériences ont le plus renforcé votre résilience ?",
+        "Comment équilibez-vous persévérance et prise de soin de vous-même ?"
+      ]
     },
     "selfDiscipline": {
-      "label": "Autodiscipline"
+      "label": "Autodiscipline",
+      "description": "Maintenir contrôle de soi et persévérer malgré les défis et tentations.",
+      "insight": "L'autodiscipline transforme les intentions en résultats durables. Les leaders disciplinés modèlent la constance et la fiabilité, inspirant les autres par leur engagement aux valeurs et objectifs même face aux difficultés et distractions.",
+      "strengths": "Vous maintenez focus et engagement envers vos objectifs malgré les obstacles.",
+      "dangers": "Une autodiscipline excessive peut parfois mener à rigidité ou épuisement.",
+      "reflectionQuestions": [
+        "Dans quels domaines votre autodiscipline vous sert-elle le mieux ?",
+        "Comment équilibez-vous discipline personnelle et flexibilité adaptative ?"
+      ]
     },
     "devotion": {
-      "label": "Dévotion"
+      "label": "Dévotion",
+      "description": "S'engager profondément envers des personnes, causes ou principes importants.",
+      "insight": "La dévotion authentique crée un sens profond de but et d'appartenance. Les leaders dévoués inspirent par leur engagement profond, montrant comment la loyauté et l'engagement peuvent transformer à la fois l'individu et ceux qu'il sert.",
+      "strengths": "Vous vous engagez profondément envers ce qui compte vraiment pour vous.",
+      "dangers": "La dévotion excessive peut parfois aveugler aux défauts ou empêcher l'évolution nécessaire.",
+      "reflectionQuestions": [
+        "À quoi êtes-vous le plus profondément dévoué dans votre vie ?",
+        "Comment votre dévotion influence-t-elle vos décisions importantes ?"
+      ]
     },
     "respectForCustoms": {
-      "label": "Respect des coutumes"
+      "label": "Respect des coutumes",
+      "description": "Honorer et suivre les traditions et pratiques établies de sa communauté.",
+      "insight": "Le respect des coutumes maintient la continuité culturelle et renforce les liens communautaires. Les leaders conscients des coutumes savent quand les traditions servent le bien commun et quand l'adaptation respectueuse est nécessaire pour l'évolution positive.",
+      "strengths": "Vous honorez les traditions importantes et maintenez la continuité culturelle.",
+      "dangers": "Un respect rigide des coutumes peut parfois empêcher l'innovation bénéfique.",
+      "reflectionQuestions": [
+        "Quelles coutumes vous semblent les plus importantes à préserver ?",
+        "Comment équilibez-vous respect des traditions et ouverture au changement ?"
+      ]
     },
     "faith": {
-      "label": "Foi"
+      "label": "Foi",
+      "description": "Maintenir confiance et croyance en quelque chose de plus grand que soi.",
+      "insight": "La foi fournit ancrage et espoir face à l'incertitude, offrant perspective et résilience. Les leaders guidés par la foi inspirent par leur conviction profonde et leur capacité à voir au-delà des défis immédiats vers un but plus grand.",
+      "strengths": "Vous puisez force et guidance dans vos convictions profondes.",
+      "dangers": "La foi aveugle peut parfois empêcher la pensée critique nécessaire.",
+      "reflectionQuestions": [
+        "En quoi votre foi vous guide-t-elle dans les moments difficiles ?",
+        "Comment votre foi influence-t-elle vos relations avec les autres ?"
+      ]
     },
     "ritual": {
-      "label": "Rituel"
+      "label": "Rituel",
+      "description": "Participer à des cérémonies et pratiques traditionnelles significatives.",
+      "insight": "Les rituels créent un sens sacré et une connexion communautaire qui transcendent l'ordinaire. Les leaders qui comprennent les rituels savent comment créer des moments significatifs qui renforcent les valeurs partagées et marquent les transitions importantes.",
+      "strengths": "Vous trouvez sens et connexion à travers les pratiques rituelles significatives.",
+      "dangers": "L'attachement aux rituels peut parfois empêcher l'adaptation aux nouveaux contextes.",
+      "reflectionQuestions": [
+        "Quels rituels vous apportent le plus de sens et de connexion ?",
+        "Comment vos pratiques rituelles renforcent-elles vos valeurs importantes ?"
+      ]
     },
     "authenticity": {
-      "label": "Authenticité"
+      "label": "Authenticité",
+      "description": "Être fidèle à soi-même et agir en cohérence avec ses valeurs profondes.",
+      "insight": "L'authenticité crée une cohérence intérieure qui inspire confiance et respect. Les leaders authentiques donnent permission aux autres d'être également vrais, créant des environnements où l'innovation et la collaboration prospèrent grâce à la sécurité psychologique et la confiance mutuelle.",
+      "strengths": "Vous restez fidèle à vos valeurs et agissez avec intégrité personnelle.",
+      "dangers": "L'authenticité peut parfois créer des conflits avec les attentes ou normes sociales.",
+      "reflectionQuestions": [
+        "Dans quels domaines vous sentez-vous le plus authentique ?",
+        "Où pourriez-vous avoir besoin de plus d'courage pour être votre vrai moi ?"
+      ]
     },
     "exploration": {
-      "label": "Exploration"
+      "label": "Exploration",
+      "description": "Rechercher activement nouvelles expériences, lieux et connaissances.",
+      "insight": "L'exploration nourrit la curiosité et élargit les perspectives, révélant des possibilités inattendues. Les leaders explorateurs encouragent l'apprentissage continu et la découverte, créant des cultures qui embrassent l'inconnu et trouvent opportunités dans la nouveauté.",
+      "strengths": "Vous cherchez activement nouvelles expériences et élargissez continuellement vos horizons.",
+      "dangers": "L'exploration constante peut parfois empêcher l'approfondissement ou la spécialisation.",
+      "reflectionQuestions": [
+        "Quelles nouvelles frontières vous attirent le plus en ce moment ?",
+        "Comment équilibez-vous exploration et approfondissement de vos connaissances ?"
+      ]
     },
     "belonging": {
-      "label": "Appartenance"
+      "label": "Appartenance",
+      "description": "Se sentir accepté, valorisé et connecté au sein d'un groupe ou communauté.",
+      "insight": "L'appartenance satisfait le besoin humain fondamental de connexion et d'acceptation. Les leaders qui cultivent l'appartenance créent des environnements inclusifs où chacun se sent valorisé pour ses contributions uniques, renforçant l'engagement et la performance collective.",
+      "strengths": "Vous cherchez et créez des connexions authentiques et un sentiment d'inclusion.",
+      "dangers": "Le besoin d'appartenance peut parfois compromettre l'authenticité personnelle.",
+      "reflectionQuestions": [
+        "Où ressentez-vous le plus fort sentiment d'appartenance dans votre vie ?",
+        "Comment créez-vous appartenance pour les autres autour de vous ?"
+      ]
     }
   },
   "valueCard": {

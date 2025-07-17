@@ -15,193 +15,697 @@
   },
   "values": {
     "curiosity": {
-      "label": "Curiosidad"
+      "label": "Curiosidad",
+      "description": "Una motivación para buscar nuevas ideas, conocimiento y experiencias.",
+      "insight": "La curiosidad te alienta a aventurarte más allá de lo familiar, comprometiéndote con preguntas que profundizan tu comprensión de ti mismo y del mundo. Como líder, fomentar la curiosidad no solo alimenta el crecimiento personal y profesional continuo, sino que también cultiva un entorno donde la innovación prospera, inspirando a tu equipo a explorar nuevos horizontes de manera reflexiva e intencional.",
+      "strengths": "Eres de mente abierta y estás motivado a explorar nuevas ideas y perspectivas.",
+      "dangers": "La curiosidad puede llevar a la distracción o comprensión superficial si no se enfoca.",
+      "reflectionQuestions": [
+        "¿Hacia dónde te está llevando tu curiosidad en este momento?",
+        "¿Cómo eliges qué preguntas valen la pena perseguir?"
+      ]
     },
     "creativity": {
-      "label": "Creatividad"
+      "label": "Creatividad",
+      "description": "Usar pensamiento original e imaginación para dar forma a ideas y soluciones.",
+      "insight": "La creatividad te permite transformar la imaginación en acción significativa, desafiando los límites convencionales con pensamiento original. El liderazgo arraigado en la creatividad equilibra las ideas visionarias con la ejecución práctica, fomentando una cultura que abraza la experimentación, aprende del fracaso y evoluciona continuamente a través de la resolución inspirada de problemas.",
+      "strengths": "Aportas originalidad e innovación a tu trabajo y vida.",
+      "dangers": "La creatividad puede causar frustración cuando las ideas no se realizan o aceptan.",
+      "reflectionQuestions": [
+        "¿Cómo expresas tu creatividad hoy en día?",
+        "¿Qué bloqueos están impidiendo tu potencial creativo?"
+      ]
     },
     "freedom": {
-      "label": "Libertad"
+      "label": "Libertad",
+      "description": "Tener autonomía para hacer tus propias elecciones y actuar independientemente.",
+      "insight": "La libertad no se trata solo de elección—se trata de poseer la dirección de tu vida. Para los líderes, esto significa dar forma a entornos donde otros también pueden prosperar independientemente.",
+      "strengths": "Valoras la autonomía y hacer tus propias elecciones.",
+      "dangers": "La libertad sin límites puede llevar a la impulsividad o al aislamiento.",
+      "reflectionQuestions": [
+        "¿En qué áreas te sientes más libre?",
+        "¿Cómo equilibras libertad y responsabilidad?"
+      ]
     },
     "independence": {
-      "label": "Independencia"
+      "label": "Independencia",
+      "description": "Ser autosuficiente y confiado en tus habilidades para tener éxito por ti mismo.",
+      "insight": "La independencia es la confianza de navegar la vida en tus propios términos, mientras permaneces abierto a la colaboración y apoyo cuando tiene sentido. Para los líderes, es modelar la autodirección mientras crean espacios donde otros pueden desarrollar su propia fuerza y capacidad.",
+      "strengths": "Eres autosuficiente y confiado en tus habilidades.",
+      "dangers": "La independencia excesiva puede crear barreras a la colaboración y apoyo.",
+      "reflectionQuestions": [
+        "¿Dónde te sirve mejor tu independencia?",
+        "¿Cuándo pedir ayuda fortalecería tu autonomía?"
+      ]
     },
     "selfExpression": {
-      "label": "Autoexpresión"
+      "label": "Autoexpresión",
+      "description": "Comunicar auténticamente quién eres a través de tus palabras, acciones y creaciones.",
+      "insight": "La autoexpresión auténtica invita a otros a hacer lo mismo, creando conexiones más profundas y una cultura de confianza. Como líder, tu disposición a ser vulnerable y auténtico da permiso a otros para traer todo su ser al trabajo y la vida.",
+      "strengths": "Comunicas auténticamente quién eres.",
+      "dangers": "La autoexpresión a veces puede entrar en conflicto con expectativas sociales o normas grupales.",
+      "reflectionQuestions": [
+        "¿Cómo te expresas más auténticamente?",
+        "¿Cuándo retienes tu verdadera voz?"
+      ]
     },
     "excitement": {
-      "label": "Emoción"
+      "label": "Emoción",
+      "description": "Buscar energía y emoción a través de experiencias estimulantes.",
+      "insight": "La emoción es la energía emocional que señala pasión y compromiso, impulsándote hacia desafíos significativos y nuevas experiencias. Los líderes efectivos aprovechan esta energía de manera reflexiva, equilibrando el entusiasmo con prácticas sostenibles para mantener la motivación e inspirar a otros sin riesgo de agotamiento o distracción.",
+      "strengths": "Buscas y creas energía a través de experiencias nuevas y emocionantes.",
+      "dangers": "Perseguir la emoción puede llevar al agotamiento o imprudencia.",
+      "reflectionQuestions": [
+        "¿Qué experiencias recientes te han emocionado?",
+        "¿Cómo manejas tu energía para evitar el agotamiento?"
+      ]
     },
     "adventure": {
-      "label": "Aventura"
+      "label": "Aventura",
+      "description": "Abrazar nuevos desafíos y aventurarse en lo desconocido.",
+      "insight": "La aventura te invita a abrazar la incertidumbre y aventurarte audazmente en lo desconocido, fomentando el crecimiento a través de la toma de riesgos y la resistencia. El liderazgo que abraza la aventura modela el coraje, alentando a otros a salir de zonas de confort con visión clara y juicio calculado para navegar desafíos con confianza.",
+      "strengths": "Persigues desafíos y nuevos horizontes con valentía.",
+      "dangers": "Buscar aventura puede causar toma de riesgos sin suficiente precaución.",
+      "reflectionQuestions": [
+        "¿Qué nuevos desafíos estás listo para enfrentar?",
+        "¿Cómo evalúas y manejas los riesgos en tus aventuras?"
+      ]
     },
     "novelty": {
-      "label": "Novedad"
+      "label": "Novedad",
+      "description": "Apreciar la frescura, diversidad y experiencias inesperadas.",
+      "insight": "La novedad despierta perspectivas frescas y revitaliza patrones obsoletos, pero requiere discernimiento para mantener el enfoque y la profundidad. Como líder, saber cuándo introducir nuevas ideas y cuándo consolidar el progreso es crucial para mantener el impulso y asegurar un impacto significativo y duradero.",
+      "strengths": "Prosperas con nuevas ideas y diversidad en las experiencias.",
+      "dangers": "La novedad constante puede perturbar el enfoque y la consistencia.",
+      "reflectionQuestions": [
+        "¿Cómo incorporas la novedad sin perder el enfoque?",
+        "¿Qué rutinas te ayudan a mantenerte centrado en medio del cambio?"
+      ]
     },
     "energy": {
-      "label": "Energía"
+      "label": "Energía",
+      "description": "Vivir con entusiasmo, audacia y una fuerte motivación personal.",
+      "insight": "La energía refleja tu vitalidad, influencia y capacidad de liderar con presencia. Los líderes sabios manejan su energía deliberadamente—sabiendo cuándo amplificar el impulso y cuándo retroceder para restaurarse—modelando la resistencia y estabilidad que permiten a los equipos rendir sostenidamente a lo largo del tiempo.",
+      "strengths": "Aportas entusiasmo y audacia a tus emprendimientos.",
+      "dangers": "La energía alta sin descanso puede causar agotamiento o abrumar a otros.",
+      "reflectionQuestions": [
+        "¿Cómo canalizas tu energía de manera productiva?",
+        "¿Qué señales te dicen que debes ralentizar y recargarte?"
+      ]
     },
     "challenge": {
-      "label": "Desafío"
+      "label": "Desafío",
+      "description": "Empujarte a través de objetivos exigentes y crecimiento personal.",
+      "insight": "El desafío sirve como catalizador para el crecimiento personal y colectivo al empujar límites y fomentar la perseverancia. El liderazgo que abraza el desafío fomenta una mentalidad de crecimiento, equilibrando la ambición con la compasión para mantener la motivación mientras reconoce los límites para evitar el abrumamiento y agotamiento.",
+      "strengths": "Buscas crecimiento a través de objetivos exigentes y competencia.",
+      "dangers": "Buscar constantemente desafíos puede llevar al agotamiento o insatisfacción.",
+      "reflectionQuestions": [
+        "¿Qué desafíos te motivan más en este momento?",
+        "¿Cómo equilibras ambición y bienestar?"
+      ]
     },
     "achievement": {
-      "label": "Logro"
+      "label": "Logro",
+      "description": "Esforzarse por alcanzar objetivos y demostrar el éxito personal.",
+      "insight": "El logro valida la competencia y el progreso, reforzando la autoeficacia y el propósito. Los líderes que celebran el logro de manera reflexiva inspiran la excelencia continua mientras mantienen el equilibrio, asegurando que el éxito alimente la moral colectiva y el florecimiento a largo plazo en lugar de una fijación estrecha en las metas.",
+      "strengths": "Estás motivado a alcanzar objetivos y demostrar tus capacidades.",
+      "dangers": "Un enfoque excesivo en el logro puede causar estrés o descuido de las relaciones.",
+      "reflectionQuestions": [
+        "¿De qué logro estás más orgulloso?",
+        "¿Cómo mides el éxito en tu vida?"
+      ]
     },
     "ambition": {
-      "label": "Ambición"
+      "label": "Ambición",
+      "description": "Perseguir el crecimiento, impacto y avance con determinación.",
+      "insight": "La ambición es la fuerza motriz que impulsa el avance intencional y el establecimiento de objetivos visionarios. La ambición equilibrada te conecta con tus valores fundamentales y te motiva a elevarte a ti mismo y a aquellos que lideras, nutriendo una visión compartida mientras previene las trampas de la competitividad desenfrenada o el agotamiento.",
+      "strengths": "Estableces objetivos altos y trabajas duro para alcanzarlos.",
+      "dangers": "La ambición sin equilibrio puede llevar al agotamiento o sobrecompetitividad.",
+      "reflectionQuestions": [
+        "¿Hacia dónde te está llevando tu ambición en este momento?",
+        "¿Cómo te mantienes centrado mientras persigues tus objetivos?"
+      ]
     },
     "influence": {
-      "label": "Influencia"
+      "label": "Influencia",
+      "description": "Dar forma a resultados, decisiones o personas a través de tu presencia y voz.",
+      "insight": "La influencia es el poder de dar forma a los resultados a través de la presencia, voz e integridad. El liderazgo efectivo canaliza la influencia para inspirar, empoderar y cultivar la propiedad compartida, fomentando la colaboración y confianza en lugar del control o coerción, construyendo así un impacto positivo y duradero.",
+      "strengths": "Creas impacto e inspiras a otros a seguir tu liderazgo.",
+      "dangers": "La influencia usada sin cuidado puede manipular o dominar a otros.",
+      "reflectionQuestions": [
+        "¿A quién influyes más en tu vida?",
+        "¿Qué tipo de impacto quieres dejar atrás?"
+      ]
     },
     "status": {
-      "label": "Estatus"
+      "label": "Estatus",
+      "description": "Lograr reconocimiento social y posición respetada.",
+      "insight": "El estatus puede motivar la excelencia y proporcionar influencia para el cambio positivo. Los líderes conscientes del estatus equilibran la ambición personal con el impacto colectivo, usando su posición para elevar a otros en lugar de solo para el reconocimiento personal.",
+      "strengths": "Aspiras a la excelencia y al reconocimiento de tus contribuciones.",
+      "dangers": "Perseguir el estatus puede crear competencia no saludable o comprometer la autenticidad.",
+      "reflectionQuestions": [
+        "¿Cómo influye tu deseo de estatus en tus decisiones?",
+        "¿Dónde puedes usar tu posición para ayudar a otros?"
+      ]
     },
     "control": {
-      "label": "Control"
+      "label": "Control",
+      "description": "Tener el poder de dirigir eventos y resultados.",
+      "insight": "El control ofrece seguridad y eficiencia, permitiendo dar forma a los resultados y mantener la estabilidad. Los líderes efectivos equilibran el control con la delegación, entendiendo cuándo liderar firmemente y cuándo permitir la autonomía para fomentar el crecimiento e innovación.",
+      "strengths": "Sobresales dirigiendo resultados y manteniendo la estabilidad.",
+      "dangers": "El control excesivo puede sofocar la creatividad y crear resistencia en otros.",
+      "reflectionQuestions": [
+        "¿Dónde te sirve mejor tu necesidad de control?",
+        "¿Cuándo ceder el control podría llevar a mejores resultados?"
+      ]
     },
     "pleasure": {
-      "label": "Placer"
+      "label": "Placer",
+      "description": "Buscar felicidad, satisfacción y experiencias agradables.",
+      "insight": "El placer nutre la alegría y puede energizar otras actividades importantes. Los líderes equilibrados entienden que cultivar la alegría y satisfacción mejora la creatividad y el bienestar, creando un ambiente más positivo y productivo para todos.",
+      "strengths": "Valoras la alegría y buscas activamente experiencias agradables.",
+      "dangers": "Buscar solo el placer a veces puede entrar en conflicto con objetivos a largo plazo.",
+      "reflectionQuestions": [
+        "¿Qué actividades te traen más alegría auténtica?",
+        "¿Cómo equilibras placer y responsabilidades?"
+      ]
     },
     "stability": {
-      "label": "Estabilidad"
+      "label": "Estabilidad",
+      "description": "Mantener consistencia, predictibilidad y equilibrio en la vida.",
+      "insight": "La estabilidad proporciona la base desde la cual el crecimiento e innovación pueden florecer. Los líderes que valoran la estabilidad crean ambientes confiables donde los equipos pueden tomar riesgos calculados, sabiendo que hay una base sólida a la cual regresar.",
+      "strengths": "Creas consistencia y predictibilidad para ti mismo y otros.",
+      "dangers": "La estabilidad excesiva puede resistir el cambio necesario o la innovación.",
+      "reflectionQuestions": [
+        "¿Qué áreas de tu vida más se benefician de la estabilidad?",
+        "¿Dónde podrías necesitar abrazar más cambio?"
+      ]
     },
     "order": {
-      "label": "Orden"
+      "label": "Orden",
+      "description": "Crear estructura, organización y sistemas para eficiencia y claridad.",
+      "insight": "El orden aporta claridad y eficiencia, creando fundaciones estables para que equipos y proyectos prosperen. Los líderes que valoran el orden equilibran estructura con flexibilidad, entendiendo que los sistemas bien diseñados liberan la creatividad en lugar de obstaculizarla.",
+      "strengths": "Sobresales creando sistemas y estructura que permiten a otros tener éxito.",
+      "dangers": "El orden excesivo puede sofocar la flexibilidad y adaptación a cambios inesperados.",
+      "reflectionQuestions": [
+        "¿Qué sistemas o estructuras más te ayudan a tener éxito?",
+        "¿Dónde podrías necesitar más flexibilidad en tu enfoque?"
+      ]
     },
     "loyalty": {
-      "label": "Lealtad"
+      "label": "Lealtad",
+      "description": "Mantener fidelidad y compromiso hacia personas, grupos o causas.",
+      "insight": "La lealtad construye confianza y estabilidad relacional, creando vínculos duraderos basados en el compromiso mutuo. Los líderes leales inspiran devoción al demostrar consistencia y confiabilidad, mientras equilibran la lealtad con discernimiento para asegurar que el compromiso sirva a causas y relaciones saludables.",
+      "strengths": "Construyes confianza y relaciones duraderas a través de tu fidelidad.",
+      "dangers": "La lealtad ciega puede impedir ver problemas o hacer cambios necesarios.",
+      "reflectionQuestions": [
+        "¿A quién o qué eres más leal en tu vida?",
+        "¿Cómo equilibras lealtad con pensamiento crítico?"
+      ]
     },
     "responsibility": {
-      "label": "Responsabilidad"
+      "label": "Responsabilidad",
+      "description": "Asumir la carga de tus deberes, acciones y su impacto en otros.",
+      "insight": "La responsabilidad crea confianza y fiabilidad, demostrando que se puede contar contigo para cumplir tus compromisos. Los líderes responsables modelan integridad y rendición de cuentas, creando una cultura donde todos asumen sus roles y contribuyen al éxito colectivo.",
+      "strengths": "Eres confiable y cumples tus compromisos hacia otros.",
+      "dangers": "La responsabilidad excesiva puede llevar al agotamiento o dificultad para delegar.",
+      "reflectionQuestions": [
+        "¿En qué áreas tu sentido de responsabilidad te sirve mejor?",
+        "¿Dónde podrías necesitar compartir más responsabilidades con otros?"
+      ]
     },
     "humility": {
-      "label": "Humildad"
+      "label": "Humildad",
+      "description": "Reconocer tus limitaciones y valorar las contribuciones de otros.",
+      "insight": "La humildad fomenta el aprendizaje continuo y relaciones auténticas al reconocer que todos tienen algo que aportar. Los líderes humildes crean un espacio psicológicamente seguro donde las ideas pueden surgir libremente, entendiendo que reconocer las limitaciones fortalece en lugar de disminuir la autoridad.",
+      "strengths": "Te mantienes abierto al aprendizaje y valoras las perspectivas de otros.",
+      "dangers": "La humildad excesiva a veces puede impedir reclamar tus logros o experiencia.",
+      "reflectionQuestions": [
+        "¿Cómo mejora la humildad tus relaciones y aprendizaje?",
+        "¿Dónde podrías necesitar más confianza en tus capacidades?"
+      ]
     },
     "tradition": {
-      "label": "Tradición"
+      "label": "Tradición",
+      "description": "Respetar y preservar costumbres y creencias culturales.",
+      "insight": "La tradición te conecta con un rico patrimonio y proporciona estabilidad y continuidad. Como líder, honrar la tradición puede crear un sentido de pertenencia y orgullo, mientras equilibras la innovación con el respeto por lo que ha dado forma a tu organización o comunidad.",
+      "strengths": "Aportas sabiduría histórica y estabilidad cultural.",
+      "dangers": "El exceso de tradición puede sofocar la innovación o adaptación al cambio.",
+      "reflectionQuestions": [
+        "¿Qué tradiciones te aportan más significado?",
+        "¿Cómo equilibras respeto por la tradición y necesidad de cambio?"
+      ]
     },
     "empathy": {
-      "label": "Empatía"
+      "label": "Empatía",
+      "description": "Entender y compartir los sentimientos de otros con compasión.",
+      "insight": "La empatía crea conexiones auténticas y fomenta la comprensión mutua. En el liderazgo, la empatía te permite responder a las necesidades profundas de tu equipo, creando un ambiente donde las personas se sienten vistas, escuchadas y valoradas, lo que naturalmente mejora la colaboración y lealtad.",
+      "strengths": "Sobresales entendiendo y conectando con otros.",
+      "dangers": "La empatía puede llevar al agotamiento emocional si no se equilibra con límites.",
+      "reflectionQuestions": [
+        "¿Cómo influye tu empatía en tus relaciones?",
+        "¿Cuándo necesitas proteger tu energía emocional?"
+      ]
     },
     "kindness": {
-      "label": "Bondad"
+      "label": "Bondad",
+      "description": "Actuar con gentileza, consideración y generosidad hacia otros.",
+      "insight": "La bondad crea un círculo virtuoso de positividad y confianza. Los líderes bondadosos inspiran lealtad no por miedo sino por cuidado auténtico, construyendo equipos que se apoyan mutuamente y sobresalen juntos en un ambiente de seguridad psicológica.",
+      "strengths": "Creas calidez y confianza en tus relaciones.",
+      "dangers": "La bondad puede ser explotada si no va acompañada de límites.",
+      "reflectionQuestions": [
+        "¿Cómo afecta tu bondad a quienes te rodean?",
+        "¿Dónde podrías necesitar establecer límites más claros?"
+      ]
     },
     "helpfulness": {
-      "label": "Ayuda"
+      "label": "Ayuda",
+      "description": "Ofrecer ayuda, apoyo y asistencia a otros en necesidad.",
+      "insight": "La ayuda crea un impacto directo y significativo en las vidas de otros, construyendo una red de confianza y apoyo mutuo. Los líderes serviciales entienden que su éxito está interconectado con el de otros, fomentando ambientes donde la asistencia y colaboración florecen naturalmente.",
+      "strengths": "Sobresales identificando y respondiendo a las necesidades de otros.",
+      "dangers": "Ser demasiado servicial puede llevar al agotamiento o descuido de tus propias necesidades.",
+      "reflectionQuestions": [
+        "¿Cómo afecta tu ayuda a quienes apoyas?",
+        "¿Cuándo necesitas priorizar tu propio bienestar?"
+      ]
     },
     "equality": {
-      "label": "Igualdad"
+      "label": "Igualdad",
+      "description": "Asegurar trato justo y oportunidades para todos.",
+      "insight": "La igualdad refleja un compromiso profundo con la justicia y dignidad humana. Los líderes que valoran la igualdad crean ambientes inclusivos donde todos pueden contribuir y prosperar, entendiendo que la diversidad de perspectivas fortalece la toma de decisiones y la innovación colectiva.",
+      "strengths": "Defiendes la justicia y creas oportunidades equitativas para todos.",
+      "dangers": "Perseguir la igualdad puede ser frustrante frente a sistemas resistentes al cambio.",
+      "reflectionQuestions": [
+        "¿Dónde ves la mayor necesidad de igualdad en tu entorno?",
+        "¿Cómo equilibras idealismo y acción práctica?"
+      ]
     },
     "sustainability": {
-      "label": "Sostenibilidad"
+      "label": "Sostenibilidad",
+      "description": "Proteger el medio ambiente y asegurar recursos para futuras generaciones.",
+      "insight": "La sostenibilidad representa responsabilidad hacia el futuro y comprensión de nuestra interconexión con el mundo natural. Los líderes enfocados en sostenibilidad toman decisiones pensando en impactos a largo plazo, equilibrando necesidades inmediatas con la preservación de recursos para generaciones futuras.",
+      "strengths": "Piensas a largo plazo y consideras el impacto de tus acciones.",
+      "dangers": "Enfocarse en sostenibilidad a veces puede entrar en conflicto con necesidades o presiones inmediatas.",
+      "reflectionQuestions": [
+        "¿Cómo reflejan tus elecciones diarias tus valores ambientales?",
+        "¿Dónde puedes tener más impacto sostenible?"
+      ]
     },
     "openness": {
-      "label": "Apertura"
+      "label": "Apertura",
+      "description": "Ser receptivo a nuevas ideas, experiencias y perspectivas diferentes.",
+      "insight": "La apertura cultiva la curiosidad y crecimiento, permitiéndote aprender continuamente y adaptarte. Los líderes abiertos crean espacios psicológicamente seguros donde ideas diversas pueden emerger, fomentando la innovación y comprensión mutua a través de las diferencias.",
+      "strengths": "Abrazas nuevas ideas y perspectivas con curiosidad.",
+      "dangers": "Ser demasiado abierto a veces puede llevar a la indecisión o falta de dirección.",
+      "reflectionQuestions": [
+        "¿Qué nuevas perspectivas han cambiado recientemente tu punto de vista?",
+        "¿Dónde tu apertura ha llevado a un crecimiento significativo?"
+      ]
     },
     "justice": {
-      "label": "Justicia"
+      "label": "Justicia",
+      "description": "Defender la equidad, derechos y trato moral de todos.",
+      "insight": "La justicia es el compromiso de hacer lo correcto, incluso cuando es difícil. Los líderes guiados por la justicia crean sistemas y culturas que protegen derechos, recompensan el mérito y aseguran que las voces sean escuchadas, entendiendo que la equidad fortalece la confianza y cohesión a largo plazo.",
+      "strengths": "Defiendes lo que es correcto y equitativo.",
+      "dangers": "Perseguir la justicia puede ser emocionalmente agotador frente a la injusticia sistémica.",
+      "reflectionQuestions": [
+        "¿Dónde sientes el llamado más fuerte a defender la justicia?",
+        "¿Cómo equilibras idealismo y pragmatismo en tu búsqueda de justicia?"
+      ]
     },
     "compassion": {
-      "label": "Compasión"
+      "label": "Compasión",
+      "description": "Sentir profundamente el sufrimiento de otros y estar motivado a ayudar.",
+      "insight": "La compasión transforma la empatía en acción, creando conexiones profundas e inspirando cambio positivo. Los líderes compasivos reconocen el sufrimiento sin dejarse abrumar, canalizando su cuidado en acciones reflexivas que elevan a otros mientras mantienen su propia resistencia.",
+      "strengths": "Sientes profundamente el sufrimiento de otros y actúas para ayudar.",
+      "dangers": "La compasión sin límites puede llevar al agotamiento o sufrimiento vicario.",
+      "reflectionQuestions": [
+        "¿Cómo te guía tu compasión en tus acciones?",
+        "¿Dónde necesitas más compasión hacia ti mismo?"
+      ]
     },
     "community": {
-      "label": "Comunidad"
+      "label": "Comunidad",
+      "description": "Construir conexiones y pertenencia a algo más grande.",
+      "insight": "La comunidad satisface nuestra necesidad humana fundamental de conexión y propósito compartido. Los líderes enfocados en la comunidad entienden que el éxito colectivo eleva a todos, fomentando ambientes donde las personas se sienten vistas, valoradas e invertidas en resultados mutuos.",
+      "strengths": "Sobresales creando conexiones y fomentando pertenencia.",
+      "dangers": "Priorizar la comunidad a veces puede comprometer la autonomía individual o toma de decisiones.",
+      "reflectionQuestions": [
+        "¿Qué comunidades te dan más energía?",
+        "¿Cómo equilibras necesidades comunitarias y personales?"
+      ]
     },
     "respect": {
-      "label": "Respeto"
+      "label": "Respeto",
+      "description": "Honrar la dignidad, derechos y valor de cada persona.",
+      "insight": "El respeto crea la base de todas las relaciones saludables y colaboración efectiva. Los líderes respetuosos reconocen el valor inherente de cada persona, creando ambientes donde las diferencias son honradas y todos pueden contribuir auténticamente.",
+      "strengths": "Honras la dignidad y valor de cada persona.",
+      "dangers": "Mostrar respeto a veces puede ser desafiado cuando otros no lo devuelven.",
+      "reflectionQuestions": [
+        "¿Cómo muestras respeto incluso en situaciones difíciles?",
+        "¿Dónde podrías honrar mejor las perspectivas de otros?"
+      ]
     },
     "generosity": {
-      "label": "Generosidad"
+      "label": "Generosidad",
+      "description": "Dar libremente tu tiempo, recursos o atención a otros.",
+      "insight": "La generosidad crea abundancia en circulación, construyendo confianza y fortaleciendo relaciones. Los líderes generosos entienden que dar estratégicamente—ya sea tiempo, recursos u oportunidades—crea un efecto multiplicador que beneficia a todos.",
+      "strengths": "Das libremente y creas abundancia para otros.",
+      "dangers": "La generosidad excesiva puede llevar al agotamiento o ser explotada por otros.",
+      "reflectionQuestions": [
+        "¿Qué forma de generosidad te da más satisfacción?",
+        "¿Cómo mantienes límites saludables en tu generosidad?"
+      ]
     },
     "playfulness": {
-      "label": "Diversión"
+      "label": "Diversión",
+      "description": "Aportar ligereza, humor y alegría a las experiencias diarias.",
+      "insight": "La diversión fomenta la creatividad, reduce el estrés y fortalece conexiones a través de la alegría compartida. Los líderes divertidos saben cuándo introducir ligereza para energizar equipos, difundir tensiones y crear un ambiente donde la innovación y colaboración florecen naturalmente.",
+      "strengths": "Aportas alegría y ligereza a las situaciones, energizando a otros.",
+      "dangers": "La diversión mal ubicada puede parecer inapropiada en contextos serios.",
+      "reflectionQuestions": [
+        "¿Cómo mejora la diversión tus relaciones y trabajo?",
+        "¿Cuándo sabes que es momento de ser más serio?"
+      ]
     },
     "spontaneity": {
-      "label": "Espontaneidad"
+      "label": "Espontaneidad",
+      "description": "Actuar naturalmente y sin planificación excesiva, abrazando el momento presente.",
+      "insight": "La espontaneidad aporta frescura y autenticidad a la vida, permitiendo aprovechar oportunidades inesperadas. Los líderes que abrazan la espontaneidad equilibran planificación estratégica con flexibilidad, sabiendo cuándo ajustar el curso para aprovechar momentos oportunos.",
+      "strengths": "Abrazas oportunidades inesperadas y actúas con autenticidad natural.",
+      "dangers": "La espontaneidad excesiva a veces puede comprometer la planificación o consistencia necesarias.",
+      "reflectionQuestions": [
+        "¿Cuándo te ha llevado la espontaneidad a descubrimientos importantes?",
+        "¿Cómo equilibras espontaneidad y planificación en tu vida?"
+      ]
     },
     "sensuality": {
-      "label": "Sensualidad"
+      "label": "Sensualidad",
+      "description": "Apreciar las experiencias sensoriales y la conexión física con el mundo.",
+      "insight": "La sensualidad enriquece la vida a través de la apreciación consciente de las experiencias sensoriales. Los líderes que abrazan la sensualidad entienden la importancia del bienestar físico y el ambiente en el rendimiento, creando espacios que nutren los sentidos y fomentan la comodidad y creatividad.",
+      "strengths": "Aprecias plenamente las experiencias sensoriales y físicas de la vida.",
+      "dangers": "Enfocarse solo en el placer sensorial a veces puede distraer de objetivos a largo plazo.",
+      "reflectionQuestions": [
+        "¿Cómo enriquecen las experiencias sensoriales tu vida diaria?",
+        "¿Dónde podrías crear más comodidad y belleza en tu entorno?"
+      ]
     },
     "obedience": {
-      "label": "Obediencia"
+      "label": "Obediencia",
+      "description": "Seguir reglas, autoridad y estructuras establecidas con respeto.",
+      "insight": "La obediencia reflexiva reconoce el valor de las estructuras y autoridad legítimas mientras mantiene la integridad personal. Los líderes que entienden la obediencia saben cuándo seguir y cuándo liderar, creando ambientes donde el respeto mutuo y jerarquía clara permiten la eficiencia colectiva.",
+      "strengths": "Respetas la autoridad legítima y contribuyes al orden organizacional.",
+      "dangers": "La obediencia ciega puede impedir el pensamiento crítico o innovación necesaria.",
+      "reflectionQuestions": [
+        "¿En qué contextos te sirve mejor la obediencia?",
+        "¿Cómo equilibras respeto por la autoridad y pensamiento independiente?"
+      ]
     },
     "selfControl": {
-      "label": "Autocontrol"
+      "label": "Autocontrol",
+      "description": "Ejercer disciplina y moderación en acciones y reacciones emocionales.",
+      "insight": "El autocontrol es la base del liderazgo consciente, permitiendo respuestas reflexivas en lugar de reacciones impulsivas. Los líderes con fuerte autocontrol inspiran confianza y estabilidad, modelando cómo navegar desafíos con calma e intención deliberada.",
+      "strengths": "Mantienes disciplina y compostura en situaciones difíciles.",
+      "dangers": "El autocontrol excesivo a veces puede suprimir la expresión emocional natural.",
+      "reflectionQuestions": [
+        "¿En qué situaciones te sirve mejor tu autocontrol?",
+        "¿Dónde podrías necesitar más espontaneidad o expresión emocional?"
+      ]
     },
     "competence": {
-      "label": "Competencia"
+      "label": "Competencia",
+      "description": "Desarrollar y demostrar habilidades y capacidades profesionales.",
+      "insight": "La competencia construye confianza y permite contribuir de manera significativa. Los líderes competentes invierten continuamente en su desarrollo mientras reconocen las áreas de experiencia de otros, creando una cultura de excelencia y aprendizaje mutuo.",
+      "strengths": "Te esfuerzas por dominar tus habilidades y entregar trabajo de calidad.",
+      "dangers": "La búsqueda de competencia a veces puede llevar al perfeccionismo o resistencia al cambio.",
+      "reflectionQuestions": [
+        "¿En qué áreas tu competencia te da más confianza?",
+        "¿Qué nuevas habilidades podrías desarrollar para crecer?"
+      ]
     },
     "fun": {
-      "label": "Diversión"
+      "label": "Diversión",
+      "description": "Buscar y crear momentos de placer, risa y ligereza.",
+      "insight": "La diversión revitaliza el espíritu y fortalece vínculos sociales, creando memorias positivas que apoyan la resistencia. Los líderes que valoran la diversión entienden que la alegría compartida mejora la cohesión del equipo y creatividad, equilibrando seriedad y ligereza para mantener el compromiso y moral.",
+      "strengths": "Creas atmósfera positiva y buscas activamente momentos de alegría.",
+      "dangers": "Priorizar la diversión a veces puede comprometer el enfoque en tareas serias.",
+      "reflectionQuestions": [
+        "¿Cómo mejora la diversión tus relaciones y bienestar?",
+        "¿Dónde podrías introducir más ligereza en tu vida o trabajo?"
+      ]
     },
     "authority": {
-      "label": "Autoridad"
+      "label": "Autoridad",
+      "description": "Ejercer liderazgo e influencia para guiar decisiones y acciones.",
+      "insight": "La autoridad responsable combina experiencia con servicio, usando la influencia para crear resultados positivos. Los líderes conscientes de su autoridad entienden que el verdadero poder viene de empoderar a otros y crear ambientes donde todos pueden contribuir efectivamente.",
+      "strengths": "Ejerces liderazgo y tomas decisiones con confianza.",
+      "dangers": "La autoridad mal usada puede volverse autoritaria o sofocar las contribuciones de otros.",
+      "reflectionQuestions": [
+        "¿Cómo usas tu autoridad para servir a otros?",
+        "¿Dónde podrías compartir más poder de decisión?"
+      ]
     },
     "personalSecurity": {
-      "label": "Seguridad Personal"
+      "label": "Seguridad Personal",
+      "description": "Asegurar tu propia protección física, emocional y financiera.",
+      "insight": "La seguridad personal crea la base estable necesaria para tomar riesgos calculados y perseguir objetivos ambiciosos. Los líderes conscientes de la seguridad equilibran precaución y valentía, asegurando que la estabilidad personal permita la innovación en lugar de obstaculizarla.",
+      "strengths": "Priorizas tu bienestar y creas fundaciones estables para tu vida.",
+      "dangers": "Una preocupación excesiva por la seguridad puede limitar la toma de riesgos necesarios.",
+      "reflectionQuestions": [
+        "¿En qué áreas te sientes más seguro?",
+        "¿Dónde podrías necesitar más valentía para crecer?"
+      ]
     },
     "dominance": {
-      "label": "Dominancia"
+      "label": "Dominancia",
+      "description": "Ejercer control y autoridad sobre otros en situaciones sociales y profesionales.",
+      "insight": "La dominancia puede ser una herramienta de liderazgo efectiva cuando se usa para crear orden y dirigir hacia objetivos compartidos. Los líderes conscientes de su dominancia equilibran autoridad con respeto, entendiendo que el verdadero poder viene de la inspiración y empoderamiento de otros en lugar de solo la coerción.",
+      "strengths": "Tomas cargo naturalmente de las situaciones y lideras con confianza y autoridad.",
+      "dangers": "La dominancia excesiva puede crear resistencia, sofocar la creatividad y dañar relaciones.",
+      "reflectionQuestions": [
+        "¿Cómo afecta tu tendencia a dominar tus relaciones?",
+        "¿Cuándo sería tu liderazgo más efectivo siendo menos directivo?"
+      ]
     },
     "wealth": {
-      "label": "Riqueza"
+      "label": "Riqueza",
+      "description": "Acumular recursos financieros y bienes materiales.",
+      "insight": "La riqueza puede ser una herramienta poderosa para crear seguridad, oportunidades e impacto positivo. Los líderes conscientes de la riqueza entienden que es un medio hacia fines más grandes, usando recursos para crear valor para otros mientras mantienen equilibrio y perspectiva.",
+      "strengths": "Estás motivado a crear seguridad financiera y oportunidades a través de recursos.",
+      "dangers": "Perseguir solo la riqueza a veces puede comprometer relaciones o valores importantes.",
+      "reflectionQuestions": [
+        "¿Cómo te permite la riqueza servir a tus valores más profundos?",
+        "¿Qué equilibrio buscas entre seguridad financiera y otras prioridades?"
+      ]
     },
     "culturalHeritage": {
-      "label": "Patrimonio Cultural"
+      "label": "Patrimonio Cultural",
+      "description": "Preservar y honrar las tradiciones, costumbres y herencias de tu cultura.",
+      "insight": "El patrimonio cultural conecta el presente con el pasado, ofreciendo sabiduría e identidad. Los líderes conscientes del patrimonio cultural aprovechan la riqueza de las tradiciones mientras adaptan las enseñanzas a las realidades contemporáneas, creando puentes entre generaciones y culturas.",
+      "strengths": "Valoras y preservas tradiciones culturales importantes y sabiduría ancestral.",
+      "dangers": "Un apego excesivo al patrimonio a veces puede resistir cambios necesarios.",
+      "reflectionQuestions": [
+        "¿Qué aspectos de tu patrimonio cultural más aprecias?",
+        "¿Cómo transmites valores culturales importantes a otros?"
+      ]
     },
     "respectForElders": {
-      "label": "Respeto a los Mayores"
+      "label": "Respeto a los Mayores",
+      "description": "Honrar la sabiduría, experiencia y contribuciones de las personas mayores.",
+      "insight": "El respeto a los mayores reconoce el valor de la experiencia vivida y perspectiva. Los líderes que respetan a los mayores crean ambientes intergeneracionales donde la sabiduría se transmite naturalmente, enriqueciendo la toma de decisiones con profundidad histórica y perspectiva.",
+      "strengths": "Valoras la sabiduría y experiencia que los mayores aportan a la comunidad.",
+      "dangers": "El respeto a veces puede impedir el cuestionamiento necesario de ideas obsoletas.",
+      "reflectionQuestions": [
+        "¿Qué sabiduría has aprendido de los mayores en tu vida?",
+        "¿Cómo equilibras respeto por la tradición e innovación necesaria?"
+      ]
     },
     "enjoyment": {
-      "label": "Disfrute"
+      "label": "Disfrute",
+      "description": "Encontrar alegría y satisfacción en las experiencias y actividades de la vida.",
+      "insight": "El disfrute auténtico nutre el espíritu y mantiene la motivación a largo plazo. Los líderes que entienden el disfrute crean ambientes donde la alegría y el logro se refuerzan mutuamente, reconociendo que el bienestar y el rendimiento están intrínsecamente vinculados.",
+      "strengths": "Sabes apreciar la belleza y alegría en las experiencias cotidianas.",
+      "dangers": "La búsqueda constante del disfrute a veces puede evitar desafíos necesarios para el crecimiento.",
+      "reflectionQuestions": [
+        "¿Qué actividades te traen más alegría auténtica?",
+        "¿Cómo integras disfrute y responsabilidad en tu vida?"
+      ]
     },
     "gratification": {
-      "label": "Gratificación"
+      "label": "Gratificación",
+      "description": "Buscar satisfacción y recompensa inmediata por tus esfuerzos y deseos.",
+      "insight": "La gratificación equilibrada motiva la acción y mantiene el compromiso. Los líderes conscientes de la gratificación entienden la importancia de celebrar el progreso mientras mantienen perspectiva sobre objetivos a largo plazo, usando recompensas para apoyar la perseverancia.",
+      "strengths": "Sabes reconocer y celebrar tus logros y progreso.",
+      "dangers": "Buscar gratificación inmediata a veces puede comprometer objetivos a largo plazo.",
+      "reflectionQuestions": [
+        "¿Qué tipos de gratificación te motivan más duraderamente?",
+        "¿Cómo equilibras satisfacción inmediata y objetivos a largo plazo?"
+      ]
     },
     "success": {
-      "label": "Éxito"
+      "label": "Éxito",
+      "description": "Lograr objetivos significativos y realizar tus aspiraciones.",
+      "insight": "El éxito auténtico alinea logros externos con realización personal e impacto positivo. Los líderes que redefinen el éxito crean ambientes donde el logro colectivo e individual se refuerzan mutuamente, midiendo el progreso más allá de solo métricas tradicionales.",
+      "strengths": "Estás motivado a alcanzar tus objetivos y crear resultados tangibles.",
+      "dangers": "Perseguir el éxito a veces puede comprometer valores importantes o bienestar.",
+      "reflectionQuestions": [
+        "¿Cómo defines el éxito en tu vida actual?",
+        "¿Qué tipos de éxito te dan más satisfacción duradera?"
+      ]
     },
     "recognition": {
-      "label": "Reconocimiento"
+      "label": "Reconocimiento",
+      "description": "Recibir aprecio y validación por tus contribuciones y logros.",
+      "insight": "El reconocimiento valida el esfuerzo e impacto, motivando la excelencia continua. Los líderes que entienden el reconocimiento crean culturas que celebran contribuciones significativas, entendiendo que la apreciación auténtica inspira rendimiento y compromiso a largo plazo.",
+      "strengths": "Aspiras a que tus contribuciones sean vistas y valoradas por otros.",
+      "dangers": "Depender solo del reconocimiento externo puede comprometer la motivación intrínseca.",
+      "reflectionQuestions": [
+        "¿Qué tipo de reconocimiento te motiva más?",
+        "¿Cómo encuentras satisfacción en tu trabajo independientemente del reconocimiento?"
+      ]
     },
     "leadership": {
-      "label": "Liderazgo"
+      "label": "Liderazgo",
+      "description": "Guiar, inspirar e influir positivamente a otros hacia objetivos comunes.",
+      "insight": "El liderazgo auténtico emerge del servicio a otros y la visión compartida. Los verdaderos líderes entienden que su papel es desarrollar otros líderes, creando impactos que perduran mucho más allá de su propia presencia e influencia directa.",
+      "strengths": "Inspiras y guías a otros hacia el logro de objetivos comunes.",
+      "dangers": "El liderazgo a veces puede aislar o crear presión excesiva de rendimiento.",
+      "reflectionQuestions": [
+        "¿Qué tipo de líder quieres ser reconocido como?",
+        "¿Cómo desarrolla tu liderazgo las capacidades de otros?"
+      ]
     },
     "safety": {
-      "label": "Seguridad"
+      "label": "Seguridad",
+      "description": "Proteger a ti mismo y a otros de peligros y riesgos.",
+      "insight": "La seguridad crea el ambiente en el cual la innovación y crecimiento pueden prosperar. Los líderes enfocados en seguridad equilibran protección y progreso, entendiendo que la seguridad física y psicológica es esencial para que los equipos rindan a su mejor nivel.",
+      "strengths": "Priorizas la protección y bienestar de ti mismo y otros.",
+      "dangers": "Una preocupación excesiva por la seguridad a veces puede impedir la toma de riesgos necesarios.",
+      "reflectionQuestions": [
+        "¿Cómo creas seguridad para ti mismo y otros?",
+        "¿Dónde es más importante para ti el equilibrio entre seguridad y riesgo?"
+      ]
     },
     "protection": {
-      "label": "Protección"
+      "label": "Protección",
+      "description": "Defender y preservar lo que es importante contra amenazas y peligros.",
+      "insight": "La protección crea el espacio seguro necesario para que el crecimiento e innovación prosperen. Los líderes protectores equilibran vigilancia y confianza, creando ambientes donde otros se sienten lo suficientemente seguros para tomar riesgos creativos y expresar su autenticidad.",
+      "strengths": "Defiendes activamente lo que más importa para ti y otros.",
+      "dangers": "La protección excesiva a veces puede limitar el crecimiento e independencia necesarios.",
+      "reflectionQuestions": [
+        "¿Qué más te impulsa a proteger a otros?",
+        "¿Cómo equilibras protección y fomento de la autonomía?"
+      ]
     },
     "predictability": {
-      "label": "Previsibilidad"
+      "label": "Previsibilidad",
+      "description": "Valorar la estabilidad, rutina y resultados consistentes en la vida.",
+      "insight": "La previsibilidad crea la estructura en la cual la creatividad e innovación pueden florecer con seguridad. Los líderes que entienden la previsibilidad crean sistemas confiables que liberan energía mental para enfocarse en lo que realmente importa.",
+      "strengths": "Creas estabilidad y consistencia que tranquiliza y permite planificación.",
+      "dangers": "Demasiada previsibilidad a veces puede impedir la adaptación necesaria al cambio.",
+      "reflectionQuestions": [
+        "¿En qué áreas te ayuda más la previsibilidad a rendir?",
+        "¿Dónde podrías beneficiarte de más flexibilidad y adaptación?"
+      ]
     },
     "resilience": {
-      "label": "Resistencia"
+      "label": "Resistencia",
+      "description": "Recuperarse de desafíos y adaptarse a cambios con fortaleza.",
+      "insight": "La resistencia transforma obstáculos en oportunidades de crecimiento, desarrollando la capacidad de prosperar en la adversidad. Los líderes resistentes modelan perseverancia y adaptabilidad, inspirando a sus equipos a ver desafíos como ocasiones para innovación y desarrollo personal.",
+      "strengths": "Te recuperas de dificultades y te adaptas efectivamente al cambio.",
+      "dangers": "La resistencia a veces puede enmascarar la necesidad de apoyo o descanso necesario.",
+      "reflectionQuestions": [
+        "¿Qué experiencias han fortalecido más tu resistencia?",
+        "¿Cómo equilibras perseverancia y cuidado de ti mismo?"
+      ]
     },
     "selfDiscipline": {
-      "label": "Autodisciplina"
+      "label": "Autodisciplina",
+      "description": "Mantener autocontrol y perseverar a pesar de desafíos y tentaciones.",
+      "insight": "La autodisciplina transforma intenciones en resultados duraderos. Los líderes disciplinados modelan consistencia y confiabilidad, inspirando a otros a través de su compromiso con valores y objetivos incluso frente a dificultades y distracciones.",
+      "strengths": "Mantienes enfoque y compromiso con tus objetivos a pesar de obstáculos.",
+      "dangers": "La autodisciplina excesiva a veces puede llevar a rigidez o agotamiento.",
+      "reflectionQuestions": [
+        "¿En qué áreas te sirve mejor tu autodisciplina?",
+        "¿Cómo equilibras disciplina personal y flexibilidad adaptativa?"
+      ]
     },
     "devotion": {
-      "label": "Devoción"
+      "label": "Devoción",
+      "description": "Comprometerse profundamente con personas, causas o principios importantes.",
+      "insight": "La devoción auténtica crea un sentido profundo de propósito y pertenencia. Los líderes devotos inspiran a través de su compromiso profundo, mostrando cómo la lealtad y dedicación pueden transformar tanto al individuo como a aquellos a quienes sirve.",
+      "strengths": "Te comprometes profundamente con lo que realmente importa para ti.",
+      "dangers": "La devoción excesiva a veces puede cegar a defectos o impedir evolución necesaria.",
+      "reflectionQuestions": [
+        "¿A qué estás más profundamente devoto en tu vida?",
+        "¿Cómo influye tu devoción en tus decisiones importantes?"
+      ]
     },
     "respectForCustoms": {
-      "label": "Respeto a las Costumbres"
+      "label": "Respeto a las Costumbres",
+      "description": "Honrar y seguir las tradiciones y prácticas establecidas de tu comunidad.",
+      "insight": "El respeto a las costumbres mantiene la continuidad cultural y fortalece los vínculos comunitarios. Los líderes conscientes de las costumbres saben cuándo las tradiciones sirven al bien común y cuándo la adaptación respetuosa es necesaria para la evolución positiva.",
+      "strengths": "Honras tradiciones importantes y mantienes continuidad cultural.",
+      "dangers": "Un respeto rígido a las costumbres a veces puede impedir innovación beneficiosa.",
+      "reflectionQuestions": [
+        "¿Qué costumbres te parecen más importantes preservar?",
+        "¿Cómo equilibras respeto por las tradiciones y apertura al cambio?"
+      ]
     },
     "faith": {
-      "label": "Fe"
+      "label": "Fe",
+      "description": "Mantener confianza y creencia en algo más grande que uno mismo.",
+      "insight": "La fe proporciona ancla y esperanza frente a la incertidumbre, ofreciendo perspectiva y resistencia. Los líderes guiados por la fe inspiran a través de su convicción profunda y capacidad de ver más allá de desafíos inmediatos hacia un propósito más grande.",
+      "strengths": "Extraes fuerza y guía de tus convicciones profundas.",
+      "dangers": "La fe ciega a veces puede impedir el pensamiento crítico necesario.",
+      "reflectionQuestions": [
+        "¿Cómo te guía tu fe en momentos difíciles?",
+        "¿Cómo influye tu fe en tus relaciones con otros?"
+      ]
     },
     "ritual": {
-      "label": "Ritual"
+      "label": "Ritual",
+      "description": "Participar en ceremonias y prácticas tradicionales significativas.",
+      "insight": "Los rituales crean estructura y significado, conectando el presente con tradiciones más profundas y proporcionando estabilidad en tiempos de cambio. Los líderes que entienden los rituales saben cómo usar ceremonias y prácticas para fortalecer la identidad del grupo y marcar transiciones importantes.",
+      "strengths": "Encuentras significado y conexión a través de prácticas y ceremonias tradicionales.",
+      "dangers": "Los rituales pueden volverse vacíos si se realizan sin comprensión de su propósito más profundo.",
+      "reflectionQuestions": [
+        "¿Qué rituales o prácticas te aportan más significado?",
+        "¿Cómo conectan los rituales contigo y tu comunidad?"
+      ]
     },
     "authenticity": {
-      "label": "Autenticidad"
+      "label": "Autenticidad",
+      "description": "Ser fiel a ti mismo y actuar en coherencia con tus valores profundos.",
+      "insight": "La autenticidad crea coherencia interior que inspira confianza y respeto. Los líderes auténticos dan permiso a otros para ser también verdaderos, creando ambientes donde la innovación y colaboración prosperan a través de la seguridad psicológica y confianza mutua.",
+      "strengths": "Te mantienes fiel a tus valores y actúas con integridad personal.",
+      "dangers": "La autenticidad a veces puede crear conflictos con expectativas o normas sociales.",
+      "reflectionQuestions": [
+        "¿En qué áreas te sientes más auténtico?",
+        "¿Dónde podrías necesitar más valentía para ser tu verdadero yo?"
+      ]
     },
     "exploration": {
-      "label": "Exploración"
+      "label": "Exploración",
+      "description": "Buscar activamente nuevas experiencias, lugares y conocimientos.",
+      "insight": "La exploración nutre la curiosidad y amplía perspectivas, revelando posibilidades inesperadas. Los líderes exploradores fomentan el aprendizaje continuo y descubrimiento, creando culturas que abrazan lo desconocido y encuentran oportunidades en la novedad.",
+      "strengths": "Buscas activamente nuevas experiencias y amplías continuamente tus horizontes.",
+      "dangers": "La exploración constante a veces puede impedir la profundización o especialización.",
+      "reflectionQuestions": [
+        "¿Qué nuevas fronteras te atraen más en este momento?",
+        "¿Cómo equilibras exploración y profundización de tu conocimiento?"
+      ]
     },
     "belonging": {
-      "label": "Pertenencia"
+      "label": "Pertenencia",
+      "description": "Sentirse aceptado, valorado y conectado dentro de un grupo o comunidad.",
+      "insight": "La pertenencia satisface la necesidad humana fundamental de conexión y aceptación. Los líderes que cultivan la pertenencia crean ambientes inclusivos donde todos se sienten valorados por sus contribuciones únicas, fortaleciendo el compromiso y rendimiento colectivo.",
+      "strengths": "Buscas y creas conexiones auténticas y un sentido de inclusión.",
+      "dangers": "La necesidad de pertenencia a veces puede comprometer la autenticidad personal.",
+      "reflectionQuestions": [
+        "¿Dónde sientes el sentido más fuerte de pertenencia en tu vida?",
+        "¿Cómo creas pertenencia para otros a tu alrededor?"
+      ]
     }
   },
   "valueCard": {
