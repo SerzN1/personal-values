@@ -18,9 +18,17 @@
     darkMode = isDark;
   }
 
-  // if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  // Detect preferred color scheme on first load, fallback to system preference
+  function getInitialDarkMode() {
+    const stored = localStorage.getItem('darkMode');
+    if (stored !== null) {
+      return stored === 'true';
+    }
+    // Fallback to system preference
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
 
-  $: darkMode = localStorage.getItem('darkMode') === 'true';
+  $: darkMode = getInitialDarkMode();
   $: if (darkMode) {
     document.documentElement.classList.add('dark');
   } else {
