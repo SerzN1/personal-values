@@ -41,6 +41,10 @@
     pointer-events: none;
     max-height: 35vh;
   }
+  :global([dir="rtl"]) .group-icon {
+    left: auto;
+    right: -1rem;
+  }
   .rank {
     font: var(--sk-font-h1);
     font-size: 5rem;
@@ -49,6 +53,10 @@
     right: 0rem;
     opacity: 0.15;
     pointer-events: none;
+  }
+  :global([dir="rtl"]) .rank {
+    left: 0rem;
+    right: auto;
   }
   h3 {
     margin-top: 5rem;

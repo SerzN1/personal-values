@@ -100,24 +100,24 @@
   }
 
   blockquote {
-    padding: 0 0 0 4.5rem;
-    position: relative;
+    display: flex;
   }
 
   blockquote:before {
+    flex: 0 0 4.5rem;
+    display: flex;
     font-size: 6.4em;
     line-height: 1;
     font-family: var(--sk-font-family-heading);
     color: var(--sk-fg-4);
-    position: absolute;
-    left: 0;
     content: "";
     background: var(--sk-fg-accent);
     pointer-events: none;
-    width: 2em;
-    height: 2em;
     display: block;
-    top: .05em;
     mask: url("data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%23ff3e00'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'%3e%3cpath%20d='M15%2014c.2-1%20.7-1.7%201.5-2.5%201-.9%201.5-2.2%201.5-3.5A6%206%200%200%200%206%208c0%201%20.2%202.2%201.5%203.5.7.7%201.3%201.5%201.5%202.5'/%3e%3cpath%20d='M9%2018h6'/%3e%3cpath%20d='M10%2022h4'/%3e%3c/svg%3e") .5rem 0/2.6rem no-repeat
+  }
+
+  :global([dir="rtl"]) blockquote:before {
+    mask-position: 100% 0;
   }
 </style>

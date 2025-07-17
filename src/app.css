@@ -207,7 +207,8 @@ a {
 }
 
 a:hover {
-    text-decoration: underline
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
 }
 
 h1 {
@@ -277,17 +278,17 @@ header {
 }
 
 blockquote {
-    margin: var(--sk-line-height-body)0;
-    max-width: var(--sk-page-content-width);
-    position: relative
+  margin: var(--sk-line-height-body)0;
+  max-width: var(--sk-page-content-width);
+  position: relative
 }
 
 blockquote :where(p,ul,ol) {
-    font-size: var(--sk-font-size-body-small)
+  font-size: var(--sk-font-size-body-small)
 }
 
 blockquote :last-child {
-    margin: 0
+  margin: 0
 }
 
 input,button {
@@ -518,12 +519,22 @@ main ul li:before {
     margin-left: -4.8rem;
     padding: 0 2.4rem 0 4.8rem;
   }
+  [dir="rtl"] h2[id],
+  [dir="rtl"] h3[id] {
+    margin-left: 0;
+    margin-right: -4.8rem;
+    padding: 0 4.8rem 0 2.4rem;
+  }
 }
 
 @media (max-width: 767px) {
   .permalink {
     right: 0;
     scale: .8;
+  }
+  [dir="rtl"] .permalink {
+    left: 0;
+    right: auto;
   }
 }
 .permalink {
@@ -538,12 +549,16 @@ main ul li:before {
 @media (min-width: 768px) {
   h2[id]:hover .permalink,
   h3[id]:hover .permalink {
-      opacity: 1;
+    opacity: 1;
   }
   .permalink {
-      opacity: 0;
-      transition: opacity .2s;
-      left: 1.6rem;
+    opacity: 0;
+    transition: opacity .2s;
+    left: 1.6rem;
+  }
+  [dir="rtl"] .permalink {
+    left: auto;
+    right: 1.6rem;
   }
 }
 
